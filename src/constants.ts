@@ -60,7 +60,7 @@ export const PRICING: PricingTier = {
   season: 'Standard Rate',
   price: '8,910,000',
   currency: 'IDR',
-  details: 'Per night. Includes tax & service. Min 3 nights.'
+  details: 'Per 2 nights. Includes tax & service. Min 2 nights.'
 };
 
 export const REVIEWS = [
