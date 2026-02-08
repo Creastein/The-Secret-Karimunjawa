@@ -19,6 +19,11 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   return (
+  const handlePreloaderComplete = React.useCallback(() => {
+    setLoading(false);
+  }, []);
+
+  return (
     <>
       <Helmet>
         <title>Villa VB Bali - Ungasan Coastal Modernism</title>
@@ -40,7 +45,7 @@ const App: React.FC = () => {
         <meta property="twitter:image" content="https://picsum.photos/seed/luxuryvilla15/1200/630" />
       </Helmet>
 
-      <Preloader onComplete={() => setLoading(false)} />
+      <Preloader onComplete={handlePreloaderComplete} />
 
       {!loading && (
         <div className="min-h-screen bg-sand font-sans overflow-x-hidden animate-fade-in">
