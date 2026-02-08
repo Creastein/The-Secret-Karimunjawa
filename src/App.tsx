@@ -18,7 +18,6 @@ const AvailabilityStickyBar = lazy(() => import('./components/AvailabilitySticky
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
-  return (
   const handlePreloaderComplete = React.useCallback(() => {
     setLoading(false);
   }, []);
