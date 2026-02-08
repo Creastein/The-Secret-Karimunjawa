@@ -16,70 +16,77 @@ const Testimonials: React.FC = () => {
 
     gsap.registerPlugin(ScrollTrigger);
     const ctx = gsap.context(() => {
-      if (headerRef.current) {
-        const headerItems = headerRef.current.querySelectorAll('[data-testimonial-reveal]');
-        gsap.fromTo(
-          headerItems,
-          { opacity: 0, y: 22 },
+      if (!sectionRef.current) return;
+
+      const title = sectionRef.current.querySelector('[data-testimonial-title]');
+      if (title) {
+        gsap.fromTo(title,
+          { opacity: 0, y: 30 },
           {
-            opacity: 1,
-            y: 0,
-            duration: 0.85,
-            ease: 'power3.out',
-            stagger: 0.12,
-            scrollTrigger: {
-              trigger: headerRef.current,
-              start: 'top 80%'
+            opacity: 1, y: 0, duration: 1, ease: 'power3.out', scrollTrigger: {
+              trigger: title,
+              start: 'top 85%'
             }
           }
         );
       }
 
       const cards = gsap.utils.toArray<HTMLElement>('.testimonial-card');
-      if (!cards.length) return;
-
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 20 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.75,
-          ease: 'power3.out',
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 80%'
+      if (cards.length) {
+        gsap.fromTo(
+          cards,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power3.out',
+            stagger: 0.2,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%'
+            }
           }
-        }
-      );
+        );
+      }
     }, sectionRef);
 
     return () => ctx.revert();
   }, [shouldReduceMotion]);
 
   return (
-    <Section className="bg-limestone">
-      <div ref={sectionRef} className="max-w-5xl mx-auto">
-        <div ref={headerRef} className="mb-12 text-center">
-          <span data-testimonial-reveal className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">Guest Voices</span>
-          <h2 data-testimonial-reveal className="font-serif text-3xl md:text-4xl text-charcoal leading-[1.05]">
-            Moments from Our Guests
-          </h2>
+    <Section className="bg-sand relative overflow-hidden py-32">
+      {/* Ambient Background */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[20%] right-[-5%] w-[40%] h-[40%] bg-white/40 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-[10%] left-[-10%] w-[50%] h-[50%] bg-stone-200/30 rounded-full blur-[100px]"></div>
+      </div>
+
+      <div ref={sectionRef} className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-20" data-testimonial-title>
+          <span className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-4 block">Guest Voices</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Moments from Our Guests</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {REVIEWS.map((review) => (
-          <div key={review.id} className="testimonial-card relative p-8 md:p-12 border border-white/60 bg-white/80 backdrop-blur-sm shadow-coastal">
-            <Quote className="w-8 h-8 text-teak-accent/40 absolute top-8 left-8" />
-            <p className="font-serif text-lg md:text-xl text-stone-600 italic leading-relaxed mb-6 relative z-10 pt-4">
-              "{review.text}"
-            </p>
-            <div>
-              <p className="text-xs uppercase tracking-widest text-tide font-semibold">{review.author}</p>
-              <p className="text-[10px] text-stone-400 uppercase tracking-wide mt-1">{review.origin}</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
+          {REVIEWS.map((review) => (
+            <div key={review.id} className="testimonial-card flex flex-col items-center text-center p-8 md:p-12">
+              <div className="mb-8 text-teak-accent/20">
+                <Quote className="w-12 h-12 fill-current" />
+              </div>
+
+              <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
+                "{review.text}"
+              </p>
+
+              <div className="w-12 h-px bg-teak-accent/30 mb-6"></div>
+
+              <div>
+                <h4 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h4>
+                <span className="text-[10px] text-stone-400 uppercase tracking-wide">{review.origin}</span>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </Section>

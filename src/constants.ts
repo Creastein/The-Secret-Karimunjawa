@@ -65,13 +65,13 @@ export const REVIEWS = [
   {
     id: 1,
     text: "Honestly, we booked this just to escape the Canggu crowds, and it was the best decision. The photos don't capture the actual scale of the living area—it is massive. Waking up to that quiet every morning was exactly what we needed.",
-    author: "James & Sophie",
-    origin: "London, UK"
+    author: "Elena & Marc Dubois",
+    origin: "Lyon, France"
   },
   {
     id: 2,
     text: "It wasn't just the design, it was the team. They anticipated things before we asked—from fresh coconuts by the pool to sorting out our dinner reservations. It felt completely private, yet we never felt abandoned.",
-    author: "The Anderson Family",
-    origin: "Perth, Australia"
+    author: "Sarah Jenkins",
+    origin: "Sydney, Australia"
   }
 ];

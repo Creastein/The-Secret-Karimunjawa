@@ -32,10 +32,20 @@ const Hero: React.FC = () => {
 
       if (heroContentRef.current) {
         const items = heroContentRef.current.querySelectorAll('[data-hero-reveal]');
-        gsap.fromTo(
+
+        // Master Timeline for Entrance
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+        tl.fromTo(
           items,
-          { opacity: 0, y: 22 },
-          { opacity: 1, y: 0, duration: 0.85, ease: 'power3.out', stagger: 0.12 }
+          { opacity: 0, y: 32 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            stagger: 0.15,
+            delay: 0.2 // Slight delay to let the image settle
+          }
         );
       }
     }, containerRef);
@@ -61,9 +71,9 @@ const Hero: React.FC = () => {
               </span>
             </div>
 
-            <h1 data-hero-reveal className="font-serif text-4xl md:text-6xl lg:text-7xl text-charcoal leading-[1.05]">
-              Coastal Modernism
-              <span className="block font-light italic text-tide">Refined to Silence</span>
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-charcoal leading-[1.05]">
+              <span data-hero-reveal className="block">Coastal Modernism</span>
+              <span data-hero-reveal className="block font-light italic text-tide">Refined to Silence</span>
             </h1>
 
             <p data-hero-reveal className="mt-6 text-sm md:text-base text-ink/70 leading-relaxed">
