@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Section from './Section';
 import { MapPin, Plane, Waves, Coffee, Navigation } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useReducedMotion } from 'framer-motion';
 
 const hotspots = [
   { name: 'Melasti Beach', time: '5 mins', icon: Waves, desc: 'White sand & beach clubs' },
@@ -10,9 +13,79 @@ const hotspots = [
 ];
 
 const Location: React.FC = () => {
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const infoRef = useRef<HTMLDivElement>(null);
+  const hotspotsRef = useRef<HTMLDivElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      if (overlayRef.current) {
+        gsap.fromTo(
+          overlayRef.current,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%'
+            }
+          }
+        );
+      }
+
+      if (infoRef.current) {
+        const infoItems = infoRef.current.querySelectorAll('[data-location-reveal]');
+        gsap.fromTo(
+          infoItems,
+          { opacity: 0, y: 22 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.85,
+            ease: 'power3.out',
+            stagger: 0.12,
+            scrollTrigger: {
+              trigger: infoRef.current,
+              start: 'top 75%'
+            }
+          }
+        );
+      }
+
+      if (hotspotsRef.current) {
+        const spots = hotspotsRef.current.querySelectorAll('[data-location-spot]');
+        gsap.fromTo(
+          spots,
+          { opacity: 0, y: 16 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.75,
+            ease: 'power3.out',
+            stagger: 0.08,
+            scrollTrigger: {
+              trigger: hotspotsRef.current,
+              start: 'top 80%'
+            }
+          }
+        );
+      }
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [shouldReduceMotion]);
+
   return (
-    <Section id="location" className="bg-stone-50" fullWidth>
-      <div className="flex flex-col-reverse lg:flex-row h-auto lg:h-[600px]">
+    <Section id="location" className="bg-sand" fullWidth>
+      <div ref={sectionRef} className="flex flex-col-reverse lg:flex-row h-auto lg:h-[600px]">
         
         {/* Left: Map Container */}
         {/* We use a grayscale filter that fades out on hover for a sophisticated look */}
@@ -30,12 +103,12 @@ const Location: React.FC = () => {
           ></iframe>
           
           {/* Custom Overlay Button */}
-          <div className="absolute bottom-8 left-8 z-10">
+          <div ref={overlayRef} className="absolute bottom-8 left-8 z-10">
             <a 
                 href="https://maps.google.com/?q=Ungasan,Bali" 
                 target="_blank"
                 rel="noreferrer"
-                className="bg-white text-stone-900 px-6 py-3 text-xs uppercase tracking-widest flex items-center gap-3 hover:bg-stone-900 hover:text-white transition-all shadow-lg"
+                className="bg-white text-charcoal px-6 py-3 text-xs uppercase tracking-widest flex items-center gap-3 hover:bg-charcoal hover:text-white transition-all shadow-lg"
             >
                 <Navigation className="w-4 h-4" />
                 Get Directions
@@ -44,19 +117,19 @@ const Location: React.FC = () => {
         </div>
 
         {/* Right: Curated Guide */}
-        <div className="w-full lg:w-1/3 bg-white p-10 md:p-16 flex flex-col justify-center border-l border-stone-200">
-          <span className="text-ocean-deep text-xs tracking-[0.3em] uppercase font-bold mb-6 block">The Neighborhood</span>
-          <h2 className="font-serif text-3xl md:text-4xl text-stone-800 mb-8 leading-tight">
+        <div ref={infoRef} className="w-full lg:w-1/3 bg-white p-10 md:p-16 flex flex-col justify-center border-l border-stone-200">
+          <span data-location-reveal className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-6 block">The Neighborhood</span>
+          <h2 data-location-reveal className="font-serif text-3xl md:text-4xl text-charcoal mb-8 leading-[1.05] tracking-tight">
             Connected yet <br /> 
             <span className="italic text-stone-400">Secluded</span>
           </h2>
-          <p className="text-stone-500 font-light text-sm leading-relaxed mb-10">
+          <p data-location-reveal className="text-stone-500 font-light text-sm leading-relaxed mb-10">
             Ungasan offers a rare balance in Bali: the raw beauty of limestone cliffs and pristine beaches, just minutes away from world-class dining and entertainment.
           </p>
 
-          <div className="space-y-6">
+          <div ref={hotspotsRef} className="space-y-6">
             {hotspots.map((spot, idx) => (
-                <div key={idx} className="flex items-start gap-4 group cursor-default">
+                <div key={idx} className="flex items-start gap-4 group cursor-default" data-location-spot>
                     <div className="p-2 bg-stone-50 rounded-full text-stone-400 group-hover:text-teak-accent group-hover:bg-stone-100 transition-colors">
                         <spot.icon className="w-5 h-5" strokeWidth={1.5} />
                     </div>

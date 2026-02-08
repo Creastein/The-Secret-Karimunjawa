@@ -9,8 +9,8 @@ const Navigation: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'The Estate', href: '#about' },
-    { name: 'Suites', href: '#rooms' },
+    { name: 'The Estate', href: '#estate' },
+    { name: 'Suites', href: '#suites' },
     { name: 'Experience', href: '#experience' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
@@ -101,10 +101,10 @@ const Navigation: React.FC = () => {
         <nav 
           className={`
             flex items-center transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-            backdrop-blur-xl rounded-full text-stone-800
+            backdrop-blur-2xl rounded-full text-ink
             ${scrolled 
-              ? 'py-3 px-5 md:px-6 bg-white/90 border border-stone-300 shadow-[0_4px_20px_rgba(0,0,0,0.1)] gap-4 md:gap-8' 
-              : 'py-3 px-5 md:py-4 md:px-8 bg-white/70 border border-white/50 shadow-sm gap-4 md:gap-12'
+              ? 'py-3 px-5 md:px-6 bg-limestone/95 border border-white/60 shadow-coastal gap-4 md:gap-8' 
+              : 'py-3 px-5 md:py-4 md:px-8 bg-white/60 border border-white/40 shadow-sm gap-4 md:gap-12'
             }
           `}
         >
@@ -112,7 +112,7 @@ const Navigation: React.FC = () => {
           <a 
             href="#" 
             onClick={handleLogoClick}
-            className="font-serif text-xl md:text-2xl tracking-tight font-bold relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity"
+            className="font-serif text-xl md:text-2xl tracking-tight font-semibold relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity"
           >
             <span>VB.</span>
           </a>
@@ -128,7 +128,7 @@ const Navigation: React.FC = () => {
                   onClick={(e) => handleNavClick(e, link.href)}
                   className={`
                     text-[11px] uppercase tracking-widest transition-colors relative group py-1 font-medium cursor-pointer
-                    ${isActive ? 'text-stone-900' : 'text-stone-500 hover:text-teak-accent'}
+                    ${isActive ? 'text-ink' : 'text-stone-500 hover:text-tide'}
                   `}
                 >
                   {link.name}
@@ -144,7 +144,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Toggle */}
           <button 
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="md:hidden text-stone-800 relative z-50 focus:outline-none p-1 hover:bg-stone-100 rounded-full transition-colors ml-1"
+            className="md:hidden text-ink relative z-50 focus:outline-none p-1 hover:bg-stone-100 rounded-full transition-colors ml-1"
           >
             {isMobileOpen ? (
               <X className="w-5 h-5" />
@@ -163,7 +163,7 @@ const Navigation: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-bleached-sand/95 backdrop-blur-xl flex items-center justify-center"
+            className="fixed inset-0 z-40 bg-limestone/95 backdrop-blur-xl flex items-center justify-center"
           >
             <div className="flex flex-col items-center gap-8 text-center">
               {navLinks.map((link, i) => {
@@ -176,7 +176,7 @@ const Navigation: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 + (i * 0.1), duration: 0.5 }}
-                    className={`font-serif text-3xl transition-colors cursor-pointer ${isActive ? 'text-teak-accent italic' : 'text-stone-800 hover:text-teak-accent'}`}
+                    className={`font-serif text-3xl transition-colors cursor-pointer ${isActive ? 'text-teak-accent italic' : 'text-ink hover:text-tide'}`}
                   >
                     {link.name}
                   </motion.a>

@@ -4,6 +4,38 @@
 
 @layer base {
   body {
-    @apply antialiased text-stone-800;
+    @apply antialiased text-ink bg-sand font-sans;
+    background-image: radial-gradient(circle at top, rgba(155, 183, 173, 0.25), transparent 55%),
+      radial-gradient(circle at 20% 80%, rgba(183, 137, 95, 0.15), transparent 45%);
+  }
+}
+
+@layer base {
+  :root {
+    --coastal-shadow: 0 24px 80px rgba(15, 14, 12, 0.18);
+    --coastal-glow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    --coastal-gradient: linear-gradient(135deg, rgba(246, 243, 236, 0.95) 0%, rgba(239, 233, 223, 0.92) 45%, rgba(155, 183, 173, 0.2) 100%);
+  }
+}
+
+@layer utilities {
+  .bg-atmosphere {
+    background-image: var(--coastal-gradient);
+  }
+
+  .shadow-coastal {
+    box-shadow: var(--coastal-shadow);
+  }
+
+  .ring-coastal {
+    box-shadow: var(--coastal-glow);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

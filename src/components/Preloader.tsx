@@ -25,7 +25,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[9999] bg-stone-900 flex items-center justify-center"
+          className="fixed inset-0 z-[9999] bg-charcoal flex items-center justify-center"
         >
           <div className="text-center overflow-hidden">
             <motion.h1 
@@ -46,7 +46,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 1 }}
-              className="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-4"
+               className="text-[10px] text-stone-400 uppercase tracking-[0.3em] mt-4"
             >
               Ungasan Coastal Modernism
             </motion.p>

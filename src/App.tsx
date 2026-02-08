@@ -2,11 +2,11 @@ import React, { useState, Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import About from './components/About';
+import Estate from './components/Estate';
 import Preloader from './components/Preloader';
 
 // Lazy load components below the fold
-const Rooms = lazy(() => import('./components/Rooms'));
+const Suites = lazy(() => import('./components/Suites'));
 const Experience = lazy(() => import('./components/Experience'));
 const Gallery = lazy(() => import('./components/Gallery'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
@@ -43,13 +43,13 @@ const App: React.FC = () => {
       <Preloader onComplete={() => setLoading(false)} />
 
       {!loading && (
-        <div className="min-h-screen bg-bleached-sand font-sans overflow-x-hidden animate-fade-in">
+        <div className="min-h-screen bg-sand font-sans overflow-x-hidden animate-fade-in">
           <Navigation />
           <Hero />
-          <About />
+          <Estate />
 
           <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
-            <Rooms />
+            <Suites />
             <Experience />
             <Gallery />
             <Testimonials />

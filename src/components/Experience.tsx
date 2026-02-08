@@ -1,8 +1,63 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Section from './Section';
 import { Sparkles, UtensilsCrossed, Car, User, Shirt, Flower2 } from 'lucide-react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useReducedMotion } from 'framer-motion';
 
 const Services: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        const headerItems = headerRef.current.querySelectorAll('[data-experience-reveal]');
+        gsap.fromTo(
+          headerItems,
+          { opacity: 0, y: 22 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.85,
+            ease: 'power3.out',
+            stagger: 0.12,
+            scrollTrigger: {
+              trigger: headerRef.current,
+              start: 'top 75%'
+            }
+          }
+        );
+      }
+
+      const rows = gsap.utils.toArray<HTMLElement>('.service-row');
+      if (!rows.length) return;
+
+      gsap.fromTo(
+        rows,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.75,
+          ease: 'power3.out',
+          stagger: 0.08,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 75%',
+            end: 'bottom 35%'
+          }
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, [shouldReduceMotion]);
+
   const services = [
     { 
       title: "Villa Butler", 
@@ -41,37 +96,38 @@ const Services: React.FC = () => {
   };
 
   return (
-    <Section id="experience" className="bg-white">
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+    <Section id="experience" className="bg-white bg-atmosphere">
+       <div ref={sectionRef} className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
           
-          <div className="md:sticky md:top-32">
-             <span className="text-ocean-deep text-xs tracking-[0.3em] uppercase font-bold mb-4 block">The Hospitality</span>
-             <h2 className="font-serif text-4xl md:text-6xl mb-8 leading-tight">
+           <div ref={headerRef} className="md:sticky md:top-32">
+             <span data-experience-reveal className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">The Hospitality</span>
+             <h2 data-experience-reveal className="font-serif text-4xl md:text-6xl mb-8 leading-[1.05] tracking-tight">
                Bespoke <br />
-               <span className="italic text-stone-400">Services</span>
-             </h2>
-             <p className="text-stone-600 font-light leading-relaxed mb-8 text-lg max-w-md">
+                <span className="italic text-stone-400">Services</span>
+              </h2>
+             <p data-experience-reveal className="text-stone-600 font-light leading-relaxed mb-8 text-lg max-w-md">
                True luxury is the absence of effort. Our team operates with an intuitive understanding of your needs—present when required, invisible when you seek solitude.
-             </p>
-             <button 
+              </p>
+              <button 
+               data-experience-reveal
                onClick={handleContact}
-               className="text-xs uppercase tracking-widest border border-stone-800 px-8 py-3 hover:bg-stone-800 hover:text-white transition-all"
-             >
+               className="text-xs uppercase tracking-widest border border-charcoal px-8 py-3 hover:bg-charcoal hover:text-white transition-all"
+              >
                Request Services
              </button>
           </div>
 
           <div className="space-y-0 border-t border-stone-200">
-            {services.map((item, index) => (
+              {services.map((item, index) => (
               <div 
                 key={index} 
-                className="group py-8 border-b border-stone-200 flex flex-col md:flex-row justify-between md:items-center gap-4 hover:bg-stone-50/50 transition-all duration-500 cursor-default px-2"
+                className="service-row group py-8 border-b border-stone-200 flex flex-col md:flex-row justify-between md:items-center gap-4 hover:bg-limestone/60 transition-all duration-500 cursor-default px-2"
               >
                 <div className="flex items-center gap-4">
                   <div className="text-stone-300 group-hover:text-teak-accent transition-colors">
                     <item.icon className="w-5 h-5" strokeWidth={1} />
                   </div>
-                  <h4 className="font-serif text-xl md:text-2xl text-stone-700 group-hover:text-stone-900 transition-colors">
+                  <h4 className="font-serif text-xl md:text-2xl text-stone-700 group-hover:text-charcoal transition-colors">
                     {item.title}
                   </h4>
                 </div>

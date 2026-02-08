@@ -16,44 +16,42 @@ export const ROOMS: Room[] = [
     id: 'master-1',
     name: 'The Ocean Master',
     description: 'Commanding the prime position of the estate, this master sanctuary offers seamless indoor-outdoor living. Wake up to the sight of the shimmering lap pool, accessible directly from your private teak terrace. The interior features a bespoke king-size canopy bed, a dedicated reading corner, and a luxurious semi-outdoor rain shower that captures the essence of tropical bathing.',
-    imageUrl: 'https://picsum.photos/seed/room1/1200/800',
+    imageUrl: '/src/assets/room-The-Ocean-Master.png',
     features: ['King Size Bed', 'En-suite Bathroom', 'Direct Pool Access', 'Walk-in Closet']
   },
   {
     id: 'suite-2',
-    name: 'Garden Suite I',
+    name: 'The Master Suite',
     description: 'Immersed in manicured greenery, this suite is a study in tranquility. Floor-to-ceiling glass walls frame the tropical landscape like a living painting, ensuring nature is never more than a glance away. Ideal for those seeking privacy and deep focus, it features a dedicated workspace and a plush queen-size bed.',
-    imageUrl: 'https://picsum.photos/seed/room2/1200/800',
+    imageUrl: '/src/assets/room-The-Master-Suite.png',
     features: ['Queen Size Bed', 'Private Garden Terrace', 'Work Desk', 'Safety Box']
   },
   {
     id: 'suite-3',
-    name: 'Garden Suite II',
+    name: 'Deluxe Suite',
     description: 'Tucked away in the quietest wing of the villa, this versatile suite is perfect for family or friends. It can be configured as a king or twin setup, offering flexibility without compromising on luxury. The large windows overlook the fern garden, creating a cool, shaded retreat from the midday sun.',
-    imageUrl: 'https://picsum.photos/seed/room3/1200/800',
+    imageUrl: '/src/assets/room-deluxe.png',
     features: ['Twin/King Convertible', 'Garden View', 'Deep Soaking Tub', 'Smart TV']
   },
   {
     id: 'master-2',
-    name: 'The Pavilion Suite',
+    name: 'Guest Suite',
     description: 'A standalone architectural gem, the Pavilion Suite offers the ultimate in seclusion. Detached from the main building, it functions as a private cottage with its own lounge area and meditative garden spot. The soaring ceilings and cross-ventilation design embrace the traditional Balinese way of living with a modern twist.',
-    imageUrl: 'https://picsum.photos/seed/room4/1200/800',
+    imageUrl: '/src/assets/room-guest.png',
     features: ['King Size Bed', 'Private Lounge', 'Outdoor Shower', 'Mini Bar']
   }
 ];
 
 // EXPANDED GALLERY FOR MASONRY LAYOUT WITH CATEGORIES
 export const GALLERY_IMAGES: ImageItem[] = [
-  { id: '1', url: 'https://picsum.photos/seed/poolvb/1200/800', alt: 'Main Pool at Dusk', category: 'Exteriors', span: true },
-  { id: '2', url: 'https://picsum.photos/seed/livingvb/800/1200', alt: 'Living Area High Ceiling', category: 'Interiors', span: false },
-  { id: '3', url: 'https://picsum.photos/seed/gardenvb/800/800', alt: 'Tropical Garden Path', category: 'Exteriors', span: false },
-  { id: '4', url: 'https://picsum.photos/seed/kitchenvb/800/600', alt: 'Gourmet Kitchen', category: 'Interiors', span: false },
-  { id: '5', url: 'https://picsum.photos/seed/bathvb/800/1200', alt: 'Stone Bathtub Details', category: 'Details', span: false },
-  { id: '6', url: 'https://picsum.photos/seed/archvb/1200/800', alt: 'Architectural Facade', category: 'Exteriors', span: true },
-  { id: '7', url: 'https://picsum.photos/seed/bedvb/800/600', alt: 'Linen Details', category: 'Details', span: false },
-  { id: '8', url: 'https://picsum.photos/seed/nightvb/800/800', alt: 'Villa by Night', category: 'Night', span: false },
-  { id: '9', url: 'https://picsum.photos/seed/loungevb/800/600', alt: 'Sunset Lounge', category: 'Interiors', span: false },
-  { id: '10', url: 'https://picsum.photos/seed/artvb/800/1200', alt: 'Balinese Artifacts', category: 'Details', span: false },
+  { id: '1', url: '/src/assets/gallery-exteriors-1.png', alt: 'Main Pool at Dusk', category: 'Exteriors', span: true },
+  { id: '2', url: '/src/assets/gallery-interiors-1.png', alt: 'Living Area High Ceiling', category: 'Interiors', span: false },
+  { id: '3', url: '/src/assets/gallery-exteriors-2.png', alt: 'Tropical Garden Path', category: 'Exteriors', span: false },
+  { id: '4', url: '/src/assets/gallery-interiors-2.png', alt: 'Gourmet Kitchen', category: 'Interiors', span: false },
+  { id: '5', url: '/src/assets/gallery-details-1.png', alt: 'Stone Bathtub Details', category: 'Details', span: false },
+  { id: '6', url: '/src/assets/gallery-details-2.png', alt: 'Linen Details', category: 'Details', span: false },
+  { id: '7', url: '/src/assets/gallery-night-1.png', alt: 'Villa by Night', category: 'Night', span: false },
+  { id: '8', url: '/src/assets/gallery-night-2.png', alt: 'Evening Terrace Glow', category: 'Night', span: false },
 ];
 
 export const PRICING: PricingTier = {
