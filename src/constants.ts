@@ -30,7 +30,7 @@ export const ROOMS: Room[] = [
     id: 'suite-3',
     name: 'Deluxe Suite',
     description: 'Tucked away in the quietest wing of the villa, this versatile suite is perfect for family or friends. It can be configured as a king or twin setup, offering flexibility without compromising on luxury. The large windows overlook the fern garden, creating a cool, shaded retreat from the midday sun.',
-    imageUrl: '/src/assets/room-deluxe.png',
+    imageUrl: '/src/assets/Room-Deluxe.png',
     features: ['Twin/King Convertible', 'Garden View', 'Deep Soaking Tub', 'Smart TV']
   },
   {

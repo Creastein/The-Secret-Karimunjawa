@@ -111,8 +111,8 @@ villa-new2/
 ### Typography
 | Font | Family | Penggunaan |
 |------|--------|------------|
-| **Playfair Display** | `font-serif` | Headings, hero text |
-| **Inter** | `font-sans` | Body text, UI elements |
+| **Fraunces** | `font-serif` | Headings, hero text |
+| **Manrope** | `font-sans` | Body text, UI elements |
 
 ### Spacing Scale
 Gunakan Tailwind default: `4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96`
@@ -128,10 +128,14 @@ Gunakan Tailwind default: `4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96`
 | TypeScript interfaces | PascalCase + prefix I (optional) | `Room`, `ImageItem` |
 
 ## 🔗 External Links & Contact
-* **WhatsApp:** [Tambahkan nomor WA villa]
+* **WhatsApp:** `+62 812 3456 7890` ⚠️ **PLACEHOLDER** - Update sebelum production!
 * **Instagram:** [Tambahkan @username]
 * **Google Maps:** Ungasan, Bali (embed di Location component)
 * **Booking URL:** [Tambahkan jika ada sistem booking eksternal]
+
+> ⚠️ **PENTING:** WhatsApp number saat ini adalah placeholder. Update di 3 lokasi:
+> - `src/components/Contact.tsx` (line 90, 142)
+> - `src/components/Suites.tsx` (line 203)
 
 ## 🧪 Testing & Verification
 Sebelum deploy atau commit, pastikan:
