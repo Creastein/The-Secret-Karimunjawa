@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
         <div className="relative overflow-hidden">
           <img
             ref={imageRef}
-            src="/src/assets/hero-coastal.png"
+            src="/assets/hero-coastal.png"
             alt="Villa VB Bali Main Pool"
             className="absolute inset-0 h-full w-full object-cover object-[50%_75%]"
             loading="eager"
