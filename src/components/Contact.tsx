@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-12 items-start">
 
           {/* Left Column: Context & Info (The "Backdrop") */}
-          <div className="lg:col-span-5 pt-10 pb-20 lg:py-20 flex flex-col justify-between h-full">
+          <div className="lg:col-span-5 pt-10 pb-10 md:pb-20 lg:py-20 flex flex-col justify-between h-full">
             <div>
               <span data-contact-reveal className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-6 block">
                 Connection
@@ -158,7 +158,7 @@ const Contact: React.FC = () => {
           <div className="lg:col-span-7">
             <div
               data-contact-card
-              className="bg-white p-8 md:p-14 shadow-2xl shadow-stone-400/20 rounded-sm relative border border-stone-100 ring-1 ring-stone-900/5"
+              className="bg-white p-6 sm:p-8 md:p-14 shadow-2xl shadow-stone-400/20 rounded-sm relative border border-stone-100 ring-1 ring-stone-900/5"
             >
               {/* Decorative corner accent */}
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-stone-100 to-transparent pointer-events-none"></div>
@@ -230,7 +230,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="pt-6 flex justify-end">
-                  <button type="submit" className="bg-charcoal text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-teak-accent transition-all duration-500 flex items-center gap-4 group shadow-lg hover:shadow-xl hover:-translate-y-1">
+                  <button type="submit" className="w-full md:w-auto bg-charcoal text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-teak-accent transition-all duration-500 flex items-center justify-center md:inline-flex gap-4 group shadow-lg hover:shadow-xl hover:-translate-y-1">
                     <span>Send Request</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>

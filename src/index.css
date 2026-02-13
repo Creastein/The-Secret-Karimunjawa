@@ -5,6 +5,9 @@
 @layer base {
   body {
     @apply antialiased text-ink bg-sand font-sans;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    overscroll-behavior: none;
     background-image: radial-gradient(circle at top, rgba(155, 183, 173, 0.25), transparent 55%),
       radial-gradient(circle at 20% 80%, rgba(183, 137, 95, 0.15), transparent 45%);
   }
@@ -29,6 +32,14 @@
 
   .ring-coastal {
     box-shadow: var(--coastal-glow);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 

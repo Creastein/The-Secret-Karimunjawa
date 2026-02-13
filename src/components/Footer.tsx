@@ -58,12 +58,12 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-charcoal text-stone-400 pt-24 pb-12 border-t border-stone-800">
+    <footer className="bg-charcoal text-stone-400 pt-16 md:pt-24 pb-10 md:pb-12 border-t border-stone-800">
       <div ref={footerRef} className="container mx-auto px-6 md:px-12">
-        
+
         {/* Main Grid Content - 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-14 md:mb-20">
+
           {/* Column 1: Brand Identity & Socials */}
           <div className="space-y-6" data-footer-col>
             <h2 className="font-serif text-3xl text-white tracking-tight">VB.</h2>
@@ -73,16 +73,16 @@ const Footer: React.FC = () => {
             <div className="pt-4">
               <p className="text-xs uppercase tracking-widest text-stone-500 mb-2">Address</p>
               <p className="text-sm font-light text-stone-300">
-                Jalan Karang Mas, Ungasan<br/>
-                Badung Regency, Bali 80361<br/>
+                Jalan Karang Mas, Ungasan<br />
+                Badung Regency, Bali 80361<br />
                 Indonesia
               </p>
             </div>
             {/* Social Icons Moved Here */}
-             <div className="flex gap-6 pt-2">
-                <a href="#" className="text-stone-500 hover:text-teak-accent transition-colors"><Instagram className="w-5 h-5" /></a>
-                <a href="#" className="text-stone-500 hover:text-teak-accent transition-colors"><Facebook className="w-5 h-5" /></a>
-             </div>
+            <div className="flex gap-6 pt-2">
+              <a href="#" className="text-stone-500 hover:text-teak-accent transition-colors"><Instagram className="w-5 h-5" /></a>
+              <a href="#" className="text-stone-500 hover:text-teak-accent transition-colors"><Facebook className="w-5 h-5" /></a>
+            </div>
           </div>
 
           {/* Column 2: Navigation */}
@@ -116,18 +116,18 @@ const Footer: React.FC = () => {
           <p className="text-[10px] uppercase tracking-widest text-stone-600">
             &copy; {new Date().getFullYear()} Villa VB Ungasan. All rights reserved.
           </p>
-          
+
           <div className="flex items-center gap-8">
-             <span className="text-[10px] uppercase tracking-widest text-stone-600 hidden md:block">
-               Designed by Coastal Modernism
-             </span>
-             <button 
-               onClick={scrollToTop}
-               className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-stone-400 hover:text-white transition-colors group"
-             >
-               Back to Top
-               <ArrowUp className="w-3 h-3 group-hover:-translate-y-1 transition-transform" />
-             </button>
+            <span className="text-[10px] uppercase tracking-widest text-stone-600 hidden md:block">
+              Designed by Coastal Modernism
+            </span>
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-stone-400 hover:text-white transition-colors group"
+            >
+              Back to Top
+              <ArrowUp className="w-3 h-3 group-hover:-translate-y-1 transition-transform" />
+            </button>
           </div>
         </div>
 

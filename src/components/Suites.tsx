@@ -188,13 +188,18 @@ const Suites: React.FC = () => {
     }
   }, [showLeftArrow, showRightArrow, shouldReduceMotion]);
 
-  const scrollTabs = (direction: 'left' | 'right') => {
-    if (tabsRef.current) {
-      const scrollAmount = 200;
-      tabsRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
+  const navigateRoom = (direction: 'left' | 'right') => {
+    const currentIndex = ROOMS.findIndex(r => r.id === activeRoomId);
+    const nextIndex = direction === 'left'
+      ? Math.max(0, currentIndex - 1)
+      : Math.min(ROOMS.length - 1, currentIndex + 1);
+
+    setActiveRoomId(ROOMS[nextIndex].id);
+
+    // Scroll the tab into view
+    const targetTab = tabRefs.current[nextIndex];
+    if (targetTab && tabsRef.current) {
+      targetTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   };
 
@@ -240,23 +245,23 @@ const Suites: React.FC = () => {
         </div>
 
         {/* Horizontal Tab Navigation Container */}
-          <div ref={tabsWrapRef} className="relative flex justify-center">
+        <div ref={tabsWrapRef} className="relative flex justify-center">
 
           {/* Left Navigation Arrow (Mobile/Tablet) */}
-            {showLeftArrow && (
-              <div
-                ref={leftArrowRef}
-                className="absolute left-0 top-0 bottom-0 z-20 flex items-center pr-8 bg-gradient-to-r from-limestone via-limestone to-transparent"
+          {showLeftArrow && (
+            <div
+              ref={leftArrowRef}
+              className="absolute left-0 top-0 bottom-0 z-20 flex items-center pr-8 bg-gradient-to-r from-limestone via-limestone to-transparent"
+            >
+              <button
+                onClick={() => navigateRoom('left')}
+                className="bg-white border border-stone-200 rounded-full p-2 shadow-md hover:bg-stone-100 transition-colors"
+                aria-label="Scroll left"
               >
-                <button
-                  onClick={() => scrollTabs('left')}
-                  className="bg-white border border-stone-200 rounded-full p-2 shadow-md hover:bg-stone-100 transition-colors"
-                  aria-label="Scroll left"
-                >
-                  <ChevronLeft className="w-4 h-4 text-stone-600" />
-                </button>
-              </div>
-            )}
+                <ChevronLeft className="w-4 h-4 text-stone-600" />
+              </button>
+            </div>
+          )}
 
           {/* Scrollable Tabs */}
           <div
@@ -297,98 +302,98 @@ const Suites: React.FC = () => {
 
           {/* Right Navigation Arrow (Mobile/Tablet) */}
           {showRightArrow && (
-              <div
-                ref={rightArrowRef}
-                className="absolute right-0 top-0 bottom-0 z-20 flex items-center pl-8 bg-gradient-to-l from-limestone via-limestone to-transparent"
+            <div
+              ref={rightArrowRef}
+              className="absolute right-0 top-0 bottom-0 z-20 flex items-center pl-8 bg-gradient-to-l from-limestone via-limestone to-transparent"
+            >
+              <button
+                onClick={() => navigateRoom('right')}
+                className="bg-white border border-stone-200 rounded-full p-2 shadow-md hover:bg-stone-100 transition-colors"
+                aria-label="Scroll right"
               >
-                <button
-                  onClick={() => scrollTabs('right')}
-                  className="bg-white border border-stone-200 rounded-full p-2 shadow-md hover:bg-stone-100 transition-colors"
-                  aria-label="Scroll right"
-                >
-                  <ChevronRight className="w-4 h-4 text-stone-600" />
-                </button>
-              </div>
-            )}
+                <ChevronRight className="w-4 h-4 text-stone-600" />
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Content Display */}
         <div ref={contentRef} className="relative mt-4">
-            <div key={activeRoom.id} className="flex flex-col gap-10">
-              {/* Image Container - Larger Aspect Ratio 16:9 */}
-              <div
-                ref={visualRef}
-                data-suite-reveal
-                className="relative aspect-[4/3] md:aspect-[16/9] w-full overflow-hidden bg-stone-200 shadow-xl"
-              >
-                <img
-                  src={activeRoom.imageUrl}
-                  alt={activeRoom.name}
-                  className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
-                  loading="lazy"
-                  decoding="async"
-                />
+          <div key={activeRoom.id} className="flex flex-col gap-10">
+            {/* Image Container - Larger Aspect Ratio 16:9 */}
+            <div
+              ref={visualRef}
+              data-suite-reveal
+              className="relative aspect-[3/2] md:aspect-[16/9] w-full overflow-hidden bg-stone-200 shadow-xl"
+            >
+              <img
+                src={activeRoom.imageUrl}
+                alt={activeRoom.name}
+                className="w-full h-full object-cover transition-transform duration-[4s] hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            {/* Room Details Split Layout */}
+            <div data-suite-reveal className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+
+              {/* Left: Detailed Description */}
+              <div className="lg:col-span-7 flex flex-col justify-center" data-suite-reveal>
+                <h3 className="font-serif text-2xl md:text-3xl lg:text-4xl text-charcoal mb-4 md:mb-6">{activeRoom.name}</h3>
+                <div className="h-[1px] w-16 bg-teak-accent mb-8"></div>
+                <p className="text-stone-600 font-light text-base md:text-lg leading-relaxed mb-10">
+                  {activeRoom.description}
+                </p>
+                <div>
+                  <button
+                    ref={ctaRef}
+                    onClick={() => handleRoomInquiry(activeRoom.name)}
+                    onMouseEnter={handleCtaEnter}
+                    onMouseLeave={handleCtaLeave}
+                    className="inline-flex items-center gap-3 text-xs uppercase tracking-widest bg-charcoal text-white px-6 py-3 md:px-8 md:py-4 hover:bg-teak-accent hover:gap-4 transition-all duration-300"
+                  >
+                    <span>Reserve via WhatsApp</span>
+                    <svg
+                      className="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                      focusable="false"
+                      fill="currentColor"
+                    >
+                      <path d="M12.04 2C6.56 2 2.1 6.48 2.1 11.96c0 1.9.5 3.77 1.48 5.4L2 22l4.75-1.52a9.9 9.9 0 0 0 5.29 1.51h.01c5.48 0 9.94-4.48 9.94-9.96C22 6.48 17.53 2 12.04 2zm5.8 14.2c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.12.11-1.8-.1-.4-.12-.92-.3-1.59-.6-2.8-1.22-4.62-4.2-4.76-4.4-.13-.2-1.14-1.53-1.14-2.92 0-1.38.72-2.05.98-2.33.24-.28.56-.35.75-.35.18 0 .37 0 .53.01.18.01.42-.07.66.5.24.58.82 2 .9 2.15.07.15.12.32.02.52-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.32-.13.62.17.3.76 1.25 1.63 2.02 1.12.98 2.06 1.29 2.36 1.43.3.14.48.12.66-.08.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.23.58.36.07.12.07.72-.17 1.4z" />
+                    </svg>
+                  </button>
+                </div>
               </div>
 
-              {/* Room Details Split Layout */}
-              <div data-suite-reveal className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-
-                {/* Left: Detailed Description */}
-                <div className="lg:col-span-7 flex flex-col justify-center" data-suite-reveal>
-                  <h3 className="font-serif text-3xl md:text-4xl text-charcoal mb-6">{activeRoom.name}</h3>
-                  <div className="h-[1px] w-16 bg-teak-accent mb-8"></div>
-                  <p className="text-stone-600 font-light text-base md:text-lg leading-relaxed mb-10">
-                    {activeRoom.description}
-                  </p>
-                  <div>
-                    <button
-                      ref={ctaRef}
-                      onClick={() => handleRoomInquiry(activeRoom.name)}
-                      onMouseEnter={handleCtaEnter}
-                      onMouseLeave={handleCtaLeave}
-                      className="inline-flex items-center gap-3 text-xs uppercase tracking-widest bg-charcoal text-white px-8 py-4 hover:bg-teak-accent hover:gap-4 transition-all duration-300"
-                    >
-                      <span>Reserve via WhatsApp</span>
-                      <svg
-                        className="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                        focusable="false"
-                        fill="currentColor"
-                      >
-                        <path d="M12.04 2C6.56 2 2.1 6.48 2.1 11.96c0 1.9.5 3.77 1.48 5.4L2 22l4.75-1.52a9.9 9.9 0 0 0 5.29 1.51h.01c5.48 0 9.94-4.48 9.94-9.96C22 6.48 17.53 2 12.04 2zm5.8 14.2c-.24.68-1.42 1.3-1.96 1.38-.5.08-1.12.11-1.8-.1-.4-.12-.92-.3-1.59-.6-2.8-1.22-4.62-4.2-4.76-4.4-.13-.2-1.14-1.53-1.14-2.92 0-1.38.72-2.05.98-2.33.24-.28.56-.35.75-.35.18 0 .37 0 .53.01.18.01.42-.07.66.5.24.58.82 2 .9 2.15.07.15.12.32.02.52-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.32-.13.62.17.3.76 1.25 1.63 2.02 1.12.98 2.06 1.29 2.36 1.43.3.14.48.12.66-.08.18-.2.75-.88.95-1.18.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.23.58.36.07.12.07.72-.17 1.4z" />
-                      </svg>
-                    </button>
+              {/* Right: Dedicated Amenities Grid */}
+              <div className="lg:col-span-5" data-suite-reveal>
+                <div className="bg-white/90 p-8 border border-white/70 shadow-coastal h-full backdrop-blur-sm">
+                  <div className="flex items-center justify-between mb-8 border-b border-stone-100 pb-4">
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-stone-400">Suite Features</span>
+                    <Star className="w-4 h-4 text-teak-accent/50" />
                   </div>
-                </div>
 
-                {/* Right: Dedicated Amenities Grid */}
-                <div className="lg:col-span-5" data-suite-reveal>
-                  <div className="bg-white/90 p-8 border border-white/70 shadow-coastal h-full backdrop-blur-sm">
-                    <div className="flex items-center justify-between mb-8 border-b border-stone-100 pb-4">
-                      <span className="text-[10px] uppercase tracking-[0.2em] text-stone-400">Suite Features</span>
-                      <Star className="w-4 h-4 text-teak-accent/50" />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {activeRoom.features.map((feature, idx) => {
-                        const Icon = getIconComponent(feature);
-                        return (
-                          <div key={idx} className="flex items-start gap-3 p-3 rounded-lg hover:bg-stone-50 transition-colors group">
-                            <div className="mt-0.5 text-stone-400 group-hover:text-teak-accent transition-colors">
-                              <Icon className="w-5 h-5" strokeWidth={1.5} />
-                            </div>
-                            <span className="text-xs text-stone-600 font-medium uppercase tracking-wide leading-relaxed group-hover:text-stone-900">
-                              {feature}
-                            </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {activeRoom.features.map((feature, idx) => {
+                      const Icon = getIconComponent(feature);
+                      return (
+                        <div key={idx} className="flex items-start gap-3 p-3 rounded-lg hover:bg-stone-50 transition-colors group">
+                          <div className="mt-0.5 text-stone-400 group-hover:text-teak-accent transition-colors">
+                            <Icon className="w-5 h-5" strokeWidth={1.5} />
                           </div>
-                        );
-                      })}
-                    </div>
+                          <span className="text-xs text-stone-600 font-medium uppercase tracking-wide leading-relaxed group-hover:text-stone-900">
+                            {feature}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
             </div>
+          </div>
         </div>
 
       </div>

@@ -55,7 +55,7 @@ const Testimonials: React.FC = () => {
   }, [shouldReduceMotion]);
 
   return (
-    <Section className="bg-sand relative overflow-hidden py-32">
+    <Section className="bg-sand relative overflow-hidden py-16 md:py-24 lg:py-32">
       {/* Ambient Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[20%] right-[-5%] w-[40%] h-[40%] bg-white/40 rounded-full blur-[100px]"></div>
@@ -68,11 +68,11 @@ const Testimonials: React.FC = () => {
           <h2 className="font-serif text-4xl md:text-5xl text-charcoal">Moments from Our Guests</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {REVIEWS.map((review) => (
-            <div key={review.id} className="testimonial-card flex flex-col items-center text-center p-8 md:p-12">
+            <div key={review.id} className="testimonial-card flex flex-col items-center text-center p-6 md:p-8 lg:p-12">
               <div className="mb-8 text-teak-accent/20">
-                <Quote className="w-12 h-12 fill-current" />
+                <Quote className="w-8 h-8 md:w-12 md:h-12 fill-current" />
               </div>
 
               <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">

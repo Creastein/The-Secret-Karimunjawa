@@ -64,14 +64,20 @@ export const PRICING: PricingTier = {
 export const REVIEWS = [
   {
     id: 1,
-    text: "Honestly, we booked this just to escape the Canggu crowds, and it was the best decision. The photos don't capture the actual scale of the living area—it is massive. Waking up to that quiet every morning was exactly what we needed.",
-    author: "Elena & Marc Dubois",
-    origin: "Lyon, France"
+    text: "This is the most 'homely' place I've ever stayed in during my time in Bali. The surroundings are quiet and safe, and the villa rooms are spotlessly clean. The breakfast is absolutely delicious — fresh, hygienic, and we always felt completely full every morning. I would definitely choose to stay here again.",
+    author: "Chuchun Cheng",
+    origin: "5/5 — Google Review"
   },
   {
     id: 2,
-    text: "It wasn't just the design, it was the team. They anticipated things before we asked—from fresh coconuts by the pool to sorting out our dinner reservations. It felt completely private, yet we never felt abandoned.",
-    author: "Sarah Jenkins",
-    origin: "Sydney, Australia"
+    text: "Staying at this villa for our honeymoon was truly unforgettable. The serene surroundings, breathtaking views, and thoughtful attention to every detail created a perfect sense of peace and romance. When the owner got to know we were here for our honeymoon, he surprisingly left a cake for us. One of the best owners and staff — must check out this place.",
+    author: "Himani Gupta",
+    origin: "5/5 — Google Review"
+  },
+  {
+    id: 3,
+    text: "We had an amazing stay at the villa. The place was spotless, spacious, and beautifully designed. The rooms were cozy, the pool was clean and private, and the surroundings were incredibly peaceful. The staff were friendly and always ready to help. It truly felt like a home away from home. Highly recommended!",
+    author: "Rupeash Gautam",
+    origin: "5/5 — Google Review"
   }
 ];

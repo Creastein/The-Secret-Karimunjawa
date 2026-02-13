@@ -39,9 +39,9 @@ const AvailabilityStickyBar: React.FC = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 20, opacity: 0 }}
           transition={{ type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 z-50 md:bottom-8 md:right-8"
+          className="fixed bottom-4 left-4 right-4 md:bottom-8 md:left-auto md:right-8 z-50"
         >
-          <div className="bg-charcoal/90 backdrop-blur-xl text-white p-2 pl-4 pr-2 rounded-full shadow-2xl flex items-center gap-4 border border-white/10 ring-1 ring-white/5">
+          <div className="bg-charcoal/90 backdrop-blur-xl text-white p-2 pl-4 pr-2 rounded-full shadow-2xl flex items-center justify-between md:justify-start gap-3 md:gap-4 border border-white/10 ring-1 ring-white/5">
 
             {/* Info Compact */}
             <div className="flex flex-col items-end pr-2">

@@ -59,10 +59,10 @@ const Hero: React.FC = () => {
         ref={containerRef}
         className="relative min-h-[95vh] lg:min-h-screen grid lg:grid-cols-[1.05fr_1.4fr] gap-8 lg:gap-0 items-stretch"
       >
-        <div className="relative z-10 flex items-end lg:items-center px-6 md:px-12 lg:px-16 py-16 lg:py-24">
+        <div className="relative z-10 flex items-end lg:items-center px-5 md:px-12 lg:px-16 py-10 md:py-16 lg:py-24 order-2 lg:order-1">
           <div
             ref={heroContentRef}
-            className="max-w-xl bg-limestone/90 backdrop-blur-xl px-8 md:px-10 py-10 md:py-12 border border-white/70 ring-coastal shadow-coastal"
+            className="max-w-xl bg-limestone/90 backdrop-blur-xl px-6 md:px-10 py-8 md:py-12 border border-white/70 ring-coastal shadow-coastal"
           >
             <div data-hero-reveal className="flex items-center gap-4 mb-6">
               <span className="h-[1px] w-12 bg-teak-accent/80" />
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-charcoal leading-[1.05]">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-charcoal leading-[1.05]">
               <span data-hero-reveal className="block">Coastal Modernism</span>
               <span data-hero-reveal className="block font-light italic text-tide">Refined to Silence</span>
             </h1>
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden min-h-[50vh] lg:min-h-0 order-1 lg:order-2">
           <img
             ref={imageRef}
             src="/assets/hero-coastal.png"
