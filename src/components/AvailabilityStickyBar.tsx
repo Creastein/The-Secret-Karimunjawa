@@ -21,7 +21,7 @@ const AvailabilityStickyBar: React.FC = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open(`https://wa.me/6281234567890?text=I'm%20interested%20in%20staying%20at%20Villa%20VB.%20Could%20you%20share%20availability%20for...`, '_blank');
+    window.open(`https://wa.me/628131011434?text=I'm%20interested%20in%20staying%20at%20The%20Secret%20Karimunjawa.%20Could%20you%20share%20availability%20for...`, '_blank');
   };
 
   const handleScrollToBooking = () => {
@@ -54,7 +54,7 @@ const AvailabilityStickyBar: React.FC = () => {
               </div>
               <div className="flex items-baseline gap-1">
                 <span className="font-serif text-sm leading-none">Rp {PRICING.price}</span>
-                <span className="text-[10px] text-stone-400 font-light lowercase">/ 2malam</span>
+                <span className="text-[10px] text-stone-400 font-light lowercase">/ malam</span>
               </div>
             </div>
 

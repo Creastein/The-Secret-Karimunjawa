@@ -1,7 +1,7 @@
 export interface Facility {
   id: string;
   name: string;
-  iconName: 'Wifi' | 'Tv' | 'Wind' | 'Coffee' | 'Utensils' | 'Shield' | 'Waves' | 'Trees';
+  iconName: 'Anchor' | 'Utensils' | 'Car' | 'PawPrint' | 'Eye' | 'CigaretteOff' | 'ConciergeBell' | 'Sunrise';
   description: string;
 }
 

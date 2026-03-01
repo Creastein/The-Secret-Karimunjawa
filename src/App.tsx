@@ -25,23 +25,23 @@ const App: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Villa VB Bali - Ungasan Coastal Modernism</title>
-        <meta name="description" content="Experience coastal modernism at Villa VB Bali. A luxury private sanctuary in Ungasan featuring sustainable design, ocean views, and bespoke hospitality." />
-        <meta name="keywords" content="luxury villa bali, ungasan villa, villa vb, coastal modernism, private pool villa, bali architecture" />
+        <title>The Secret Karimunjawa — Exclusive Island Retreat</title>
+        <meta name="description" content="Experience The Secret Karimunjawa, an exclusive island retreat on the shores of Karimunjawa. Beachfront villas, world-class diving, and heartfelt Indonesian hospitality. Rated 9.6 Istimewa." />
+        <meta name="keywords" content="the secret karimunjawa, karimunjawa villa, island retreat, beachfront villa, karimunjawa hotel, jepara, diving karimunjawa" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://villavb.com/" />
-        <meta property="og:title" content="Villa VB Bali - Ungasan Coastal Modernism" />
-        <meta property="og:description" content="Where raw concrete meets organic tropics. Discover a masterpiece of sustainable luxury living in the heart of Ungasan." />
-        <meta property="og:image" content="https://picsum.photos/seed/luxuryvilla15/1200/630" />
+        <meta property="og:url" content="https://thesecretkarimunjawa.com/" />
+        <meta property="og:title" content="The Secret Karimunjawa — Exclusive Island Retreat" />
+        <meta property="og:description" content="An exclusive island retreat where nature, hospitality, and tranquility converge on the pristine shores of Karimunjawa." />
+        <meta property="og:image" content="/assets/hero-coastal.png" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://villavb.com/" />
-        <meta property="twitter:title" content="Villa VB Bali - Ungasan Coastal Modernism" />
-        <meta property="twitter:description" content="Where raw concrete meets organic tropics. Discover a masterpiece of sustainable luxury living in the heart of Ungasan." />
-        <meta property="twitter:image" content="https://picsum.photos/seed/luxuryvilla15/1200/630" />
+        <meta property="twitter:url" content="https://thesecretkarimunjawa.com/" />
+        <meta property="twitter:title" content="The Secret Karimunjawa — Exclusive Island Retreat" />
+        <meta property="twitter:description" content="An exclusive island retreat where nature, hospitality, and tranquility converge on the pristine shores of Karimunjawa." />
+        <meta property="twitter:image" content="/assets/hero-coastal.png" />
       </Helmet>
 
       <Preloader onComplete={handlePreloaderComplete} />

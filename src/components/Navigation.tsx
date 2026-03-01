@@ -9,7 +9,7 @@ const Navigation: React.FC = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'The Estate', href: '#estate' },
+    { name: 'The Retreat', href: '#estate' },
     { name: 'Suites', href: '#suites' },
     { name: 'Experience', href: '#experience' },
     { name: 'Gallery', href: '#gallery' },
@@ -114,7 +114,7 @@ const Navigation: React.FC = () => {
             onClick={handleLogoClick}
             className="font-serif text-xl md:text-2xl tracking-tight font-semibold relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity"
           >
-            <span>VB.</span>
+            <span>TS.</span>
           </a>
 
           {/* Desktop Menu - Always visible in pill */}
@@ -189,7 +189,7 @@ const Navigation: React.FC = () => {
                 transition={{ delay: 0.6 }}
                 className="mt-8 pt-8 border-t border-stone-200 w-32"
               >
-                <p className="text-xs text-stone-400 uppercase tracking-widest">Ungasan, Bali</p>
+                <p className="text-xs text-stone-400 uppercase tracking-widest">Karimunjawa, Jepara</p>
               </motion.div>
             </div>
           </motion.div>
