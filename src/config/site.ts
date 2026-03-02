@@ -21,7 +21,6 @@ export const ROOMS: Room[] = [
   },
 ];
 
-// EXPANDED GALLERY FOR MASONRY LAYOUT WITH CATEGORIES
 export const GALLERY_IMAGES: ImageItem[] = [
   { id: '1', url: '/assets/gallery-exteriors-1.png', alt: 'Aerial View of The Secret Karimunjawa', category: 'Exteriors', span: true },
   { id: '2', url: '/assets/gallery-interiors-1.png', alt: 'Rustic Wooden Living Area', category: 'Interiors', span: false },

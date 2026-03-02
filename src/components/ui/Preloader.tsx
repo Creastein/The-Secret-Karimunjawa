@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 interface PreloaderProps {
-  onComplete: () => void;
+  onComplete: () => void
 }
 
-const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
-  const [isVisible, setIsVisible] = useState(true);
+export default function Preloader({ onComplete }: PreloaderProps) {
+  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    // Simulate asset loading time or minimum brand exposure time
     const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(onComplete, 1000); // Allow exit animation to finish
-    }, 2500);
+      setIsVisible(false)
+      setTimeout(onComplete, 1000)
+    }, 2500)
 
-    return () => clearTimeout(timer);
-  }, [onComplete]);
+    return () => clearTimeout(timer)
+  }, [onComplete])
 
   return (
     <AnimatePresence>
@@ -24,7 +23,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.8, ease: 'easeInOut' }}
           className="fixed inset-0 z-[9999] bg-charcoal flex items-center justify-center"
         >
           <div className="text-center overflow-hidden">
@@ -39,7 +38,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ duration: 1.5, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 1.5, delay: 0.5, ease: 'easeInOut' }}
               className="h-[1px] bg-stone-600 w-32 mx-auto mt-4"
             />
             <motion.p
@@ -54,7 +53,5 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         </motion.div>
       )}
     </AnimatePresence>
-  );
-};
-
-export default Preloader;
+  )
+}

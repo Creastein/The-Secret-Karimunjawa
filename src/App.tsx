@@ -1,26 +1,22 @@
-import React, { useState, Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Estate from './components/Estate';
-import Preloader from './components/Preloader';
+import { useState, Suspense, lazy, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from './components/layout/Navigation'
+import Hero from './components/sections/Hero'
+import Estate from './components/sections/Estate'
+import Preloader from './components/ui/Preloader'
 
-// Lazy load components below the fold
-const Suites = lazy(() => import('./components/Suites'));
-const Experience = lazy(() => import('./components/Experience'));
-const Gallery = lazy(() => import('./components/Gallery'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const Contact = lazy(() => import('./components/Contact'));
-const Location = lazy(() => import('./components/Location'));
-const Footer = lazy(() => import('./components/Footer'));
-const AvailabilityStickyBar = lazy(() => import('./components/AvailabilityStickyBar'));
+const Suites = lazy(() => import('./components/sections/Suites'))
+const Experience = lazy(() => import('./components/sections/Experience'))
+const Gallery = lazy(() => import('./components/sections/Gallery'))
+const Testimonials = lazy(() => import('./components/sections/Testimonials'))
+const Contact = lazy(() => import('./components/sections/Contact'))
+const Location = lazy(() => import('./components/sections/Location'))
+const Footer = lazy(() => import('./components/layout/Footer'))
+const AvailabilityStickyBar = lazy(() => import('./components/ui/AvailabilityStickyBar'))
 
-const App: React.FC = () => {
-  const [loading, setLoading] = useState(true);
-
-  const handlePreloaderComplete = React.useCallback(() => {
-    setLoading(false);
-  }, []);
+export default function App() {
+  const [loading, setLoading] = useState(true)
+  const handlePreloaderComplete = useCallback(() => setLoading(false), [])
 
   return (
     <>
@@ -29,14 +25,12 @@ const App: React.FC = () => {
         <meta name="description" content="Experience The Secret Karimunjawa, an exclusive island retreat on the shores of Karimunjawa. Beachfront villas, world-class diving, and heartfelt Indonesian hospitality. Rated 9.6 Istimewa." />
         <meta name="keywords" content="the secret karimunjawa, karimunjawa villa, island retreat, beachfront villa, karimunjawa hotel, jepara, diving karimunjawa" />
 
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://thesecretkarimunjawa.com/" />
         <meta property="og:title" content="The Secret Karimunjawa — Exclusive Island Retreat" />
         <meta property="og:description" content="An exclusive island retreat where nature, hospitality, and tranquility converge on the pristine shores of Karimunjawa." />
         <meta property="og:image" content="/assets/hero-coastal.png" />
 
-        {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://thesecretkarimunjawa.com/" />
         <meta property="twitter:title" content="The Secret Karimunjawa — Exclusive Island Retreat" />
@@ -65,7 +59,5 @@ const App: React.FC = () => {
         </div>
       )}
     </>
-  );
-};
-
-export default App;
+  )
+}

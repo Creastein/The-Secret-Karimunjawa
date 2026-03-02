@@ -1,42 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Instagram, Facebook, ArrowUp } from 'lucide-react';
+import { motion } from 'framer-motion'
+import { Instagram, Facebook, ArrowUp } from 'lucide-react'
+import { fadeUp, staggerContainer } from '@/lib/motion'
 
-// Animation variants
-const containerVariant = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 }
-  }
-};
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
-  }
-};
-
-const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+export default function Footer() {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
     <footer className="bg-charcoal text-stone-400 pt-16 md:pt-24 pb-10 md:pb-12 border-t border-stone-800">
       <div className="container mx-auto px-6 md:px-12">
 
-        {/* Main Grid Content */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
-          variants={containerVariant}
+          initial="hidden" whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+          variants={staggerContainer(0.12)}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-14 md:mb-20"
         >
-          {/* Column 1: Brand */}
           <motion.div variants={fadeUp} className="space-y-6">
             <h2 className="font-serif text-3xl text-white tracking-tight">TS.</h2>
             <p className="text-sm font-light leading-relaxed max-w-xs">
@@ -56,7 +34,6 @@ const Footer: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Column 2: Navigation */}
           <motion.div variants={fadeUp} className="lg:pl-12">
             <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">Explore</h4>
             <ul className="space-y-4 text-sm font-light">
@@ -68,7 +45,6 @@ const Footer: React.FC = () => {
             </ul>
           </motion.div>
 
-          {/* Column 3: Info */}
           <motion.div variants={fadeUp}>
             <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">Information</h4>
             <ul className="space-y-4 text-sm font-light">
@@ -81,7 +57,6 @@ const Footer: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -92,15 +67,11 @@ const Footer: React.FC = () => {
           <p className="text-[10px] uppercase tracking-widest text-stone-600">
             &copy; {new Date().getFullYear()} The Secret Karimunjawa. All rights reserved.
           </p>
-
           <div className="flex items-center gap-8">
             <span className="text-[10px] uppercase tracking-widest text-stone-600 hidden md:block">
               Karimunjawa Island Retreat
             </span>
-            <button
-              onClick={scrollToTop}
-              className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-stone-400 hover:text-white transition-colors group"
-            >
+            <button onClick={scrollToTop} className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-stone-400 hover:text-white transition-colors group">
               Back to Top
               <ArrowUp className="w-3 h-3 group-hover:-translate-y-1 transition-transform" />
             </button>
@@ -109,7 +80,5 @@ const Footer: React.FC = () => {
 
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}

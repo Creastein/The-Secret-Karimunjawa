@@ -1,102 +1,65 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Menu } from 'lucide-react';
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { X, Menu } from 'lucide-react'
+import { useScrollSpy } from '@/hooks/useScrollSpy'
+import { useLockBodyScroll } from '@/hooks/useLockBodyScroll'
+import { EASE_OUT_EXPO } from '@/lib/motion'
 
-const Navigation: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+const NAV_LINKS = [
+  { name: 'Home', href: '#home', id: 'home' },
+  { name: 'The Retreat', href: '#estate', id: 'estate' },
+  { name: 'Suites', href: '#suites', id: 'suites' },
+  { name: 'Experience', href: '#experience', id: 'experience' },
+  { name: 'Gallery', href: '#gallery', id: 'gallery' },
+  { name: 'Contact', href: '#contact', id: 'contact' },
+] as const
 
-  const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'The Retreat', href: '#estate' },
-    { name: 'Suites', href: '#suites' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Contact', href: '#contact' },
-  ];
+const SECTION_IDS = NAV_LINKS.map((l) => l.id)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // 1. Handle Navbar Appearance
-      setScrolled(window.scrollY > 50);
+export default function Navigation() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const activeSection = useScrollSpy({ offset: 200, ids: [...SECTION_IDS] })
 
-      // 2. Handle Scroll Spy (Active Section Detection)
-      const scrollPosition = window.scrollY + 200; // Offset (Header height + buffer)
+  useLockBodyScroll(mobileOpen)
 
-      // Find the current section
-      for (const link of navLinks) {
-        const sectionId = link.href.replace('#', '');
-        const element = document.getElementById(sectionId);
+  useState(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  })
 
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(sectionId);
-          }
-        }
-      }
-    };
+  const scrollToElement = (id: string, delay = 0) => {
+    const el = document.getElementById(id)
+    if (!el) return
 
-    window.addEventListener('scroll', handleScroll);
-    // Trigger once on mount to set initial active state
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Lock body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
+    const offset = mobileOpen ? 80 : 100
+    const go = () => {
+      const top = el.getBoundingClientRect().top + window.scrollY - offset
+      window.scrollTo({ top, behavior: 'smooth' })
     }
-  }, [isMobileOpen]);
+
+    delay ? setTimeout(go, delay) : go()
+  }
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault()
+    if (mobileOpen) {
+      setMobileOpen(false)
+      scrollToElement(id, 350)
+    } else {
+      scrollToElement(id)
+    }
+  }
 
   const handleLogoClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (isMobileOpen) setIsMobileOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
-
-    if (element) {
-      if (isMobileOpen) {
-        setIsMobileOpen(false);
-        setTimeout(() => {
-          const headerOffset = 80;
-          const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }, 350);
-      } else {
-        const headerOffset = 100;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-    }
-  };
+    e.preventDefault()
+    setMobileOpen(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <>
-      {/* Navigation Container */}
       <div className={`fixed top-0 left-0 right-0 z-50 flex justify-end md:justify-center px-6 md:px-0 transition-all duration-700 ${scrolled ? 'pt-4' : 'pt-6 md:pt-10'}`}>
         <nav
           className={`
@@ -108,56 +71,38 @@ const Navigation: React.FC = () => {
             }
           `}
         >
-          {/* Logo - Timeless Serif Monogram - Clickable */}
-          <a
-            href="#"
-            onClick={handleLogoClick}
-            className="font-serif text-xl md:text-2xl tracking-tight font-semibold relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity"
-          >
+          <a href="#" onClick={handleLogoClick} className="font-serif text-xl md:text-2xl tracking-tight font-semibold relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity">
             <span>TS.</span>
           </a>
 
-          {/* Desktop Menu - Always visible in pill */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.href.replace('#', '');
+            {NAV_LINKS.map((link) => {
+              const isActive = activeSection === link.id
               return (
                 <a
-                  key={link.name}
+                  key={link.id}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className={`
-                    text-[11px] uppercase tracking-widest transition-colors relative group py-1 font-medium cursor-pointer
-                    ${isActive ? 'text-ink' : 'text-stone-500 hover:text-tide'}
-                  `}
+                  onClick={(e) => handleNavClick(e, link.id)}
+                  className={`text-[11px] uppercase tracking-widest transition-colors relative group py-1 font-medium cursor-pointer ${isActive ? 'text-ink' : 'text-stone-500 hover:text-tide'}`}
                 >
                   {link.name}
-                  <span className={`
-                    absolute bottom-0 left-0 h-[1px] bg-teak-accent transition-all duration-500
-                    ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}
-                  `}></span>
+                  <span className={`absolute bottom-0 left-0 h-[1px] bg-teak-accent transition-all duration-500 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </a>
-              );
+              )
             })}
           </div>
 
-          {/* Mobile Toggle */}
           <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-ink relative z-50 focus:outline-none p-2.5 hover:bg-stone-100 rounded-full transition-colors ml-1 min-w-[44px] min-h-[44px] flex items-center justify-center"
           >
-            {isMobileOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </nav>
       </div>
 
-      {/* Mobile Full Screen Overlay */}
       <AnimatePresence>
-        {isMobileOpen && (
+        {mobileOpen && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -167,16 +112,16 @@ const Navigation: React.FC = () => {
             style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
           >
             <div className="flex flex-col items-center gap-8 text-center">
-              {navLinks.map((link, i) => {
-                const isActive = activeSection === link.href.replace('#', '');
+              {NAV_LINKS.map((link, i) => {
+                const isActive = activeSection === link.id
                 return (
                   <motion.a
-                    key={link.name}
+                    key={link.id}
                     href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
+                    onClick={(e) => handleNavClick(e, link.id)}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 + (i * 0.1), duration: 0.5 }}
+                    transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
                     className={`font-serif text-3xl transition-colors cursor-pointer ${isActive ? 'text-teak-accent italic' : 'text-ink hover:text-tide'}`}
                   >
                     {link.name}
@@ -196,7 +141,5 @@ const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
-
-export default Navigation;
+  )
+}
