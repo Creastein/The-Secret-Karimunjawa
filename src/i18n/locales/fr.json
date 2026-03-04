@@ -255,50 +255,16 @@
         "eyebrow": "L'Île",
         "title": "10 Minutes du Village.",
         "titleAccent": "Un Monde à Part",
-        "description": "À 10 minutes du village de Karimunjawa et à 15 minutes à pied des plages principales — assez loin pour n'entendre que le bruit des vagues.",
-        "highlights": {
-            "access": "À 10 minutes du village avec un accès facile depuis l'aéroport et le port.",
-            "beaches": "Proche des principales plages comme Batu Topeng et Tanjung Gelam.",
-            "nature": "À proximité du Mont Maming et de sentiers de randonnée en forêt tropicale."
-        },
         "directionsLabel": "Obtenir l'itinéraire",
-        "access": {
-            "airport": {
-                "label": "Depuis l'Aéroport",
-                "description": "Organisez un transfert pour un accès direct à la villa."
-            },
-            "harbor": {
-                "label": "Depuis le Port",
-                "description": "Court trajet en voiture depuis le port de ferry."
-            }
+        "tabs": {
+            "nearby": "À proximité",
+            "culinary": "Gastronomie",
+            "airport": "Aéroport",
+            "transport": "Transport",
+            "attractions": "Attractions",
+            "landmarks": "Landmarks"
         },
-        "spots": {
-            "batuTopeng": {
-                "name": "Plage Batu Topeng",
-                "time": "1,3 km",
-                "desc": "Plage la plus proche de The Secret"
-            },
-            "sunset": {
-                "name": "Plage Sunset",
-                "time": "1,4 km",
-                "desc": "Spot favori pour admirer le coucher de soleil"
-            },
-            "ujungGelam": {
-                "name": "Plage Ujung Gelam",
-                "time": "1,7 km",
-                "desc": "Plage avec vue de coucher de soleil emblématique"
-            },
-            "legonLele": {
-                "name": "Plage Legon Lele",
-                "time": "5 km",
-                "desc": "Plage calme pour nager et se détendre"
-            },
-            "kanjen": {
-                "name": "Plage Kanjen",
-                "time": "5 km",
-                "desc": "Littoral plus sauvage et peu fréquenté"
-            }
-        }
+        "nearbyFooter": "Les distances sont mesurées en ligne droite. Les distances réelles peuvent varier."
     },
     "footer": {
         "description": "Construit avec amour. Accueilli comme une famille. Trois villas face à la mer au bord de Karimunjawa.",

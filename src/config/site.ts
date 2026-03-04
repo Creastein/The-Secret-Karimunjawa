@@ -1,4 +1,4 @@
-import { Facility, Room, ImageItem, PricingTier, LocationSpot, LocationAccess } from './types';
+import { Facility, Room, ImageItem, PricingTier, LocationSpot, LocationAccess, NearbyTab } from './types';
 
 export const FACILITIES: Facility[] = [
   { id: '1', name: 'Sea & Sunset View', iconName: 'Eye', description: 'Breathtaking 180-degree ocean views and spectacular daily sunsets.' },
@@ -157,6 +157,74 @@ export const LOCATION_SPOTS: LocationSpot[] = [
   { name: 'Pantai Legon Lele', time: '5 km', description: 'Pantai tenang untuk berenang dan bersantai', iconName: 'MapPin' },
   { name: 'Pantai Kanjen', time: '5 km', description: 'Pantai yang masih relatif sepi dan alami', iconName: 'MapPin' },
 ];
+
+export const NEARBY_TABS: NearbyTab[] = [
+  {
+    id: 'nearby',
+    labelKey: 'location.tabs.nearby',
+    places: [
+      { name: 'Pantai Batu Topeng', category: 'Landmark', distance: '786m', categoryColor: '#4285F4' },
+      { name: 'Whaleys Cafe', category: 'Restoran', distance: '2.6km', categoryColor: '#EA4335' },
+      { name: 'Karimunjawa Package', category: 'Atraksi outdoor', distance: '3.7km', categoryColor: '#34A853' },
+      { name: 'Pelabuhan Karimunjawa', category: 'Pelabuhan', distance: '4.9km', categoryColor: '#4285F4' },
+    ],
+  },
+  {
+    id: 'culinary',
+    labelKey: 'location.tabs.culinary',
+    places: [
+      { name: 'Whaleys Cafe', category: 'Restoran', distance: '2.6km', categoryColor: '#EA4335' },
+      { name: 'Basa-basi Karimunjawa', category: 'Restoran', distance: '3.1km', categoryColor: '#EA4335' },
+      { name: 'Eat & Meet Restaurant', category: 'Restoran', distance: '4km', categoryColor: '#EA4335' },
+      { name: 'Hakuna Matata Resto', category: 'Restoran', distance: '4.2km', categoryColor: '#EA4335' },
+      { name: 'Saung Odang', category: 'Restoran', distance: '4.5km', categoryColor: '#EA4335' },
+    ],
+  },
+  {
+    id: 'airport',
+    labelKey: 'location.tabs.airport',
+    places: [
+      { name: 'Bandar Udara Dewadaru', category: 'Bandara', distance: '8km', categoryColor: '#4285F4' },
+    ],
+  },
+  {
+    id: 'transport',
+    labelKey: 'location.tabs.transport',
+    places: [
+      { name: 'Pelabuhan Karimunjawa', category: 'Pelabuhan', distance: '4.9km', categoryColor: '#4285F4' },
+    ],
+  },
+  {
+    id: 'attractions',
+    labelKey: 'location.tabs.attractions',
+    places: [
+      { name: 'Karimunjawa Package', category: 'Atraksi outdoor', distance: '3.7km', categoryColor: '#34A853' },
+      { name: 'KarimunDjawa Tour', category: 'Atraksi outdoor', distance: '4.1km', categoryColor: '#34A853' },
+      { name: 'Go Green Tour', category: 'Atraksi outdoor', distance: '4.3km', categoryColor: '#34A853' },
+    ],
+  },
+  {
+    id: 'landmarks',
+    labelKey: 'location.tabs.landmarks',
+    places: [
+      { name: 'Pantai Batu Topeng', category: 'Landmark lain', distance: '786m', categoryColor: '#4285F4' },
+      { name: 'Pantai Ujung Gelam', category: 'Landmark lain', distance: '1.1km', categoryColor: '#4285F4' },
+      { name: 'Taman Nasional Karimunjawa', category: 'Taman & wisata alam', distance: '2.2km', categoryColor: '#34A853' },
+      { name: 'Bukit Cinta Karimunjawa', category: 'Landmark lain', distance: '2.6km', categoryColor: '#4285F4' },
+      { name: 'Karimunjawa National Park', category: 'Taman & wisata alam', distance: '3.4km', categoryColor: '#34A853' },
+      { name: 'Bukit Love', category: 'Landmark lain', distance: '3.6km', categoryColor: '#4285F4' },
+      { name: 'Alun-Alun Karimunjawa', category: 'Taman & wisata alam', distance: '4.2km', categoryColor: '#34A853' },
+      { name: 'Balon Oedara', category: 'Landmark lain', distance: '4.7km', categoryColor: '#4285F4' },
+      { name: 'Pulau Menjangan Besar', category: 'Landmark lain', distance: '4.9km', categoryColor: '#4285F4' },
+      { name: 'Pulau Menjangan Kecil', category: 'Landmark lain', distance: '5.3km', categoryColor: '#4285F4' },
+      { name: 'Kawasan Wisata Mangrove', category: 'Landmark lain', distance: '5.6km', categoryColor: '#4285F4' },
+      { name: 'Pantai Alano', category: 'Taman & wisata alam', distance: '5.9km', categoryColor: '#34A853' },
+      { name: 'Pantai Batu Lawang', category: 'Landmark lain', distance: '10.1km', categoryColor: '#4285F4' },
+      { name: 'Sintok Island', category: 'Landmark lain', distance: '12.2km', categoryColor: '#4285F4' },
+    ],
+  },
+];
+
 
 export const TESTIMONIALS_SECTION = {
   eyebrow: 'Guest Voices',

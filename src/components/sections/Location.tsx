@@ -1,34 +1,24 @@
-import type * as React from 'react'
+import { useState } from 'react'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Location01Icon, FerryBoatIcon, WaveIcon, MountainIcon, Navigation02Icon } from 'hugeicons-react'
+import { Navigation02Icon, Location01Icon } from 'hugeicons-react'
 
 import Section from '@/components/layout/Section'
-import { LOCATION_SECTION, LOCATION_SPOTS } from '@/config/site'
-import type { LocationIconName } from '@/config/types'
-import { fadeUp, spotReveal, mapReveal, staggerContainer } from '@/lib/motion'
+import { LOCATION_SECTION, NEARBY_TABS } from '@/config/site'
+import { fadeUp, staggerContainer, mapReveal } from '@/lib/motion'
 
-interface Props { }
-
-const iconMap: Record<LocationIconName, React.ElementType> = {
-  Waves: WaveIcon,
-  Ship: FerryBoatIcon,
-  Mountain: MountainIcon,
-  MapPin: Location01Icon,
-}
-
-const SPOT_KEYS = ['batuTopeng', 'sunset', 'ujungGelam', 'legonLele', 'kanjen'] as const
-const ACCESS_KEYS = ['airport', 'harbor'] as const
-
-const Location: React.FC<Props> = () => {
+const Location: React.FC = () => {
   const { t } = useTranslation()
+  const [activeTab, setActiveTab] = useState(0)
   const titleAccent = t('location.titleAccent')
+  const currentTab = NEARBY_TABS[activeTab]
 
   return (
     <Section id="location" className="bg-sand" fullWidth>
       <div className="flex flex-col-reverse lg:flex-row h-auto lg:h-[620px]">
 
+        {/* Left: Map (unchanged) */}
         <motion.div
           initial="hidden" whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
@@ -60,72 +50,107 @@ const Location: React.FC<Props> = () => {
           </motion.div>
         </motion.div>
 
+        {/* Right: Nearby Places Panel */}
         <motion.div
           initial="hidden" whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer(0.1, 0.15)}
-          className="w-full lg:w-1/3 bg-white px-6 py-10 md:px-10 md:py-12 lg:px-14 lg:py-16 flex flex-col justify-center border-l border-stone-200"
+          className="w-full lg:w-1/3 bg-white flex flex-col border-l border-stone-200 overflow-hidden"
         >
-          <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-6 block">
-            {t('location.eyebrow')}
-          </motion.span>
-          <motion.h2 variants={fadeUp} className="font-serif text-3xl md:text-4xl text-charcoal mb-4 leading-[1.05] tracking-tight max-w-xs md:max-w-sm">
-            {t('location.title')}
-            {titleAccent && (
-              <>
-                <br />
-                <span className="italic text-stone-400">{titleAccent}</span>
-              </>
-            )}
-          </motion.h2>
-          <motion.ul variants={fadeUp} className="text-stone-500 font-light text-sm leading-relaxed mb-6 max-w-md space-y-1">
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-[3px] w-[3px] rounded-full bg-stone-400/70" />
-              <span>{t('location.highlights.access')}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-[3px] w-[3px] rounded-full bg-stone-400/70" />
-              <span>{t('location.highlights.beaches')}</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-1 h-[3px] w-[3px] rounded-full bg-stone-400/70" />
-              <span>{t('location.highlights.nature')}</span>
-            </li>
-          </motion.ul>
+          {/* Header */}
+          <div className="px-6 pt-8 pb-4 md:px-8 lg:px-10">
+            <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">
+              {t('location.eyebrow')}
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="font-serif text-2xl md:text-3xl text-charcoal leading-[1.1] tracking-tight">
+              {t('location.title')}
+              {titleAccent && (
+                <>
+                  <br />
+                  <span className="italic text-stone-400">{titleAccent}</span>
+                </>
+              )}
+            </motion.h2>
+          </div>
 
-          <motion.div variants={staggerContainer(0.1, 0.1)} className="space-y-4 mb-8">
-            {ACCESS_KEYS.map((key) => (
-              <motion.div key={key} variants={spotReveal} className="flex items-start gap-3">
-                <div className="mt-1 text-stone-400">
-                  <Location01Icon className="w-4 h-4" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h4 className="text-xs uppercase tracking-[0.2em] text-stone-500">{t(`location.access.${key}.label`)}</h4>
-                  <p className="text-sm text-stone-600 font-light leading-relaxed">{t(`location.access.${key}.description`)}</p>
-                </div>
-              </motion.div>
-            ))}
+          {/* Tab Bar */}
+          <motion.div variants={fadeUp} className="px-4 md:px-6 lg:px-8 pb-3 border-b border-stone-100">
+            <div className="flex gap-1.5 overflow-x-auto no-scrollbar py-1">
+              {NEARBY_TABS.map((tab, idx) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveTab(idx)}
+                  className={`
+                    whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-medium
+                    transition-all duration-300 ease-out cursor-pointer shrink-0
+                    ${activeTab === idx
+                      ? 'bg-charcoal text-white shadow-sm'
+                      : 'bg-stone-50 text-stone-500 hover:bg-stone-100 hover:text-stone-700'
+                    }
+                  `}
+                >
+                  {t(`location.tabs.${tab.id}`)}
+                </button>
+              ))}
+            </div>
           </motion.div>
 
-          <motion.div variants={staggerContainer()} className="space-y-5">
-            {LOCATION_SPOTS.map((spot, idx) => {
-              const Icon = iconMap[spot.iconName]
-              const key = SPOT_KEYS[idx]
-              return (
-                <motion.div key={spot.name} variants={spotReveal} className="flex items-start gap-4 group cursor-default">
-                  <div className="p-2 bg-stone-50 rounded-full text-stone-400 group-hover:text-teak-accent group-hover:bg-stone-100 transition-colors">
-                    <Icon className="w-5 h-5" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 border-b border-stone-100 pb-4">
-                    <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="text-sm font-bold text-stone-700 uppercase tracking-wide">{t(`location.spots.${key}.name`)}</h4>
-                      <span className="text-xs font-serif italic text-stone-400">{t(`location.spots.${key}.time`)}</span>
+          {/* Place List */}
+          <div className="flex-1 overflow-y-auto px-4 md:px-6 lg:px-8 py-2">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentTab.id}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {currentTab.places.map((place, idx) => (
+                  <div
+                    key={`${place.name}-${idx}`}
+                    className="flex items-center gap-3.5 py-3.5 border-b border-stone-50 last:border-b-0 group cursor-default"
+                  >
+                    {/* Category Icon Circle */}
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+                      style={{ backgroundColor: `${place.categoryColor}18` }}
+                    >
+                      <Location01Icon
+                        className="w-4 h-4"
+                        style={{ color: place.categoryColor }}
+                        strokeWidth={2}
+                      />
                     </div>
-                    <p className="text-xs text-stone-400 font-light">{t(`location.spots.${key}.desc`)}</p>
+
+                    {/* Name & Category */}
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-semibold text-stone-800 truncate leading-snug">
+                        {place.name}
+                      </h4>
+                      <span
+                        className="text-[11px] font-medium leading-tight"
+                        style={{ color: place.categoryColor }}
+                      >
+                        {place.category}
+                      </span>
+                    </div>
+
+                    {/* Distance */}
+                    <span className="text-sm font-bold text-stone-700 shrink-0 tabular-nums">
+                      {place.distance}
+                    </span>
                   </div>
-                </motion.div>
-              )
-            })}
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Footer Note */}
+          <motion.div variants={fadeUp} className="px-6 py-4 md:px-8 lg:px-10 border-t border-stone-100">
+            <p className="text-[11px] text-stone-400 font-light leading-relaxed">
+              {t('location.nearbyFooter')}
+            </p>
           </motion.div>
         </motion.div>
 

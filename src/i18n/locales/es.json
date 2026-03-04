@@ -255,50 +255,16 @@
         "eyebrow": "La Isla",
         "title": "10 Minutos del Pueblo.",
         "titleAccent": "Un Mundo Aparte",
-        "description": "A 10 minutos del pueblo de Karimunjawa y a 15 minutos caminando de las playas principales — lo bastante lejos para escuchar solo las olas.",
-        "highlights": {
-            "access": "A 10 minutos del pueblo con fácil acceso desde el aeropuerto y el puerto.",
-            "beaches": "Cerca de las playas principales como Batu Topeng y Tanjung Gelam.",
-            "nature": "Próximo al Monte Maming y rutas de senderismo por bosque tropical."
-        },
         "directionsLabel": "Obtener Direcciones",
-        "access": {
-            "airport": {
-                "label": "Desde el Aeropuerto",
-                "description": "Organice un traslado o taxi local para acceso directo."
-            },
-            "harbor": {
-                "label": "Desde el Puerto",
-                "description": "Corto viaje en coche desde el puerto de ferries."
-            }
+        "tabs": {
+            "nearby": "Cercanos",
+            "culinary": "Gastronomía",
+            "airport": "Aeropuerto",
+            "transport": "Transporte",
+            "attractions": "Atracciones",
+            "landmarks": "Landmarks"
         },
-        "spots": {
-            "batuTopeng": {
-                "name": "Playa Batu Topeng",
-                "time": "1,3 km",
-                "desc": "La playa más cercana a The Secret"
-            },
-            "sunset": {
-                "name": "Playa Sunset",
-                "time": "1,4 km",
-                "desc": "Lugar favorito para ver el atardecer"
-            },
-            "ujungGelam": {
-                "name": "Playa Ujung Gelam",
-                "time": "1,7 km",
-                "desc": "Playa con vistas de atardecer icónicas"
-            },
-            "legonLele": {
-                "name": "Playa Legon Lele",
-                "time": "5 km",
-                "desc": "Playa tranquila para nadar y relajarse"
-            },
-            "kanjen": {
-                "name": "Playa Kanjen",
-                "time": "5 km",
-                "desc": "Costa más calmada y poco concurrida"
-            }
-        }
+        "nearbyFooter": "Las distancias se miden en línea recta. Las distancias reales pueden variar."
     },
     "footer": {
         "description": "Construido con amor. Recibido como familia. Tres villas frente al mar en el borde de Karimunjawa.",

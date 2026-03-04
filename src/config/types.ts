@@ -51,3 +51,16 @@ export interface LocationAccess {
   label: string;
   description: string;
 }
+
+export interface NearbyPlace {
+  name: string;
+  category: string;
+  distance: string;
+  categoryColor: string;
+}
+
+export interface NearbyTab {
+  id: string;
+  labelKey: string;
+  places: NearbyPlace[];
+}

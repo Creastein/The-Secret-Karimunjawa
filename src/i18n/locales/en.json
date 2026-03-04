@@ -255,50 +255,16 @@
         "eyebrow": "The Island",
         "title": "10 Minutes from Town.",
         "titleAccent": "A World Away",
-        "description": "10 minutes from Karimunjawa town, 15 minutes on foot to the main beaches — far enough to hear nothing but the waves.",
-        "highlights": {
-            "access": "10 minutes from Karimunjawa town with easy access from the airport and harbor.",
-            "beaches": "A short distance to the main beaches, including Batu Topeng and Tanjung Gelam.",
-            "nature": "Close to Mount Maming and tropical forest hiking trails."
-        },
         "directionsLabel": "Get Directions",
-        "access": {
-            "airport": {
-                "label": "From Karimunjawa Airport",
-                "description": "Arrange a paid transfer or local taxi for direct access to the villa."
-            },
-            "harbor": {
-                "label": "From Karimunjawa Harbor",
-                "description": "A short drive from the ferry and speedboat harbor to the property."
-            }
+        "tabs": {
+            "nearby": "Nearby",
+            "culinary": "Culinary",
+            "airport": "Airport",
+            "transport": "Transport",
+            "attractions": "Attractions",
+            "landmarks": "Landmarks"
         },
-        "spots": {
-            "batuTopeng": {
-                "name": "Batu Topeng Beach",
-                "time": "1.3 km",
-                "desc": "Closest beach to The Secret"
-            },
-            "sunset": {
-                "name": "Sunset Beach",
-                "time": "1.4 km",
-                "desc": "Favorite spot to watch the sunset"
-            },
-            "ujungGelam": {
-                "name": "Ujung Gelam Beach",
-                "time": "1.7 km",
-                "desc": "Beach with iconic sunset views"
-            },
-            "legonLele": {
-                "name": "Legon Lele Beach",
-                "time": "5 km",
-                "desc": "Calm beach for swimming and relaxing"
-            },
-            "kanjen": {
-                "name": "Kanjen Beach",
-                "time": "5 km",
-                "desc": "Quieter, more untouched shoreline"
-            }
-        }
+        "nearbyFooter": "Distances are measured in a straight line. Actual travel distances may vary."
     },
     "footer": {
         "description": "Built with love. Welcomed like family. Three ocean-facing villas on the edge of Karimunjawa.",

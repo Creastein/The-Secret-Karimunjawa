@@ -255,50 +255,16 @@
         "eyebrow": "Pulau",
         "title": "10 Menit dari Kota.",
         "titleAccent": "",
-        "description": "10 menit dari pusat Karimunjawa, 15 menit berjalan ke pantai utama — cukup jauh untuk hanya mendengar suara ombak.",
-        "highlights": {
-            "access": "10 menit dari pusat Karimunjawa dengan akses mudah dari bandara dan pelabuhan.",
-            "beaches": "15 menit berjalan kaki ke pantai-pantai utama seperti Batu Topeng dan Tanjung Gelam.",
-            "nature": "Dekat dengan Gunung Maming dan jalur hiking melalui hutan tropis."
-        },
         "directionsLabel": "Dapatkan Petunjuk Arah",
-        "access": {
-            "airport": {
-                "label": "Dari Bandara Karimunjawa",
-                "description": "Atur transfer berbayar atau taksi lokal untuk akses langsung ke villa."
-            },
-            "harbor": {
-                "label": "Dari Pelabuhan Karimunjawa",
-                "description": "Perjalanan singkat dari pelabuhan feri dan speedboat ke properti."
-            }
+        "tabs": {
+            "nearby": "Terdekat",
+            "culinary": "Kuliner",
+            "airport": "Bandara",
+            "transport": "Transportasi",
+            "attractions": "Atraksi",
+            "landmarks": "Landmarks"
         },
-        "spots": {
-            "batuTopeng": {
-                "name": "Pantai Batu Topeng",
-                "time": "1,3 km",
-                "desc": "Pantai terdekat dari The Secret"
-            },
-            "sunset": {
-                "name": "Pantai Sunset",
-                "time": "1,4 km",
-                "desc": "Spot favorit menikmati sunset"
-            },
-            "ujungGelam": {
-                "name": "Pantai Ujung Gelam",
-                "time": "1,7 km",
-                "desc": "Pantai dengan pemandangan sunset ikonik"
-            },
-            "legonLele": {
-                "name": "Pantai Legon Lele",
-                "time": "5 km",
-                "desc": "Pantai tenang untuk berenang dan bersantai"
-            },
-            "kanjen": {
-                "name": "Pantai Kanjen",
-                "time": "5 km",
-                "desc": "Pantai yang masih relatif sepi dan alami"
-            }
-        }
+        "nearbyFooter": "Jarak di atas diukur berdasarkan garis lurus. Jarak perjalanan yang sebenarnya mungkin berbeda."
     },
     "footer": {
         "description": "Dibangun dengan cinta. Disambut seperti keluarga. Tiga villa menghadap laut di tepi Karimunjawa.",
