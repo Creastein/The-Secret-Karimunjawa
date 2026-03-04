@@ -248,11 +248,19 @@ const Gallery: FC<Props> = () => {
 
           {filteredImages.length > 1 && (
             <>
-              <button onClick={(e) => { e.stopPropagation(); handlePrev() }} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors duration-300 group" aria-label="Previous image">
-                <ArrowLeft01Icon className="w-8 h-8 md:w-10 md:h-10 group-hover:-translate-x-1 transition-transform" strokeWidth={1} />
+              <button
+                onClick={(e) => { e.stopPropagation(); handlePrev() }}
+                className="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 z-50 p-3 md:p-4 rounded-full bg-black/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none text-white/90 md:text-white/50 hover:text-white hover:bg-black/60 transition-all duration-300 group"
+                aria-label="Previous image"
+              >
+                <ArrowLeft01Icon className="w-6 h-6 md:w-10 md:h-10 group-hover:-translate-x-1 transition-transform" strokeWidth={1.5} />
               </button>
-              <button onClick={(e) => { e.stopPropagation(); handleNext() }} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors duration-300 group" aria-label="Next image">
-                <ArrowRight01Icon className="w-8 h-8 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform" strokeWidth={1} />
+              <button
+                onClick={(e) => { e.stopPropagation(); handleNext() }}
+                className="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 z-50 p-3 md:p-4 rounded-full bg-black/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none text-white/90 md:text-white/50 hover:text-white hover:bg-black/60 transition-all duration-300 group"
+                aria-label="Next image"
+              >
+                <ArrowRight01Icon className="w-6 h-6 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform" strokeWidth={1.5} />
               </button>
             </>
           )}
