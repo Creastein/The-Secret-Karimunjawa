@@ -282,10 +282,9 @@
             "concierge": "Layanan Concierge",
             "activities": "Aktivitas Pulau",
             "faq": "Pertanyaan yang Sering Diajukan",
-            "privacy": "Kebijakan Privasi",
-            "terms": "Syarat & Ketentuan",
             "contact": "Hubungi Kami"
         },
+        "contactTitle": "Hubungi Kami",
         "copyright": "© {{year}} The Secret Karimunjawa. Hak cipta dilindungi.",
         "tagline": "Karimunjawa Punya Rahasia",
         "backToTop": "Kembali ke Atas"

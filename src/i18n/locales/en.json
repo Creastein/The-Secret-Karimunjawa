@@ -282,10 +282,9 @@
             "concierge": "Concierge Services",
             "activities": "Island Activities",
             "faq": "Frequently Asked Questions",
-            "privacy": "Privacy Policy",
-            "terms": "Terms & Conditions",
             "contact": "Contact Us"
         },
+        "contactTitle": "Get in Touch",
         "copyright": "© {{year}} The Secret Karimunjawa. All rights reserved.",
         "tagline": "Karimunjawa Has a Secret",
         "backToTop": "Back to Top"

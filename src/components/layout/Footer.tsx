@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { InstagramIcon, Facebook01Icon, ArrowUp01Icon } from 'hugeicons-react'
+import { InstagramIcon, ArrowUp01Icon, Whatsapp01Icon, Mail01Icon } from 'hugeicons-react'
 import { fadeUp, staggerContainer } from '@/lib/motion'
+import { CONTACT_SECTION, WHATSAPP_NUMBER } from '@/config/site'
 
 export default function Footer() {
   const { t } = useTranslation()
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`
 
   return (
     <footer className="bg-charcoal text-stone-400 pt-16 md:pt-24 pb-10 md:pb-12 border-t border-stone-800">
@@ -15,8 +18,9 @@ export default function Footer() {
           initial="hidden" whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={staggerContainer(0.12)}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 mb-14 md:mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-14 md:mb-20"
         >
+          {/* Column 1: Brand */}
           <motion.div variants={fadeUp} className="space-y-6">
             <img src="/assets/logo-footer.svg" alt="The Secret Karimunjawa" className="h-11 w-auto" />
             <p className="text-sm font-light leading-relaxed max-w-xs">
@@ -30,13 +34,10 @@ export default function Footer() {
                 Jawa Tengah, Indonesia
               </p>
             </div>
-            <div className="flex gap-6 pt-2">
-              <a href="https://www.instagram.com/thesecretkarimunjawa/" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-teak-accent transition-colors"><InstagramIcon className="w-5 h-5" /></a>
-              <a href="#" className="text-stone-500 hover:text-teak-accent transition-colors"><Facebook01Icon className="w-5 h-5" /></a>
-            </div>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="lg:pl-12">
+          {/* Column 2: Explore */}
+          <motion.div variants={fadeUp} className="lg:pl-8">
             <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.exploreTitle')}</h4>
             <ul className="space-y-4 text-sm font-light">
               <li><a href="#estate" className="hover:text-teak-accent transition-colors">{t('footer.exploreLinks.retreat')}</a></li>
@@ -47,15 +48,54 @@ export default function Footer() {
             </ul>
           </motion.div>
 
+          {/* Column 3: Information */}
           <motion.div variants={fadeUp}>
             <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.infoTitle')}</h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><a href="#" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.concierge')}</a></li>
-              <li><a href="#" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.activities')}</a></li>
+              <li><a href="#experience" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.concierge')}</a></li>
+              <li><a href="#location" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.activities')}</a></li>
               <li><a href="#faq" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.faq')}</a></li>
-              <li><a href="#" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.privacy')}</a></li>
-              <li><a href="#" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.terms')}</a></li>
               <li><a href="#contact" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.contact')}</a></li>
+            </ul>
+          </motion.div>
+
+          {/* Column 4: Contact */}
+          <motion.div variants={fadeUp}>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.contactTitle')}</h4>
+            <ul className="space-y-5">
+              <li>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                  <div className="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center group-hover:bg-teak-accent/20 transition-colors">
+                    <Whatsapp01Icon className="w-4 h-4 text-stone-400 group-hover:text-teak-accent transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-stone-500 font-medium">{t('contact.whatsappLabel')}</p>
+                    <p className="text-sm text-stone-300 font-light">{CONTACT_SECTION.whatsappText}</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href={CONTACT_SECTION.instagramLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+                  <div className="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center group-hover:bg-teak-accent/20 transition-colors">
+                    <InstagramIcon className="w-4 h-4 text-stone-400 group-hover:text-teak-accent transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-stone-500 font-medium">{t('contact.instagramLabel')}</p>
+                    <p className="text-sm text-stone-300 font-light">{CONTACT_SECTION.instagramHandle}</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href={`mailto:thesecretkarimunjawa@gmail.com`} className="flex items-center gap-3 group">
+                  <div className="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center group-hover:bg-teak-accent/20 transition-colors">
+                    <Mail01Icon className="w-4 h-4 text-stone-400 group-hover:text-teak-accent transition-colors" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-stone-500 font-medium">Email</p>
+                    <p className="text-sm text-stone-300 font-light">thesecretkarimunjawa@gmail.com</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </motion.div>
         </motion.div>

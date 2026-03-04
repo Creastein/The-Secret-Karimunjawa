@@ -282,10 +282,9 @@
             "concierge": "Conciergerie",
             "activities": "Activités",
             "faq": "Questions Fréquentes",
-            "privacy": "Confidentialité",
-            "terms": "Conditions",
             "contact": "Contactez-Nous"
         },
+        "contactTitle": "Contactez-Nous",
         "copyright": "© {{year}} The Secret Karimunjawa. Tous droits réservés.",
         "tagline": "Karimunjawa a un Secret",
         "backToTop": "Retour en Haut"
