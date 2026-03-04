@@ -161,19 +161,22 @@ Sections yang sudah ada: `Hero`, `Estate`, `Suites`, `Experience`, `Gallery`, `T
 **Estimasi**: 1–2 hari kerja
 
 ### 6.1 Cross-Device Testing
-- [ ] Mobile (≤ 390px): iPhone SE, iPhone 14 Pro
-- [ ] Tablet (768px): iPad Air
-- [ ] Desktop (1440px, 1920px)
+- [x] Desktop (1440px, 1920px) — Verified all sections render correctly
+- [ ] Mobile (≤ 390px): iPhone SE, iPhone 14 Pro — Manual testing required
+- [ ] Tablet (768px): iPad Air — Manual testing required
 
 ### 6.2 Functional Testing
+- [x] Language switcher → seluruh teks berganti tanpa reload ✅
+- [x] Location tabs → switching antar tab smooth, data benar ✅
+- [x] Footer links → semua link mengarah ke section yang benar ✅
+- [x] WhatsApp icon fix → custom WhatsAppIcon component ✅
 - [ ] Semua tombol "Book Now" → WhatsApp terbuka dengan pesan benar
-- [ ] Language switcher → seluruh teks berganti tanpa reload
 - [ ] FAQ accordion → buka/tutup smooth
 - [ ] Gallery filter → category images benar
 
 ### 6.3 Checklist Final
-- [ ] Zero TypeScript error (`tsc --noEmit`)
-- [ ] Zero `console.log`
+- [x] Zero TypeScript error (`tsc --noEmit`) ✅
+- [x] Zero `console.log` ✅
 - [ ] Semua gambar unit villa sudah diterima dari klien & dioptimasi
 - [ ] Domain final dikonfirmasi & DNS pointing ke Vercel
 - [ ] SSL aktif (auto via Vercel)
