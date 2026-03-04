@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { InstagramIcon, ArrowUp01Icon, Whatsapp01Icon, Mail01Icon } from 'hugeicons-react'
+import { InstagramIcon, ArrowUp01Icon, Mail01Icon } from 'hugeicons-react'
 import { fadeUp, staggerContainer } from '@/lib/motion'
 import { CONTACT_SECTION, WHATSAPP_NUMBER } from '@/config/site'
+import WhatsAppIcon from '@/components/ui/WhatsAppIcon'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -66,7 +67,7 @@ export default function Footer() {
               <li>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
                   <div className="w-9 h-9 rounded-full bg-stone-800 flex items-center justify-center group-hover:bg-teak-accent/20 transition-colors">
-                    <Whatsapp01Icon className="w-4 h-4 text-stone-400 group-hover:text-teak-accent transition-colors" />
+                    <WhatsAppIcon className="w-4 h-4" />
                   </div>
                   <div>
                     <p className="text-xs text-stone-500 font-medium">{t('contact.whatsappLabel')}</p>
