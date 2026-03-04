@@ -1,18 +1,19 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { GALLERY_IMAGES } from '@/config/site'
 import type { ImageCategory } from '@/config/types'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, Maximize2, X } from 'lucide-react'
+import { ArrowLeft01Icon, ArrowRight01Icon, Maximize01Icon, Cancel01Icon } from 'hugeicons-react'
 import { gsap } from 'gsap'
 import { fadeUp, staggerContainer, EASE_OUT_EXPO } from '@/lib/motion'
 
-const CATEGORY_CONTENT: Record<string, { title: string; description: string }> = {
-  All: { title: 'The Complete Narrative', description: 'A comprehensive journey through the retreat, capturing every nuance of island living.' },
-  Exteriors: { title: 'Architectural Form', description: 'Where rustic teak meets organic tropics. The structure is designed to blend seamlessly with the island landscape.' },
-  Interiors: { title: 'Curated Spaces', description: 'Interiors that breathe. Hand-crafted wooden furniture, natural textures, and a palette inspired by the ocean.' },
-  Details: { title: 'Micro Narratives', description: 'True luxury lies in what you touch. From tropical breakfast to outdoor showers, nothing is accidental.' },
-  Night: { title: 'After Dark', description: 'When the sun sets, the villa transforms. Warm ambient lighting creates an intimate atmosphere for evening reflection.' },
+const CATEGORY_KEYS: Record<string, string> = {
+  All: 'all',
+  Exteriors: 'exteriors',
+  Interiors: 'interiors',
+  Details: 'details',
+  Night: 'night',
 }
 
 const CATEGORIES: (ImageCategory | 'All')[] = ['All', 'Exteriors', 'Interiors', 'Details', 'Night']
@@ -32,6 +33,7 @@ const slideVariants = {
 }
 
 export default function Gallery() {
+  const { t } = useTranslation()
   const lightboxRef = useRef<HTMLDivElement>(null)
   const lightboxImageRef = useRef<HTMLImageElement>(null)
   const lightboxCaptionRef = useRef<HTMLDivElement>(null)
@@ -90,7 +92,7 @@ export default function Gallery() {
     return () => { tl.kill() }
   }, [isLightboxOpen, shouldReduceMotion, currentIndex])
 
-  const content = CATEGORY_CONTENT[activeCategory] || CATEGORY_CONTENT.All
+  const catKey = CATEGORY_KEYS[activeCategory] || 'all'
 
   return (
     <Section id="gallery" className="bg-sand bg-atmosphere" fullWidth>
@@ -104,13 +106,13 @@ export default function Gallery() {
             className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-10 border-b border-stone-200 pb-6"
           >
             <div className="text-center md:text-left">
-              <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">Visual Narrative</motion.span>
-              <motion.h2 variants={fadeUp} className="font-serif text-4xl text-charcoal leading-[1.05] tracking-tight">Gallery</motion.h2>
+              <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">{t('gallery.eyebrow')}</motion.span>
+              <motion.h2 variants={fadeUp} className="font-serif text-4xl text-charcoal leading-[1.05] tracking-tight">{t('gallery.title')}</motion.h2>
 
               <AnimatePresence mode="wait">
                 <motion.div key={activeCategory} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.4, ease: EASE_OUT_EXPO }} className="mt-8 max-w-lg mx-auto md:mx-0">
-                  <h3 className="font-serif text-2xl md:text-3xl text-charcoal italic mb-3">{content.title}</h3>
-                  <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">{content.description}</p>
+                  <h3 className="font-serif text-2xl md:text-3xl text-charcoal italic mb-3">{t(`gallery.categoryContent.${catKey}.title`)}</h3>
+                  <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">{t(`gallery.categoryContent.${catKey}.description`)}</p>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -121,7 +123,7 @@ export default function Gallery() {
                   key={cat} onClick={() => setActiveCategory(cat)}
                   className={`text-[11px] uppercase tracking-widest transition-all duration-300 pb-1 border-b-2 ${activeCategory === cat ? 'text-charcoal border-teak-accent' : 'text-stone-400 border-transparent hover:text-stone-600'}`}
                 >
-                  {cat}
+                  {t(`gallery.categories.${CATEGORY_KEYS[cat]}`)}
                 </button>
               ))}
             </motion.div>
@@ -154,17 +156,17 @@ export default function Gallery() {
                   </motion.div>
                 </AnimatePresence>
 
-                <button onClick={() => setIsLightboxOpen(true)} className="absolute top-6 right-6 p-3 bg-white/90 backdrop-blur-sm rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 z-30 hover:scale-110 shadow-lg" aria-label="Expand image">
-                  <Maximize2 className="w-5 h-5 text-stone-800" strokeWidth={1.5} />
+                <button onClick={() => setIsLightboxOpen(true)} className="absolute top-6 right-6 p-3 bg-white/90 backdrop-blur-sm rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 z-30 hover:scale-110 shadow-lg" aria-label={t('gallery.expandLabel')}>
+                  <Maximize01Icon className="w-5 h-5 text-stone-800" strokeWidth={1.5} />
                 </button>
 
                 {filteredImages.length > 1 && (
                   <>
                     <button onClick={handlePrev} className="absolute left-4 top-1/2 -translate-y-1/2 z-30 p-3 md:p-4 rounded-full bg-stone-900/20 backdrop-blur-md border border-white/20 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg" aria-label="Previous image">
-                      <ArrowLeft className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+                      <ArrowLeft01Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
                     </button>
                     <button onClick={handleNext} className="absolute right-4 top-1/2 -translate-y-1/2 z-30 p-3 md:p-4 rounded-full bg-stone-900/20 backdrop-blur-md border border-white/20 text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 hover:bg-white hover:text-stone-900 transition-all duration-300 shadow-lg" aria-label="Next image">
-                      <ArrowRight className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
+                      <ArrowRight01Icon className="w-5 h-5 md:w-6 md:h-6" strokeWidth={1.5} />
                     </button>
                   </>
                 )}
@@ -192,16 +194,16 @@ export default function Gallery() {
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.8)_100%)]" />
 
           <button onClick={(e) => { e.stopPropagation(); closeLightbox() }} className="absolute top-6 right-6 text-white/60 hover:text-white z-50 p-2 transition-colors duration-300" aria-label="Close lightbox">
-            <X className="w-8 h-8" strokeWidth={1} />
+            <Cancel01Icon className="w-8 h-8" strokeWidth={1} />
           </button>
 
           {filteredImages.length > 1 && (
             <>
               <button onClick={(e) => { e.stopPropagation(); handlePrev() }} className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors duration-300 group" aria-label="Previous image">
-                <ArrowLeft className="w-8 h-8 md:w-10 md:h-10 group-hover:-translate-x-1 transition-transform" strokeWidth={1} />
+                <ArrowLeft01Icon className="w-8 h-8 md:w-10 md:h-10 group-hover:-translate-x-1 transition-transform" strokeWidth={1} />
               </button>
               <button onClick={(e) => { e.stopPropagation(); handleNext() }} className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors duration-300 group" aria-label="Next image">
-                <ArrowRight className="w-8 h-8 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform" strokeWidth={1} />
+                <ArrowRight01Icon className="w-8 h-8 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform" strokeWidth={1} />
               </button>
             </>
           )}

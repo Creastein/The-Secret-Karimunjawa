@@ -1,0 +1,332 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "estate": "Retraite",
+        "suites": "Suites",
+        "experience": "Expérience",
+        "gallery": "Galerie",
+        "contact": "Contact",
+        "location": "Emplacement",
+        "locationSubtitle": "Karimunjawa, Java Central"
+    },
+    "hero": {
+        "badge": "Karimunjawa, Java Central",
+        "title1": "Karimunjawa a",
+        "title2": "un Secret",
+        "description": "Construit avec amour par Eddy et Patricia comme maison familiale au bord de l'océan. Aujourd'hui, trois villas face à la mer avec une vue panoramique de 120° sur le coucher de soleil — ouvertes à ceux qui cherchent la vraie tranquillité. Noté 9.6 Exceptionnel sur Booking.com.",
+        "ctaReserve": "Trouvez le Secret",
+        "ctaGallery": "Voir la Galerie",
+        "tagline1": "Panorama Coucher de Soleil 120°",
+        "tagline2": "Seulement 3 Villas — Toutes Face à la Mer",
+        "scrollHint": "Faites défiler pour explorer"
+    },
+    "estate": {
+        "eyebrow": "Notre Histoire",
+        "title": "Pas un Hôtel.",
+        "titleAccent": "Une Maison",
+        "description": "Ce qui a commencé comme le rêve d'un couple de Bandung et d'Allemagne en 2013 est aujourd'hui trois villas face à la mer — un endroit où les visiteurs sont accueillis comme une famille par Abyan, Anik et Dadang. Pas de luxe artificiel. De la chaleur authentique.",
+        "ratingLabel": "Évaluation",
+        "reviewsLabel": "Avis",
+        "facilitiesLabel": "Installations",
+        "amenitiesTitle": "Ce Qui Nous Rend Différents",
+        "amenitiesSubtitle": "Petits détails qui font que chaque invité se sent chez soi",
+        "additionalNote": "*Plongée, snorkeling et visites de l'île — vous n'avez qu'à demander."
+    },
+    "facilities": {
+        "seaSunsetView": "Coucher de Soleil 120° Chaque Jour",
+        "seaSunsetViewDesc": "Un panorama différent de l'océan et du coucher de soleil chaque jour — directement depuis votre véranda.",
+        "privateVeranda": "Véranda Privée",
+        "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
+        "privateKitchen": "Cuisine Privée",
+        "privateKitchenDesc": "Cuisine complète dans la Villa Cipaku — cuisinez vous-même ou demandez l'aide d'Anik.",
+        "privateGarden": "Jardin Secret",
+        "privateGardenDesc": "Jardin tropical privé à Villa Tivoli — réveillez-vous au chant des oiseaux.",
+        "airportTransfer": "Nous Venons Vous Chercher",
+        "airportTransferDesc": "Navette depuis l'aéroport ou le port disponible avec supplément.",
+        "dailyHousekeeping": "Service de nettoyage quotidien",
+        "dailyHousekeepingDesc": "Notre équipe s'assure que votre villa est toujours propre et confortable.",
+        "directBooking": "Directement Avec Nous",
+        "directBookingDesc": "Réservez via WhatsApp — sans agents, sans commissions, 100% va à la villa.",
+        "sunriseBreakfast": "Petit-déjeuner Fait Maison",
+        "sunriseBreakfastDesc": "Toast fait maison, confiture de Patricia et café du matin avec vue sur l'océan."
+    },
+    "suites": {
+        "eyebrow": "Trois Villas",
+        "title": "Chaque Villa a Son Histoire",
+        "description": "Cipaku, Birdsong, Tivoli Garden — chacune a été construite pour quelqu'un de spécial. Maintenant, c'est votre tour.",
+        "featuresLabel": "Caractéristiques",
+        "ctaLabel": "Réserver Cette Villa",
+        "bedLabel": "Configuration des Lits",
+        "typeLabel": "Type",
+        "rooms": {
+            "cipaku": {
+                "name": "Cipaku",
+                "typeLabel": "Une Chambre",
+                "bedDetails": "Lit King 2x2m",
+                "description": "La villa principale de la famille — cuisine complète, véranda privée, et la paix que seul un propriétaire connaît. Construite pour Patricia et Eddy, maintenant ouverte pour vous.",
+                "features": [
+                    "Cuisine Privée Complète",
+                    "Véranda Face à la Mer",
+                    "100% Intimité Totale",
+                    "Coucher de Soleil à Travers les Cocotiers"
+                ]
+            },
+            "birdsong": {
+                "name": "Birdsong",
+                "typeLabel": "Deluxe",
+                "bedDetails": "Lit King",
+                "description": "Conçue pour les amis les plus proches de la famille. La véranda la plus large de The Secret — comme être enlacé par l'océan et le ciel à la fois.",
+                "features": [
+                    "Véranda la Plus Large",
+                    "Panorama Océanique 120°",
+                    "Couchers de Soleil Sans Obstacle",
+                    "Ménage Quotidien"
+                ]
+            },
+            "tivoliGarden": {
+                "name": "Tivoli Garden",
+                "typeLabel": "Supérieure",
+                "bedDetails": "Queen 1.8x2m + Simple 1.5x2m",
+                "description": "Une villa avec un jardin secret — où les matins commencent avec le chant des oiseaux et l'arôme du pain fait maison. Flexible pour les couples ou les petites familles.",
+                "features": [
+                    "Jardin Privé",
+                    "Réveil au Chant des Oiseaux",
+                    "Literie Flexible",
+                    "Idéal pour les Familles"
+                ]
+            }
+        }
+    },
+    "experience": {
+        "eyebrow": "Expérience",
+        "title": "Le Luxe Réside",
+        "titleAccent": "dans les Détails",
+        "description": "Toast fait maison pour le petit-déjeuner. Yoga sur le toit sous les étoiles. Confiture artisanale de la cuisine de Patricia. Un coucher de soleil différent chaque jour, juste devant vos yeux.",
+        "ctaLabel": "Demander des Services"
+    },
+    "gallery": {
+        "eyebrow": "Narration Visuelle",
+        "title": "Galerie",
+        "categories": {
+            "all": "Tout",
+            "exteriors": "Extérieurs",
+            "interiors": "Intérieurs",
+            "details": "Détails",
+            "night": "Nuit"
+        },
+        "categoryContent": {
+            "all": {
+                "title": "L'Histoire Complète",
+                "description": "Chaque recoin a son histoire. Des vérandas face à la mer aux jardins cachés, voici la vraie vie insulaire."
+            },
+            "exteriors": {
+                "title": "Construit avec Amour",
+                "description": "Là où le teck rencontre les tropiques. Structures bâties par Eddy, en harmonie avec le paysage de l'île."
+            },
+            "interiors": {
+                "title": "Comme Chez Vous",
+                "description": "Meubles en bois artisanaux, textures naturelles et couleurs inspirées par la mer de Karimunjawa."
+            },
+            "details": {
+                "title": "Les Petites Choses",
+                "description": "Confiture maison. Toast du matin. Douches en plein air. Le vrai luxe est dans ce que vous touchez."
+            },
+            "night": {
+                "title": "Après le Coucher du Soleil",
+                "description": "Éclairage chaleureux, bruit de l'océan et ciel étoilé. Notre toit-terrasse est parfait pour admirer les étoiles."
+            }
+        },
+        "expandLabel": "Agrandir l'image"
+    },
+    "testimonials": {
+        "eyebrow": "Voix des Invités",
+        "title": "Des Invités Devenus Famille"
+    },
+    "contact": {
+        "eyebrow": "Contactez-nous",
+        "title": "Nous Vous",
+        "titleAccent": "Attendons",
+        "description": "Directement avec nous — sans agents, sans commissions. Comme appeler chez un ami. Abyan et l'équipe sont prêts à vous aider à planifier la visite parfaite.",
+        "formTitle": "Demande Directe",
+        "formSubtitle": "Réponse dans les 2 heures",
+        "submitLabel": "Envoyer la Demande",
+        "locationLabel": "Emplacement",
+        "whatsappLabel": "WhatsApp",
+        "nameLabel": "Nom Complet",
+        "namePlaceholder": "Ex. Jean Dupont",
+        "checkInLabel": "Date d'arrivée",
+        "checkOutLabel": "Date de départ",
+        "unitLabel": "Sélectionner la Villa",
+        "unitPlaceholder": "Choisissez une villa",
+        "whatsappBookingMessage": "Bonjour, je souhaite réserver la Villa [UNIT] pour le [DATE]. Merci !",
+        "whatsappServiceMessage": "Bonjour, je souhaite me renseigner sur les services supplémentaires pour mon séjour.",
+        "whatsappAvailabilityMessage": "Bonjour, je souhaite vérifier la disponibilité pour un séjour à The Secret Karimunjawa.",
+        "whatsappInquiryTemplate": "Bonjour, je souhaite me renseigner sur la disponibilité à The Secret Karimunjawa.\n\nNom: [NAME]\nArrivée: [CHECKIN]\nDépart: [CHECKOUT]\nVilla: [UNIT]",
+        "faqButton": "Lire les Questions Fréquentes"
+    },
+    "faq": {
+        "eyebrow": "Information",
+        "title": "Questions",
+        "titleAccent": "Fréquentes",
+        "ctaText": "Vous avez d'autres questions ? Notre équipe est prête à vous aider.",
+        "ctaButton": "Demander via WhatsApp",
+        "ctaMessage": "Bonjour, je voudrais poser quelques questions sur The Secret Karimunjawa.",
+        "categories": {
+            "reservation": "Réservation et Tarifs",
+            "facilities": "Capacité et Installations",
+            "dining": "Restauration",
+            "policies": "Politiques Générales",
+            "location": "Emplacement et Activités"
+        },
+        "reservation": {
+            "q1": "Quelles sont les heures d'arrivée et de départ ?",
+            "a1": "Arrivée entre 13h00 et 18h00 WIB. Départ entre 06h00 et 10h00 WIB.",
+            "q2": "Quels sont les tarifs ?",
+            "a2": "Tarifs dynamiques selon la saison. De Rp 1.600.000 à Rp 2.000.000 par nuit. Contactez-nous pour le prix exact.",
+            "q3": "Quels modes de paiement sont acceptés ?",
+            "a3": "Espèces sur place. Cartes de crédit en garantie pour les réservations en ligne. Renseignez-vous sur les virements.",
+            "q4": "Puis-je réserver directement sans OTA ?",
+            "a4": "Oui ! Réservez directement via WhatsApp avec 0% de commission. 100% va directement à la villa."
+        },
+        "facilities": {
+            "q1": "Combien de personnes par unité ?",
+            "a1": "De 2 à maximum 4 personnes par unité. Parfait pour les couples et les familles.",
+            "q2": "Quelles villas sont disponibles ?",
+            "a2_intro": "Nous avons 3 villas exclusives :",
+            "a2_cipaku": "Villa Cipaku (Une Chambre) — King 2x2m, cuisine privée, véranda privée, 100% intimité.",
+            "a2_birdsong": "Villa Birdsong (Deluxe) — King, vue mer et coucher de soleil, véranda la plus large.",
+            "a2_tivoli": "Villa Tivoli Garden (Supérieure) — Queen + Simple, jardin privé.",
+            "a2_note": "Toutes face à la mer avec panorama de coucher de soleil de 120°.",
+            "q3": "Chaque unité a-t-elle une terrasse ?",
+            "a3": "Oui, toutes les unités ont une spacieuse terrasse privée avec vue mer et coucher de soleil.",
+            "q4": "Quelles installations dans la chambre ?",
+            "a4_intro": "Chaque unité comprend :",
+            "a4_items": [
+                "Climatisation et ventilateur",
+                "Entrée privée",
+                "Terrasse avec vue mer et coucher de soleil",
+                "Salle de bain privée (douche, sèche-cheveux)",
+                "Étendoir à linge"
+            ],
+            "q5": "Des lits supplémentaires ou lits bébé ?",
+            "a5": "Désolé, nous ne disposons pas de lits supplémentaires actuellement. Contactez-nous pour vos besoins."
+        },
+        "dining": {
+            "q1": "Y a-t-il un restaurant sur place ?",
+            "a1": "Oui, The Secret Garden sert une cuisine indonésienne, indienne et méditerranéenne. Menus Halal, Végétarien et Végan disponibles.",
+            "q2": "Quelles options de petit-déjeuner ?",
+            "a2": "Notre petit-déjeuner est spécial — toast maison, confiture artisanale et options variées. Servi sur votre véranda.",
+            "q3": "Faut-il réserver pour le dîner ?",
+            "a3": "Oui, nous recommandons de réserver votre dîner à l'avance."
+        },
+        "policies": {
+            "q1": "Les animaux sont-ils acceptés ?",
+            "a1": "Oui, sans frais supplémentaires. Confirmez à la réservation.",
+            "q2": "Peut-on fumer dans les chambres ?",
+            "a2": "Non, mais des espaces extérieurs sont prévus.",
+            "q3": "Quelles langues le personnel parle-t-il ?",
+            "a3": "Indonésien, anglais et allemand."
+        },
+        "location": {
+            "q1": "À quelle distance des plages et du centre ?",
+            "a1": "Nous sommes le plus proche hébergement des trois plages principales ! Batu Topeng à 15 min à pied ou 2 min en scooter. Centre-ville à 10 min en scooter.",
+            "q2": "Navette aéroport disponible ?",
+            "a2": "Oui, depuis l'aéroport et le port (avec supplément). Coordonnez lors de la réservation.",
+            "q3": "Quelles activités sont proposées ?",
+            "a3_intro": "Beaucoup d'options autour de The Secret :",
+            "a3_items": [
+                "Massages et Yoga sur le toit",
+                "Plongée, Pêche et Canoë",
+                "Randonnée au Mont Maming (3 heures), Scooter",
+                "Plages: Batu Topeng, Alano, Anora, Tanjung Gelam",
+                "Karaoké, Observation des étoiles"
+            ]
+        }
+    },
+    "location": {
+        "eyebrow": "L'Île",
+        "title": "10 Minutes du Village.",
+        "titleAccent": "Un Monde à Part",
+        "description": "À 10 minutes du village de Karimunjawa et à 15 minutes à pied des plages principales — assez loin pour n'entendre que le bruit des vagues.",
+        "highlights": {
+            "access": "À 10 minutes du village avec un accès facile depuis l'aéroport et le port.",
+            "beaches": "Proche des principales plages comme Batu Topeng et Tanjung Gelam.",
+            "nature": "À proximité du Mont Maming et de sentiers de randonnée en forêt tropicale."
+        },
+        "directionsLabel": "Obtenir l'itinéraire",
+        "access": {
+            "airport": {
+                "label": "Depuis l'Aéroport",
+                "description": "Organisez un transfert pour un accès direct à la villa."
+            },
+            "harbor": {
+                "label": "Depuis le Port",
+                "description": "Court trajet en voiture depuis le port de ferry."
+            }
+        },
+        "spots": {
+            "batuTopeng": {
+                "name": "Plage Batu Topeng",
+                "time": "1,3 km",
+                "desc": "Plage la plus proche de The Secret"
+            },
+            "sunset": {
+                "name": "Plage Sunset",
+                "time": "1,4 km",
+                "desc": "Spot favori pour admirer le coucher de soleil"
+            },
+            "ujungGelam": {
+                "name": "Plage Ujung Gelam",
+                "time": "1,7 km",
+                "desc": "Plage avec vue de coucher de soleil emblématique"
+            },
+            "legonLele": {
+                "name": "Plage Legon Lele",
+                "time": "5 km",
+                "desc": "Plage calme pour nager et se détendre"
+            },
+            "kanjen": {
+                "name": "Plage Kanjen",
+                "time": "5 km",
+                "desc": "Littoral plus sauvage et peu fréquenté"
+            }
+        }
+    },
+    "footer": {
+        "description": "Construit avec amour. Accueilli comme une famille. Trois villas face à la mer au bord de Karimunjawa.",
+        "addressLabel": "Adresse",
+        "exploreTitle": "Explorer",
+        "exploreLinks": {
+            "retreat": "Notre Histoire",
+            "suites": "Trois Villas",
+            "experience": "Expérience",
+            "gallery": "Galerie",
+            "island": "L'Île"
+        },
+        "infoTitle": "Information",
+        "infoLinks": {
+            "concierge": "Conciergerie",
+            "activities": "Activités",
+            "faq": "Questions Fréquentes",
+            "privacy": "Confidentialité",
+            "terms": "Conditions",
+            "contact": "Contactez-Nous"
+        },
+        "copyright": "© {{year}} The Secret Karimunjawa. Tous droits réservés.",
+        "tagline": "Karimunjawa a un Secret",
+        "backToTop": "Retour en Haut"
+    },
+    "availability": {
+        "statusLabel": "Disponible",
+        "priceSuffix": "/ nuit",
+        "reserveLabel": "Réserver",
+        "whatsappLabel": "Chat Direct",
+        "floatingLabel": "WhatsApp"
+    },
+    "seo": {
+        "title": "Villa de Luxe Karimunjawa Vue Mer & Coucher de Soleil | The Secret",
+        "description": "Villas exclusives à Karimunjawa avec vue mer et panorama coucher de soleil 120°. 3 unités: Cipaku, Birdsong, Tivoli Garden. 9.6 sur Booking.com. Réservation directe via WhatsApp sans commission.",
+        "keywords": "villa karimunjawa, villa de luxe karimunjawa, hébergement karimunjawa, villa karimunjawa indonésie, villa vue mer karimunjawa, où séjourner karimunjawa, villa privée karimunjawa, the secret karimunjawa, villa plage karimunjawa, lune de miel karimunjawa, vacances karimunjawa, hôtel boutique karimunjawa, villa familiale karimunjawa, île karimunjawa hébergement",
+        "ogDescription": "3 villas exclusives face à la mer à Karimunjawa avec panorama coucher de soleil 120°. Construit avec amour, accueilli comme famille. 9.6 sur Booking.com."
+    }
+}

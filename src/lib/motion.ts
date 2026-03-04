@@ -20,6 +20,16 @@ export const fadeUpSlow: Variants = {
   },
 }
 
+export const blurFade: Variants = {
+  hidden: { opacity: 0, y: 15, filter: 'blur(8px)' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: EASE_OUT_EXPO }
+  }
+}
+
 export const fadeUpCustom = (i: number = 0): Variants => ({
   hidden: { opacity: 0, y: 32 },
   visible: {

@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
-import { Quote } from 'lucide-react'
+import { QuoteUpIcon } from 'hugeicons-react'
 import { REVIEWS } from '@/config/site'
 import { fadeUp, cardReveal, staggerContainer } from '@/lib/motion'
 
 export default function Testimonials() {
+  const { t } = useTranslation()
+
   return (
     <Section className="bg-sand relative overflow-hidden py-16 md:py-24 lg:py-32">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -19,8 +22,8 @@ export default function Testimonials() {
           variants={staggerContainer(0.15, 0.2)}
           className="text-center mb-20"
         >
-          <motion.span variants={fadeUp} className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-4 block">Guest Voices</motion.span>
-          <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal">Moments from Our Guests</motion.h2>
+          <motion.span variants={fadeUp} className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-4 block">{t('testimonials.eyebrow')}</motion.span>
+          <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal">{t('testimonials.title')}</motion.h2>
         </motion.div>
 
         <motion.div
@@ -32,7 +35,7 @@ export default function Testimonials() {
           {REVIEWS.map((review) => (
             <motion.div key={review.id} variants={cardReveal} className="flex flex-col items-center text-center p-6 md:p-8 lg:p-12">
               <div className="mb-8 text-teak-accent/20">
-                <Quote className="w-8 h-8 md:w-12 md:h-12 fill-current" />
+                <QuoteUpIcon className="w-8 h-8 md:w-12 md:h-12 fill-current" />
               </div>
               <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
                 "{review.text}"

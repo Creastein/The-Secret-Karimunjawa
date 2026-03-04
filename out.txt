@@ -1,0 +1,37 @@
+anchor: AnchorIcon, AnchorPointIcon
+utensil: KitchenUtensilsIcon
+pot: FlowerPotIcon, HotspotIcon, HotspotOfflineIcon, OrientationImageLandscapeToPotraitIcon, OrientationImagePotraitToLandscapeIcon
+restaurant: MenuRestaurantIcon, Restaurant01Icon, Restaurant02Icon, Restaurant03Icon, RestaurantIcon
+car: BitcoinCreditCardIcon, CableCarIcon, Car01Icon, Car02Icon, Car03Icon
+paw: ChessPawnIcon
+eye: BitcoinEyeIcon, EyeIcon, FileYenIcon, MoneyExchange01Icon, MoneyExchange02Icon
+smoking: 
+concierge: 
+sunrise: SunriseIcon
+coffee: Coffee01Icon, Coffee02Icon, Coffee03Icon, Coffee04Icon, CoffeeBeansIcon
+leaf: Leaf01Icon, Leaf02Icon, Leaf03Icon, Leaf04Icon
+sparkle: SparklesIcon
+smartphone: BitcoinSmartphone01Icon, BitcoinSmartphone02Icon, SmartPhone01Icon, SmartPhone02Icon, SmartPhone03Icon
+map: GoogleMapsIcon, MapPinIcon, MapPinpoint01Icon, MapPinpoint02Icon, MapingIcon
+globe: Globe02Icon, GlobeIcon
+earth: EarthIcon
+quote: LeftToRightBlockQuoteIcon, QuoteDownCircleIcon, QuoteDownIcon, QuoteDownSquareIcon, QuoteUpCircleIcon
+ship: CargoShipIcon, ChartRelationshipIcon, ShipmentTrackingIcon, ShippingCenterIcon, ShippingLoadingIcon
+wave: AudioWave01Icon, AudioWave02Icon, MicrowaveIcon, WaveIcon, WaveSquareIcon
+mountain: MountainIcon
+navigation: Navigation01Icon, Navigation02Icon, Navigation03Icon, Navigation04Icon, Navigation05Icon
+arrowleft: ArrowLeft01Icon, ArrowLeft02Icon, ArrowLeft03Icon, ArrowLeft04Icon, ArrowLeft05Icon
+arrowright: ArrowRight01Icon, ArrowRight02Icon, ArrowRight03Icon, ArrowRight04Icon, ArrowRight05Icon
+arrowup: ArchiveArrowUpIcon, ArrowUp01Icon, ArrowUp02Icon, ArrowUp03Icon, ArrowUp04Icon
+expand: ArrowExpand01Icon, ArrowExpand02Icon, ArrowExpandDiagonal01Icon, ArrowExpandDiagonal02Icon, ArrowExpandIcon
+cancel: BubbleChatCancelIcon, Cancel01Icon, Cancel02Icon, CancelCircleHalfDotIcon, CancelCircleIcon
+multiply: 
+menu: Menu01Icon, Menu02Icon, Menu03Icon, Menu04Icon, Menu05Icon
+plus: CrownPlusIcon, MinusPlus01Icon, MinusPlus02Icon, MinusPlusCircle01Icon, MinusPlusCircle02Icon
+minus: BookmarkMinus01Icon, BookmarkMinus02Icon, CalendarMinus01Icon, CalendarMinus02Icon, CallMinus02Icon
+chevron: 
+bubble: BubbleChatAddIcon, BubbleChatBlockedIcon, BubbleChatCancelIcon, BubbleChatDelayIcon, BubbleChatDoneIcon
+message: Message01Icon, Message02Icon, MessageAdd01Icon, MessageAdd02Icon, MessageBlockedIcon
+call: Call02Icon, CallAdd02Icon, CallAddIcon, CallBlocked02Icon, CallBlockedIcon
+instagram: InstagramIcon
+facebook: Facebook01Icon, Facebook02Icon

@@ -1,7 +1,12 @@
 import { useState } from 'react'
+import type * as React from 'react'
+
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { CallIcon, Location01Icon, ArrowRight01Icon, InstagramIcon, ArrowUpRight01Icon } from 'hugeicons-react'
+
 import Section from '@/components/layout/Section'
-import { Mail, Phone, MapPin, ArrowRight, Instagram, ArrowUpRight } from 'lucide-react'
+import { CONTACT_SECTION, ROOMS, WHATSAPP_NUMBER } from '@/config/site'
 import { fadeUp, slideInLeft, formCardReveal, staggerContainer } from '@/lib/motion'
 
 interface ContactItemProps {
@@ -11,7 +16,7 @@ interface ContactItemProps {
   link: string
 }
 
-function ContactItem({ icon: Icon, label, content, link }: ContactItemProps) {
+const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, label, content, link }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" className="flex items-start gap-6 group cursor-pointer">
       <div className="p-3 bg-white border border-stone-100 shadow-sm rounded-full text-stone-400 group-hover:text-teak-accent group-hover:border-teak-accent/30 transition-all duration-300">
@@ -21,7 +26,7 @@ function ContactItem({ icon: Icon, label, content, link }: ContactItemProps) {
         <h4 className="text-[10px] uppercase tracking-widest text-stone-400 mb-1 group-hover:text-teak-accent transition-colors">{label}</h4>
         <div className="flex items-center gap-2">
           <p className="text-base font-serif text-charcoal leading-tight group-hover:underline decoration-stone-300 underline-offset-4 decoration-1">{content}</p>
-          <ArrowUpRight className="w-3 h-3 text-stone-300 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
+          <ArrowUpRight01Icon className="w-3 h-3 text-stone-300 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
         </div>
       </div>
     </a>
@@ -39,7 +44,7 @@ interface InputFieldProps {
   setActiveField: (field: string | null) => void
 }
 
-function InputField({ label, name, type, placeholder, value, onChange, activeField, setActiveField }: InputFieldProps) {
+const InputField: React.FC<InputFieldProps> = ({ label, name, type, placeholder, value, onChange, activeField, setActiveField }) => {
   return (
     <div className="group relative">
       <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === name ? 'text-teak-accent' : 'text-stone-500'}`}>{label}</label>
@@ -48,21 +53,35 @@ function InputField({ label, name, type, placeholder, value, onChange, activeFie
   )
 }
 
-export default function Contact() {
+interface Props { }
+
+const Contact: React.FC<Props> = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    subject: 'Reservation Inquiry',
-    message: '',
+    checkIn: '',
+    checkOut: '',
+    unit: '',
   })
   const [activeField, setActiveField] = useState<string | null>(null)
 
-  const handleWhatsApp = () => {
-    const message = `Hi The Secret Karimunjawa,\n\nI'm contacting you regarding: ${formData.subject}\n\nMy details:\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    window.open(`https://wa.me/628131011434?text=${encodeURIComponent(message)}`, '_blank')
+  const handleScrollToFAQ = () => {
+    const el = document.getElementById('faq')
+    if (!el) return
+    const top = el.getBoundingClientRect().top + window.scrollY - 100
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleWhatsApp = () => {
+    const message = t('contact.whatsappInquiryTemplate')
+      .replace('[NAME]', formData.name)
+      .replace('[CHECKIN]', formData.checkIn)
+      .replace('[CHECKOUT]', formData.checkOut)
+      .replace('[UNIT]', formData.unit)
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank')
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
@@ -83,29 +102,39 @@ export default function Contact() {
             className="lg:col-span-5 pt-10 pb-10 md:pb-20 lg:py-20 flex flex-col justify-between h-full"
           >
             <div>
-              <motion.span variants={fadeUp} className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-6 block">Connection</motion.span>
+              <motion.span variants={fadeUp} className="text-teak-accent text-xs tracking-[0.25em] uppercase font-semibold mb-6 block">
+                {t('contact.eyebrow')}
+              </motion.span>
               <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal mb-8 leading-tight">
-                Begin Your <br /> <span className="italic text-stone-500">Journey</span>
+                {t('contact.title')} <br /> <span className="italic text-stone-500">{t('contact.titleAccent')}</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="font-light text-stone-600 mb-12 leading-relaxed max-w-sm">
-                From inquiries about our villa to planning island adventures, our team is ready to curate your ideal Karimunjawa experience.
+                {t('contact.description')}
               </motion.p>
+              <motion.button
+                variants={fadeUp}
+                type="button"
+                onClick={handleScrollToFAQ}
+                className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-stone-500 hover:text-teak-accent transition-colors"
+              >
+                {t('contact.faqButton')}
+              </motion.button>
             </div>
 
             <motion.div variants={staggerContainer()} className="space-y-10">
               <motion.div variants={slideInLeft}>
-                <ContactItem icon={MapPin} label="Location" content="Jl. I. J. Kasimo, Karimunjawa, Jepara" link="https://maps.app.goo.gl/N7ZEBC1pCWXsCh2W8" />
+                <ContactItem icon={Location01Icon} label={t('contact.locationLabel')} content={CONTACT_SECTION.locationText} link={CONTACT_SECTION.locationLink} />
               </motion.div>
               <motion.div variants={slideInLeft}>
-                <ContactItem icon={Phone} label="WhatsApp" content="+62 813 1011 434" link="https://wa.me/628131011434" />
+                <ContactItem icon={CallIcon} label={t('contact.whatsappLabel')} content={CONTACT_SECTION.whatsappText} link={`https://wa.me/${WHATSAPP_NUMBER}`} />
               </motion.div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="mt-16 flex items-center gap-4 text-stone-400">
               <div className="h-px w-12 bg-stone-300" />
-              <a href="https://www.instagram.com/thesecretkarimunjawa/" target="_blank" rel="noopener noreferrer" className="hover:text-teak-accent transition-colors flex items-center gap-2 text-xs uppercase tracking-widest group">
-                <Instagram className="w-4 h-4" />
-                <span className="group-hover:translate-x-1 transition-transform">@thesecretkarimunjawa</span>
+              <a href={CONTACT_SECTION.instagramLink} target="_blank" rel="noopener noreferrer" className="hover:text-teak-accent transition-colors flex items-center gap-2 text-xs uppercase tracking-widest group">
+                <InstagramIcon className="w-4 h-4" />
+                <span className="group-hover:translate-x-1 transition-transform">{CONTACT_SECTION.instagramHandle}</span>
               </a>
             </motion.div>
           </motion.div>
@@ -119,37 +148,79 @@ export default function Contact() {
             >
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-stone-100 to-transparent pointer-events-none" />
 
-              <h3 className="font-serif text-2xl text-charcoal mb-2">Direct Inquiry</h3>
-              <p className="text-xs text-stone-400 uppercase tracking-wide mb-10">Response within 2 hours</p>
+              <h3 className="font-serif text-2xl text-charcoal mb-2">{t('contact.formTitle')}</h3>
+              <p className="text-xs text-stone-400 uppercase tracking-wide mb-10">{t('contact.formSubtitle')}</p>
 
               <form className="space-y-8" onSubmit={(e) => { e.preventDefault(); handleWhatsApp() }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <InputField label="Full Name" name="name" type="text" placeholder="e.g. Alexander Hamilton" value={formData.name} onChange={handleChange} activeField={activeField} setActiveField={setActiveField} />
-                  <InputField label="Email Address" name="email" type="email" placeholder="e.g. alex@example.com" value={formData.email} onChange={handleChange} activeField={activeField} setActiveField={setActiveField} />
+                  <InputField
+                    label={t('contact.nameLabel')}
+                    name="name"
+                    type="text"
+                    placeholder={t('contact.namePlaceholder')}
+                    value={formData.name}
+                    onChange={handleChange}
+                    activeField={activeField}
+                    setActiveField={setActiveField}
+                  />
+                  <InputField
+                    label={t('contact.checkInLabel')}
+                    name="checkIn"
+                    type="date"
+                    placeholder=""
+                    value={formData.checkIn}
+                    onChange={handleChange}
+                    activeField={activeField}
+                    setActiveField={setActiveField}
+                  />
                 </div>
 
-                <div className="relative group">
-                  <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === 'subject' ? 'text-teak-accent' : 'text-stone-400'}`}>Subject</label>
-                  <div className="relative">
-                    <select name="subject" onChange={handleChange} onFocus={() => setActiveField('subject')} onBlur={() => setActiveField(null)} className="w-full border-b border-stone-300 py-3 text-sm focus:outline-none focus:border-teak-accent transition-colors bg-transparent text-charcoal font-serif appearance-none cursor-pointer">
-                      <option value="Reservation Inquiry">Reservation Inquiry</option>
-                      <option value="Diving / Snorkeling Trip">Diving / Snorkeling Trip</option>
-                      <option value="Island Tour">Island Tour</option>
-                      <option value="Other">Other</option>
-                    </select>
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400"><span className="text-[10px]">▼</span></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <InputField
+                    label={t('contact.checkOutLabel')}
+                    name="checkOut"
+                    type="date"
+                    placeholder=""
+                    value={formData.checkOut}
+                    onChange={handleChange}
+                    activeField={activeField}
+                    setActiveField={setActiveField}
+                  />
+
+                  <div className="relative group">
+                    <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === 'unit' ? 'text-teak-accent' : 'text-stone-400'}`}>
+                      {t('contact.unitLabel')}
+                    </label>
+                    <div className="relative">
+                      <select
+                        name="unit"
+                        required
+                        value={formData.unit}
+                        onChange={handleChange}
+                        onFocus={() => setActiveField('unit')}
+                        onBlur={() => setActiveField(null)}
+                        className="w-full border-b border-stone-300 py-3 text-sm focus:outline-none focus:border-teak-accent transition-colors bg-transparent text-charcoal font-serif appearance-none cursor-pointer"
+                      >
+                        <option value="" disabled>
+                          {t('contact.unitPlaceholder')}
+                        </option>
+                        {ROOMS.map((room) => (
+                          <option key={room.id} value={room.name}>
+                            {room.name}
+                          </option>
+                        ))}
+                      </select>
+                      <div className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-stone-400">
+                        <span className="text-[10px]">▼</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                <div className="relative group">
-                  <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === 'message' ? 'text-teak-accent' : 'text-stone-500'}`}>Your Message</label>
-                  <textarea required name="message" onChange={handleChange} onFocus={() => setActiveField('message')} onBlur={() => setActiveField(null)} rows={4} placeholder="Tell us about your plans..." className="w-full border-b border-stone-300 py-3 text-sm focus:outline-none focus:border-teak-accent transition-colors bg-transparent placeholder-stone-400 font-serif resize-none" />
                 </div>
 
                 <div className="pt-6 flex justify-end">
                   <button type="submit" className="w-full md:w-auto bg-charcoal text-white px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-teak-accent transition-all duration-500 flex items-center justify-center md:inline-flex gap-4 group shadow-lg hover:shadow-xl hover:-translate-y-1">
-                    <span>Send Request</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <span>{t('contact.submitLabel')}</span>
+                    <ArrowRight01Icon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </form>
@@ -161,3 +232,5 @@ export default function Contact() {
     </Section>
   )
 }
+
+export default Contact

@@ -19,8 +19,8 @@ export default {
         'clay': '#c9b59a',
       },
       fontFamily: {
-        serif: ['"Fraunces"', 'serif'],
-        sans: ['"Manrope"', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Montserrat"', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',

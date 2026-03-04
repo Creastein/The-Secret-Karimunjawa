@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://the-secret-karimunjawa.com/sitemap.xml
