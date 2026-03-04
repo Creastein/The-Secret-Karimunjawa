@@ -60,6 +60,10 @@
         "startingFrom": "Starting from",
         "perNight": "night",
         "typeLabel": "Type",
+        "lowSeason": "Low Season",
+        "highSeason": "High Season",
+        "seasonNote": "Rate varies by season",
+        "detailLabel": "View Details",
         "rooms": {
             "cipaku": {
                 "name": "Cipaku",
@@ -138,7 +142,8 @@
                 "description": "Warm lighting, ocean sounds, and a sky full of stars. Our rooftop is perfect for stargazing."
             }
         },
-        "expandLabel": "Expand image"
+        "expandLabel": "Expand image",
+        "ctaInstagram": "View more on Instagram"
     },
     "testimonials": {
         "eyebrow": "Guest Voices",
@@ -154,6 +159,7 @@
         "submitLabel": "Send Request",
         "locationLabel": "Location",
         "whatsappLabel": "WhatsApp",
+        "instagramLabel": "Instagram",
         "nameLabel": "Full Name",
         "namePlaceholder": "E.g. John Doe",
         "checkInLabel": "Check-in Date",

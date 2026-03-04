@@ -136,8 +136,8 @@ export default function Estate() {
             <p className="text-xs text-stone-400 uppercase tracking-widest mt-2">{t('estate.amenitiesSubtitle')}</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-            {FACILITIES.map((facility) => {
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-10">
+            {FACILITIES.filter((f) => ['1', '2', '3'].includes(f.id)).map((facility) => {
               const Icon = ICON_MAP[facility.iconName] || SparklesIcon
               const key = FACILITY_KEYS[facility.id]
               return (

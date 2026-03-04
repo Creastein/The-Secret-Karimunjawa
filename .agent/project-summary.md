@@ -45,3 +45,34 @@ Harga bersifat **dinamis tergantung season** (Low Season – High Season).
 ## 8. Integrasi Eksternal
 - Google Maps Embed: Penanda lokasi presisi The Secret Karimunjawa.
 - Social Media Link: Integrasi ke platform eksternal sesuai kebutuhan branding.
+
+## 9. Progress Pengembangan (Update: 4 Maret 2026)
+
+### ✅ Branding & Logo
+- **Logo Preloader**: Integrasi logo SVG (`logo-preloader.svg`) ke loading screen dengan animasi sequence khusus.
+- **Logo Navbar & Footer**: Penggantian logo di navbar (`logo-navbar.svg`) dan footer (`logo-footer.svg`) dengan penyesuaian ukuran.
+- **Favicon**: Setup favicon agar terlihat di tab browser sesuai branding.
+
+### ✅ Loading Screen (Preloader)
+- Redesign total loading screen dengan logo brand dan elemen teks menggunakan custom font.
+- Animasi entrance yang halus dan sesuai estetika premium.
+
+### ✅ Hero Section
+- Implementasi animasi entrance teks menggunakan **Framer Motion** — muncul setelah loading screen selesai.
+- Animasi reveal untuk gambar di sisi kanan hero section.
+
+### ✅ Experience Section
+- Layout **sticky scroll** menggunakan GSAP `ScrollTrigger.pin()` untuk kolom kiri agar tetap terlihat saat scroll (desktop).
+- Konten tersusun rapi dan interaktif.
+
+### ✅ Estate Section
+- Fasilitas dibatasi hanya **3 highlight utama**: 120° Sunset, Private Veranda, Private Kitchen.
+- Diferensiasi yang jelas dari Experience Section.
+
+### ✅ Location Section
+- Animasi konsisten menggunakan **Framer Motion / GSAP**.
+- Efek stagger pada header, grid villa cards, dan konten di dalam card.
+- Tampilan premium dan kohesif.
+
+### ✅ Troubleshooting
+- Investigasi dan perbaikan masalah gambar yang tidak tampil di website.

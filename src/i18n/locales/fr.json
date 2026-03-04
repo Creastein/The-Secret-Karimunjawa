@@ -60,6 +60,10 @@
         "startingFrom": "À partir de",
         "perNight": "nuit",
         "typeLabel": "Type",
+        "lowSeason": "Basse Saison",
+        "highSeason": "Haute Saison",
+        "seasonNote": "Le tarif varie selon la saison",
+        "detailLabel": "Voir les Détails",
         "rooms": {
             "cipaku": {
                 "name": "Cipaku",
@@ -138,7 +142,8 @@
                 "description": "Éclairage chaleureux, bruit de l'océan et ciel étoilé. Notre toit-terrasse est parfait pour admirer les étoiles."
             }
         },
-        "expandLabel": "Agrandir l'image"
+        "expandLabel": "Agrandir l'image",
+        "ctaInstagram": "Voir plus sur Instagram"
     },
     "testimonials": {
         "eyebrow": "Voix des Invités",
@@ -154,6 +159,7 @@
         "submitLabel": "Envoyer la Demande",
         "locationLabel": "Emplacement",
         "whatsappLabel": "WhatsApp",
+        "instagramLabel": "Instagram",
         "nameLabel": "Nom Complet",
         "namePlaceholder": "Ex. Jean Dupont",
         "checkInLabel": "Date d'arrivée",

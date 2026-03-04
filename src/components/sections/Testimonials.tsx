@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { QuoteUpIcon } from 'hugeicons-react'
 import { REVIEWS } from '@/config/site'
-import { fadeUp, cardReveal, staggerContainer } from '@/lib/motion'
+import { fadeUp, staggerContainer } from '@/lib/motion'
 
 export default function Testimonials() {
   const { t } = useTranslation()
+  const marqueeReviews = [...REVIEWS, ...REVIEWS]
 
   return (
     <Section className="bg-sand relative overflow-hidden py-16 md:py-24 lg:py-32">
@@ -26,28 +27,29 @@ export default function Testimonials() {
           <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal">{t('testimonials.title')}</motion.h2>
         </motion.div>
 
-        <motion.div
-          initial="hidden" whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={staggerContainer(0.15, 0.2)}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto"
-        >
-          {REVIEWS.map((review) => (
-            <motion.div key={review.id} variants={cardReveal} className="flex flex-col items-center text-center p-6 md:p-8 lg:p-12">
-              <div className="mb-8 text-teak-accent/20">
-                <QuoteUpIcon className="w-8 h-8 md:w-12 md:h-12 fill-current" />
+        <div className="marquee group relative max-w-6xl mx-auto overflow-hidden">
+          <div className="marquee-track flex items-stretch gap-8 lg:gap-12 py-4">
+            {marqueeReviews.map((review, index) => (
+              <div
+                key={`${review.id}-${index}`}
+                aria-hidden={index >= REVIEWS.length}
+                className="flex min-w-[280px] max-w-[360px] md:min-w-[320px] md:max-w-[420px] flex-col items-center text-center p-6 md:p-8 lg:p-12"
+              >
+                <div className="mb-8 text-teak-accent/20">
+                  <QuoteUpIcon className="w-8 h-8 md:w-12 md:h-12 fill-current" />
+                </div>
+                <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
+                  "{review.text}"
+                </p>
+                <div className="w-12 h-px bg-teak-accent/30 mb-6" />
+                <div>
+                  <h4 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h4>
+                  <span className="text-[10px] text-stone-400 uppercase tracking-wide">{review.origin}</span>
+                </div>
               </div>
-              <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
-                "{review.text}"
-              </p>
-              <div className="w-12 h-px bg-teak-accent/30 mb-6" />
-              <div>
-                <h4 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h4>
-                <span className="text-[10px] text-stone-400 uppercase tracking-wide">{review.origin}</span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </Section>
   )

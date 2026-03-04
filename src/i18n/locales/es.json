@@ -60,6 +60,10 @@
         "startingFrom": "Desde",
         "perNight": "noche",
         "typeLabel": "Tipo",
+        "lowSeason": "Temporada Baja",
+        "highSeason": "Temporada Alta",
+        "seasonNote": "La tarifa varía según la temporada",
+        "detailLabel": "Ver Detalles",
         "rooms": {
             "cipaku": {
                 "name": "Cipaku",
@@ -138,7 +142,8 @@
                 "description": "Iluminación cálida, sonido del océano y un cielo lleno de estrellas. Nuestra azotea es perfecta para observar las estrellas."
             }
         },
-        "expandLabel": "Expandir imagen"
+        "expandLabel": "Expandir imagen",
+        "ctaInstagram": "Ver más en Instagram"
     },
     "testimonials": {
         "eyebrow": "Voces de los Huéspedes",
@@ -154,6 +159,7 @@
         "submitLabel": "Enviar Solicitud",
         "locationLabel": "Ubicación",
         "whatsappLabel": "WhatsApp",
+        "instagramLabel": "Instagram",
         "nameLabel": "Nombre Completo",
         "namePlaceholder": "Ej. Juan Pérez",
         "checkInLabel": "Fecha de Llegada",

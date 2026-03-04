@@ -65,13 +65,6 @@ const Contact: React.FC<Props> = () => {
   })
   const [activeField, setActiveField] = useState<string | null>(null)
 
-  const handleScrollToFAQ = () => {
-    const el = document.getElementById('faq')
-    if (!el) return
-    const top = el.getBoundingClientRect().top + window.scrollY - 100
-    window.scrollTo({ top, behavior: 'smooth' })
-  }
-
   const handleWhatsApp = () => {
     const message = t('contact.whatsappInquiryTemplate')
       .replace('[NAME]', formData.name)
@@ -111,14 +104,6 @@ const Contact: React.FC<Props> = () => {
               <motion.p variants={fadeUp} className="font-light text-stone-600 mb-12 leading-relaxed max-w-sm">
                 {t('contact.description')}
               </motion.p>
-              <motion.button
-                variants={fadeUp}
-                type="button"
-                onClick={handleScrollToFAQ}
-                className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-stone-500 hover:text-teak-accent transition-colors"
-              >
-                {t('contact.faqButton')}
-              </motion.button>
             </div>
 
             <motion.div variants={staggerContainer()} className="space-y-10">
@@ -128,14 +113,9 @@ const Contact: React.FC<Props> = () => {
               <motion.div variants={slideInLeft}>
                 <ContactItem icon={CallIcon} label={t('contact.whatsappLabel')} content={CONTACT_SECTION.whatsappText} link={`https://wa.me/${WHATSAPP_NUMBER}`} />
               </motion.div>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="mt-16 flex items-center gap-4 text-stone-400">
-              <div className="h-px w-12 bg-stone-300" />
-              <a href={CONTACT_SECTION.instagramLink} target="_blank" rel="noopener noreferrer" className="hover:text-teak-accent transition-colors flex items-center gap-2 text-xs uppercase tracking-widest group">
-                <InstagramIcon className="w-4 h-4" />
-                <span className="group-hover:translate-x-1 transition-transform">{CONTACT_SECTION.instagramHandle}</span>
-              </a>
+              <motion.div variants={slideInLeft}>
+                <ContactItem icon={InstagramIcon} label={t('contact.instagramLabel')} content={CONTACT_SECTION.instagramHandle} link={CONTACT_SECTION.instagramLink} />
+              </motion.div>
             </motion.div>
           </motion.div>
 

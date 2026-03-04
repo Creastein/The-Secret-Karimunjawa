@@ -27,8 +27,17 @@ export const ROOMS: Room[] = [
     bedDetails: 'King Bed 2x2m',
     description: 'A secluded one-bedroom sanctuary with total privacy, a private kitchen, and a breezy veranda framing the sea and sunset beyond the palms.',
     imageUrl: '/assets/room-The-Ocean-Master.png',
+    gallery: [
+      '/assets/room-The-Ocean-Master.png',
+      '/assets/room-ocean-master-1.png',
+      '/assets/room-ocean-master-2.png',
+      '/assets/gallery-interiors-1.png',
+    ],
     features: ['Private Kitchen', 'Private Veranda', 'Sea View', 'Sunset View'],
     startingPrice: 1600000,
+    maxPrice: 1900000,
+    lowSeasonPrice: 1600000,
+    highSeasonPrice: 1900000,
   },
   {
     id: 'birdsong',
@@ -37,8 +46,16 @@ export const ROOMS: Room[] = [
     bedDetails: 'King Bed',
     description: 'An airy deluxe retreat with generous indoor space and an expansive veranda, designed for uninterrupted sea and sunset views.',
     imageUrl: '/assets/room-deluxe.png',
+    gallery: [
+      '/assets/room-deluxe.png',
+      '/assets/gallery-exteriors-1.png',
+      '/assets/gallery-exteriors-2.png',
+    ],
     features: ['Sea View', 'Sunset View', 'Spacious Veranda', 'Daily Housekeeping'],
     startingPrice: 1700000,
+    maxPrice: 2000000,
+    lowSeasonPrice: 1700000,
+    highSeasonPrice: 2000000,
   },
   {
     id: 'tivoli-garden',
@@ -47,8 +64,16 @@ export const ROOMS: Room[] = [
     bedDetails: 'Queen Bed 1.8x2m + Single Bed 1.5x2m',
     description: 'A serene superior suite with a private garden, crafted for restful stays with flexible bedding for families or friends.',
     imageUrl: '/assets/room-guest.png',
+    gallery: [
+      '/assets/room-guest.png',
+      '/assets/gallery-details-1.png',
+      '/assets/gallery-details-2.png',
+    ],
     features: ['Private Garden', 'Garden View', 'Flexible Bedding', 'Daily Housekeeping'],
     startingPrice: 1700000,
+    maxPrice: 1900000,
+    lowSeasonPrice: 1700000,
+    highSeasonPrice: 1900000,
   }
 ];
 
@@ -163,20 +188,32 @@ export const PRICING: PricingTier = {
 export const REVIEWS = [
   {
     id: 1,
-    text: "Great view. Staff sangat ramah. Breakfast enak. Bersih. Air dan wc juga bersih. Superb!",
-    author: "Ria",
-    origin: "9.6/10 — Booking.com"
+    text: "3 malam disini sangat memuaskan, kami ber-empat sewa kamar type Alang2 dengan 2 kamar, dapur, private balkon. Hotel sangat nyaman, bersih dan tertata rapih. Yang bikin betah adalah serasa rumah sendiri karena keramahan sang owner Mr. Kang Eddy kebetulan sedang stay disitu, serta Mas Egif yang selalu helpful. Hotel dengan sunset view yg menawan. Ga sabar buat kesana lagi. Terima kasih The Secret Karimunjawa menjadikan liburan kami sangat berkesan.",
+    author: "Dedup",
+    origin: "5/5 — Google Maps (Indonesia)"
   },
   {
     id: 2,
-    text: "Diluar ekspetasi, tempat menginap yang sangat luar biasa dari segi kenyamanan, staff dan fasilitas. Pengalaman yang luar biasa menginap disini, ditambah owner dan staff yang seperti keluarga padahal baru kenal. Pokoknya rekomendet next time!",
-    author: "Muthmainnah",
-    origin: "9.6/10 — Booking.com"
+    text: "Dari mulai pelayanan, kebersihan, toilet, menu breakfast dan kamar utama luar biasa, saya puas dan teman yang saya ajak saja sangat puas, nyaman dan viewnya luar biasa banget.",
+    author: "Pak Pong",
+    origin: "5/5 — Google Maps"
   },
   {
     id: 3,
-    text: "Properti ini indah dan ramah, dirancang dengan gaya yang menyatu sempurna dengan alam sekitar dan menghargai lingkungan. Masa tinggal kami di Karimunjawa tidak akan sama tanpa The Secret.",
-    author: "Marco",
-    origin: "9.6/10 — Booking.com"
+    text: "Tempat yang bagus yang pernah kami kunjungi, teman2 yang belum coba silahkan coba ini tempat yang liburan yang indah.",
+    author: "Asyer Giandra",
+    origin: "5/5 — Google Maps"
+  },
+  {
+    id: 4,
+    text: "Hal terakhir yang saya sampaikan kepada pemiliknya adalah bahwa kunjungan kami di Karimunjawa tidak akan sama tanpa The Secret. Properti ini indah dan ramah, dirancang dengan gaya yang menyatu sempurna dengan lingkungan alam dan menghormati lingkungan. Kebersihan dan kenyamanan berada pada tingkat tertinggi. Kami disambut dan dilayani dengan sangat baik, tanpa kekurangan apa pun. Jika kami kembali ke Karimunjawa, kami pasti akan menginap di The Secret.",
+    author: "Marcco Gatucci",
+    origin: "5/5 — Google Maps"
+  },
+  {
+    id: 5,
+    text: "Akomodasi ini memiliki pemandangan yang menakjubkan dan dilengkapi dengan semua yang Anda butuhkan! Kebersihannya luar biasa dan stafnya profesional dan sangat ramah. Egif memastikan kami mendapatkan semua yang kami butuhkan dan memenuhi semua kebutuhan kami. Anda dapat menyewa skuter langsung dari properti dengan harga terjangkau. Saya merekomendasikannya kepada semua orang!",
+    author: "Mariana Cornicello",
+    origin: "5/5 — Google Maps"
   }
 ];

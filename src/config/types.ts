@@ -12,8 +12,12 @@ export interface Room {
   bedDetails: string;
   description: string;
   imageUrl: string;
+  gallery?: string[];
   features: string[];
   startingPrice: number;
+  maxPrice?: number;
+  lowSeasonPrice?: number;
+  highSeasonPrice?: number;
 }
 
 export type ImageCategory = 'Exteriors' | 'Interiors' | 'Details' | 'Night';

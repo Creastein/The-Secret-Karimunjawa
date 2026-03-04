@@ -60,6 +60,10 @@
         "startingFrom": "Mulai dari",
         "perNight": "malam",
         "typeLabel": "Tipe",
+        "lowSeason": "Low Season",
+        "highSeason": "High Season",
+        "seasonNote": "Harga bervariasi sesuai musim",
+        "detailLabel": "Lihat Detail",
         "rooms": {
             "cipaku": {
                 "name": "Cipaku",
@@ -138,7 +142,8 @@
                 "description": "Pencahayaan hangat, suara ombak, dan langit berbintang. Rooftop kami sempurna untuk stargazing."
             }
         },
-        "expandLabel": "Perbesar gambar"
+        "expandLabel": "Perbesar gambar",
+        "ctaInstagram": "Lihat lebih banyak di Instagram"
     },
     "testimonials": {
         "eyebrow": "Kata Mereka",
@@ -154,6 +159,7 @@
         "submitLabel": "Kirim Permintaan",
         "locationLabel": "Lokasi",
         "whatsappLabel": "WhatsApp",
+        "instagramLabel": "Instagram",
         "nameLabel": "Nama Lengkap",
         "namePlaceholder": "Contoh: Diah Ayu",
         "checkInLabel": "Tanggal Check-in",

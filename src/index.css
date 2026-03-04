@@ -44,6 +44,19 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .marquee {
+    position: relative;
+  }
+
+  .marquee-track {
+    width: max-content;
+    animation: marquee-right-left 25s linear infinite;
+  }
+
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 @layer utilities {
@@ -71,6 +84,16 @@
 
   100% {
     transform: scale(1.08);
+  }
+}
+
+@keyframes marquee-right-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
 

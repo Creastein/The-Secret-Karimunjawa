@@ -99,7 +99,7 @@ export default function App() {
       <Preloader onComplete={handlePreloaderComplete} />
 
       {!loading && (
-        <div className="min-h-screen bg-sand font-sans overflow-x-hidden animate-fade-in">
+        <div className="min-h-screen bg-sand font-sans overflow-x-clip animate-fade-in">
           <Navigation />
           <Hero />
           <Estate />

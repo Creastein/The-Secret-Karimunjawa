@@ -1,10 +1,10 @@
-import { useState, useEffect, useMemo, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef, type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { GALLERY_IMAGES } from '@/config/site'
 import type { ImageCategory } from '@/config/types'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
-import { ArrowLeft01Icon, ArrowRight01Icon, Maximize01Icon, Cancel01Icon } from 'hugeicons-react'
+import { ArrowLeft01Icon, ArrowRight01Icon, Maximize01Icon, Cancel01Icon, InstagramIcon } from 'hugeicons-react'
 import { gsap } from 'gsap'
 import { fadeUp, staggerContainer, EASE_OUT_EXPO } from '@/lib/motion'
 
@@ -32,7 +32,9 @@ const slideVariants = {
   exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 100 : -100, opacity: 0, scale: 0.95 }),
 }
 
-export default function Gallery() {
+type Props = {}
+
+const Gallery: FC<Props> = () => {
   const { t } = useTranslation()
   const lightboxRef = useRef<HTMLDivElement>(null)
   const lightboxImageRef = useRef<HTMLImageElement>(null)
@@ -97,64 +99,80 @@ export default function Gallery() {
   return (
     <Section id="gallery" className="bg-sand bg-atmosphere" fullWidth>
       <div className="container mx-auto px-6 md:px-12 py-20">
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-12">
 
           <motion.div
             initial="hidden" whileInView="visible"
             viewport={{ once: true, margin: '-80px' }}
             variants={staggerContainer()}
-            className="flex flex-col md:flex-row justify-between items-center md:items-end gap-6 mb-10 border-b border-stone-200 pb-6"
+            className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] items-start"
           >
-            <div className="text-center md:text-left">
-              <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">{t('gallery.eyebrow')}</motion.span>
-              <motion.h2 variants={fadeUp} className="font-serif text-4xl text-charcoal leading-[1.05] tracking-tight">{t('gallery.title')}</motion.h2>
+            <div className="text-center md:text-left flex flex-col gap-10">
+              <div>
+                <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">{t('gallery.eyebrow')}</motion.span>
+                <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal leading-[1.05] tracking-tight">{t('gallery.title')}</motion.h2>
+              </div>
 
               <AnimatePresence mode="wait">
-                <motion.div key={activeCategory} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.4, ease: EASE_OUT_EXPO }} className="mt-8 max-w-lg mx-auto md:mx-0">
+                <motion.div
+                  key={activeCategory}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.4, ease: EASE_OUT_EXPO }}
+                  className="max-w-lg mx-auto md:mx-0"
+                >
                   <h3 className="font-serif text-2xl md:text-3xl text-charcoal italic mb-3">{t(`gallery.categoryContent.${catKey}.title`)}</h3>
                   <p className="text-stone-500 font-light leading-relaxed text-sm md:text-base">{t(`gallery.categoryContent.${catKey}.description`)}</p>
                 </motion.div>
               </AnimatePresence>
+
+              <motion.div variants={fadeUp} className="flex flex-col items-center md:items-start gap-8">
+                <div className="flex flex-wrap justify-center md:justify-start gap-6 border-b border-stone-200/80 pb-4">
+                  {CATEGORIES.map((cat) => (
+                    <button
+                      key={cat} onClick={() => setActiveCategory(cat)}
+                      className={`text-[11px] uppercase tracking-[0.35em] transition-all duration-300 pb-2 ${activeCategory === cat ? 'text-charcoal border-b border-charcoal' : 'text-stone-400 border-b border-transparent hover:text-stone-700'}`}
+                    >
+                      {t(`gallery.categories.${CATEGORY_KEYS[cat]}`)}
+                    </button>
+                  ))}
+                </div>
+                <div className="flex items-center gap-4 text-xs font-medium text-stone-500 font-serif shrink-0">
+                  <span className="text-stone-900 text-2xl">{(currentIndex + 1).toString().padStart(2, '0')}</span>
+                  <div className="h-[1px] w-16 bg-stone-300">
+                    <motion.div
+                      className="h-full bg-stone-800"
+                      animate={{ width: `${((currentIndex + 1) / filteredImages.length) * 100}%` }}
+                      transition={{ duration: 0.5, ease: EASE_OUT_EXPO }}
+                    />
+                  </div>
+                  <span>{filteredImages.length.toString().padStart(2, '0')}</span>
+                </div>
+              </motion.div>
             </div>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-6 md:gap-8">
-              {CATEGORIES.map((cat) => (
-                <button
-                  key={cat} onClick={() => setActiveCategory(cat)}
-                  className={`text-[11px] uppercase tracking-widest transition-all duration-300 pb-1 border-b-2 ${activeCategory === cat ? 'text-charcoal border-teak-accent' : 'text-stone-400 border-transparent hover:text-stone-600'}`}
-                >
-                  {t(`gallery.categories.${CATEGORY_KEYS[cat]}`)}
-                </button>
-              ))}
-            </motion.div>
-          </motion.div>
-
-          <div className="flex justify-end mb-2 px-1">
-            <div className="flex items-center gap-4 text-xs font-medium text-stone-400 font-serif shrink-0">
-              <span className="text-stone-900 text-xl">{(currentIndex + 1).toString().padStart(2, '0')}</span>
-              <div className="h-[1px] w-12 bg-stone-300">
-                <motion.div className="h-full bg-stone-800" animate={{ width: `${((currentIndex + 1) / filteredImages.length) * 100}%` }} transition={{ duration: 0.5, ease: EASE_OUT_EXPO }} />
-              </div>
-              <span>{filteredImages.length.toString().padStart(2, '0')}</span>
-            </div>
-          </div>
-
-          <div className="relative">
             <motion.div
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.8, ease: EASE_OUT_EXPO }}
-              className="relative h-auto group"
+              className="relative h-auto"
             >
-              <div className="relative w-full h-[280px] sm:h-[360px] md:h-[520px] overflow-hidden bg-stone-200 shadow-xl group">
+              <div className="relative w-full h-[320px] sm:h-[420px] md:h-[560px] overflow-hidden bg-stone-200/90 shadow-2xl rounded-none border border-stone-100 ring-1 ring-black/5 group">
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit"
                     transition={{ x: { type: 'spring', stiffness: 300, damping: 30 }, opacity: { duration: 0.3 }, ease: EASE_OUT_EXPO }}
                     className="absolute inset-0 w-full h-full"
                   >
                     <img src={filteredImages[currentIndex]?.url} alt={filteredImages[currentIndex]?.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" onClick={() => setIsLightboxOpen(true)} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" />
                   </motion.div>
                 </AnimatePresence>
+
+                <div className="absolute left-6 bottom-6 z-30 flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-white/80">
+                  <span>{t(`gallery.categories.${CATEGORY_KEYS[activeCategory]}`)}</span>
+                  <span className="h-px w-8 bg-white/50" />
+                  <span>{(currentIndex + 1).toString().padStart(2, '0')}</span>
+                </div>
 
                 <button onClick={() => setIsLightboxOpen(true)} className="absolute top-6 right-6 p-3 bg-white/90 backdrop-blur-sm rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 z-30 hover:scale-110 shadow-lg" aria-label={t('gallery.expandLabel')}>
                   <Maximize01Icon className="w-5 h-5 text-stone-800" strokeWidth={1.5} />
@@ -172,25 +190,56 @@ export default function Gallery() {
                 )}
               </div>
 
-              {filteredImages.length > 1 && (
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-30px' }} className="mt-4 md:mt-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 md:gap-3">
-                  {filteredImages.slice(0, 12).map((image, index) => (
-                    <motion.button key={image.id} custom={index} variants={thumbVariant} onClick={() => setCurrentIndex(index)}
-                      className={`relative aspect-[4/3] overflow-hidden border transition-all ${index === currentIndex ? 'border-teak-accent ring-2 ring-teak-accent/30' : 'border-white/60 hover:border-teak-accent/70'}`}
-                      aria-label={`View ${image.alt}`}
-                    >
-                      <img src={image.url} alt={image.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-                    </motion.button>
-                  ))}
-                </motion.div>
-              )}
+              <div className="mt-6 flex items-center justify-between gap-6">
+                <div className="flex flex-col">
+                  <p className="font-serif text-xl text-charcoal">{filteredImages[currentIndex]?.alt}</p>
+                  <span className="text-[11px] uppercase tracking-[0.3em] text-stone-400">{t(`gallery.categories.${CATEGORY_KEYS[activeCategory]}`)}</span>
+                </div>
+                <div className="hidden sm:flex items-center gap-3 text-[11px] uppercase tracking-[0.2em] text-stone-400">
+                  <span>{(currentIndex + 1).toString().padStart(2, '0')}</span>
+                  <span className="h-px w-10 bg-stone-300" />
+                  <span>{filteredImages.length.toString().padStart(2, '0')}</span>
+                </div>
+              </div>
             </motion.div>
+          </motion.div>
+
+          {filteredImages.length > 0 && (
+            <motion.div key={activeCategory} initial="hidden" animate="visible" className="mt-2">
+              <div className="flex gap-4 overflow-x-auto pb-2">
+                {filteredImages.slice(0, 12).map((image, index) => (
+                  <motion.button
+                    key={image.id}
+                    custom={index}
+                    variants={thumbVariant}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`relative aspect-[4/3] w-32 sm:w-36 md:w-40 shrink-0 overflow-hidden border transition-all duration-300 ${index === currentIndex ? 'border-teak-accent ring-2 ring-teak-accent/30 shadow-lg' : 'border-white/60 hover:border-teak-accent/70'}`}
+                    aria-label={`View ${image.alt}`}
+                  >
+                    <img src={image.url} alt={image.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
+                    <div className={`absolute inset-0 transition-opacity duration-300 ${index === currentIndex ? 'opacity-0' : 'bg-white/10'}`} />
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          <div className="mt-8 flex justify-center md:justify-start">
+            <a
+              href="https://www.instagram.com/thesecretkarimunjawa/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] text-stone-500 hover:text-stone-800 transition-colors border-b border-stone-300 pb-1"
+            >
+              <InstagramIcon className="w-4 h-4" />
+              {t('gallery.ctaInstagram')}
+            </a>
           </div>
         </div>
       </div>
 
       {isLightboxOpen && (
-        <div ref={lightboxRef} className="fixed inset-0 z-[100] bg-stone-950/98 flex items-center justify-center p-4" onClick={closeLightbox}>
+        <div ref={lightboxRef} className="fixed inset-0 z-[100] bg-stone-950/70 backdrop-blur-xl flex items-center justify-center p-4" onClick={closeLightbox}>
           <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.55)_55%,rgba(0,0,0,0.8)_100%)]" />
 
           <button onClick={(e) => { e.stopPropagation(); closeLightbox() }} className="absolute top-6 right-6 text-white/60 hover:text-white z-50 p-2 transition-colors duration-300" aria-label="Close lightbox">
@@ -223,3 +272,5 @@ export default function Gallery() {
     </Section>
   )
 }
+
+export default Gallery
