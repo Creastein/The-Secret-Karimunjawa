@@ -57,6 +57,8 @@
         "featuresLabel": "Unit Features",
         "ctaLabel": "Book This Villa",
         "bedLabel": "Bed Configuration",
+        "startingFrom": "Starting from",
+        "perNight": "night",
         "typeLabel": "Type",
         "rooms": {
             "cipaku": {

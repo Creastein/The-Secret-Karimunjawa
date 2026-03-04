@@ -19,12 +19,13 @@
 
 ## 4. Katalog Unit Villa
 Semua unit memiliki keunggulan **Sea View** dan **Sunset View**.
+Harga bersifat **dinamis tergantung season** (Low Season – High Season).
 
-| Nama Unit | Tipe Kamar | Fasilitas Utama | Detail Tempat Tidur |
-| :--- | :--- | :--- | :--- |
-| **Cipaku** | One-Bedroom | Dapur lengkap, Veranda pribadi, 100% Privacy | King Size Bed (2x2m) |
-| **Birdsong** | Deluxe | Veranda yang sangat luas | King Size Bed |
-| **Tivoli Garden** | Superior | Taman pribadi & Veranda | 1 Queen Bed (1.8x2m) + 1 Bed (1.5x2m) |
+| Nama Unit | Tipe Kamar | Harga/Malam | Fasilitas Utama | Detail Tempat Tidur |
+| :--- | :--- | :--- | :--- | :--- |
+| **Cipaku** | One-Bedroom | Rp 1.600.000 – 1.900.000 | Private Kitchen, Private Veranda, 100% Privacy | King Size Bed (2x2m) |
+| **Birdsong** | Deluxe | Rp 1.700.000 – 2.000.000 | Spacious Veranda | King Size Bed |
+| **Tivoli Garden** | Superior | Rp 1.700.000 – 1.900.000 | Private Garden & Veranda | 1 Queen Bed (1.8x2m) + 1 Bed (1.5x2m) |
 
 ## 5. Kebijakan & Informasi Penting (Policy)
 * **Pantai**: Secara tegas dicantumkan bahwa properti **TIDAK memiliki Private Beach**.

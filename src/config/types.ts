@@ -13,6 +13,7 @@ export interface Room {
   description: string;
   imageUrl: string;
   features: string[];
+  startingPrice: number;
 }
 
 export type ImageCategory = 'Exteriors' | 'Interiors' | 'Details' | 'Night';

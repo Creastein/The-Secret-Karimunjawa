@@ -27,7 +27,8 @@ export const ROOMS: Room[] = [
     bedDetails: 'King Bed 2x2m',
     description: 'A secluded one-bedroom sanctuary with total privacy, a private kitchen, and a breezy veranda framing the sea and sunset beyond the palms.',
     imageUrl: '/assets/room-The-Ocean-Master.png',
-    features: ['Private Kitchen', 'Private Veranda', 'Sea View', 'Sunset View']
+    features: ['Private Kitchen', 'Private Veranda', 'Sea View', 'Sunset View'],
+    startingPrice: 1600000,
   },
   {
     id: 'birdsong',
@@ -36,7 +37,8 @@ export const ROOMS: Room[] = [
     bedDetails: 'King Bed',
     description: 'An airy deluxe retreat with generous indoor space and an expansive veranda, designed for uninterrupted sea and sunset views.',
     imageUrl: '/assets/room-deluxe.png',
-    features: ['Sea View', 'Sunset View', 'Spacious Veranda', 'Daily Housekeeping']
+    features: ['Sea View', 'Sunset View', 'Spacious Veranda', 'Daily Housekeeping'],
+    startingPrice: 1700000,
   },
   {
     id: 'tivoli-garden',
@@ -45,7 +47,8 @@ export const ROOMS: Room[] = [
     bedDetails: 'Queen Bed 1.8x2m + Single Bed 1.5x2m',
     description: 'A serene superior suite with a private garden, crafted for restful stays with flexible bedding for families or friends.',
     imageUrl: '/assets/room-guest.png',
-    features: ['Private Garden', 'Garden View', 'Flexible Bedding', 'Daily Housekeeping']
+    features: ['Private Garden', 'Garden View', 'Flexible Bedding', 'Daily Housekeeping'],
+    startingPrice: 1700000,
   }
 ];
 

@@ -57,6 +57,8 @@
         "featuresLabel": "Fitur Unit",
         "ctaLabel": "Pesan Villa Ini",
         "bedLabel": "Konfigurasi Tempat Tidur",
+        "startingFrom": "Mulai dari",
+        "perNight": "malam",
         "typeLabel": "Tipe",
         "rooms": {
             "cipaku": {
