@@ -84,13 +84,7 @@ const taglineReveal = {
   },
 }
 
-const scrollHintReveal = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.8, delay: 1.6, ease: EXPO },
-  },
-}
+
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -206,26 +200,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── scroll hint with pulse ───────────────────── */}
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={scrollHintReveal}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden md:flex"
-      >
-        <span className="text-[10px] uppercase tracking-[0.35em] text-ink/50">
-          {t('hero.scrollHint')}
-        </span>
-        <motion.span
-          animate={{ y: [0, 6, 0] }}
-          transition={{
-            duration: 1.8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="w-[1px] h-6 bg-ink/30"
-        />
-      </motion.div>
+
     </section>
   )
 }

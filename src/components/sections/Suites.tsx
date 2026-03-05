@@ -172,24 +172,16 @@ export default function Suites({ }: Props) {
                     {/* CTA */}
                     <motion.button
                       variants={bodyItem}
-                      whileHover={{ backgroundColor: 'var(--color-charcoal)', color: '#fff' }}
                       whileTap={{ scale: 0.98 }}
                       transition={{ duration: 0.25 }}
-                      className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-charcoal border border-charcoal/20 px-4 py-2.5 w-full justify-center group/btn"
+                      className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-charcoal border border-charcoal/20 px-4 py-2.5 w-full justify-center transition-all duration-300 hover:bg-charcoal hover:text-white hover:border-charcoal"
                       onClick={e => {
                         e.stopPropagation()
                         setSelectedRoom({ room, i18nKey })
                       }}
                     >
                       <span>{t('suites.detailLabel')}</span>
-                      <motion.span
-                        className="inline-flex"
-                        initial={{ x: 0 }}
-                        whileHover={{ x: 3 }}
-                        transition={{ duration: 0.25 }}
-                      >
-                        <ArrowRight01Icon className="w-3 h-3" strokeWidth={2} />
-                      </motion.span>
+                      <ArrowRight01Icon className="w-3 h-3" strokeWidth={2} />
                     </motion.button>
                   </motion.div>
                 </motion.article>
