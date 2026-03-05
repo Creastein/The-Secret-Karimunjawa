@@ -28,18 +28,31 @@ export default function App() {
         <title>{t('seo.title')}</title>
         <meta name="description" content={t('seo.description')} />
         <meta name="keywords" content={t('seo.keywords')} />
+        <meta name="author" content="The Secret Karimunjawa" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+
+        <link rel="canonical" href="https://thesecretkarimunjawa.com/" />
 
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="The Secret Karimunjawa" />
         <meta property="og:url" content="https://thesecretkarimunjawa.com/" />
         <meta property="og:title" content={t('seo.title')} />
         <meta property="og:description" content={t('seo.ogDescription')} />
-        <meta property="og:image" content="/assets/hero-coastal.png" />
+        <meta property="og:image" content="https://thesecretkarimunjawa.com/assets/hero-coastal.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={i18n.language === 'id' ? 'id_ID' : i18n.language === 'en' ? 'en_US' : i18n.language === 'fr' ? 'fr_FR' : 'es_ES'} />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://thesecretkarimunjawa.com/" />
-        <meta property="twitter:title" content={t('seo.title')} />
-        <meta property="twitter:description" content={t('seo.ogDescription')} />
-        <meta property="twitter:image" content="/assets/hero-coastal.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://thesecretkarimunjawa.com/" />
+        <meta name="twitter:title" content={t('seo.title')} />
+        <meta name="twitter:description" content={t('seo.ogDescription')} />
+        <meta name="twitter:image" content="https://thesecretkarimunjawa.com/assets/hero-coastal.png" />
+
+        <meta name="geo.region" content="ID-JT" />
+        <meta name="geo.placename" content="Karimunjawa, Jepara" />
+        <meta name="geo.position" content="-5.8672;110.4381" />
+        <meta name="ICBM" content="-5.8672, 110.4381" />
 
         <link rel="alternate" hrefLang="id" href="https://thesecretkarimunjawa.com/?lng=id" />
         <link rel="alternate" hrefLang="en" href="https://thesecretkarimunjawa.com/?lng=en" />
