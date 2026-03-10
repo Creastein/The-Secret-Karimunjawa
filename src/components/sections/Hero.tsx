@@ -172,16 +172,32 @@ export default function Hero() {
 
         {/* ── image column ───────────────────────────── */}
         <div className="relative overflow-hidden min-h-[50vh] lg:min-h-0 order-1 lg:order-2">
-          <motion.img
-            ref={imageRef}
+          <motion.picture
             initial="hidden"
             animate="visible"
             variants={imageReveal}
-            src="/assets/hero-coastal.png"
-            alt="Villa karimunjawa sea view sunset - The Secret Karimunjawa beachfront luxury villa"
-            className="absolute inset-0 h-full w-full object-cover object-[50%_75%]"
-            loading="eager"
-          />
+            className="absolute inset-0 h-full w-full"
+          >
+            <source
+              media="(max-width: 768px)"
+              srcSet="/assets/hero-coastal-mobile.webp"
+              type="image/webp"
+            />
+            <source
+              srcSet="/assets/hero-coastal.webp"
+              type="image/webp"
+            />
+            <img
+              ref={imageRef}
+              src="/assets/hero-coastal.png"
+              alt="Villa karimunjawa sea view sunset - The Secret Karimunjawa beachfront luxury villa"
+              className="h-full w-full object-cover object-[50%_75%]"
+              loading="eager"
+              fetchPriority="high"
+              width={1920}
+              height={1080}
+            />
+          </motion.picture>
           <div
             className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/30 to-transparent"
           />

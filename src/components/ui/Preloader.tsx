@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 const EASE_EXPO: [number, number, number, number] = [0.22, 1, 0.36, 1]
-const TOTAL_DURATION = 5500
+const TOTAL_DURATION = 3000
 
 interface PreloaderProps {
   onComplete: () => void
@@ -17,7 +17,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-      setTimeout(onComplete, 1200)
+      setTimeout(onComplete, 800)
     }, TOTAL_DURATION)
 
     return () => clearTimeout(timer)
@@ -48,7 +48,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.p
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 1.8, ease: EASE_EXPO }}
+              transition={{ duration: 1.2, delay: 1.4, ease: EASE_EXPO }}
               style={{ fontFamily: '"Alex Brush", cursive' }}
               className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none mb-5"
             >
@@ -59,7 +59,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 2.6, ease: EASE_EXPO }}
+              transition={{ duration: 0.7, delay: 2.0, ease: EASE_EXPO }}
               className="font-serif italic text-xs md:text-sm tracking-[0.2em] text-white/40"
             >
               come and find it
@@ -70,7 +70,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                   animate={{ opacity: [0, 1, 1, 0] }}
                   transition={{
                     duration: 2,
-                    delay: 3.0 + i * 0.3,
+                    delay: 2.2 + i * 0.3,
                     repeat: Infinity,
                     repeatDelay: 0.8,
                     times: [0, 0.2, 0.7, 1],
