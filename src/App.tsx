@@ -107,6 +107,31 @@ export default function App() {
             "https://www.booking.com/hotel/id/the-secret-karimunjawa-kabupaten-jepara1.id.html"
           ]
         })}</script>
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": t('faq.reservation.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a1') } },
+            { "@type": "Question", "name": t('faq.reservation.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a2') } },
+            { "@type": "Question", "name": t('faq.reservation.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a3') } },
+            { "@type": "Question", "name": t('faq.reservation.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a4') } },
+            { "@type": "Question", "name": t('faq.facilities.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a1') } },
+            { "@type": "Question", "name": t('faq.facilities.q2'), "acceptedAnswer": { "@type": "Answer", "text": `${t('faq.facilities.a2_intro')} ${t('faq.facilities.a2_cipaku')} ${t('faq.facilities.a2_birdsong')} ${t('faq.facilities.a2_tivoli')} ${t('faq.facilities.a2_note')}` } },
+            { "@type": "Question", "name": t('faq.facilities.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a3') } },
+            { "@type": "Question", "name": t('faq.facilities.q4'), "acceptedAnswer": { "@type": "Answer", "text": `${t('faq.facilities.a4_intro')} ${(t('faq.facilities.a4_items', { returnObjects: true }) as string[]).join(', ')}` } },
+            { "@type": "Question", "name": t('faq.facilities.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a5') } },
+            { "@type": "Question", "name": t('faq.dining.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.dining.a1') } },
+            { "@type": "Question", "name": t('faq.dining.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.dining.a2') } },
+            { "@type": "Question", "name": t('faq.dining.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.dining.a3') } },
+            { "@type": "Question", "name": t('faq.policies.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.policies.a1') } },
+            { "@type": "Question", "name": t('faq.policies.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.policies.a2') } },
+            { "@type": "Question", "name": t('faq.policies.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.policies.a3') } },
+            { "@type": "Question", "name": t('faq.location.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.location.a1') } },
+            { "@type": "Question", "name": t('faq.location.q2'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.location.a2') } },
+            { "@type": "Question", "name": t('faq.location.q3'), "acceptedAnswer": { "@type": "Answer", "text": `${t('faq.location.a3_intro')} ${(t('faq.location.a3_items', { returnObjects: true }) as string[]).join(', ')}` } }
+          ]
+        })}</script>
       </Helmet>
 
       <Preloader onComplete={handlePreloaderComplete} />
