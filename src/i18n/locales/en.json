@@ -48,7 +48,9 @@
         "directBooking": "Straight to Us",
         "directBookingDesc": "Book via WhatsApp — no agents, no commissions, 100% goes to the villa.",
         "sunriseBreakfast": "Homemade Breakfast",
-        "sunriseBreakfastDesc": "Homemade toast, Patricia's handmade jam, and morning coffee with an ocean view."
+        "sunriseBreakfastDesc": "Homemade toast, Patricia's handmade jam, and morning coffee with an ocean view.",
+        "residentDog": "Our Furry Friend",
+        "residentDogDesc": "Our friendly dog is part of the family and may greet you during your stay."
     },
     "suites": {
         "eyebrow": "Three Villas",

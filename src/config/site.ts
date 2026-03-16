@@ -9,6 +9,7 @@ export const FACILITIES: Facility[] = [
   { id: '6', name: 'Daily Housekeeping', iconName: 'Sparkles', description: 'Daily cleaning service to ensure your comfort.' },
   { id: '7', name: 'Direct Booking', iconName: 'Smartphone', description: 'Book directly via WhatsApp for 0% commission.' },
   { id: '8', name: 'Sunrise Breakfast', iconName: 'Sunrise', description: 'Delicious daily breakfast options to start your morning.' },
+  { id: '9', name: 'Friendly Resident Dog', iconName: 'PawPrint', description: 'Our friendly dog is part of the family and may greet you during your stay.' },
 ];
 
 export const EXPERIENCE_SECTION = {

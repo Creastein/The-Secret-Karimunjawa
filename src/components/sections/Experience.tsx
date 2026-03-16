@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon } from 'hugeicons-react'
+import { PawPrint as PawPrintIcon } from 'lucide-react'
 
 import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
@@ -19,7 +20,7 @@ const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Anchor: EyeIcon,
   Utensils: Restaurant01Icon,
   Car: Car01Icon,
-  PawPrint: Leaf01Icon,
+  PawPrint: PawPrintIcon,
   Eye: EyeIcon,
   CigaretteOff: Leaf01Icon,
   ConciergeBell: SparklesIcon,
@@ -39,6 +40,7 @@ const FACILITY_KEYS: Record<string, string> = {
   '6': 'dailyHousekeeping',
   '7': 'directBooking',
   '8': 'sunriseBreakfast',
+  '9': 'residentDog',
 }
 
 /* ── animation variants ────────────────────────── */

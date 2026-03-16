@@ -48,7 +48,9 @@
         "directBooking": "Directo con Nosotros",
         "directBookingDesc": "Reserve por WhatsApp — sin agentes, sin comisiones, 100% va a la villa.",
         "sunriseBreakfast": "Desayuno Casero",
-        "sunriseBreakfastDesc": "Tostadas caseras, mermelada hecha por Patricia y café matutino con vista al mar."
+        "sunriseBreakfastDesc": "Tostadas caseras, mermelada hecha por Patricia y café matutino con vista al mar.",
+        "residentDog": "Nuestro Amigo Peludo",
+        "residentDogDesc": "Nuestro perro amigable es parte de la familia y podría saludarte durante tu estancia."
     },
     "suites": {
         "eyebrow": "Tres Villas",
