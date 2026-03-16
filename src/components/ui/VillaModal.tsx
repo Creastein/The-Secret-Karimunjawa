@@ -128,6 +128,9 @@ export default function VillaModal({ room, i18nKey, onClose }: VillaModalProps) 
                                 src={gallery[activeImg]}
                                 alt={t(`suites.rooms.${i18nKey}.name`)}
                                 className="w-full h-full object-contain"
+                                decoding="async"
+                                width={1600}
+                                height={1200}
                                 initial={{ opacity: 0, scale: 1.02 }}
                                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] } }}
                                 exit={{ opacity: 0, transition: { duration: 0.2 } }}

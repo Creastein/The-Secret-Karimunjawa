@@ -101,6 +101,8 @@ export default function OurStory() {
               className="absolute inset-0 w-full h-full object-cover object-[45%_center] origin-[45%_50%] scale-[1.01] group-hover:scale-[1.08] transition-transform duration-[2.5s] ease-[cubic-bezier(0.25,1,0.5,1)]"
               loading="lazy"
               decoding="async"
+              width={1200}
+              height={1050}
             />
             {/* Soft inner glow */}
             <div className="absolute inset-0 ring-1 ring-inset ring-white/50 pointer-events-none rounded-[8px] z-10 mix-blend-overlay" />

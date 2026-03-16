@@ -225,7 +225,15 @@ const Gallery: FC<Props> = () => {
                       className={`group relative aspect-[4/3] w-32 sm:w-36 md:w-40 shrink-0 overflow-hidden rounded-sm transition-all duration-500 snap-center ${index === currentIndex ? 'border border-teak-accent ring-1 ring-teak-accent/50 shadow-lg' : 'border border-black/5 hover:border-teak-accent/30 opacity-90 hover:opacity-100'}`}
                       aria-label={`View ${image.alt}`}
                     >
-                      <img src={image.url} alt={image.alt} className={`h-full w-full object-cover transition-transform duration-[1.5s] ease-out ${index === currentIndex ? 'scale-105' : 'scale-100 group-hover:scale-110'}`} loading="lazy" decoding="async" />
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        className={`h-full w-full object-cover transition-transform duration-[1.5s] ease-out ${index === currentIndex ? 'scale-105' : 'scale-100 group-hover:scale-110'}`}
+                        loading="lazy"
+                        decoding="async"
+                        width={480}
+                        height={360}
+                      />
                       <div className={`absolute inset-0 transition-all duration-500 ${index === currentIndex ? 'bg-transparent' : 'bg-black/10 group-hover:bg-transparent'}`} />
                     </motion.button>
                 ))}
@@ -275,7 +283,16 @@ const Gallery: FC<Props> = () => {
           )}
 
           <div className="relative z-10" onClick={(e) => e.stopPropagation()}>
-            <img ref={lightboxImageRef} src={filteredImages[currentIndex]?.url} alt={filteredImages[currentIndex]?.alt} className="max-w-[95vw] max-h-[85vh] object-contain shadow-2xl rounded-sm" draggable={false} />
+            <img
+              ref={lightboxImageRef}
+              src={filteredImages[currentIndex]?.url}
+              alt={filteredImages[currentIndex]?.alt}
+              className="max-w-[95vw] max-h-[85vh] object-contain shadow-2xl rounded-sm"
+              draggable={false}
+              decoding="async"
+              width={1920}
+              height={1440}
+            />
           </div>
 
           <div ref={lightboxCaptionRef} className="absolute bottom-8 left-0 right-0 text-center pointer-events-none">

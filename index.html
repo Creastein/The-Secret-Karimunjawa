@@ -67,12 +67,28 @@
   <script type="module" src="/src/index.tsx"></script>
 
   <!-- Google Analytics (GA4) — loaded after main content -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQFLDHJ4XV"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SQFLDHJ4XV');
+    (function () {
+      var GA_ID = 'G-SQFLDHJ4XV';
+      function loadGA() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA, { timeout: 3000 });
+      } else {
+        setTimeout(loadGA, 2000);
+      }
+    })();
   </script>
 </body>
 

@@ -1,27 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 const EASE_EXPO: [number, number, number, number] = [0.22, 1, 0.36, 1]
-const TOTAL_DURATION = 2000
 
-interface PreloaderProps {
-  onComplete: () => void
-}
-
-export default function Preloader({ onComplete }: PreloaderProps) {
+export default function Preloader() {
   const [isVisible, setIsVisible] = useState(true)
+
+  const durationMs = useMemo(() => {
+    if (typeof window === 'undefined') return 900
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    // If user prefers reduced motion or wants to save data, keep this very short.
+    const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
+    return reduce || saveData ? 200 : 900
+  }, [])
 
   useLockBodyScroll(isVisible)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-      setTimeout(onComplete, 400)
-    }, TOTAL_DURATION)
+    }, durationMs)
 
     return () => clearTimeout(timer)
-  }, [onComplete])
+  }, [durationMs])
 
   return (
     <AnimatePresence>

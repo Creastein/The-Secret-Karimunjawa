@@ -1,4 +1,4 @@
-import { useState, Suspense, lazy, useCallback } from 'react'
+import { Suspense, lazy } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import Navigation from './components/layout/Navigation'
@@ -18,8 +18,6 @@ const AvailabilityStickyBar = lazy(() => import('./components/ui/AvailabilitySti
 
 export default function App() {
   const { t, i18n } = useTranslation()
-  const [loading, setLoading] = useState(true)
-  const handlePreloaderComplete = useCallback(() => setLoading(false), [])
 
   return (
     <>
@@ -134,27 +132,25 @@ export default function App() {
         })}</script>
       </Helmet>
 
-      <Preloader onComplete={handlePreloaderComplete} />
+      <Preloader />
 
-      {!loading && (
-        <div className="min-h-screen bg-sand font-sans overflow-x-clip animate-fade-in">
-          <Navigation />
-          <Hero />
-          <OurStory />
+      <div className="min-h-screen bg-sand font-sans overflow-x-clip animate-fade-in">
+        <Navigation />
+        <Hero />
+        <OurStory />
 
-          <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
-            <Suites />
-            <Experience />
-            <Gallery />
-            <Testimonials />
-            <Contact />
-            <FAQ />
-            <Location />
-            <Footer />
-            <AvailabilityStickyBar />
-          </Suspense>
-        </div>
-      )}
+        <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
+          <Suites />
+          <Experience />
+          <Gallery />
+          <Testimonials />
+          <Contact />
+          <FAQ />
+          <Location />
+          <Footer />
+          <AvailabilityStickyBar />
+        </Suspense>
+      </div>
     </>
   )
 }

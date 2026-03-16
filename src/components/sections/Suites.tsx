@@ -120,6 +120,8 @@ export default function Suites({ }: Props) {
                       className="h-full w-full object-cover transition-transform duration-[3s] ease-out group-hover:scale-105"
                       loading="lazy"
                       decoding="async"
+                      width={1200}
+                      height={900}
                     />
                     {/* Soft gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent" />
