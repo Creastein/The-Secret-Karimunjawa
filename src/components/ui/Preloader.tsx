@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 const EASE_EXPO: [number, number, number, number] = [0.22, 1, 0.36, 1]
-const TOTAL_DURATION = 1500
+const TOTAL_DURATION = 2000
 
 interface PreloaderProps {
   onComplete: () => void
@@ -38,7 +38,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2, ease: EASE_EXPO }}
+              transition={{ duration: 0.6, delay: 0.3, ease: EASE_EXPO }}
               className="font-serif text-[11px] sm:text-xs md:text-sm tracking-[0.35em] uppercase text-white/60 mb-4"
             >
               karimunjawa has a
@@ -48,7 +48,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.p
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 1.4, ease: EASE_EXPO }}
+              transition={{ duration: 0.8, delay: 0.5, ease: EASE_EXPO }}
               style={{ fontFamily: '"Alex Brush", cursive' }}
               className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white leading-none mb-5"
             >
@@ -59,7 +59,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 2.0, ease: EASE_EXPO }}
+              transition={{ duration: 0.5, delay: 0.9, ease: EASE_EXPO }}
               className="font-serif italic text-xs md:text-sm tracking-[0.2em] text-white/40"
             >
               come and find it
@@ -70,7 +70,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                   animate={{ opacity: [0, 1, 1, 0] }}
                   transition={{
                     duration: 2,
-                    delay: 2.2 + i * 0.3,
+                    delay: 1.1 + i * 0.2,
                     repeat: Infinity,
                     repeatDelay: 0.8,
                     times: [0, 0.2, 0.7, 1],
