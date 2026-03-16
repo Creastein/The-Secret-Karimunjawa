@@ -66,7 +66,7 @@ const ctaReveal = {
 }
 
 const imageReveal = {
-  hidden: { scale: 1.18, opacity: 0 },
+  hidden: { scale: 1.05, opacity: 0 },
   visible: {
     scale: 1,
     opacity: 1,
@@ -94,10 +94,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[95vh] lg:min-h-screen"
+      className="relative min-h-[65vh] lg:min-h-[70vh]"
     >
       <div
-        className="relative min-h-[95vh] lg:min-h-screen grid lg:grid-cols-[1.05fr_1.4fr] gap-8 lg:gap-0 items-stretch"
+        className="relative min-h-[65vh] lg:min-h-[70vh] grid lg:grid-cols-[0.85fr_1.15fr] gap-8 lg:gap-0 items-stretch"
       >
         {/* ── text column ────────────────────────────── */}
         <div className="relative z-10 flex items-end lg:items-center px-5 md:px-12 lg:px-16 py-10 md:py-16 lg:py-24 order-2 lg:order-1">
@@ -180,18 +180,18 @@ export default function Hero() {
           >
             <source
               media="(max-width: 768px)"
-              srcSet="/assets/hero-coastal-mobile.webp"
+              srcSet="/assets/hero-img.png"
               type="image/webp"
             />
             <source
-              srcSet="/assets/hero-coastal.webp"
+              srcSet="/assets/hero-img.png"
               type="image/webp"
             />
             <img
               ref={imageRef}
-              src="/assets/hero-coastal.png"
+              src="/assets/hero-img.png"
               alt="Villa karimunjawa sea view sunset - The Secret Karimunjawa beachfront luxury villa"
-              className="h-full w-full object-cover object-[50%_75%]"
+              className="h-full w-full object-cover object-[70%_50%]"
               loading="eager"
               fetchPriority="high"
               width={1920}
