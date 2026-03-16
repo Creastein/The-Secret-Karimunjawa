@@ -4,14 +4,7 @@
 <head>
   <meta charset="UTF-8" />
 
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQFLDHJ4XV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SQFLDHJ4XV');
-  </script>
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/x-icon" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -66,13 +59,21 @@
   </noscript>
 
   <!-- Preload hero image (LCP element) -->
-  <link rel="preload" as="image" href="/assets/hero-coastal.webp" type="image/webp" />
-  <link rel="preload" as="image" href="/assets/hero-coastal.png" />
+  <link rel="preload" as="image" href="/assets/hero-img.webp" type="image/webp" />
 </head>
 
 <body>
   <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
+
+  <!-- Google Analytics (GA4) — loaded after main content -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQFLDHJ4XV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SQFLDHJ4XV');
+  </script>
 </body>
 
 </html>

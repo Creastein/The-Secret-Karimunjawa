@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 
 const EASE_EXPO: [number, number, number, number] = [0.22, 1, 0.36, 1]
-const TOTAL_DURATION = 3000
+const TOTAL_DURATION = 1500
 
 interface PreloaderProps {
   onComplete: () => void
@@ -17,7 +17,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-      setTimeout(onComplete, 800)
+      setTimeout(onComplete, 400)
     }, TOTAL_DURATION)
 
     return () => clearTimeout(timer)

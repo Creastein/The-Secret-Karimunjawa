@@ -180,16 +180,16 @@ export default function Hero() {
           >
             <source
               media="(max-width: 768px)"
-              srcSet="/assets/hero-img.png"
+              srcSet="/assets/hero-img.webp"
               type="image/webp"
             />
             <source
-              srcSet="/assets/hero-img.png"
+              srcSet="/assets/hero-img.webp"
               type="image/webp"
             />
             <img
               ref={imageRef}
-              src="/assets/hero-img.png"
+              src="/assets/hero-img.webp"
               alt="Villa karimunjawa sea view sunset - The Secret Karimunjawa beachfront luxury villa"
               className="h-full w-full object-cover object-[70%_50%]"
               loading="eager"
