@@ -18,6 +18,7 @@ export interface Room {
   maxPrice?: number;
   lowSeasonPrice?: number;
   highSeasonPrice?: number;
+  comingSoon?: boolean;
 }
 
 export type ImageCategory = 'Exteriors' | 'Interiors' | 'Details' | 'Night';

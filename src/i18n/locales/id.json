@@ -1,8 +1,8 @@
 {
     "nav": {
         "home": "Beranda",
-        "estate": "Villa",
-        "suites": "Unit",
+        "estate": "Our Story",
+        "suites": "Villa",
         "experience": "Fasilitas",
         "gallery": "Galeri",
         "contact": "Kontak",
@@ -24,10 +24,10 @@
         "eyebrow": "Cerita Kami",
         "title": "Bukan Hotel.",
         "titleAccent": "Ini Rumah",
-        "description": "Apa yang dimulai sebagai mimpi sepasang suami-istri dari Bandung dan Jerman di tahun 2013, kini menjadi tiga villa menghadap laut — tempat di mana tamu disambut seperti keluarga oleh Abyan, Anik, dan Dadang. Bukan kemewahan artifisial. Ini keramahan yang tulus.",
+        "description": "Apa yang dimulai sebagai mimpi sepasang suami-istri dari Bandung dan Jerman di tahun 2013, kini menjadi tiga villa menghadap laut — tempat di mana tamu disambut seperti keluarga oleh Eddy, Patricia, putra-putra mereka, dan tim yang luar biasa. Bukan kemewahan artifisial. Ini keramahan yang tulus.",
         "ratingLabel": "Rating",
         "reviewsLabel": "Ulasan",
-        "facilitiesLabel": "Fasilitas",
+        "facilitiesLabel": "Private Villa",
         "amenitiesTitle": "Yang Membuat Kami Berbeda",
         "amenitiesSubtitle": "Detail kecil yang membuat setiap tamu merasa pulang",
         "additionalNote": "*Diving, snorkeling, dan tur pulau tersedia melalui tim kami — tinggal bilang saja."
@@ -68,8 +68,8 @@
             "cipaku": {
                 "name": "Cipaku",
                 "typeLabel": "One-Bedroom",
-                "bedDetails": "King Bed 2x2m",
-                "description": "Villa utama keluarga — dapur lengkap, veranda pribadi, dan ketenangan yang hanya pemilik rumah yang tahu. Dibangun untuk Patricia dan Eddy, kini terbuka untuk Anda.",
+                "bedDetails": "King Bed (2m x 2m)",
+                "description": "Cipaku: Villa pertama keluarga — dapur lengkap, veranda pribadi, dan 100% privasi. Dibangun untuk orang tua Patricia, yang pernah tinggal di daerah 'Cipaku' di Bandung, kini terbuka untuk Anda.",
                 "features": [
                     "Dapur Pribadi Lengkap",
                     "Veranda Menghadap Laut",
@@ -80,10 +80,10 @@
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
-                "bedDetails": "King Bed",
-                "description": "Dirancang untuk teman-teman terdekat keluarga. Veranda paling luas di The Secret — seperti dipeluk oleh laut dan langit sekaligus.",
+                "bedDetails": "King Bed (2m x 2m)",
+                "description": "Dirancang untuk teman-teman terdekat keluarga. Veranda paling luas dan Villa paling lega di The Secret. 'Birdsong' adalah nama sebuah kafe kecil di desa Mukteshwar di pegunungan Himalaya India, tempat Eddy dan Patricia suka menghabiskan liburan saat mereka tinggal di India.",
                 "features": [
-                    "Veranda Terluas",
+                    "Kamar Luas dan Veranda Terluas",
                     "Panorama Laut 120°",
                     "Sunset Tanpa Halangan",
                     "Housekeeping Harian"
@@ -92,11 +92,10 @@
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
-                "bedDetails": "Queen Bed 1.8x2m + Single Bed 1.5x2m",
-                "description": "Villa dengan taman tersembunyi — tempat di mana pagi dimulai dengan kicau burung dan aroma roti buatan sendiri. Fleksibel untuk pasangan maupun keluarga kecil.",
+                "bedDetails": "Queen Bed (1.8m x 2m) + Double Bed (1.5m x 2m)",
+                "description": "Villa dengan taman tersembunyi. Fleksibel untuk pasangan maupun keluarga kecil. 'Tivoli Garden' adalah nama apartemen tempat Eddy dan Patricia tinggal di Manila, Filipina. Mereka mengunjungi Tivoli Garden yang asli di Kopenhagen, Denmark, tempat mereka menikah pada tahun 2017.",
                 "features": [
                     "Taman Pribadi",
-                    "Bangun dengan Kicau Burung",
                     "Tempat Tidur Fleksibel",
                     "Cocok untuk Keluarga"
                 ]
@@ -107,7 +106,7 @@
         "eyebrow": "Pengalaman",
         "title": "Kemewahan ada",
         "titleAccent": "di Detail",
-        "description": "Roti panggang buatan sendiri untuk sarapan. Yoga di rooftop di bawah bintang. Selai homemade dari dapur Patricia. Sunset yang berbeda setiap hari tepat di depan mata Anda.",
+        "description": "Roti panggang buatan sendiri untuk sarapan. Selai homemade dari dapur Patricia. Sunset yang berbeda setiap hari tepat di depan mata Anda.",
         "ctaLabel": "Tanyakan Layanan"
     },
     "gallery": {
@@ -153,7 +152,7 @@
         "eyebrow": "Hubungi Kami",
         "title": "Kami Menunggu",
         "titleAccent": "Anda",
-        "description": "Langsung ke kami — tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Abyan dan tim siap membantu Anda merencanakan kunjungan yang sempurna.",
+        "description": "Langsung ke kami: tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Patricia dan Eddy siap membantu Anda merencanakan kunjungan yang sempurna.",
         "formTitle": "Hubungi Langsung",
         "formSubtitle": "Respon dalam 2 jam",
         "submitLabel": "Kirim Permintaan",
@@ -201,9 +200,9 @@
             "a1": "Kami memiliki beberapa pilihan unit villa (1 hingga 2 kamar tidur) yang dirancang untuk mengakomodasi 2 hingga maksimal 4 tamu per unitnya. Sangat cocok dan populer untuk pasangan maupun liburan keluarga.",
             "q2": "Apa saja unit villa yang tersedia?",
             "a2_intro": "Kami memiliki 3 unit villa eksklusif:",
-            "a2_cipaku": "Villa Cipaku (One-Bedroom) — King Size Bed 2x2m, dapur pribadi lengkap, veranda pribadi, 100% privacy.",
-            "a2_birdsong": "Villa Birdsong (Deluxe) — King Size Bed, pemandangan laut & sunset, veranda yang sangat luas.",
-            "a2_tivoli": "Villa Tivoli Garden (Superior) — 1 Queen Bed (1.8x2m) + 1 Single Bed (1.5x2m), taman pribadi.",
+            "a2_cipaku": "Villa Cipaku (One-Bedroom) — King Bed (2m x 2m), dapur pribadi lengkap, veranda pribadi, 100% privacy.",
+            "a2_birdsong": "Villa Birdsong (Deluxe) — King Bed (2m x 2m), pemandangan laut & sunset, kamar luas dan veranda terluas.",
+            "a2_tivoli": "Villa Tivoli Garden (Superior) — 1 Queen Bed (1.8m x 2m) + 1 Double Bed (1.5m x 2m), taman pribadi.",
             "a2_note": "Semua unit menghadap laut dengan panorama sunset 120°.",
             "q3": "Apakah setiap unit memiliki balkon atau teras?",
             "a3": "Ya, setiap unit kami dilengkapi dengan teras atau veranda pribadi yang luas, lengkap dengan pemandangan laut (Sea View) dan matahari terbenam (Sunset View).",
@@ -217,15 +216,15 @@
                 "Rak pengering baju"
             ],
             "q5": "Apakah tersedia tempat tidur tambahan atau tempat tidur bayi?",
-            "a5": "Mohon maaf, saat ini kami tidak menyediakan tempat tidur bayi maupun tempat tidur ekstra. Silakan hubungi kami untuk mendiskusikan kebutuhan khusus Anda."
+            "a5": "Kami dapat menyediakan tempat tidur tambahan seharga 250.000 IDR."
         },
         "dining": {
             "q1": "Apakah The Secret Karimunjawa memiliki restoran di dalam area properti?",
-            "a1": "Ya, kami memiliki restoran eksklusif bernama The Secret Garden yang menyajikan masakan Indonesia, India, dan Mediterania. Tersedia juga menu Halal, Vegetarian, Vegan, dan bebas susu (dairy-free).",
+            "a1": "Ya, kami memiliki restoran eksklusif yang hanya terbuka untuk tamu yang menginap. Kami menyediakan beberapa pilihan untuk sarapan dan makan siang serta menyajikan berbagai hidangan makan malam tradisional lokal yang perlu dipesan sebelum jam 3 sore. Semua hidangan dapat dengan mudah dikonversi menjadi menu Vegetarian, Vegan, dan bebas susu (dairy-free).",
             "q2": "Seperti apa pilihan sarapan yang disajikan?",
-            "a2": "Sarapan kami istimewa — roti panggang homemade, selai buatan sendiri, dan berbagai pilihan menu Asia, Vegetarian, dan Vegan. Bisa disajikan langsung di veranda kamar Anda.",
+            "a2": "Sarapan kami istimewa dengan enam pilihan berbeda: 1) Roti homemade dengan selai buatan sendiri, telur dan sayuran, 2) Pancake Tower, 3) Pink Smoothie Bowl, 4) Oatmeal Bowl, 5) Soto Ayam, 6) Nasi Goreng. Sarapan Anda dapat disajikan langsung di veranda atau di rooftop.",
             "q3": "Apakah perlu reservasi untuk makan malam?",
-            "a3": "Ya, kami menyarankan tamu untuk memesan makan malam terlebih dahulu agar tim kami dapat mempersiapkan hidangan terbaik untuk Anda."
+            "a3": "Ya, kami menyarankan tamu untuk memesan makan malam terlebih dahulu (sebelum jam 3 sore) agar tim kami dapat mempersiapkan hidangan terbaik untuk Anda."
         },
         "policies": {
             "q1": "Apakah hewan peliharaan diperbolehkan?",
@@ -243,11 +242,10 @@
             "q3": "Apa saja aktivitas yang bisa dilakukan selama menginap?",
             "a3_intro": "Banyak pilihan aktivitas di sekitar The Secret:",
             "a3_items": [
-                "Relaksasi: Pijat (seluruh tubuh, punggung, leher, kepala, kaki), Yoga di rooftop",
-                "Olahraga Air: Menyelam (Diving), Memancing, dan Berkano",
-                "Eksplorasi: Hiking ke Gunung Maming (3 jam), Rental Sepeda & Skuter",
-                "Pantai: Batu Topeng (15 mnt jalan), Alano & Anora Beach (15 mnt skuter), Tanjung Gelam (20 mnt)",
-                "Hiburan: Fasilitas Karaoke, Stargazing dari rooftop"
+                "Relaksasi: Pijat, Yoga di Rooftop",
+                "Olahraga Air: Island Hopping, Snorkeling, Menyelam (Diving), Memancing, dan Berkano",
+                "Eksplorasi: Hiking ke Gunung Maming (3 jam), Stargazing melalui teleskop di Observatorium 'Deepsky'",
+                "Pantai: Batu Topeng, Sunset dan Pantai Tanjung Gelam (20 menit jalan / 3 menit naik skuter), Pantai Alano & Anora (15 menit skuter)"
             ]
         }
     },

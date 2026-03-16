@@ -121,14 +121,14 @@ export default function VillaModal({ room, i18nKey, onClose }: VillaModalProps) 
                     </button>
 
                     {/* ── Left: Gallery ── */}
-                    <div className="relative md:w-[55%] aspect-[4/3] md:aspect-auto md:h-auto bg-stone-100 flex-shrink-0 overflow-hidden">
+                    <div className="relative md:w-[55%] aspect-[4/3] md:aspect-auto md:h-auto bg-stone-900 flex-shrink-0 overflow-hidden flex items-center justify-center">
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={activeImg}
                                 src={gallery[activeImg]}
                                 alt={t(`suites.rooms.${i18nKey}.name`)}
-                                className="w-full h-full object-cover"
-                                initial={{ opacity: 0, scale: 1.04 }}
+                                className="w-full h-full object-contain"
+                                initial={{ opacity: 0, scale: 1.02 }}
                                 animate={{ opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] } }}
                                 exit={{ opacity: 0, transition: { duration: 0.2 } }}
                             />

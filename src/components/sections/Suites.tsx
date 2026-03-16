@@ -106,7 +106,9 @@ export default function Suites({ }: Props) {
                 <motion.article
                   key={room.id}
                   variants={cardVariant}
-                  className="group flex flex-col overflow-hidden bg-white border border-stone-100 shadow-sm hover:shadow-coastal transition-shadow duration-500 cursor-pointer"
+                  className={`group flex flex-col overflow-hidden bg-white border border-stone-100 shadow-sm hover:shadow-coastal transition-shadow duration-500 cursor-pointer ${
+                    room.comingSoon ? 'opacity-90' : ''
+                  }`}
                   onClick={() => setSelectedRoom({ room, i18nKey })}
                 >
                   {/* ── Image ── */}
@@ -130,6 +132,18 @@ export default function Suites({ }: Props) {
                       <span className="h-1.5 w-1.5 rounded-full bg-teak-accent" />
                       {t(`suites.rooms.${i18nKey}.typeLabel`)}
                     </motion.div>
+
+                    {/* Coming Soon Badge (Center Overlay) */}
+                    {room.comingSoon && (
+                      <motion.div
+                        variants={badgeVariant}
+                        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+                      >
+                        <span className="bg-black/60 backdrop-blur-md text-white text-xs md:text-sm font-medium tracking-[0.3em] uppercase py-3 px-6 border border-white/20 shadow-xl">
+                          Coming Soon
+                        </span>
+                      </motion.div>
+                    )}
 
                     {/* Gallery count */}
                     {room.gallery && room.gallery.length > 1 && (
@@ -174,13 +188,13 @@ export default function Suites({ }: Props) {
                       variants={bodyItem}
                       whileTap={{ scale: 0.98 }}
                       transition={{ duration: 0.25 }}
-                      className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-charcoal border border-charcoal/20 px-4 py-2.5 w-full justify-center transition-all duration-300 hover:bg-charcoal hover:text-white hover:border-charcoal"
+                      className="mt-2 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] border px-4 py-2.5 w-full justify-center transition-all duration-300 text-charcoal border-charcoal/20 hover:bg-charcoal hover:text-white hover:border-charcoal"
                       onClick={e => {
                         e.stopPropagation()
                         setSelectedRoom({ room, i18nKey })
                       }}
                     >
-                      <span>{t('suites.detailLabel')}</span>
+                      <span>{room.comingSoon ? 'View Details' : t('suites.detailLabel')}</span>
                       <ArrowRight01Icon className="w-3 h-3" strokeWidth={2} />
                     </motion.button>
                   </motion.div>

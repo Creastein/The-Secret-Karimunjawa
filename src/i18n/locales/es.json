@@ -1,8 +1,8 @@
 {
     "nav": {
         "home": "Inicio",
-        "estate": "Retiro",
-        "suites": "Suites",
+        "estate": "Nuestra Historia",
+        "suites": "Villa",
         "experience": "Experiencia",
         "gallery": "Galería",
         "contact": "Contacto",
@@ -24,10 +24,10 @@
         "eyebrow": "Nuestra Historia",
         "title": "No es un Hotel.",
         "titleAccent": "Es un Hogar",
-        "description": "Lo que comenzó como el sueño de una pareja de Bandung y Alemania en 2013, hoy son tres villas frente al mar — un lugar donde los huéspedes son recibidos como familia por Abyan, Anik y Dadang. No es lujo artificial. Es calidez genuina.",
+        "description": "Lo que comenzó como el sueño de una pareja de Bandung y Alemania en 2013, hoy son tres villas frente al mar — un lugar donde los huéspedes son recibidos como familia por Eddy, Patricia, sus hijos y su maravilloso equipo. No es lujo artificial. Es calidez genuina.",
         "ratingLabel": "Calificación",
         "reviewsLabel": "Reseñas",
-        "facilitiesLabel": "Instalaciones",
+        "facilitiesLabel": "Villas Privadas",
         "amenitiesTitle": "Lo Que Nos Hace Diferentes",
         "amenitiesSubtitle": "Pequeños detalles que hacen que cada huésped se sienta en casa",
         "additionalNote": "*Buceo, snorkel y tours por la isla disponibles — solo pregunte."
@@ -68,8 +68,8 @@
             "cipaku": {
                 "name": "Cipaku",
                 "typeLabel": "Un Dormitorio",
-                "bedDetails": "Cama King 2x2m",
-                "description": "La villa principal de la familia — cocina completa, terraza privada, y la paz que solo un dueño de casa conoce. Construida para Patricia y Eddy, ahora abierta para usted.",
+                "bedDetails": "Cama King (2m x 2m)",
+                "description": "Cipaku: La primera villa de la familia — cocina completa, terraza privada, y 100% de privacidad. Construida para los padres de Patricia, quienes vivían en el barrio 'Cipaku' en Bandung, ahora abierta para usted.",
                 "features": [
                     "Cocina Privada Completa",
                     "Terraza Frente al Mar",
@@ -80,10 +80,10 @@
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
-                "bedDetails": "Cama King",
-                "description": "Diseñada para los amigos más cercanos de la familia. La terraza más amplia de The Secret — como ser abrazado por el océano y el cielo a la vez.",
+                "bedDetails": "Cama King (2m x 2m)",
+                "description": "Diseñada para los amigos más cercanos de la familia. La terraza más amplia y la villa más espaciosa de The Secret. 'Birdsong' es el nombre de un café encantador en el pueblo de Mukteshwar, en el Himalaya indio, donde Eddy y Patricia solían pasar sus vacaciones cuando vivían en la India.",
                 "features": [
-                    "Terraza Más Amplia",
+                    "Habitación Espaciosa y Terraza Más Amplia",
                     "Panorama Oceánico 120°",
                     "Atardeceres Sin Obstáculos",
                     "Limpieza Diaria"
@@ -92,11 +92,10 @@
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
-                "bedDetails": "Queen 1.8x2m + Individual 1.5x2m",
-                "description": "Una villa con jardín oculto — donde las mañanas comienzan con el canto de los pájaros y el aroma de pan casero. Flexible para parejas o familias pequeñas.",
+                "bedDetails": "Queen (1.8m x 2m) + Doble (1.5m x 2m)",
+                "description": "Una villa con un jardín oculto. Flexible para parejas o familias pequeñas. 'Tivoli Garden' era el nombre del apartamento donde Eddy y Patricia vivían en Manila, Filipinas. Visitaron el Tivoli Garden original en Copenhague, Dinamarca, donde se casaron en 2017.",
                 "features": [
                     "Jardín Privado",
-                    "Despertar con Pájaros",
                     "Camas Flexibles",
                     "Ideal para Familias"
                 ]
@@ -107,7 +106,7 @@
         "eyebrow": "Experiencia",
         "title": "El Lujo Está",
         "titleAccent": "en los Detalles",
-        "description": "Tostadas caseras para el desayuno. Yoga en la azotea bajo las estrellas. Mermelada artesanal de la cocina de Patricia. Un atardecer diferente cada día, justo ante sus ojos.",
+        "description": "Tostadas caseras para el desayuno. Mermelada artesanal de la cocina de Patricia. Un atardecer diferente cada día, justo ante sus ojos.",
         "ctaLabel": "Consultar Servicios"
     },
     "gallery": {
@@ -153,7 +152,7 @@
         "eyebrow": "Contáctenos",
         "title": "Le Esperamos",
         "titleAccent": "Como Familia",
-        "description": "Directo con nosotros — sin agentes, sin comisiones. Como llamar a la casa de un amigo. Abyan y el equipo están listos para ayudarle a planificar la visita perfecta.",
+        "description": "Directo con nosotros: sin agentes, sin comisiones. Como llamar a la casa de un amigo. Patricia y Eddy están listos para ayudarle a planificar la visita perfecta.",
         "formTitle": "Consulta Directa",
         "formSubtitle": "Respuesta en 2 horas",
         "submitLabel": "Enviar Solicitud",
@@ -201,9 +200,9 @@
             "a1": "De 2 a máximo 4 huéspedes por unidad. Perfecto para parejas y familias.",
             "q2": "¿Qué villas están disponibles?",
             "a2_intro": "Tenemos 3 villas exclusivas:",
-            "a2_cipaku": "Villa Cipaku (Un dormitorio) — King 2x2m, cocina privada, terraza privada, 100% privacidad.",
-            "a2_birdsong": "Villa Birdsong (Deluxe) — King, vista al mar y atardecer, terraza más amplia.",
-            "a2_tivoli": "Villa Tivoli Garden (Superior) — Queen + Individual, jardín privado.",
+            "a2_cipaku": "Villa Cipaku (Un dormitorio) — Cama King (2m x 2m), cocina privada, terraza privada, 100% privacidad.",
+            "a2_birdsong": "Villa Birdsong (Deluxe) — Cama King (2m x 2m), vista al mar y atardecer, habitación espaciosa y terraza más amplia.",
+            "a2_tivoli": "Villa Tivoli Garden (Superior) — Queen (1.8m x 2m) + Doble (1.5m x 2m), jardín privado.",
             "a2_note": "Todas frente al mar con panorama de atardecer de 120°.",
             "q3": "¿Cada unidad tiene terraza?",
             "a3": "Sí, todas las unidades tienen terraza privada espaciosa con vista al mar y al atardecer.",
@@ -217,15 +216,15 @@
                 "Tendedero"
             ],
             "q5": "¿Hay camas extra o cunas?",
-            "a5": "Disculpe, actualmente no disponemos de cunas ni camas extra. Contáctenos para sus necesidades."
+            "a5": "Podemos proporcionar camas extra por 250.000 IDR."
         },
         "dining": {
             "q1": "¿Hay restaurante en el lugar?",
-            "a1": "Sí, The Secret Garden sirve cocina indonesia, india y mediterránea. Menús Halal, Vegetariano, Vegano y sin lácteos disponibles.",
+            "a1": "Sí, tenemos un restaurante exclusivo solo abierto para nuestros huéspedes. Ofrecemos varias opciones de desayuno y almuerzo, y una variedad de cenas tradicionales locales que deben reservarse antes de las 3pm. Todos los platos pueden adaptarse fácilmente a menús Vegetarianos, Veganos y sin lácteos.",
             "q2": "¿Qué opciones de desayuno hay?",
-            "a2": "Nuestro desayuno es especial — tostadas caseras, mermelada artesanal y opciones asiáticas, vegetarianas y veganas. Se puede servir en su terraza.",
+            "a2": "Nuestro desayuno es especial con seis opciones diferentes: 1) Pan casero con mermelada artesanal, huevos y verduras, 2) Torre de Panqueques, 3) Pink Smoothie Bowl, 4) Oatmeal Bowl, 5) Soto Ayam, 6) Nasi Goreng. Su desayuno puede servirse en su terraza o en la azotea.",
             "q3": "¿Se requiere reserva para cenar?",
-            "a3": "Sí, recomendamos reservar la cena con anticipación."
+            "a3": "Sí, recomendamos reservar la cena con anticipación (antes de las 3pm) para que nuestro equipo prepare los mejores platos."
         },
         "policies": {
             "q1": "¿Se permiten mascotas?",
@@ -243,11 +242,10 @@
             "q3": "¿Qué actividades hay disponibles?",
             "a3_intro": "Muchas opciones cerca de The Secret:",
             "a3_items": [
-                "Masajes y Yoga en azotea",
-                "Buceo, Pesca y Canotaje",
-                "Senderismo al Monte Maming (3 horas), Scooter",
-                "Playas: Batu Topeng, Alano, Anora, Tanjung Gelam",
-                "Karaoke, Observación de estrellas"
+                "Relajación: Masajes, Yoga en la Azotea",
+                "Deportes Acuáticos: Island Hopping, Snorkel, Buceo, Pesca y Canotaje",
+                "Exploración: Senderismo al Monte Maming (3 horas), Observación de estrellas con telescopios en el Observatorio 'Deepsky'",
+                "Playas: Batu Topeng, Sunset y Playa Tanjung Gelam (20 min caminando / 3 min en scooter), Playa Alano y Anora (15 min en scooter)"
             ]
         }
     },

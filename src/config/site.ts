@@ -24,7 +24,7 @@ export const ROOMS: Room[] = [
     id: 'cipaku',
     name: 'Cipaku',
     typeLabel: 'One-Bedroom',
-    bedDetails: 'King Bed 2x2m',
+    bedDetails: 'King Bed (2m x 2m)',
     description: 'A secluded one-bedroom sanctuary with total privacy, a private kitchen, and a breezy veranda framing the sea and sunset beyond the palms.',
     imageUrl: '/assets/room-The-Ocean-Master.png',
     gallery: [
@@ -43,13 +43,17 @@ export const ROOMS: Room[] = [
     id: 'birdsong',
     name: 'Birdsong',
     typeLabel: 'Deluxe',
-    bedDetails: 'King Bed',
+    bedDetails: 'King Bed (2m x 2m)',
     description: 'An airy deluxe retreat with generous indoor space and an expansive veranda, designed for uninterrupted sea and sunset views.',
-    imageUrl: '/assets/room-deluxe.png',
+    imageUrl: '/assets/Birdsong/Birdsong1.webp',
     gallery: [
-      '/assets/room-deluxe.png',
-      '/assets/gallery-exteriors-1.png',
-      '/assets/gallery-exteriors-2.png',
+      '/assets/Birdsong/Birdsong1.webp',
+      '/assets/Birdsong/Birdsong2.webp',
+      '/assets/Birdsong/Birdsong3.webp',
+      '/assets/Birdsong/Birdsong4.webp',
+      '/assets/Birdsong/Birdsong5.webp',
+      '/assets/Birdsong/Birdsong6.webp',
+      '/assets/Birdsong/Birdsong7.webp',
     ],
     features: ['Sea View', 'Sunset View', 'Spacious Veranda', 'Daily Housekeeping'],
     startingPrice: 1700000,
@@ -61,19 +65,19 @@ export const ROOMS: Room[] = [
     id: 'tivoli-garden',
     name: 'Tivoli Garden',
     typeLabel: 'Superior',
-    bedDetails: 'Queen Bed 1.8x2m + Single Bed 1.5x2m',
+    bedDetails: 'Queen Bed (1.8m x 2m) + Double Bed (1.5m x 2m)',
     description: 'A serene superior suite with a private garden, crafted for restful stays with flexible bedding for families or friends.',
-    imageUrl: '/assets/room-guest.png',
+    imageUrl: '/assets/TivoliGarden1.webp',
     gallery: [
-      '/assets/room-guest.png',
-      '/assets/gallery-details-1.png',
-      '/assets/gallery-details-2.png',
+      '/assets/TivoliGarden1.webp',
+      '/assets/TivoliGarden2.webp',
     ],
     features: ['Private Garden', 'Garden View', 'Flexible Bedding', 'Daily Housekeeping'],
     startingPrice: 1700000,
     maxPrice: 1900000,
     lowSeasonPrice: 1700000,
     highSeasonPrice: 1900000,
+    comingSoon: true,
   }
 ];
 
@@ -237,14 +241,25 @@ export const TESTIMONIALS_SECTION = {
 } as const;
 
 export const GALLERY_IMAGES: ImageItem[] = [
-  { id: '1', url: '/assets/gallery-exteriors-1.png', alt: 'Aerial View of The Secret Karimunjawa', category: 'Exteriors', span: true },
-  { id: '2', url: '/assets/gallery-interiors-1.png', alt: 'Rustic Wooden Living Area', category: 'Interiors', span: false },
-  { id: '3', url: '/assets/gallery-exteriors-2.png', alt: 'Beachfront Terrace with Umbrellas', category: 'Exteriors', span: false },
-  { id: '4', url: '/assets/gallery-interiors-2.png', alt: 'Seaside Restaurant Pavilion', category: 'Interiors', span: false },
-  { id: '5', url: '/assets/gallery-details-1.png', alt: 'Tropical Outdoor Shower', category: 'Details', span: false },
-  { id: '6', url: '/assets/gallery-details-2.png', alt: 'Sunrise Breakfast by the Sea', category: 'Details', span: false },
-  { id: '7', url: '/assets/gallery-night-1.png', alt: 'The Secret at Sunset', category: 'Night', span: false },
-  { id: '8', url: '/assets/gallery-night-2.png', alt: 'Candlelit Evening Terrace', category: 'Night', span: false },
+  // Interiors
+  { id: '1', url: '/assets/Birdsong/Birdsong6.webp', alt: 'Birdsong Spacious Interior', category: 'Interiors', span: true },
+  { id: '2', url: '/assets/Birdsong/gallery8.webp', alt: 'Birdsong Bathroom Design', category: 'Interiors', span: false },
+  { id: '3', url: '/assets/Birdsong/Birdsong3.webp', alt: 'Birdsong Bedroom View', category: 'Interiors', span: false },
+  { id: '4', url: '/assets/Birdsong/Birdsong4.webp', alt: 'Birdsong Indoor Living Space', category: 'Interiors', span: false },
+  // Exteriors
+  { id: '5', url: '/assets/Birdsong/Birdsong7.webp', alt: 'Birdsong Veranda', category: 'Exteriors', span: true },
+  { id: '6', url: '/assets/Birdsong/gallery5.webp', alt: 'Birdsong Exterior View', category: 'Exteriors', span: false },
+  { id: '7', url: '/assets/Birdsong/gallery6.webp', alt: 'Birdsong Surrounding Nature', category: 'Exteriors', span: false },
+  // Details
+  { id: '8', url: '/assets/Birdsong/Birdsong2.webp', alt: 'Birdsong Hammock Detail', category: 'Details', span: false },
+  { id: '9', url: '/assets/Birdsong/Birdsong5.webp', alt: 'Birdsong Wooden Architecture', category: 'Details', span: false },
+  { id: '10', url: '/assets/Birdsong/gallery1.webp', alt: 'Birdsong Relaxing Corner', category: 'Details', span: false },
+  { id: '11', url: '/assets/Birdsong/gallery2.webp', alt: 'Birdsong Decorative Elements', category: 'Details', span: false },
+  { id: '12', url: '/assets/Birdsong/gallery3.webp', alt: 'Birdsong Artisan Details', category: 'Details', span: false },
+  { id: '13', url: '/assets/Birdsong/gallery4.webp', alt: 'Birdsong Premium Amenities', category: 'Details', span: false },
+  { id: '14', url: '/assets/Birdsong/gallery7.webp', alt: 'Birdsong Natural Textures', category: 'Details', span: false },
+  // Night
+  { id: '15', url: '/assets/Birdsong/Birdsong1.webp', alt: 'Birdsong at Sunset', category: 'Night', span: true },
 ];
 
 export const PRICING: PricingTier = {

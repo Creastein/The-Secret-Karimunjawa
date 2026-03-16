@@ -27,9 +27,9 @@ const thumbVariant = {
 }
 
 const slideVariants = {
-  enter: (direction: number) => ({ x: direction > 0 ? 100 : -100, opacity: 0, scale: 0.95 }),
-  center: { zIndex: 1, x: 0, opacity: 1, scale: 1 },
-  exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 100 : -100, opacity: 0, scale: 0.95 }),
+  enter: (direction: number) => ({ x: direction > 0 ? 60 : -60, opacity: 0, scale: 1.03, filter: 'blur(8px)' }),
+  center: { zIndex: 1, x: 0, opacity: 1, scale: 1, filter: 'blur(0px)' },
+  exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 60 : -60, opacity: 0, scale: 0.97, filter: 'blur(4px)' }),
 }
 
 type Props = {}
@@ -160,11 +160,20 @@ const Gallery: FC<Props> = () => {
               <div className="relative w-full h-[320px] sm:h-[420px] md:h-[560px] overflow-hidden bg-stone-200/90 shadow-2xl rounded-none border border-stone-100 ring-1 ring-black/5 group">
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit"
-                    transition={{ x: { type: 'spring', stiffness: 300, damping: 30 }, opacity: { duration: 0.3 }, ease: EASE_OUT_EXPO }}
-                    className="absolute inset-0 w-full h-full"
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 w-full h-full overflow-hidden"
                   >
-                    <img src={filteredImages[currentIndex]?.url} alt={filteredImages[currentIndex]?.alt} className="w-full h-full object-cover" loading="lazy" decoding="async" onClick={() => setIsLightboxOpen(true)} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent pointer-events-none" />
+                    <motion.img 
+                      src={filteredImages[currentIndex]?.url} 
+                      alt={filteredImages[currentIndex]?.alt} 
+                      className="w-full h-full object-cover origin-center" 
+                      loading="lazy" 
+                      decoding="async" 
+                      onClick={() => setIsLightboxOpen(true)} 
+                      animate={{ scale: [1, 1.05] }}
+                      transition={{ duration: 20, ease: 'linear', repeat: Infinity, repeatType: 'reverse' }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent pointer-events-none" />
                   </motion.div>
                 </AnimatePresence>
 
@@ -206,19 +215,19 @@ const Gallery: FC<Props> = () => {
 
           {filteredImages.length > 0 && (
             <motion.div key={activeCategory} initial="hidden" animate="visible" className="mt-2">
-              <div className="flex gap-4 overflow-x-auto pb-2">
+              <div className="flex gap-4 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                 {filteredImages.slice(0, 12).map((image, index) => (
-                  <motion.button
-                    key={image.id}
-                    custom={index}
-                    variants={thumbVariant}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`relative aspect-[4/3] w-32 sm:w-36 md:w-40 shrink-0 overflow-hidden border transition-all duration-300 ${index === currentIndex ? 'border-teak-accent ring-2 ring-teak-accent/30 shadow-lg' : 'border-white/60 hover:border-teak-accent/70'}`}
-                    aria-label={`View ${image.alt}`}
-                  >
-                    <img src={image.url} alt={image.alt} className="h-full w-full object-cover" loading="lazy" decoding="async" />
-                    <div className={`absolute inset-0 transition-opacity duration-300 ${index === currentIndex ? 'opacity-0' : 'bg-white/10'}`} />
-                  </motion.button>
+                    <motion.button
+                      key={image.id}
+                      custom={index}
+                      variants={thumbVariant}
+                      onClick={() => setCurrentIndex(index)}
+                      className={`group relative aspect-[4/3] w-32 sm:w-36 md:w-40 shrink-0 overflow-hidden rounded-sm transition-all duration-500 snap-center ${index === currentIndex ? 'border border-teak-accent ring-1 ring-teak-accent/50 shadow-lg' : 'border border-black/5 hover:border-teak-accent/30 opacity-90 hover:opacity-100'}`}
+                      aria-label={`View ${image.alt}`}
+                    >
+                      <img src={image.url} alt={image.alt} className={`h-full w-full object-cover transition-transform duration-[1.5s] ease-out ${index === currentIndex ? 'scale-105' : 'scale-100 group-hover:scale-110'}`} loading="lazy" decoding="async" />
+                      <div className={`absolute inset-0 transition-all duration-500 ${index === currentIndex ? 'bg-transparent' : 'bg-black/10 group-hover:bg-transparent'}`} />
+                    </motion.button>
                 ))}
               </div>
             </motion.div>
