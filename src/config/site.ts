@@ -70,10 +70,10 @@ export const ROOMS: Room[] = [
     typeLabel: 'Superior',
     bedDetails: 'Queen Bed (1.8m x 2m) + Double Bed (1.5m x 2m)',
     description: 'A serene superior suite with a private garden, crafted for restful stays with flexible bedding for families or friends.',
-    imageUrl: '/assets/TivoliGarden1.webp',
+    imageUrl: '/assets/TivoliGarden/TivoliGarden1.webp',
     gallery: [
-      '/assets/TivoliGarden1.webp',
-      '/assets/TivoliGarden2.webp',
+      '/assets/TivoliGarden/TivoliGarden1.webp',
+      '/assets/TivoliGarden/TivoliGarden2.webp',
     ],
     features: ['Private Garden', 'Garden View', 'Flexible Bedding', 'Daily Housekeeping'],
     startingPrice: 1700000,
