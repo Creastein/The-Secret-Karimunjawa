@@ -270,7 +270,6 @@ export const GALLERY_IMAGES: ImageItem[] = [
   { id: '16', url: '/assets/Cipaku/cipaku13.webp', alt: 'Cipaku Artisan Details', category: 'Details', span: false },
   { id: '17', url: '/assets/Cipaku/cipaku14.webp', alt: 'Cipaku Natural Textures', category: 'Details', span: false },
   { id: '18', url: '/assets/Cipaku/cipaku15.webp', alt: 'Cipaku Curated Amenities', category: 'Details', span: false },
-  { id: '19', url: '/assets/Cipaku/cipaku16.webp', alt: 'Cipaku Interior Accents', category: 'Details', span: false },
   { id: '20', url: '/assets/Cipaku/cipaku18.webp', alt: 'Cipaku Finishing Touches', category: 'Details', span: false },
   // Interiors
   { id: '21', url: '/assets/Cipaku/cipaku2.webp', alt: 'Cipaku Bedroom Suite', category: 'Interiors', span: true },
@@ -290,6 +289,42 @@ export const GALLERY_IMAGES: ImageItem[] = [
   { id: '34', url: '/assets/exteriror 2.jpeg', alt: 'The Secret Karimunjawa Beachfront', category: 'Exteriors', span: false },
   // Night
   { id: '32', url: '/assets/Cipaku/cipaku3.webp', alt: 'Cipaku at Night', category: 'Night', span: false },
+
+  // ── Common Area ──
+  // Exteriors
+  { id: '35', url: '/assets/common-area/CA1.webp', alt: 'The Secret Common Area Overview', category: 'Exteriors', span: false },
+  { id: '36', url: '/assets/common-area/CA2.webp', alt: 'The Secret Garden Pathway', category: 'Exteriors', span: false },
+  { id: '37', url: '/assets/common-area/CA3.webp', alt: 'The Secret Tropical Courtyard', category: 'Exteriors', span: false },
+  { id: '38', url: '/assets/common-area/CA4.webp', alt: 'The Secret Outdoor Lounge', category: 'Exteriors', span: false },
+  { id: '39', url: '/assets/common-area/CA16.webp', alt: 'The Secret Beachfront Area', category: 'Exteriors', span: true },
+  { id: '53', url: '/assets/common-area/CA22.webp', alt: 'Common Area Greenery', category: 'Exteriors', span: false },
+  { id: '54', url: '/assets/common-area/CA25.webp', alt: 'Common Area Tropical Path', category: 'Exteriors', span: false },
+  { id: '55', url: '/assets/common-area/CA26.webp', alt: 'Common Area Sunny View', category: 'Exteriors', span: false },
+  { id: '56', url: '/assets/common-area/CA27.webp', alt: 'Common Area Open Space', category: 'Exteriors', span: false },
+  { id: '57', url: '/assets/common-area/CA28.webp', alt: 'Common Area Architecture Overview', category: 'Exteriors', span: false },
+  { id: '58', url: '/assets/common-area/CA29.webp', alt: 'Common Area Landscaping', category: 'Exteriors', span: false },
+  { id: '59', url: '/assets/common-area/CA30.webp', alt: 'Common Area Walkway', category: 'Exteriors', span: false },
+  { id: '60', url: '/assets/common-area/CA31.webp', alt: 'Common Area Coastal Vibe', category: 'Exteriors', span: false },
+  { id: '61', url: '/assets/common-area/CA32.webp', alt: 'Common Area Rest Spot', category: 'Exteriors', span: false },
+  { id: '62', url: '/assets/common-area/CA33.webp', alt: 'Common Area Scenic Corner', category: 'Exteriors', span: false },
+  { id: '63', url: '/assets/common-area/CA35.webp', alt: 'Common Area Wide View', category: 'Exteriors', span: false },
+  // Details
+  { id: '40', url: '/assets/common-area/CA7.webp', alt: 'Common Area Wooden Decor', category: 'Details', span: false },
+  { id: '41', url: '/assets/common-area/CA10.webp', alt: 'Common Area Rustic Accents', category: 'Details', span: false },
+  { id: '42', url: '/assets/common-area/CA11_5.webp', alt: 'Common Area Tropical Details', category: 'Details', span: false },
+  { id: '43', url: '/assets/common-area/CA13.webp', alt: 'Common Area Artisan Crafts', category: 'Details', span: false },
+  { id: '44', url: '/assets/common-area/CA14.webp', alt: 'Common Area Natural Elements', category: 'Details', span: false },
+  { id: '45', url: '/assets/common-area/CA15.webp', alt: 'Common Area Curated Fixtures', category: 'Details', span: false },
+  { id: '46', url: '/assets/common-area/CA17.webp', alt: 'Common Area Island Textures', category: 'Details', span: false },
+  { id: '47', url: '/assets/common-area/CA19.webp', alt: 'Common Area Premium Finishing', category: 'Details', span: true },
+  { id: '48', url: '/assets/common-area/CA20.webp', alt: 'Common Area Cozy Touches', category: 'Details', span: false },
+  { id: '64', url: '/assets/common-area/CA23.webp', alt: 'Common Area Texture Details', category: 'Details', span: false },
+  { id: '65', url: '/assets/common-area/CA24.webp', alt: 'Common Area Artisan Material', category: 'Details', span: false },
+  // Night
+  { id: '49', url: '/assets/common-area/CA6.webp', alt: 'The Secret Evening Ambiance', category: 'Night', span: false },
+  { id: '50', url: '/assets/common-area/CA9.webp', alt: 'The Secret Twilight View', category: 'Night', span: false },
+  { id: '51', url: '/assets/common-area/CA12.webp', alt: 'The Secret Candlelit Terrace', category: 'Night', span: false },
+  { id: '52', url: '/assets/common-area/CA21.webp', alt: 'The Secret Night Sky', category: 'Night', span: false },
 ];
 
 export const PRICING: PricingTier = {
