@@ -12,7 +12,7 @@ export default function Preloader() {
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
     // If user prefers reduced motion or wants to save data, keep this very short.
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
-    return reduce || saveData ? 200 : 900
+    return reduce || saveData ? 400 : 2500
   }, [])
 
   useLockBodyScroll(isVisible)

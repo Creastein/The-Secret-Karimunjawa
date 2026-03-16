@@ -52,6 +52,19 @@ const Gallery: FC<Props> = () => {
 
   useEffect(() => { setCurrentIndex(0); setDirection(0) }, [activeCategory])
 
+  // Preload adjacent images for smooth carousel transitions
+  useEffect(() => {
+    if (filteredImages.length <= 1) return
+    const preloadIndexes = [
+      (currentIndex + 1) % filteredImages.length,
+      (currentIndex - 1 + filteredImages.length) % filteredImages.length,
+    ]
+    preloadIndexes.forEach((idx) => {
+      const img = new Image()
+      img.src = filteredImages[idx]?.url ?? ''
+    })
+  }, [currentIndex, filteredImages])
+
   const handleNext = () => { setDirection(1); setCurrentIndex((p) => (p + 1) % filteredImages.length) }
   const handlePrev = () => { setDirection(-1); setCurrentIndex((p) => (p - 1 + filteredImages.length) % filteredImages.length) }
 
@@ -158,16 +171,21 @@ const Gallery: FC<Props> = () => {
               className="relative h-auto"
             >
               <div className="relative w-full h-[320px] sm:h-[420px] md:h-[560px] overflow-hidden bg-stone-200/90 shadow-2xl rounded-none border border-stone-100 ring-1 ring-black/5 group">
+                {/* Shimmer background — sits behind the image, visible while image loads */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                  <div className="w-full h-full bg-gradient-to-r from-stone-200 via-stone-100 to-stone-200 bg-[length:200%_100%] animate-shimmer" />
+                </div>
                 <AnimatePresence initial={false} custom={direction}>
                   <motion.div key={currentIndex} custom={direction} variants={slideVariants} initial="enter" animate="center" exit="exit"
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute inset-0 w-full h-full overflow-hidden"
+                    className="absolute inset-0 z-[1] w-full h-full overflow-hidden"
                   >
                     <motion.img 
                       src={filteredImages[currentIndex]?.url} 
                       alt={filteredImages[currentIndex]?.alt} 
                       className="w-full h-full object-cover origin-center" 
-                      loading="lazy" 
+                      style={{ willChange: 'transform' }}
+                      loading="eager" 
                       decoding="async" 
                       onClick={() => setIsLightboxOpen(true)} 
                       animate={{ scale: [1, 1.05] }}

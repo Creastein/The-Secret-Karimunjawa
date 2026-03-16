@@ -24,11 +24,16 @@ export default {
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
+        'shimmer': 'shimmer 1.5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
         },
       },
     },
