@@ -26,12 +26,15 @@ export const ROOMS: Room[] = [
     typeLabel: 'One-Bedroom',
     bedDetails: 'King Bed (2m x 2m)',
     description: 'A secluded one-bedroom sanctuary with total privacy, a private kitchen, and a breezy veranda framing the sea and sunset beyond the palms.',
-    imageUrl: '/assets/room-The-Ocean-Master.png',
+    imageUrl: '/assets/Cipaku/cipaku2.webp',
     gallery: [
-      '/assets/room-The-Ocean-Master.png',
-      '/assets/room-ocean-master-1.png',
-      '/assets/room-ocean-master-2.png',
-      '/assets/gallery-interiors-1.png',
+      '/assets/Cipaku/cipaku2.webp',
+      '/assets/Cipaku/cipaku12.webp',
+      '/assets/Cipaku/cipaku13.webp',
+      '/assets/Cipaku/cipaku5.webp',
+      '/assets/Cipaku/cipaku3.webp',
+      '/assets/Cipaku/cipaku17.webp',
+      '/assets/Cipaku/cipaku18.webp',
     ],
     features: ['Private Kitchen', 'Private Veranda', 'Sea View', 'Sunset View'],
     startingPrice: 1600000,
@@ -241,6 +244,7 @@ export const TESTIMONIALS_SECTION = {
 } as const;
 
 export const GALLERY_IMAGES: ImageItem[] = [
+  // ── Birdsong ──
   // Interiors
   { id: '1', url: '/assets/Birdsong/Birdsong6.webp', alt: 'Birdsong Spacious Interior', category: 'Interiors', span: true },
   { id: '2', url: '/assets/Birdsong/gallery8.webp', alt: 'Birdsong Bathroom Design', category: 'Interiors', span: false },
@@ -260,6 +264,29 @@ export const GALLERY_IMAGES: ImageItem[] = [
   { id: '14', url: '/assets/Birdsong/gallery7.webp', alt: 'Birdsong Natural Textures', category: 'Details', span: false },
   // Night
   { id: '15', url: '/assets/Birdsong/Birdsong1.webp', alt: 'Birdsong at Sunset', category: 'Night', span: true },
+
+  // ── Cipaku ──
+  // Details
+  { id: '16', url: '/assets/Cipaku/cipaku13.webp', alt: 'Cipaku Artisan Details', category: 'Details', span: false },
+  { id: '17', url: '/assets/Cipaku/cipaku14.webp', alt: 'Cipaku Natural Textures', category: 'Details', span: false },
+  { id: '18', url: '/assets/Cipaku/cipaku15.webp', alt: 'Cipaku Curated Amenities', category: 'Details', span: false },
+  { id: '19', url: '/assets/Cipaku/cipaku16.webp', alt: 'Cipaku Interior Accents', category: 'Details', span: false },
+  { id: '20', url: '/assets/Cipaku/cipaku18.webp', alt: 'Cipaku Finishing Touches', category: 'Details', span: false },
+  // Interiors
+  { id: '21', url: '/assets/Cipaku/cipaku2.webp', alt: 'Cipaku Bedroom Suite', category: 'Interiors', span: true },
+  { id: '22', url: '/assets/Cipaku/cipaku1.webp', alt: 'Cipaku Living Space', category: 'Interiors', span: false },
+  { id: '23', url: '/assets/Cipaku/cipaku4.webp', alt: 'Cipaku Interior Design', category: 'Interiors', span: false },
+  { id: '24', url: '/assets/Cipaku/cipaku5.webp', alt: 'Cipaku Cozy Corner', category: 'Interiors', span: false },
+  { id: '25', url: '/assets/Cipaku/cipaku12.webp', alt: 'Cipaku Kitchen Area', category: 'Interiors', span: false },
+  { id: '26', url: '/assets/Cipaku/cipaku17.webp', alt: 'Cipaku Private Retreat', category: 'Interiors', span: false },
+  // Exteriors
+  { id: '27', url: '/assets/Cipaku/ciapku10.webp', alt: 'Cipaku Exterior Panorama', category: 'Exteriors', span: true },
+  { id: '28', url: '/assets/Cipaku/cipaku6.webp', alt: 'Cipaku Garden Path', category: 'Exteriors', span: false },
+  { id: '29', url: '/assets/Cipaku/cipaku7.webp', alt: 'Cipaku Tropical Surroundings', category: 'Exteriors', span: false },
+  { id: '30', url: '/assets/Cipaku/cipaku9.webp', alt: 'Cipaku Veranda View', category: 'Exteriors', span: false },
+  { id: '31', url: '/assets/Cipaku/cipaku11.webp', alt: 'Cipaku Outdoor Living', category: 'Exteriors', span: false },
+  // Night
+  { id: '32', url: '/assets/Cipaku/cipaku3.webp', alt: 'Cipaku at Night', category: 'Night', span: false },
 ];
 
 export const PRICING: PricingTier = {
