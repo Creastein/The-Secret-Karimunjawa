@@ -285,6 +285,9 @@ export const GALLERY_IMAGES: ImageItem[] = [
   { id: '29', url: '/assets/Cipaku/cipaku7.webp', alt: 'Cipaku Tropical Surroundings', category: 'Exteriors', span: false },
   { id: '30', url: '/assets/Cipaku/cipaku9.webp', alt: 'Cipaku Veranda View', category: 'Exteriors', span: false },
   { id: '31', url: '/assets/Cipaku/cipaku11.webp', alt: 'Cipaku Outdoor Living', category: 'Exteriors', span: false },
+  // General Exteriors
+  { id: '33', url: '/assets/exterior1.jpeg', alt: 'The Secret Karimunjawa Aerial View', category: 'Exteriors', span: true },
+  { id: '34', url: '/assets/exteriror 2.jpeg', alt: 'The Secret Karimunjawa Beachfront', category: 'Exteriors', span: false },
   // Night
   { id: '32', url: '/assets/Cipaku/cipaku3.webp', alt: 'Cipaku at Night', category: 'Night', span: false },
 ];
