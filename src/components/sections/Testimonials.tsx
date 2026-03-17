@@ -2,12 +2,19 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { QuoteUpIcon } from 'hugeicons-react'
-import { REVIEWS } from '@/config/site'
 import { fadeUp, staggerContainer } from '@/lib/motion'
+
+interface ReadReview {
+  id: number;
+  text: string;
+  author: string;
+  origin: string;
+}
 
 export default function Testimonials() {
   const { t } = useTranslation()
-  const marqueeReviews = [...REVIEWS, ...REVIEWS]
+  const reviews = t('reviews', { returnObjects: true }) as ReadReview[]
+  const marqueeReviews = [...reviews, ...reviews]
 
   return (
     <Section className="bg-sand relative overflow-hidden py-16 md:py-24 lg:py-32">
@@ -32,7 +39,7 @@ export default function Testimonials() {
             {marqueeReviews.map((review, index) => (
               <div
                 key={`${review.id}-${index}`}
-                aria-hidden={index >= REVIEWS.length}
+                aria-hidden={index >= reviews.length}
                 className="flex min-w-[280px] max-w-[360px] md:min-w-[320px] md:max-w-[420px] flex-col items-center text-center p-6 md:p-8 lg:p-12"
               >
                 <div className="mb-8 text-teak-accent/20">

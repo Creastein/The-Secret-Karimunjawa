@@ -248,6 +248,38 @@
             ]
         }
     },
+    "reviews": [
+        {
+            "id": 1,
+            "text": "3 nuits ici ont été très satisfaisantes, nous avons loué à quatre la chambre de type Alang2 avec 2 chambres, une cuisine et un balcon privé. L'hôtel est très confortable, propre et bien agencé. Ce qui nous fait nous sentir chez nous, c'est l'hospitalité du propriétaire M. Kang Eddy, ainsi que de Mas Egif qui est toujours serviable. Un hôtel avec une magnifique vue sur le coucher de soleil. J'ai hâte d'y retourner. Merci The Secret Karimunjawa d'avoir rendu nos vacances si mémorables.",
+            "author": "Dedup",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 2,
+            "text": "Du service à la propreté, les toilettes, le menu du petit-déjeuner et la chambre principale, c'est incroyable. Je suis satisfait et mon ami que j'ai amené était très satisfait, confortable et la vue est absolument incroyable.",
+            "author": "Pak Pong",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 3,
+            "text": "Le plus bel endroit que nous ayons jamais visité, les amis qui n'ont pas essayé, essayez ce magnifique lieu de vacances.",
+            "author": "Asyer Giandra",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 4,
+            "text": "La dernière chose que j'ai dite aux propriétaires était que notre séjour à Karimunjawa n'aurait pas été le même sans The Secret. La propriété est belle et accueillante, conçue dans un style qui se fond parfaitement dans le cadre naturel et respecte l'environnement. La propreté et le confort sont au plus haut niveau. Nous avons été très bien accueillis et pris en charge, sans manquer de rien. Si nous retournons à Karimunjawa, nous séjournerons sans aucun doute au The Secret.",
+            "author": "Marcco Gatucci",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 5,
+            "text": "Cet hébergement a une vue imprenable et est équipé de tout ce dont vous avez besoin ! Une propreté irréprochable et un personnel professionnel et très sympathique. Egif s'est assuré que nous obtenions tout ce dont nous avions besoin. Vous pouvez louer un scooter directement à la propriété à un prix abordable. Je le recommande à tout le monde !",
+            "author": "Mariana Cornicello",
+            "origin": "5/5 — Google Maps"
+        }
+    ],
     "location": {
         "eyebrow": "L'Île",
         "title": "10 Minutes du Village.",

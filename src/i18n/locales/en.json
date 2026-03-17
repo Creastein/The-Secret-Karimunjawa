@@ -249,6 +249,38 @@
             ]
         }
     },
+    "reviews": [
+        {
+            "id": 1,
+            "text": "3 nights here was very satisfying, the four of us rented the Alang2 type room with 2 bedrooms, kitchen, private balcony. The hotel is very comfortable, clean, and neatly arranged. What makes us feel at home is the hospitality of the owner Mr. Kang Eddy who happened to be staying there, as well as Mas Egif who is always helpful. A hotel with a charming sunset view. Can't wait to go there again. Thank you The Secret Karimunjawa for making our vacation very memorable.",
+            "author": "Dedup",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 2,
+            "text": "From the service, cleanliness, toilets, breakfast menu and the main bedroom, it's amazing. I'm satisfied and my friend who I brought along was very satisfied, comfortable and the view is absolutely amazing.",
+            "author": "Pak Pong",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 3,
+            "text": "The nicest place we've ever visited, friends who haven't tried it please try this beautiful vacation spot.",
+            "author": "Asyer Giandra",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 4,
+            "text": "The last thing I said to the owners was that our stay in Karimunjawa would not have been the same without The Secret. The property is beautiful and welcoming, designed with a style that blends perfectly with the natural surroundings and respects the environment. Cleanliness and comfort are at the highest level. We were welcomed and taken care of very well, without lack of anything. If we return to Karimunjawa, we will definitely stay at The Secret.",
+            "author": "Marcco Gatucci",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 5,
+            "text": "This accommodation has stunning views and comes with everything you need! Impeccable cleanliness and professional and very friendly staff. Egif made sure we got everything we needed and accommodated all our needs. You can rent a scooter right from the property at an affordable price. I recommend it to everyone!",
+            "author": "Mariana Cornicello",
+            "origin": "5/5 — Google Maps"
+        }
+    ],
     "location": {
         "eyebrow": "The Island",
         "title": "10 Minutes from Town.",

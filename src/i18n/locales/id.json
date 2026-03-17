@@ -248,6 +248,38 @@
             ]
         }
     },
+    "reviews": [
+        {
+            "id": 1,
+            "text": "3 malam disini sangat memuaskan, kami ber-empat sewa kamar type Alang2 dengan 2 kamar, dapur, private balkon. Hotel sangat nyaman, bersih dan tertata rapih. Yang bikin betah adalah serasa rumah sendiri karena keramahan sang owner Mr. Kang Eddy kebetulan sedang stay disitu, serta Mas Egif yang selalu helpful. Hotel dengan sunset view yg menawan. Ga sabar buat kesana lagi. Terima kasih The Secret Karimunjawa menjadikan liburan kami sangat berkesan.",
+            "author": "Dedup",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 2,
+            "text": "Dari mulai pelayanan, kebersihan, toilet, menu breakfast dan kamar utama luar biasa, saya puas dan teman yang saya ajak saja sangat puas, nyaman dan viewnya luar biasa banget.",
+            "author": "Pak Pong",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 3,
+            "text": "Tempat yang bagus yang pernah kami kunjungi, teman2 yang belum coba silahkan coba ini tempat yang liburan yang indah.",
+            "author": "Asyer Giandra",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 4,
+            "text": "Hal terakhir yang saya sampaikan kepada pemiliknya adalah bahwa kunjungan kami di Karimunjawa tidak akan sama tanpa The Secret. Properti ini indah dan ramah, dirancang dengan gaya yang menyatu sempurna dengan lingkungan alam dan menghormati lingkungan. Kebersihan dan kenyamanan berada pada tingkat tertinggi. Kami disambut dan dilayani dengan sangat baik, tanpa kekurangan apa pun. Jika kami kembali ke Karimunjawa, kami pasti akan menginap di The Secret.",
+            "author": "Marcco Gatucci",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 5,
+            "text": "Akomodasi ini memiliki pemandangan yang menakjubkan dan dilengkapi dengan semua yang Anda butuhkan! Kebersihannya luar biasa dan stafnya profesional dan sangat ramah. Egif memastikan kami mendapatkan semua yang kami butuhkan dan memenuhi semua kebutuhan kami. Anda dapat menyewa skuter langsung dari properti dengan harga terjangkau. Saya merekomendasikannya kepada semua orang!",
+            "author": "Mariana Cornicello",
+            "origin": "5/5 — Google Maps"
+        }
+    ],
     "location": {
         "eyebrow": "Pulau",
         "title": "10 Menit dari Kota.",

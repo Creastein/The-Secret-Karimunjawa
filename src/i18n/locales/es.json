@@ -248,6 +248,38 @@
             ]
         }
     },
+    "reviews": [
+        {
+            "id": 1,
+            "text": "3 noches aquí fueron muy satisfactorias, los cuatro alquilamos la habitación tipo Alang2 con 2 dormitorios, cocina y balcón privado. El hotel es muy cómodo, limpio y bien arreglado. Lo que nos hace sentir como en casa es la hospitalidad del propietario, el Sr. Kang Eddy, que estaba allí, así como de Mas Egif, que siempre es servicial. Un hotel con una vista del atardecer encantadora. No puedo esperar para volver. Gracias a The Secret Karimunjawa por hacer de nuestras vacaciones algo memorable.",
+            "author": "Dedup",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 2,
+            "text": "Desde el servicio, la limpieza, los baños, el menú del desayuno y el dormitorio principal, es increíble. Estoy satisfecho y mi amigo que traje estaba muy satisfecho, cómodo y la vista es absolutamente increíble.",
+            "author": "Pak Pong",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 3,
+            "text": "El lugar más bonito que hemos visitado, los amigos que no lo han probado, por favor prueben este hermoso lugar de vacaciones.",
+            "author": "Asyer Giandra",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 4,
+            "text": "Lo último que les dije a los dueños fue que nuestra estancia en Karimunjawa no habría sido la misma sin The Secret. La propiedad es hermosa y acogedora, diseñada con un estilo que se integra perfectamente con el entorno natural y respeta el medio ambiente. La limpieza y el confort son del más alto nivel. Fuimos recibidos y bien atendidos, sin que faltara de nada. Si volvemos a Karimunjawa, definitivamente nos alojaremos en The Secret.",
+            "author": "Marcco Gatucci",
+            "origin": "5/5 — Google Maps"
+        },
+        {
+            "id": 5,
+            "text": "¡Este alojamiento tiene unas vistas impresionantes y cuenta con todo lo que necesitas! Una limpieza impecable y un personal profesional y muy amable. Egif se aseguró de que obtuviéramos todo lo que necesitábamos. Puedes alquilar un scooter directamente en la propiedad a un precio asequible. ¡Se lo recomiendo a todo el mundo!",
+            "author": "Mariana Cornicello",
+            "origin": "5/5 — Google Maps"
+        }
+    ],
     "location": {
         "eyebrow": "La Isla",
         "title": "10 Minutos del Pueblo.",
