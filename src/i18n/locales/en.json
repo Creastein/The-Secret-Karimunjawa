@@ -5,6 +5,7 @@
         "suites": "Villa",
         "experience": "Experience",
         "gallery": "Gallery",
+        "team": "Our Team",
         "contact": "Contact",
         "location": "Location",
         "locationSubtitle": "Karimunjawa, Central Java"
@@ -35,26 +36,20 @@
     "facilities": {
         "seaSunsetView": "120° Sunset and Stargazing Rooftop",
         "seaSunsetViewDesc": "Our guests' favorite spot for morning coffee, afternoon sunsets and dinner under the milky way.",
+        "cozyKitchenBar": "Cozy Open Kitchen-Bar",
+        "cozyKitchenBarDesc": "The heart of The Secret — a welcoming place where guests gather and enjoy friendly conversations with the family and the team.",
+        "privateGarden": "Tropical Garden",
+        "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
         "privateVeranda": "Private Veranda",
         "privateVerandaDesc": "Our guests' favorite spot for morning coffee and afternoon sunsets.",
-        "privateGarden": "Tropical Garden ",
-        "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
         "sunriseBreakfast": "Homemade Breakfast",
         "sunriseBreakfastDesc": "Homemade bread and jam with freshly ground coffee with an ocean view.",
-        "privateKitchen": "Private Kitchen",
-        "privateKitchenDesc": "Villa Cipaku has a private kitchen - cook yourself with a prime view!",
-        "ecoConscious": "Eco-conscious living",
+        "ecoConscious": "Eco-conscious Living",
         "ecoConsciousDesc": "Stay lightly on the island with the dedicated zero single-use plastic approach and effort to recycle and compost. Refill your water bottle and enjoy the local cuisine.",
-        
-        "airportTransfer": "We Pick You Up",
-        "airportTransferDesc": "Shuttle service from airport or harbor available at an additional charge.",
-        "dailyHousekeeping": "Daily Cleaning Services",
-        "dailyHousekeepingDesc": "Our housekeeping team ensures your villa is always clean and comfortable.",
-        "directBooking": "Straight to Us",
-        "directBookingDesc": "Book via WhatsApp — no agents, no commissions, 100% goes to the villa.",
-        
         "residentDog": "Our Furry Family",
-        "residentDogDesc": "Our two dogs and our cat are part of our family. They will loudly welcome you and bark once in a while"
+        "residentDogDesc": "Our two dogs and our cat are part of our family. They will loudly welcome you and bark once in a while.",
+        "dailyHousekeeping": "Daily Cleaning Services",
+        "dailyHousekeepingDesc": "Our housekeeping team ensures your villa is always clean and comfortable."
     },
     "suites": {
         "eyebrow": "Three Villas",
@@ -247,6 +242,23 @@
                 "Exploration: Hiking Mount Maming (3 hours), Stargazing through telescopes at 'Deepsky' Observatory",
                 "Beaches: Batu Topeng, Sunset and Tanjung Gelam Beach (20 min walk / 3 min by scooter), Alano & Anora Beach (15 min scooter)"
             ]
+        }
+    },
+    "team": {
+        "eyebrow": "The Faces Behind Your Stay",
+        "title": "Our Team",
+        "description": "Meet our dedicated family who work hard every day to make your stay memorable. We treat every guest as part of our own family.",
+        "roles": {
+            "abyan": "Kitchen & Guest Connection",
+            "anik": "Kitchen & Housekeeping",
+            "dadang": "All-Rounder, Gardens & Property",
+            "bella": "Family Care (Longest member since 2021)"
+        },
+        "descriptions": {
+            "abyan": "From kitchen to guest connection, Mas Abyan crafts delicious moments with warmth — and a welcoming smile.",
+            "anik": "With a cheerful spirit and genuine love for her work, Mbak Anik takes care of both kitchen and housekeeping.",
+            "dadang": "Our trusted all-rounder, has a keen eye for detail. He brings life to our gardens and care to every corner of the property.",
+            "bella": "Our longest standing team member since 2021 is the heart of our home — now devoted to care for our family with her tireless energy and loving care."
         }
     },
     "reviews": [

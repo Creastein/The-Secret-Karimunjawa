@@ -12,6 +12,7 @@ const NAV_LINKS = [
   { key: 'estate', href: '#estate', id: 'estate' },
   { key: 'suites', href: '#suites', id: 'suites' },
   { key: 'experience', href: '#experience', id: 'experience' },
+  { key: 'team', href: '#team', id: 'team' },
   { key: 'gallery', href: '#gallery', id: 'gallery' },
   { key: 'contact', href: '#contact', id: 'contact' },
   { key: 'location', href: '#location', id: 'location' },

@@ -5,6 +5,7 @@
         "suites": "Villa",
         "experience": "Expérience",
         "gallery": "Galerie",
+        "team": "Notre Équipe",
         "contact": "Contact",
         "location": "Emplacement",
         "locationSubtitle": "Karimunjawa, Java Central"
@@ -35,24 +36,20 @@
     "facilities": {
         "seaSunsetView": "Toit-Terrasse Coucher de Soleil 120° et Observation des Étoiles",
         "seaSunsetViewDesc": "L'endroit préféré de nos invités pour le café du matin, les couchers de soleil l'après-midi et les dîners sous la voie lactée.",
-        "privateVeranda": "Véranda Privée",
-        "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
+        "cozyKitchenBar": "Cuisine-Bar Ouverte et Chaleureuse",
+        "cozyKitchenBarDesc": "Le cœur de The Secret — un lieu accueillant où les invités se retrouvent et profitent de conversations amicales avec la famille et l'équipe.",
         "privateGarden": "Jardin Tropical",
         "privateGardenDesc": "Votre espace pour respirer dans le jardin caché magnifiquement aménagé au milieu de la jungle.",
+        "privateVeranda": "Véranda Privée",
+        "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
         "sunriseBreakfast": "Petit-déjeuner Fait Maison",
         "sunriseBreakfastDesc": "Pain et confiture faits maison avec du café fraîchement moulu et vue sur l'océan.",
-        "privateKitchen": "Cuisine Privée",
-        "privateKitchenDesc": "La Villa Cipaku dispose d'une cuisine privée - cuisinez vous-même avec une vue imprenable !",
-        "ecoConscious": "Mode de vie éco-responsable",
+        "ecoConscious": "Mode de Vie Éco-responsable",
         "ecoConsciousDesc": "Séjournez en douceur sur l'île grâce à une approche dédiée au zéro plastique à usage unique et à des efforts de recyclage et de compostage. Remplissez votre bouteille d'eau et profitez de la cuisine locale.",
-        "airportTransfer": "Nous Venons Vous Chercher",
-        "airportTransferDesc": "Navette depuis l'aéroport ou le port disponible avec supplément.",
-        "dailyHousekeeping": "Service de nettoyage quotidien",
-        "dailyHousekeepingDesc": "Notre équipe s'assure que votre villa est toujours propre et confortable.",
-        "directBooking": "Directement Avec Nous",
-        "directBookingDesc": "Réservez via WhatsApp — sans agents, sans commissions, 100% va à la villa.",
         "residentDog": "Notre Famille à Quatre Pattes",
-        "residentDogDesc": "Nos deux chiens et notre chat font partie de notre famille. Ils vous accueilleront bruyamment et aboieront de temps en temps."
+        "residentDogDesc": "Nos deux chiens et notre chat font partie de notre famille. Ils vous accueilleront bruyamment et aboieront de temps en temps.",
+        "dailyHousekeeping": "Service de Nettoyage Quotidien",
+        "dailyHousekeepingDesc": "Notre équipe s'assure que votre villa est toujours propre et confortable."
     },
     "suites": {
         "eyebrow": "Trois Villas",
@@ -246,6 +243,23 @@
                 "Exploration : Randonnée au Mont Maming (3 heures), Observation des étoiles au télescope à l'Observatoire 'Deepsky'",
                 "Plages : Batu Topeng, Sunset et Plage de Tanjung Gelam (20 min à pied / 3 min en scooter), Plage Alano et Anora (15 min en scooter)"
             ]
+        }
+    },
+    "team": {
+        "eyebrow": "Les Visages de Votre Séjour",
+        "title": "Notre Équipe",
+        "description": "Rencontrez notre famille dévouée qui travaille dur chaque jour pour rendre votre séjour inoubliable. Nous traitons chaque invité comme un membre de notre propre famille.",
+        "roles": {
+            "abyan": "Cuisine & Connexion avec les Invités",
+            "anik": "Cuisine & Entretien",
+            "dadang": "Polyvalent, Jardins & Propriété",
+            "bella": "Soins Familiaux (Membre le plus ancien depuis 2021)"
+        },
+        "descriptions": {
+            "abyan": "De la cuisine à la connexion avec les invités, Mas Abyan crée des moments délicieux avec chaleur — et un sourire accueillant.",
+            "anik": "Avec un esprit joyeux et un amour sincère pour son travail, Mbak Anik s'occupe à la fois de la cuisine et de l'entretien.",
+            "dadang": "Notre homme de confiance polyvalent, a un œil aiguisé pour les détails. Il donne vie à nos jardins et prend soin de chaque coin de la propriété.",
+            "bella": "Notre membre d'équipe la plus ancienne depuis 2021 est le cœur de notre maison — désormais dévouée aux soins de notre famille avec son énergie inépuisable et son amour."
         }
     },
     "reviews": [

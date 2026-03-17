@@ -2,15 +2,13 @@ import { Facility, Room, ImageItem, PricingTier, LocationSpot, LocationAccess, N
 
 export const FACILITIES: Facility[] = [
   { id: '1', name: 'Sea & Sunset View', iconName: 'Eye', description: 'Breathtaking 180-degree ocean views and spectacular daily sunsets.' },
-  { id: '2', name: 'Private Veranda', iconName: 'Coffee', description: 'Spacious private outdoor living area to relax and unwind.' },
+  { id: '11', name: 'Cozy Kitchen-Bar', iconName: 'Beer', description: 'The heart of The Secret - a welcoming place where guests gather and enjoy friendly conversations.' },
   { id: '4', name: 'Private Garden', iconName: 'Leaf', description: 'Lush tropical private garden for ultimate tranquility.' },
+  { id: '2', name: 'Private Veranda', iconName: 'Coffee', description: 'Spacious private outdoor living area to relax and unwind.' },
   { id: '8', name: 'Sunrise Breakfast', iconName: 'Sunrise', description: 'Delicious daily breakfast options to start your morning.' },
-  { id: '3', name: 'Private Kitchen', iconName: 'Utensils', description: 'Fully equipped private kitchen available in selected villas.' },
   { id: '10', name: 'Eco-conscious living', iconName: 'Recycle', description: 'Stay lightly on the island with the dedicated zero single-use plastic approach and effort to recycle and compost.' },
-  { id: '5', name: 'Airport Transfer', iconName: 'Car', description: 'Convenient pick-up and drop-off service (subject to additional charge).' },
-  { id: '6', name: 'Daily Housekeeping', iconName: 'Sparkles', description: 'Daily cleaning service to ensure your comfort.' },
-  { id: '7', name: 'Direct Booking', iconName: 'Smartphone', description: 'Book directly via WhatsApp for 0% commission.' },
   { id: '9', name: 'Friendly Resident Dog', iconName: 'PawPrint', description: 'Our friendly dog is part of the family and may greet you during your stay.' },
+  { id: '6', name: 'Daily Housekeeping', iconName: 'Sparkles', description: 'Daily cleaning service to ensure your comfort.' },
 ];
 
 export const EXPERIENCE_SECTION = {

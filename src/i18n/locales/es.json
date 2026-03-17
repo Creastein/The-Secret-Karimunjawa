@@ -5,6 +5,7 @@
         "suites": "Villa",
         "experience": "Experiencia",
         "gallery": "Galería",
+        "team": "Nuestro Equipo",
         "contact": "Contacto",
         "location": "Ubicación",
         "locationSubtitle": "Karimunjawa, Java Central"
@@ -35,24 +36,20 @@
     "facilities": {
         "seaSunsetView": "Azotea con Atardecer 120° y Observación de Estrellas",
         "seaSunsetViewDesc": "El lugar favorito de nuestros huéspedes para el café matutino, los atardeceres y cenas bajo la vía láctea.",
-        "privateVeranda": "Terraza Privada",
-        "privateVerandaDesc": "El lugar favorito de nuestros huéspedes para el café matutino y los atardeceres.",
+        "cozyKitchenBar": "Cocina-Bar Abierta y Acogedora",
+        "cozyKitchenBarDesc": "El corazón de The Secret — un lugar acogedor donde los huéspedes se reúnen y disfrutan de conversaciones amistosas con la familia y el equipo.",
         "privateGarden": "Jardín Tropical",
         "privateGardenDesc": "Tu espacio para respirar en el jardín oculto bellamente arreglado en medio de la jungla.",
+        "privateVeranda": "Terraza Privada",
+        "privateVerandaDesc": "El lugar favorito de nuestros huéspedes para el café matutino y los atardeceres.",
         "sunriseBreakfast": "Desayuno Casero",
         "sunriseBreakfastDesc": "Pan y mermelada caseros con café recién molido con vista al océano.",
-        "privateKitchen": "Cocina Privada",
-        "privateKitchenDesc": "La Villa Cipaku tiene una cocina privada: ¡cocina tú mismo con una vista de primera!",
-        "ecoConscious": "Estilo de vida eco-consciente",
+        "ecoConscious": "Estilo de Vida Eco-consciente",
         "ecoConsciousDesc": "Disfruta de la isla de forma ligera con un enfoque dedicado a no usar plásticos de un solo uso y esfuerzo por reciclar y compostar. Rellena tu botella de agua y disfruta de la gastronomía local.",
-        "airportTransfer": "Lo Recogemos",
-        "airportTransferDesc": "Servicio de transporte desde el aeropuerto o el puerto disponible con cargo adicional.",
-        "dailyHousekeeping": "Servicio de limpieza diario",
-        "dailyHousekeepingDesc": "Nuestro equipo asegura que su villa esté siempre limpia y cómoda.",
-        "directBooking": "Directo con Nosotros",
-        "directBookingDesc": "Reserve por WhatsApp — sin agentes, sin comisiones, 100% va a la villa.",
         "residentDog": "Nuestra Familia Peluda",
-        "residentDogDesc": "Nuestros dos perros y nuestro gato son parte de nuestra familia. Te darán una ruidosa bienvenida y ladrarán de vez en cuando."
+        "residentDogDesc": "Nuestros dos perros y nuestro gato son parte de nuestra familia. Te darán una ruidosa bienvenida y ladrarán de vez en cuando.",
+        "dailyHousekeeping": "Servicio de Limpieza Diario",
+        "dailyHousekeepingDesc": "Nuestro equipo asegura que su villa esté siempre limpia y cómoda."
     },
     "suites": {
         "eyebrow": "Tres Villas",
@@ -246,6 +243,23 @@
                 "Exploración: Senderismo al Monte Maming (3 horas), Observación de estrellas con telescopios en el Observatorio 'Deepsky'",
                 "Playas: Batu Topeng, Sunset y Playa Tanjung Gelam (20 min caminando / 3 min en scooter), Playa Alano y Anora (15 min en scooter)"
             ]
+        }
+    },
+    "team": {
+        "eyebrow": "Los Rostros de Su Estancia",
+        "title": "Nuestro Equipo",
+        "description": "Conozca a nuestra familia dedicada que trabaja arduamente todos los días para hacer que su estancia sea memorable. Tratamos a cada huésped como parte de nuestra propia familia.",
+        "roles": {
+            "abyan": "Cocina y Conexión con los Huéspedes",
+            "anik": "Cocina y Limpieza",
+            "dadang": "Mantenimiento General, Jardines y Propiedad",
+            "bella": "Cuidado de la Familia (Miembro más antiguo desde 2021)"
+        },
+        "descriptions": {
+            "abyan": "De la cocina a la conexión con los huéspedes, Mas Abyan crea momentos deliciosos con calidez — y una sonrisa acogedora.",
+            "anik": "Con un espíritu alegre y amor genuino por su trabajo, Mbak Anik cuida tanto la cocina como la limpieza.",
+            "dadang": "Nuestro todoterreno de confianza, tiene un ojo agudo para los detalles. Da vida a nuestros jardines y cuida cada rincón de la propiedad.",
+            "bella": "Nuestra miembro más antigua del equipo desde 2021 es el corazón de nuestro hogar — ahora dedicada al cuidado de nuestra familia con su energía incansable y cariño."
         }
     },
     "reviews": [

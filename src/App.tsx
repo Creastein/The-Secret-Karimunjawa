@@ -8,6 +8,7 @@ import Preloader from './components/ui/Preloader'
 const OurStory = lazy(() => import('./components/sections/OurStory'))
 const Suites = lazy(() => import('./components/sections/Suites'))
 const Experience = lazy(() => import('./components/sections/Experience'))
+const OurTeam = lazy(() => import('./components/sections/OurTeam'))
 const Gallery = lazy(() => import('./components/sections/Gallery'))
 const Testimonials = lazy(() => import('./components/sections/Testimonials'))
 const Contact = lazy(() => import('./components/sections/Contact'))
@@ -150,6 +151,7 @@ export default function App() {
             <OurStory />
             <Suites />
             <Experience />
+            <OurTeam />
             <Gallery />
             <Testimonials />
             <Contact />

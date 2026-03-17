@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon } from 'hugeicons-react'
-import { PawPrint as PawPrintIcon, Recycle as RecycleIcon } from 'lucide-react'
+import { PawPrint as PawPrintIcon, Recycle as RecycleIcon, Beer as BeerIcon } from 'lucide-react'
 
 import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
@@ -26,19 +26,18 @@ const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Sparkles: SparklesIcon,
   Smartphone: SmartPhone01Icon,
   Recycle: RecycleIcon,
+  Beer: BeerIcon,
 }
 
 const FACILITY_KEYS: Record<string, string> = {
   '1': 'seaSunsetView',
   '2': 'privateVeranda',
-  '3': 'privateKitchen',
   '4': 'privateGarden',
-  '5': 'airportTransfer',
   '6': 'dailyHousekeeping',
-  '7': 'directBooking',
   '8': 'sunriseBreakfast',
   '9': 'residentDog',
   '10': 'ecoConscious',
+  '11': 'cozyKitchenBar',
 }
 
 /* ── animation variants ────────────────────────── */

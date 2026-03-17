@@ -5,6 +5,7 @@
         "suites": "Villa",
         "experience": "Fasilitas",
         "gallery": "Galeri",
+        "team": "Tim Kami",
         "contact": "Kontak",
         "location": "Lokasi",
         "locationSubtitle": "Karimunjawa, Jepara"
@@ -35,24 +36,20 @@
     "facilities": {
         "seaSunsetView": "Rooftop Sunset 120° & Stargazing",
         "seaSunsetViewDesc": "Tempat favorit tamu kami untuk kopi pagi, sunset sore hari, dan makan malam di bawah taburan bintang.",
-        "privateVeranda": "Veranda Pribadi",
-        "privateVerandaDesc": "Tempat favorit tamu kami untuk kopi pagi dan sunset sore.",
+        "cozyKitchenBar": "Dapur-Bar Terbuka yang Nyaman",
+        "cozyKitchenBarDesc": "Jantung dari The Secret — tempat yang hangat di mana tamu berkumpul dan menikmati obrolan santai bersama keluarga dan tim.",
         "privateGarden": "Taman Tropis",
         "privateGardenDesc": "Ruang Anda untuk bernapas di taman tersembunyi yang tertata indah di tengah hutan.",
+        "privateVeranda": "Veranda Pribadi",
+        "privateVerandaDesc": "Tempat favorit tamu kami untuk kopi pagi dan sunset sore.",
         "sunriseBreakfast": "Sarapan Buatan Sendiri",
         "sunriseBreakfastDesc": "Roti dan selai buatan sendiri dengan kopi yang baru digiling sambil menikmati pemandangan laut.",
-        "privateKitchen": "Dapur Pribadi",
-        "privateKitchenDesc": "Villa Cipaku memiliki dapur pribadi - masak sendiri dengan pemandangan utama!",
-        "ecoConscious": "Gaya hidup ramah lingkungan",
+        "ecoConscious": "Gaya Hidup Ramah Lingkungan",
         "ecoConsciousDesc": "Tinggal dengan nyaman di pulau ini dengan pendekatan tanpa plastik sekali pakai serta upaya daur ulang dan pengomposan. Isi ulang botol air Anda dan nikmati kuliner lokal.",
-        "airportTransfer": "Dijemput Langsung",
-        "airportTransferDesc": "Layanan antar-jemput dari bandara atau pelabuhan tersedia dengan biaya tambahan.",
-        "dailyHousekeeping": "Layanan Kebersihan Harian",
-        "dailyHousekeepingDesc": "Tim kami memastikan villa selalu bersih dan nyaman.",
-        "directBooking": "Langsung ke Kami",
-        "directBookingDesc": "Pesan via WhatsApp — tanpa agen, tanpa komisi, 100% masuk ke villa.",
         "residentDog": "Keluarga Berbulu Kami",
-        "residentDogDesc": "Dua anjing dan kucing kami adalah bagian dari keluarga. Mereka mungkin akan menyambut Anda dengan keras dan menggonggong sesekali."
+        "residentDogDesc": "Dua anjing dan kucing kami adalah bagian dari keluarga. Mereka mungkin akan menyambut Anda dengan keras dan menggonggong sesekali.",
+        "dailyHousekeeping": "Layanan Kebersihan Harian",
+        "dailyHousekeepingDesc": "Tim kami memastikan villa selalu bersih dan nyaman."
     },
     "suites": {
         "eyebrow": "Tiga Villa",
@@ -246,6 +243,23 @@
                 "Eksplorasi: Hiking ke Gunung Maming (3 jam), Stargazing melalui teleskop di Observatorium 'Deepsky'",
                 "Pantai: Batu Topeng, Sunset dan Pantai Tanjung Gelam (20 menit jalan / 3 menit naik skuter), Pantai Alano & Anora (15 menit skuter)"
             ]
+        }
+    },
+    "team": {
+        "eyebrow": "Wajah di Balik Masa Inap Anda",
+        "title": "Tim Kami",
+        "description": "Kenali keluarga kami yang berdedikasi bekerja sepenuh hati setiap hari untuk membuat masa inap Anda berkesan. Kami memperlakukan setiap tamu sebagai bagian dari keluarga kami.",
+        "roles": {
+            "abyan": "Dapur & Tim Komunikasi Tamu",
+            "anik": "Dapur & Housekeeping",
+            "dadang": "Serbabisa, Logistik & Taman",
+            "bella": "Pengurus Keluarga (Anggota terlama sejak 2021)"
+        },
+        "descriptions": {
+            "abyan": "Dari dapur hingga koneksi dengan tamu, Mas Abyan menciptakan momen lezat dengan kehangatan — dan senyum ramahnya.",
+            "anik": "Dengan semangat ceria dan cinta tulus terhadap pekerjaannya, Mbak Anik mengurus dapur dan kebersihan sekaligus.",
+            "dadang": "Si serbabisa yang terpercaya, memiliki mata yang tajam untuk detail. Dia menghidupkan taman kami dan merawat setiap sudut properti.",
+            "bella": "Anggota tim terlama kami sejak 2021 adalah jantung rumah kami — kini mengabdikan diri merawat keluarga dengan energi tiada henti dan kasih sayangnya."
         }
     },
     "reviews": [
