@@ -66,10 +66,9 @@ const ctaReveal = {
 }
 
 const imageReveal = {
-  hidden: { scale: 1.05, opacity: 0 },
+  hidden: { scale: 1.05 },
   visible: {
     scale: 1,
-    opacity: 1,
     transition: { duration: 1.8, ease: QUINT },
   },
 }

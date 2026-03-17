@@ -5,7 +5,7 @@ import { GALLERY_IMAGES } from '@/config/site'
 import type { ImageCategory } from '@/config/types'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { ArrowLeft01Icon, ArrowRight01Icon, Maximize01Icon, Cancel01Icon, InstagramIcon } from 'hugeicons-react'
-import { gsap } from 'gsap'
+
 import { fadeUp, staggerContainer, EASE_OUT_EXPO } from '@/lib/motion'
 
 const CATEGORY_KEYS: Record<string, string> = {
@@ -82,10 +82,12 @@ const Gallery: FC<Props> = () => {
       setIsLightboxOpen(false)
       return
     }
-    const tl = gsap.timeline({ onComplete: () => setIsLightboxOpen(false) })
-    tl.to(lightboxCaptionRef.current, { opacity: 0, y: 8, duration: 0.2, ease: 'power2.in' })
-      .to(lightboxImageRef.current, { opacity: 0, scale: 0.98, y: 8, duration: 0.25, ease: 'power2.in' }, 0)
-      .to(lightboxRef.current, { opacity: 0, duration: 0.25, ease: 'power2.in' }, 0.05)
+    import('gsap').then(({ gsap }) => {
+      const tl = gsap.timeline({ onComplete: () => setIsLightboxOpen(false) })
+      tl.to(lightboxCaptionRef.current, { opacity: 0, y: 8, duration: 0.2, ease: 'power2.in' })
+        .to(lightboxImageRef.current, { opacity: 0, scale: 0.98, y: 8, duration: 0.25, ease: 'power2.in' }, 0)
+        .to(lightboxRef.current, { opacity: 0, duration: 0.25, ease: 'power2.in' }, 0.05)
+    })
   }
 
   useEffect(() => {
@@ -101,19 +103,23 @@ const Gallery: FC<Props> = () => {
   useEffect(() => {
     if (!isLightboxOpen || !lightboxRef.current || !lightboxImageRef.current || !lightboxCaptionRef.current) return
 
-    if (shouldReduceMotion) {
-      gsap.set(lightboxRef.current, { opacity: 1 })
-      gsap.set(lightboxImageRef.current, { opacity: 1, scale: 1, y: 0, filter: 'blur(0px)' })
-      gsap.set(lightboxCaptionRef.current, { opacity: 1, y: 0 })
-      return
-    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let tl: any
+    import('gsap').then(({ gsap }) => {
+      if (shouldReduceMotion) {
+        gsap.set(lightboxRef.current, { opacity: 1 })
+        gsap.set(lightboxImageRef.current, { opacity: 1, scale: 1, y: 0 })
+        gsap.set(lightboxCaptionRef.current, { opacity: 1, y: 0 })
+        return
+      }
 
-    const tl = gsap.timeline()
-    tl.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out' })
-      .fromTo(lightboxImageRef.current, { opacity: 0, scale: 0.96, y: 12, filter: 'blur(6px)' }, { opacity: 1, scale: 1, y: 0, filter: 'blur(0px)', duration: 0.5, ease: 'power3.out' }, 0.05)
-      .fromTo(lightboxCaptionRef.current, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, 0.2)
+      tl = gsap.timeline()
+      tl.fromTo(lightboxRef.current, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: 'power2.out' })
+        .fromTo(lightboxImageRef.current, { opacity: 0, scale: 0.96, y: 12 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'power3.out' }, 0.05)
+        .fromTo(lightboxCaptionRef.current, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, 0.2)
+    })
 
-    return () => { tl.kill() }
+    return () => { tl?.kill() }
   }, [isLightboxOpen, shouldReduceMotion, currentIndex])
 
   const catKey = CATEGORY_KEYS[activeCategory] || 'all'
