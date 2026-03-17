@@ -33,22 +33,24 @@
         "additionalNote": "*Plongée, snorkeling et visites de l'île — vous n'avez qu'à demander."
     },
     "facilities": {
-        "seaSunsetView": "Coucher de Soleil 120° Chaque Jour",
-        "seaSunsetViewDesc": "Un panorama différent de l'océan et du coucher de soleil chaque jour — directement depuis votre véranda.",
+        "seaSunsetView": "Toit-Terrasse Coucher de Soleil 120° et Observation des Étoiles",
+        "seaSunsetViewDesc": "L'endroit préféré de nos invités pour le café du matin, les couchers de soleil l'après-midi et les dîners sous la voie lactée.",
         "privateVeranda": "Véranda Privée",
         "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
-        "privateKitchen": "Cuisine Privée",
-        "privateKitchenDesc": "La Villa Cipaku dispose d'une cuisine privée - cuisinez vous-même avec une vue imprenable !",
         "privateGarden": "Jardin Tropical",
         "privateGardenDesc": "Votre espace pour respirer dans le jardin caché magnifiquement aménagé au milieu de la jungle.",
+        "sunriseBreakfast": "Petit-déjeuner Fait Maison",
+        "sunriseBreakfastDesc": "Pain et confiture faits maison avec du café fraîchement moulu et vue sur l'océan.",
+        "privateKitchen": "Cuisine Privée",
+        "privateKitchenDesc": "La Villa Cipaku dispose d'une cuisine privée - cuisinez vous-même avec une vue imprenable !",
+        "ecoConscious": "Mode de vie éco-responsable",
+        "ecoConsciousDesc": "Séjournez en douceur sur l'île grâce à une approche dédiée au zéro plastique à usage unique et à des efforts de recyclage et de compostage. Remplissez votre bouteille d'eau et profitez de la cuisine locale.",
         "airportTransfer": "Nous Venons Vous Chercher",
         "airportTransferDesc": "Navette depuis l'aéroport ou le port disponible avec supplément.",
         "dailyHousekeeping": "Service de nettoyage quotidien",
         "dailyHousekeepingDesc": "Notre équipe s'assure que votre villa est toujours propre et confortable.",
         "directBooking": "Directement Avec Nous",
         "directBookingDesc": "Réservez via WhatsApp — sans agents, sans commissions, 100% va à la villa.",
-        "sunriseBreakfast": "Petit-déjeuner Fait Maison",
-        "sunriseBreakfastDesc": "Toast fait maison, confiture de Patricia et café du matin avec vue sur l'océan.",
         "residentDog": "Notre Famille à Quatre Pattes",
         "residentDogDesc": "Nos deux chiens et notre chat font partie de notre famille. Ils vous accueilleront bruyamment et aboieront de temps en temps."
     },
@@ -106,8 +108,8 @@
     },
     "experience": {
         "eyebrow": "Expérience",
-        "title": "Le Luxe Réside",
-        "titleAccent": "dans les Détails",
+        "title": "Confort Tropical",
+        "titleAccent": "Votre Maison au Cœur de la Nature",
         "description": "Pain et confiture faits maison pour le petit-déjeuner. Vues imprenables depuis le toit-terrasse face à l'océan et vos vérandas confortables. Un coucher de soleil différent chaque jour, juste devant vos yeux.",
         "ctaLabel": "Demander des Services"
     },
@@ -124,7 +126,7 @@
         "categoryContent": {
             "all": {
                 "title": "L'Histoire Complète",
-                "description": "Chaque recoin a son histoire. Des vérandas face à la mer aux jardins cachés, voici la vraie vie insulaire."
+                "description": "Chaque coin a une histoire. Des vérandas face à l'océan aux jardins cachés, c'est un luxe doux, entouré par la nature."
             },
             "exteriors": {
                 "title": "Construit avec Amour",
@@ -193,7 +195,7 @@
             "q2": "Quels sont les tarifs ?",
             "a2": "Tarifs dynamiques selon la saison. De Rp 1.600.000 à Rp 2.000.000 par nuit. Contactez-nous pour le prix exact.",
             "q3": "Quels modes de paiement sont acceptés ?",
-            "a3": "Espèces sur place. Cartes de crédit en garantie pour les réservations en ligne. Renseignez-vous sur les virements.",
+            "a3": "Les paiements sur place se font généralement en espèces ou via l'application 'Wise'. Cartes de crédit en garantie pour les réservations en ligne. Renseignez-vous sur les virements bancaires.",
             "q4": "Puis-je réserver directement sans OTA ?",
             "a4": "Oui ! Réservez directement via WhatsApp avec 0% de commission. 100% va directement à la villa."
         },

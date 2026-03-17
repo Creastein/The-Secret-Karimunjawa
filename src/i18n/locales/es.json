@@ -33,22 +33,24 @@
         "additionalNote": "*Buceo, snorkel y tours por la isla disponibles — solo pregunte."
     },
     "facilities": {
-        "seaSunsetView": "Atardecer 120° Cada Día",
-        "seaSunsetViewDesc": "Un panorama de océano y atardecer diferente cada día — directamente desde su terraza.",
+        "seaSunsetView": "Azotea con Atardecer 120° y Observación de Estrellas",
+        "seaSunsetViewDesc": "El lugar favorito de nuestros huéspedes para el café matutino, los atardeceres y cenas bajo la vía láctea.",
         "privateVeranda": "Terraza Privada",
         "privateVerandaDesc": "El lugar favorito de nuestros huéspedes para el café matutino y los atardeceres.",
-        "privateKitchen": "Cocina Privada",
-        "privateKitchenDesc": "La Villa Cipaku tiene una cocina privada: ¡cocina tú mismo con una vista de primera!",
         "privateGarden": "Jardín Tropical",
         "privateGardenDesc": "Tu espacio para respirar en el jardín oculto bellamente arreglado en medio de la jungla.",
+        "sunriseBreakfast": "Desayuno Casero",
+        "sunriseBreakfastDesc": "Pan y mermelada caseros con café recién molido con vista al océano.",
+        "privateKitchen": "Cocina Privada",
+        "privateKitchenDesc": "La Villa Cipaku tiene una cocina privada: ¡cocina tú mismo con una vista de primera!",
+        "ecoConscious": "Estilo de vida eco-consciente",
+        "ecoConsciousDesc": "Disfruta de la isla de forma ligera con un enfoque dedicado a no usar plásticos de un solo uso y esfuerzo por reciclar y compostar. Rellena tu botella de agua y disfruta de la gastronomía local.",
         "airportTransfer": "Lo Recogemos",
         "airportTransferDesc": "Servicio de transporte desde el aeropuerto o el puerto disponible con cargo adicional.",
         "dailyHousekeeping": "Servicio de limpieza diario",
         "dailyHousekeepingDesc": "Nuestro equipo asegura que su villa esté siempre limpia y cómoda.",
         "directBooking": "Directo con Nosotros",
         "directBookingDesc": "Reserve por WhatsApp — sin agentes, sin comisiones, 100% va a la villa.",
-        "sunriseBreakfast": "Desayuno Casero",
-        "sunriseBreakfastDesc": "Tostadas caseras, mermelada hecha por Patricia y café matutino con vista al mar.",
         "residentDog": "Nuestra Familia Peluda",
         "residentDogDesc": "Nuestros dos perros y nuestro gato son parte de nuestra familia. Te darán una ruidosa bienvenida y ladrarán de vez en cuando."
     },
@@ -106,8 +108,8 @@
     },
     "experience": {
         "eyebrow": "Experiencia",
-        "title": "El Lujo Está",
-        "titleAccent": "en los Detalles",
+        "title": "Confort Tropical",
+        "titleAccent": "Tu Hogar en el Corazón de la Naturaleza",
         "description": "Pan y mermelada caseros para el desayuno. Vistas impresionantes desde la azotea frente al océano y tus acogedoras terrazas. Un atardecer diferente cada día, justo ante tus ojos.",
         "ctaLabel": "Consultar Servicios"
     },
@@ -124,7 +126,7 @@
         "categoryContent": {
             "all": {
                 "title": "La Historia Completa",
-                "description": "Cada rincón tiene una historia. Desde las terrazas frente al mar hasta los jardines ocultos, así es la verdadera vida en la isla."
+                "description": "Cada rincón tiene una historia. Desde terrazas con vista al océano hasta jardines ocultos, esto es lujo suave, rodeado de naturaleza."
             },
             "exteriors": {
                 "title": "Construido con Amor",
@@ -193,7 +195,7 @@
             "q2": "¿Cuáles son las tarifas?",
             "a2": "Nuestras tarifas son dinámicas (temporada alta/baja). Rango: Rp 1.600.000 – Rp 2.000.000 por noche. Contáctenos para el precio exacto.",
             "q3": "¿Qué métodos de pago se aceptan?",
-            "a3": "Pagos en el lugar generalmente en efectivo. Tarjetas de crédito para garantía en reservas online. Consulte sobre transferencias bancarias.",
+            "a3": "Pagos en el lugar generalmente en efectivo o a través de la aplicación 'Wise'. Tarjetas de crédito para garantía en reservas online. Consulte sobre transferencias bancarias.",
             "q4": "¿Puedo reservar directamente sin OTA?",
             "a4": "¡Sí! Reserve directamente por nuestro WhatsApp con 0% de comisión. El 100% va directamente a la villa."
         },

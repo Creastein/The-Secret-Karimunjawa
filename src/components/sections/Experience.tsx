@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon } from 'hugeicons-react'
-import { PawPrint as PawPrintIcon } from 'lucide-react'
+import { PawPrint as PawPrintIcon, Recycle as RecycleIcon } from 'lucide-react'
 
 import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
@@ -25,6 +25,7 @@ const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Leaf: Leaf01Icon,
   Sparkles: SparklesIcon,
   Smartphone: SmartPhone01Icon,
+  Recycle: RecycleIcon,
 }
 
 const FACILITY_KEYS: Record<string, string> = {
@@ -37,6 +38,7 @@ const FACILITY_KEYS: Record<string, string> = {
   '7': 'directBooking',
   '8': 'sunriseBreakfast',
   '9': 'residentDog',
+  '10': 'ecoConscious',
 }
 
 /* ── animation variants ────────────────────────── */
@@ -57,45 +59,8 @@ const lineReveal = {
   },
 }
 
-const Experience: React.FC<Props> = () => {
+  const Experience: React.FC<Props> = () => {
   const { t } = useTranslation()
-  const sectionRef = useRef<HTMLElement>(null)
-  const leftColRef = useRef<HTMLDivElement>(null)
-  const rightColRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    let ctx: { revert: () => void } | undefined
-
-    // Dynamic import gsap only when component mounts
-    Promise.all([
-      import('gsap'),
-      import('gsap/ScrollTrigger'),
-    ]).then(([gsapModule, scrollTriggerModule]) => {
-      const gsap = gsapModule.default || gsapModule.gsap
-      const ScrollTrigger = scrollTriggerModule.ScrollTrigger
-      gsap.registerPlugin(ScrollTrigger)
-
-      ctx = gsap.context(() => {
-        /* only pin on desktop (lg: 1024px+) */
-        ScrollTrigger.matchMedia({
-          '(min-width: 1024px)': () => {
-            if (!leftColRef.current || !rightColRef.current) return
-
-            ScrollTrigger.create({
-              trigger: leftColRef.current,
-              pin: true,
-              start: 'top 35%',
-              endTrigger: rightColRef.current,
-              end: 'bottom center',
-              pinSpacing: false,
-            })
-          },
-        })
-      }, sectionRef)
-    })
-
-    return () => ctx?.revert()
-  }, [])
 
   const handleContact = () => {
     const msg = t('contact.whatsappServiceMessage')
@@ -106,7 +71,7 @@ const Experience: React.FC<Props> = () => {
   }
 
   return (
-    <section ref={sectionRef} id="experience" className="relative bg-white bg-atmosphere">
+    <section id="experience" className="relative bg-white bg-atmosphere">
 
       {/* ── mobile: stacked layout ── */}
       <div className="lg:hidden py-14 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
@@ -121,7 +86,7 @@ const Experience: React.FC<Props> = () => {
             {t('experience.eyebrow')}
           </motion.span>
           <motion.h2 variants={fadeUp} className="font-serif text-3xl md:text-4xl mb-6 md:mb-8 leading-[1.05] tracking-tight">
-            {t('experience.title')} <br />
+            <span className="whitespace-nowrap">{t('experience.title')}</span> <br />
             <span className="italic text-stone-400">{t('experience.titleAccent')}</span>
           </motion.h2>
           <motion.div variants={lineReveal} className="h-[1px] w-16 bg-teak-accent/60 mb-6" />
@@ -171,23 +136,22 @@ const Experience: React.FC<Props> = () => {
       </div>
 
       {/* ── desktop: GSAP pinned scroll layout ── */}
-      <div className="hidden lg:flex max-w-7xl mx-auto px-6 md:px-12 gap-20 py-32">
+      <div className="hidden lg:flex max-w-7xl mx-auto px-6 md:px-12 gap-16 xl:gap-20 pt-16 pb-32">
 
-        {/* left column: pinned by GSAP within section bounds */}
+        {/* left column: sticky to viewport */}
         <motion.div
-          ref={leftColRef}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
           variants={staggerContainer(0.12)}
-          className="w-[40%]"
+          className="w-5/12 sticky top-40 h-fit"
         >
           <motion.span variants={fadeUp} className="text-tide text-xs tracking-[0.3em] uppercase font-semibold mb-4 block">
             {t('experience.eyebrow')}
           </motion.span>
 
-          <motion.h2 variants={fadeUp} className="font-serif text-4xl lg:text-6xl mb-6 md:mb-8 leading-[1.05] tracking-tight">
-            {t('experience.title')} <br />
+          <motion.h2 variants={fadeUp} className="font-serif text-4xl lg:text-5xl xl:text-6xl mb-6 md:mb-8 leading-[1.05] tracking-tight">
+            <span className="whitespace-nowrap">{t('experience.title')}</span> <br className="hidden xl:block" />
             <span className="italic text-stone-400">{t('experience.titleAccent')}</span>
           </motion.h2>
 
@@ -210,11 +174,10 @@ const Experience: React.FC<Props> = () => {
 
         {/* right column: scrollable service items */}
         <motion.div
-          ref={rightColRef}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          className="w-[60%] border-t border-stone-200"
+          className="w-7/12 border-t border-stone-200"
         >
           {FACILITIES.map((item, index) => {
             const Icon = iconMap[item.iconName]

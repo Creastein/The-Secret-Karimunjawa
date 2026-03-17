@@ -37,18 +37,22 @@
         "seaSunsetViewDesc": "Our guests' favorite spot for morning coffee, afternoon sunsets and dinner under the milky way.",
         "privateVeranda": "Private Veranda",
         "privateVerandaDesc": "Our guests' favorite spot for morning coffee and afternoon sunsets.",
-        "privateKitchen": "Private Kitchen",
-        "privateKitchenDesc": "Villa Cipaku has a private kitchen - cook yourself with a prime view!",
         "privateGarden": "Tropical Garden ",
         "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
+        "sunriseBreakfast": "Homemade Breakfast",
+        "sunriseBreakfastDesc": "Homemade bread and jam with freshly ground coffee with an ocean view.",
+        "privateKitchen": "Private Kitchen",
+        "privateKitchenDesc": "Villa Cipaku has a private kitchen - cook yourself with a prime view!",
+        "ecoConscious": "Eco-conscious living",
+        "ecoConsciousDesc": "Stay lightly on the island with the dedicated zero single-use plastic approach and effort to recycle and compost. Refill your water bottle and enjoy the local cuisine.",
+        
         "airportTransfer": "We Pick You Up",
         "airportTransferDesc": "Shuttle service from airport or harbor available at an additional charge.",
         "dailyHousekeeping": "Daily Cleaning Services",
         "dailyHousekeepingDesc": "Our housekeeping team ensures your villa is always clean and comfortable.",
         "directBooking": "Straight to Us",
         "directBookingDesc": "Book via WhatsApp — no agents, no commissions, 100% goes to the villa.",
-        "sunriseBreakfast": "Homemade Breakfast",
-        "sunriseBreakfastDesc": "Homemade toast, Patricia's handmade jam, and morning coffee with an ocean view.",
+        
         "residentDog": "Our Furry Family",
         "residentDogDesc": "Our two dogs and our cat are part of our family. They will loudly welcome you and bark once in a while"
     },
@@ -106,8 +110,8 @@
     },
     "experience": {
         "eyebrow": "Experience",
-        "title": "Luxury Lives",
-        "titleAccent": "in the Details",
+        "title": "Tropical Comfort",
+        "titleAccent": "Your Home in the Heart of Nature",
         "description": "Homemade bread and jam for breakfast. Breathtaking views from the ocean-facing rooftop and your cozy verandas. A different sunset every day, right before your eyes.",
         "ctaLabel": "Inquire Services"
     },
@@ -124,7 +128,7 @@
         "categoryContent": {
             "all": {
                 "title": "The Full Story",
-                "description": "Every corner has a story. From ocean-facing verandas to hidden gardens, this is island life as it really is."
+                "description": "Every corner has a story. From ocean-facing verandas to hidden gardens, This is soft luxury, surrounded by nature."
             },
             "exteriors": {
                 "title": "Built with Love",
@@ -193,7 +197,7 @@
             "q2": "What are the room rates at The Secret Karimunjawa?",
             "a2": "Our rates are dynamic and vary depending on the selected unit type and your stay dates (High/Low Season). Prices generally range from Rp 1,600,000 – Rp 2,000,000 per night. Please contact us to get the exact price for your preferred dates.",
             "q3": "What payment methods are accepted?",
-            "a3": "On-site payments are generally in cash. For bookings via online platforms, credit cards can be used as a guarantee. Please contact us for more information regarding bank transfers.",
+            "a3": "On-site payments are generally in cash or via the application 'Wise'. For bookings via online platforms, credit cards can be used as a guarantee. Please contact us for more information regarding bank transfers.",
             "q4": "Can I book directly without using an OTA (Online Travel Agent)?",
             "a4": "Yes, absolutely! You can book directly via our WhatsApp with 0% commission. All transactions go 100% to the villa, allowing us to provide the best service for you."
         },

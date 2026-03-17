@@ -33,22 +33,24 @@
         "additionalNote": "*Diving, snorkeling, dan tur pulau tersedia melalui tim kami — tinggal bilang saja."
     },
     "facilities": {
-        "seaSunsetView": "Sunset 120° Setiap Hari",
-        "seaSunsetViewDesc": "Panorama laut dan sunset yang berbeda setiap hari — langsung dari veranda Anda.",
+        "seaSunsetView": "Rooftop Sunset 120° & Stargazing",
+        "seaSunsetViewDesc": "Tempat favorit tamu kami untuk kopi pagi, sunset sore hari, dan makan malam di bawah taburan bintang.",
         "privateVeranda": "Veranda Pribadi",
         "privateVerandaDesc": "Tempat favorit tamu kami untuk kopi pagi dan sunset sore.",
-        "privateKitchen": "Dapur Pribadi",
-        "privateKitchenDesc": "Villa Cipaku memiliki dapur pribadi - masak sendiri dengan pemandangan utama!",
         "privateGarden": "Taman Tropis",
         "privateGardenDesc": "Ruang Anda untuk bernapas di taman tersembunyi yang tertata indah di tengah hutan.",
+        "sunriseBreakfast": "Sarapan Buatan Sendiri",
+        "sunriseBreakfastDesc": "Roti dan selai buatan sendiri dengan kopi yang baru digiling sambil menikmati pemandangan laut.",
+        "privateKitchen": "Dapur Pribadi",
+        "privateKitchenDesc": "Villa Cipaku memiliki dapur pribadi - masak sendiri dengan pemandangan utama!",
+        "ecoConscious": "Gaya hidup ramah lingkungan",
+        "ecoConsciousDesc": "Tinggal dengan nyaman di pulau ini dengan pendekatan tanpa plastik sekali pakai serta upaya daur ulang dan pengomposan. Isi ulang botol air Anda dan nikmati kuliner lokal.",
         "airportTransfer": "Dijemput Langsung",
         "airportTransferDesc": "Layanan antar-jemput dari bandara atau pelabuhan tersedia dengan biaya tambahan.",
         "dailyHousekeeping": "Layanan Kebersihan Harian",
         "dailyHousekeepingDesc": "Tim kami memastikan villa selalu bersih dan nyaman.",
         "directBooking": "Langsung ke Kami",
         "directBookingDesc": "Pesan via WhatsApp — tanpa agen, tanpa komisi, 100% masuk ke villa.",
-        "sunriseBreakfast": "Sarapan Buatan Sendiri",
-        "sunriseBreakfastDesc": "Roti panggang homemade, selai buatan Patricia, dan kopi pagi dengan pemandangan laut.",
         "residentDog": "Keluarga Berbulu Kami",
         "residentDogDesc": "Dua anjing dan kucing kami adalah bagian dari keluarga. Mereka mungkin akan menyambut Anda dengan keras dan menggonggong sesekali."
     },
@@ -69,8 +71,8 @@
         "rooms": {
             "cipaku": {
                 "name": "Cipaku",
-                "typeLabel": "One-Bedroom",
-                "bedDetails": "King Bed (2m x 2m)",
+                "typeLabel": "Satu Kamar Tidur",
+                "bedDetails": "Kasur King (2m x 2m)",
                 "description": "Cipaku: Villa pertama keluarga — dapur lengkap, veranda pribadi, dan 100% privasi. Dibangun untuk orang tua Patricia, yang pernah tinggal di daerah 'Cipaku' di Bandung, kini terbuka untuk Anda.",
                 "features": [
                     "Dapur Pribadi Lengkap",
@@ -82,7 +84,7 @@
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
-                "bedDetails": "King Bed (2m x 2m)",
+                "bedDetails": "Kasur King (2m x 2m)",
                 "description": "Dirancang untuk teman-teman terdekat keluarga. Veranda paling luas dan Villa paling lega di The Secret. 'Birdsong' adalah nama sebuah kafe kecil di desa Mukteshwar di pegunungan Himalaya India, tempat Eddy dan Patricia suka menghabiskan liburan saat mereka tinggal di India.",
                 "features": [
                     "Kamar Luas dan Veranda Terluas",
@@ -94,7 +96,7 @@
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
-                "bedDetails": "Queen Bed (1.8m x 2m) + Double Bed (1.5m x 2m)",
+                "bedDetails": "Kasur Queen (1.8m x 2m) + Kasur Double (1.5m x 2m)",
                 "description": "Villa dengan taman tersembunyi. Fleksibel untuk pasangan maupun keluarga kecil. 'Tivoli Garden' adalah nama apartemen tempat Eddy dan Patricia tinggal di Manila, Filipina. Mereka mengunjungi Tivoli Garden yang asli di Kopenhagen, Denmark, tempat mereka menikah pada tahun 2017.",
                 "features": [
                     "Taman Pribadi",
@@ -106,8 +108,8 @@
     },
     "experience": {
         "eyebrow": "Pengalaman",
-        "title": "Kemewahan ada",
-        "titleAccent": "di Detail",
+        "title": "Kenyamanan Tropis",
+        "titleAccent": "Rumah Anda di Jantung Alam",
         "description": "Roti panggang dan selai buatan sendiri untuk sarapan. Pemandangan menakjubkan dari rooftop yang menghadap ke laut dan beranda Anda yang nyaman. Sunset yang berbeda setiap hari tepat di depan mata Anda.",
         "ctaLabel": "Tanyakan Layanan"
     },
@@ -124,7 +126,7 @@
         "categoryContent": {
             "all": {
                 "title": "Cerita Lengkap",
-                "description": "Setiap sudut punya cerita. Dari veranda yang menghadap laut sampai taman tersembunyi, ini kehidupan pulau yang sesungguhnya."
+                "description": "Setiap sudut punya cerita. Dari beranda yang menghadap laut hingga taman tersembunyi, ini adalah kemewahan yang lembut, dikelilingi oleh alam."
             },
             "exteriors": {
                 "title": "Dibangun dengan Cinta",
@@ -193,7 +195,7 @@
             "q2": "Berapa harga menginap di The Secret Karimunjawa?",
             "a2": "Tarif menginap kami bersifat dinamis dan bervariasi tergantung pada tipe unit yang dipilih serta masa inap Anda (High/Low Season). Kisaran harga mulai dari Rp 1.600.000 – Rp 2.000.000 per malam. Silakan hubungi kami untuk mendapatkan harga pasti pada tanggal pilihan Anda.",
             "q3": "Metode pembayaran apa saja yang diterima?",
-            "a3": "Pembayaran di lokasi umumnya menggunakan tunai (cash). Untuk pemesanan melalui platform online, kartu kredit dapat digunakan sebagai jaminan. Silakan hubungi kami untuk informasi lebih lanjut mengenai transfer bank.",
+            "a3": "Pembayaran di lokasi umumnya menggunakan tunai (cash) atau via aplikasi 'Wise'. Untuk pemesanan melalui platform online, kartu kredit dapat digunakan sebagai jaminan. Silakan hubungi kami untuk informasi lebih lanjut mengenai transfer bank.",
             "q4": "Apakah bisa memesan langsung tanpa melalui OTA (Online Travel Agent)?",
             "a4": "Ya, tentu! Anda dapat memesan langsung melalui WhatsApp kami dengan komisi 0%. Seluruh transaksi masuk 100% ke pihak villa, sehingga kami dapat memberikan pelayanan terbaik untuk Anda."
         },
@@ -249,7 +251,7 @@
     "location": {
         "eyebrow": "Pulau",
         "title": "10 Menit dari Kota.",
-        "titleAccent": "",
+        "titleAccent": "Terasa Sangat Berbeda",
         "directionsLabel": "Dapatkan Petunjuk Arah",
         "tabs": {
             "nearby": "Terdekat",
