@@ -157,9 +157,9 @@ const Experience: React.FC<Props> = () => {
                   <div className="text-stone-400 group-hover:text-teak-accent transition-colors duration-300">
                     <Icon className="w-5 h-5" strokeWidth={1} />
                   </div>
-                  <h4 className="font-serif text-lg md:text-xl text-stone-700 group-hover:text-charcoal transition-colors duration-300">
+                  <h3 className="font-serif text-lg md:text-xl text-stone-700 group-hover:text-charcoal transition-colors duration-300">
                     {t(`facilities.${key}`)}
-                  </h4>
+                  </h3>
                 </div>
                 <p className="text-sm text-stone-400 font-light tracking-wide max-w-xs text-left md:text-right group-hover:text-stone-600 transition-colors duration-300 pl-9 md:pl-0">
                   {t(`facilities.${key}Desc`)}
@@ -230,9 +230,9 @@ const Experience: React.FC<Props> = () => {
                   <div className="text-stone-400 group-hover:text-teak-accent transition-colors duration-300">
                     <Icon className="w-5 h-5" strokeWidth={1} />
                   </div>
-                  <h4 className="font-serif text-xl lg:text-2xl text-stone-700 group-hover:text-charcoal transition-colors duration-300">
+                  <h3 className="font-serif text-xl lg:text-2xl text-stone-700 group-hover:text-charcoal transition-colors duration-300">
                     {t(`facilities.${key}`)}
-                  </h4>
+                  </h3>
                 </div>
                 <p className="text-sm text-stone-400 font-light tracking-wide w-[380px] text-right group-hover:text-stone-600 transition-colors duration-300">
                   {t(`facilities.${key}Desc`)}

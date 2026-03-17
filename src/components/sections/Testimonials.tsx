@@ -43,8 +43,8 @@ export default function Testimonials() {
                 </p>
                 <div className="w-12 h-px bg-teak-accent/30 mb-6" />
                 <div>
-                  <h4 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h4>
-                  <span className="text-[10px] text-stone-400 uppercase tracking-wide">{review.origin}</span>
+                  <h3 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h3>
+                  <span className="text-[10px] text-stone-500 uppercase tracking-wide">{review.origin}</span>
                 </div>
               </div>
             ))}

@@ -125,9 +125,9 @@ const Location: React.FC = () => {
 
                     {/* Name & Category */}
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-semibold text-stone-800 truncate leading-snug">
+                      <h3 className="text-sm font-semibold text-stone-800 truncate leading-snug">
                         {place.name}
-                      </h4>
+                      </h3>
                       <span
                         className="text-[11px] font-medium leading-tight"
                         style={{ color: place.categoryColor }}

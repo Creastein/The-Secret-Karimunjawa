@@ -20,9 +20,9 @@ function FAQItem({ question, answer, isOpen, onClick }: FAQItemProps) {
                 onClick={onClick}
                 className="w-full py-5 flex items-center justify-between text-left group"
             >
-                <h4 className={`font-serif text-base md:text-lg transition-colors duration-300 pr-8 ${isOpen ? "text-teak-accent" : "text-charcoal group-hover:text-teak-accent"}`}>
+                <h3 className={`font-serif text-base md:text-lg transition-colors duration-300 pr-8 ${isOpen ? "text-teak-accent" : "text-charcoal group-hover:text-teak-accent"}`}>
                     {question}
-                </h4>
+                </h3>
                 <div className={`flex-shrink-0 w-7 h-7 rounded-full border flex items-center justify-center transition-all duration-300 ${isOpen ? "border-teak-accent bg-teak-accent text-white" : "border-stone-300 text-stone-400 group-hover:border-teak-accent group-hover:text-teak-accent"}`}>
                     {isOpen ? <MinusSignIcon className="w-3.5 h-3.5" /> : <PlusSignIcon className="w-3.5 h-3.5" />}
                 </div>

@@ -38,9 +38,9 @@
         "privateVeranda": "Private Veranda",
         "privateVerandaDesc": "Our guests' favorite spot for morning coffee and afternoon sunsets.",
         "privateKitchen": "Private Kitchen",
-        "privateKitchenDesc": "Full kitchen in Villa Cipaku — cook yourself or ask Anik for help.",
-        "privateGarden": "Hidden Garden",
-        "privateGardenDesc": "Private tropical garden at Villa Tivoli — wake up to birdsong.",
+        "privateKitchenDesc": "Villa Cipaku has a private kitchen - cook yourself with a prime view!",
+        "privateGarden": "Tropical Garden ",
+        "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
         "airportTransfer": "We Pick You Up",
         "airportTransferDesc": "Shuttle service from airport or harbor available at an additional charge.",
         "dailyHousekeeping": "Daily Cleaning Services",
@@ -49,8 +49,8 @@
         "directBookingDesc": "Book via WhatsApp — no agents, no commissions, 100% goes to the villa.",
         "sunriseBreakfast": "Homemade Breakfast",
         "sunriseBreakfastDesc": "Homemade toast, Patricia's handmade jam, and morning coffee with an ocean view.",
-        "residentDog": "Our Furry Friend",
-        "residentDogDesc": "Our friendly dog is part of the family and may greet you during your stay."
+        "residentDog": "Our Furry Family",
+        "residentDogDesc": "Our two dogs and our cat are part of our family. They will loudly welcome you and bark once in a while"
     },
     "suites": {
         "eyebrow": "Three Villas",
@@ -108,7 +108,7 @@
         "eyebrow": "Experience",
         "title": "Luxury Lives",
         "titleAccent": "in the Details",
-        "description": "Homemade toast for breakfast. Patricia's handmade jam. A different sunset every day, right before your eyes.",
+        "description": "Homemade bread and jam (not toast!) for breakfast. Breathtaking views from the ocean-facing rooftop and your cozy verandas. A different sunset every day, right before your eyes.",
         "ctaLabel": "Inquire Services"
     },
     "gallery": {
@@ -154,7 +154,7 @@
         "eyebrow": "Contact Us",
         "title": "We're Waiting",
         "titleAccent": "for You",
-        "description": "Straight to us: no agents, no commissions. Like calling a friend's home. Patricia and Eddy are ready to help you plan the perfect visit.",
+        "description": "Straight to us: no agents, no commissions. Like calling a friend's home. Patricia and Eddy are ready to help you plan the perfect visit. On-site payments are generally in cash or via the application 'Wise'.",
         "formTitle": "Direct Inquiry",
         "formSubtitle": "Response within 2 hours",
         "submitLabel": "Send Request",
@@ -199,13 +199,7 @@
         },
         "facilities": {
             "q1": "How many guests can stay in one unit?",
-            "a1": "We have several villa options (1 to 2 bedrooms) designed to accommodate 2 to a maximum of 4 guests per unit. Perfect and popular for couples and family holidays.",
-            "q2": "What villa units are available?",
-            "a2_intro": "We have 3 exclusive villa units:",
-            "a2_cipaku": "Villa Cipaku (One-Bedroom) — King Bed (2m x 2m), fully equipped private kitchen, private veranda, 100% privacy.",
-            "a2_birdsong": "Villa Birdsong (Deluxe) — King Bed (2m x 2m), sea & sunset view, spacious room and widest veranda.",
-            "a2_tivoli": "Villa Tivoli Garden (Superior) — 1 Queen Bed (1.8m x 2m) + 1 Double Bed (1.5m x 2m), private garden.",
-            "a2_note": "All units face the ocean with a 120° sunset panorama.",
+            "a1": "Villa Cipaku and Villa Birdsong are designed for 2 guests perfect for couples. Villa Tivoli Garden can host up to 4 guests and is perfect for small families.",
             "q3": "Does every unit have a balcony or terrace?",
             "a3": "Yes, every unit is equipped with a spacious private terrace or veranda, complete with Sea Views and Sunset Views.",
             "q4": "What facilities are available in the room?",
@@ -224,7 +218,7 @@
             "q1": "Does The Secret Karimunjawa have an on-site restaurant?",
             "a1": "Yes, we have an exclusive restaurant only open to our in-house guests. We have several options for breakfast and lunch and provide a variety of traditional local dinner, which needs to be pre-booked until 3pm. All meals can easily be converted to be Vegetarian, Vegan, and dairy-free menus.",
             "q2": "What breakfast options are served?",
-            "a2": "Our breakfast is special with six different options: 1) Homemade bread with handmade jam, eggs and veggies, 2) Pancake Tower, 3) Pink Smoothie Bowl, 4) Oatmeal Bowl, 5) Soto Ayam, 6) Nasi Goreng. Your breakfast can be served right on your veranda or on the rooftop.",
+            "a2": "Our breakfast is special with six different options: 1) Homemade bread with handmade jam, eggs and veggies, 2) Pancake Tower, 3) Pink Smoothie Bowl, 4) Oatmeal Bowl, 5) Soto Ayam and 6) Nasi Goreng. Your breakfast can be served right on your veranda or on the rooftop.",
             "q3": "Is a reservation required for dinner?",
             "a3": "Yes, we recommend guests book dinner in advance (before 3pm) so our team can prepare the best dishes for you."
         },
@@ -238,7 +232,7 @@
         },
         "location": {
             "q1": "How far is The Secret from the city center and the beach?",
-            "a1": "The Secret is the closest accommodation to the three main beaches of Karimunjawa! The nearest beach (Batu Topeng) is just a 15-minute walk or 2 minutes by scooter. To town it's about 10 minutes by scooter. Close enough to explore, far enough to enjoy the silence.",
+            "a1": "The Secret is the closest accommodation to the three main beaches of Karimunjawa! The nearest beaches (Batu Topeng, Sunset Beach and Tanjung Gelam) are just a 20-minute walk or 3 minutes by scooter.",
             "q2": "Is an airport shuttle service available?",
             "a2": "Yes, we provide shuttle services from the Karimunjawa airport and harbor. This service is non-complimentary (surcharge applies). Please contact us upon booking to arrange the pick-up schedule.",
             "q3": "What activities can be done during the stay?",

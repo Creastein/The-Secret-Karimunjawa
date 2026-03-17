@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Column 2: Explore */}
           <motion.div variants={fadeUp} className="lg:pl-8">
-            <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.exploreTitle')}</h4>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.exploreTitle')}</h3>
             <ul className="space-y-4 text-sm font-light">
               <li><a href="#estate" className="hover:text-teak-accent transition-colors">{t('footer.exploreLinks.retreat')}</a></li>
               <li><a href="#suites" className="hover:text-teak-accent transition-colors">{t('footer.exploreLinks.suites')}</a></li>
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Column 3: Information */}
           <motion.div variants={fadeUp}>
-            <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.infoTitle')}</h4>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.infoTitle')}</h3>
             <ul className="space-y-4 text-sm font-light">
               <li><a href="#experience" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.concierge')}</a></li>
               <li><a href="#location" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.activities')}</a></li>
@@ -62,7 +62,7 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <motion.div variants={fadeUp}>
-            <h4 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.contactTitle')}</h4>
+            <h3 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.contactTitle')}</h3>
             <ul className="space-y-5">
               <li>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">

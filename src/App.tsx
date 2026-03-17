@@ -134,22 +134,31 @@ export default function App() {
 
       <Preloader />
 
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[1000] focus:bg-white focus:text-charcoal focus:px-4 focus:py-2 focus:shadow-lg"
+      >
+        Skip to content
+      </a>
+
       <div className="min-h-screen bg-sand font-sans overflow-x-clip animate-fade-in">
         <Navigation />
-        <Hero />
+        <main id="main-content">
+          <Hero />
 
-        <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
-          <OurStory />
-          <Suites />
-          <Experience />
-          <Gallery />
-          <Testimonials />
-          <Contact />
-          <FAQ />
-          <Location />
-          <Footer />
-          <AvailabilityStickyBar />
-        </Suspense>
+          <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
+            <OurStory />
+            <Suites />
+            <Experience />
+            <Gallery />
+            <Testimonials />
+            <Contact />
+            <FAQ />
+            <Location />
+            <Footer />
+            <AvailabilityStickyBar />
+          </Suspense>
+        </main>
       </div>
     </>
   )

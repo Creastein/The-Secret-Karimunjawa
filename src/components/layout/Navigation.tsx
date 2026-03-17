@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Cancel01Icon, Menu01Icon } from 'hugeicons-react'
 import { useTranslation } from 'react-i18next'
@@ -27,11 +27,11 @@ export default function Navigation() {
 
   useLockBodyScroll(mobileOpen)
 
-  useState(() => {
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  })
+  }, [])
 
   const scrollToElement = (id: string, delay = 0) => {
     const el = document.getElementById(id)
@@ -101,6 +101,9 @@ export default function Navigation() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-ink relative z-50 focus:outline-none p-2.5 hover:bg-stone-100 rounded-full transition-colors ml-1 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label={mobileOpen ? t('nav.closeMenuLabel', 'Close menu') : t('nav.openMenuLabel', 'Open menu')}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav-panel"
           >
             {mobileOpen ? <Cancel01Icon className="w-5 h-5" /> : <Menu01Icon className="w-5 h-5" />}
           </button>
@@ -110,6 +113,7 @@ export default function Navigation() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-nav-panel"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

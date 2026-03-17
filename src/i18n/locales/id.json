@@ -38,9 +38,9 @@
         "privateVeranda": "Veranda Pribadi",
         "privateVerandaDesc": "Tempat favorit tamu kami untuk kopi pagi dan sunset sore.",
         "privateKitchen": "Dapur Pribadi",
-        "privateKitchenDesc": "Dapur lengkap di Villa Cipaku — masak sendiri atau minta Anik membantu.",
-        "privateGarden": "Taman Tersembunyi",
-        "privateGardenDesc": "Taman tropis pribadi di Villa Tivoli — bangun dengan kicau burung.",
+        "privateKitchenDesc": "Villa Cipaku memiliki dapur pribadi - masak sendiri dengan pemandangan utama!",
+        "privateGarden": "Taman Tropis",
+        "privateGardenDesc": "Ruang Anda untuk bernapas di taman tersembunyi yang tertata indah di tengah hutan.",
         "airportTransfer": "Dijemput Langsung",
         "airportTransferDesc": "Layanan antar-jemput dari bandara atau pelabuhan tersedia dengan biaya tambahan.",
         "dailyHousekeeping": "Layanan Kebersihan Harian",
@@ -49,8 +49,8 @@
         "directBookingDesc": "Pesan via WhatsApp — tanpa agen, tanpa komisi, 100% masuk ke villa.",
         "sunriseBreakfast": "Sarapan Buatan Sendiri",
         "sunriseBreakfastDesc": "Roti panggang homemade, selai buatan Patricia, dan kopi pagi dengan pemandangan laut.",
-        "residentDog": "Teman Berbulu Kami",
-        "residentDogDesc": "Anjing ramah kami adalah bagian dari keluarga dan mungkin akan menyapa Anda selama menginap."
+        "residentDog": "Keluarga Berbulu Kami",
+        "residentDogDesc": "Dua anjing dan kucing kami adalah bagian dari keluarga. Mereka mungkin akan menyambut Anda dengan keras dan menggonggong sesekali."
     },
     "suites": {
         "eyebrow": "Tiga Villa",
@@ -108,7 +108,7 @@
         "eyebrow": "Pengalaman",
         "title": "Kemewahan ada",
         "titleAccent": "di Detail",
-        "description": "Roti panggang buatan sendiri untuk sarapan. Selai homemade dari dapur Patricia. Sunset yang berbeda setiap hari tepat di depan mata Anda.",
+        "description": "Roti panggang dan selai buatan sendiri (bukan roti tawar biasa!) untuk sarapan. Pemandangan menakjubkan dari rooftop yang menghadap ke laut dan beranda Anda yang nyaman. Sunset yang berbeda setiap hari tepat di depan mata Anda.",
         "ctaLabel": "Tanyakan Layanan"
     },
     "gallery": {
@@ -154,7 +154,7 @@
         "eyebrow": "Hubungi Kami",
         "title": "Kami Menunggu",
         "titleAccent": "Anda",
-        "description": "Langsung ke kami: tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Patricia dan Eddy siap membantu Anda merencanakan kunjungan yang sempurna.",
+        "description": "Langsung ke kami: tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Patricia dan Eddy siap membantu Anda merencanakan kunjungan yang sempurna. Pembayaran di lokasi umumnya menggunakan tunai atau via aplikasi 'Wise'.",
         "formTitle": "Hubungi Langsung",
         "formSubtitle": "Respon dalam 2 jam",
         "submitLabel": "Kirim Permintaan",
@@ -199,13 +199,8 @@
         },
         "facilities": {
             "q1": "Berapa banyak tamu yang dapat menginap di satu unit?",
-            "a1": "Kami memiliki beberapa pilihan unit villa (1 hingga 2 kamar tidur) yang dirancang untuk mengakomodasi 2 hingga maksimal 4 tamu per unitnya. Sangat cocok dan populer untuk pasangan maupun liburan keluarga.",
-            "q2": "Apa saja unit villa yang tersedia?",
-            "a2_intro": "Kami memiliki 3 unit villa eksklusif:",
-            "a2_cipaku": "Villa Cipaku (One-Bedroom) — King Bed (2m x 2m), dapur pribadi lengkap, veranda pribadi, 100% privacy.",
-            "a2_birdsong": "Villa Birdsong (Deluxe) — King Bed (2m x 2m), pemandangan laut & sunset, kamar luas dan veranda terluas.",
-            "a2_tivoli": "Villa Tivoli Garden (Superior) — 1 Queen Bed (1.8m x 2m) + 1 Double Bed (1.5m x 2m), taman pribadi.",
-            "a2_note": "Semua unit menghadap laut dengan panorama sunset 120°.",
+            "a1": "Villa Cipaku dan Villa Birdsong dirancang untuk 2 tamu, sempurna untuk pasangan. Villa Tivoli Garden dapat menampung hingga 4 tamu dan sempurna untuk keluarga kecil.",
+
             "q3": "Apakah setiap unit memiliki balkon atau teras?",
             "a3": "Ya, setiap unit kami dilengkapi dengan teras atau veranda pribadi yang luas, lengkap dengan pemandangan laut (Sea View) dan matahari terbenam (Sunset View).",
             "q4": "Fasilitas apa saja yang tersedia di dalam kamar?",

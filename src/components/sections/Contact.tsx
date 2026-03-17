@@ -23,7 +23,7 @@ const ContactItem: React.FC<ContactItemProps> = ({ icon: Icon, label, content, l
         <Icon className="w-5 h-5" strokeWidth={1.5} />
       </div>
       <div>
-        <h4 className="text-[10px] uppercase tracking-widest text-stone-400 mb-1 group-hover:text-teak-accent transition-colors">{label}</h4>
+        <p className="text-[10px] uppercase tracking-widest text-stone-500 mb-1 group-hover:text-teak-accent transition-colors">{label}</p>
         <div className="flex items-center gap-2">
           <p className="text-base font-serif text-charcoal leading-tight group-hover:underline decoration-stone-300 underline-offset-4 decoration-1">{content}</p>
           <ArrowUpRight01Icon className="w-3 h-3 text-stone-300 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
@@ -45,10 +45,11 @@ interface InputFieldProps {
 }
 
 const InputField: React.FC<InputFieldProps> = ({ label, name, type, placeholder, value, onChange, activeField, setActiveField }) => {
+  const inputId = `contact-${name}`
   return (
     <div className="group relative">
-      <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === name ? 'text-teak-accent' : 'text-stone-500'}`}>{label}</label>
-      <input required name={name} onChange={onChange} onFocus={() => setActiveField(name)} onBlur={() => setActiveField(null)} type={type} value={value} placeholder={placeholder} className="w-full border-b border-stone-300 py-3 text-sm focus:outline-none focus:border-teak-accent transition-colors bg-transparent placeholder-stone-400 font-serif" />
+      <label htmlFor={inputId} className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === name ? 'text-teak-accent' : 'text-stone-500'}`}>{label}</label>
+      <input id={inputId} required name={name} onChange={onChange} onFocus={() => setActiveField(name)} onBlur={() => setActiveField(null)} type={type} value={value} placeholder={placeholder} className="w-full border-b border-stone-300 py-3 text-sm focus:outline-none focus:border-teak-accent transition-colors bg-transparent placeholder-stone-400 font-serif" />
     </div>
   )
 }
@@ -129,7 +130,7 @@ const Contact: React.FC<Props> = () => {
               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-stone-100 to-transparent pointer-events-none" />
 
               <h3 className="font-serif text-2xl text-charcoal mb-2">{t('contact.formTitle')}</h3>
-              <p className="text-xs text-stone-400 uppercase tracking-wide mb-10">{t('contact.formSubtitle')}</p>
+              <p className="text-xs text-stone-500 uppercase tracking-wide mb-10">{t('contact.formSubtitle')}</p>
 
               <form className="space-y-8" onSubmit={(e) => { e.preventDefault(); handleWhatsApp() }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -168,11 +169,12 @@ const Contact: React.FC<Props> = () => {
                   />
 
                   <div className="relative group">
-                    <label className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === 'unit' ? 'text-teak-accent' : 'text-stone-400'}`}>
+                    <label htmlFor="contact-unit" className={`text-[10px] uppercase tracking-widest block mb-2 transition-colors duration-300 ${activeField === 'unit' ? 'text-teak-accent' : 'text-stone-500'}`}>
                       {t('contact.unitLabel')}
                     </label>
                     <div className="relative">
                       <select
+                        id="contact-unit"
                         name="unit"
                         required
                         value={formData.unit}

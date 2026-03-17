@@ -5,25 +5,42 @@ import { useLockBodyScroll } from '../../hooks/useLockBodyScroll'
 const EASE_EXPO: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 export default function Preloader() {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(() => {
+    if (typeof window === 'undefined') return false
+
+    const seenThisSession = window.sessionStorage.getItem('preloaderSeen') === '1'
+    if (seenThisSession) return false
+
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection
+    const saveData = connection?.saveData
+    const effectiveType = connection?.effectiveType
+
+    // Don't block content on constrained connections.
+    if (saveData) return false
+    if (effectiveType && effectiveType !== '4g') return false
+
+    return true
+  })
 
   const durationMs = useMemo(() => {
     if (typeof window === 'undefined') return 900
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
     // If user prefers reduced motion or wants to save data, keep this very short.
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
-    return reduce || saveData ? 400 : 2500
+    return reduce || saveData ? 200 : 700
   }, [])
 
   useLockBodyScroll(isVisible)
 
   useEffect(() => {
+    if (!isVisible) return
     const timer = setTimeout(() => {
       setIsVisible(false)
+      window.sessionStorage.setItem('preloaderSeen', '1')
     }, durationMs)
 
     return () => clearTimeout(timer)
-  }, [durationMs])
+  }, [durationMs, isVisible])
 
   return (
     <AnimatePresence>

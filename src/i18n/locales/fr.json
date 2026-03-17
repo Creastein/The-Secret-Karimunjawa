@@ -38,9 +38,9 @@
         "privateVeranda": "Véranda Privée",
         "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
         "privateKitchen": "Cuisine Privée",
-        "privateKitchenDesc": "Cuisine complète dans la Villa Cipaku — cuisinez vous-même ou demandez l'aide d'Anik.",
-        "privateGarden": "Jardin Secret",
-        "privateGardenDesc": "Jardin tropical privé à Villa Tivoli — réveillez-vous au chant des oiseaux.",
+        "privateKitchenDesc": "La Villa Cipaku dispose d'une cuisine privée - cuisinez vous-même avec une vue imprenable !",
+        "privateGarden": "Jardin Tropical",
+        "privateGardenDesc": "Votre espace pour respirer dans le jardin caché magnifiquement aménagé au milieu de la jungle.",
         "airportTransfer": "Nous Venons Vous Chercher",
         "airportTransferDesc": "Navette depuis l'aéroport ou le port disponible avec supplément.",
         "dailyHousekeeping": "Service de nettoyage quotidien",
@@ -49,8 +49,8 @@
         "directBookingDesc": "Réservez via WhatsApp — sans agents, sans commissions, 100% va à la villa.",
         "sunriseBreakfast": "Petit-déjeuner Fait Maison",
         "sunriseBreakfastDesc": "Toast fait maison, confiture de Patricia et café du matin avec vue sur l'océan.",
-        "residentDog": "Notre Ami à Quatre Pattes",
-        "residentDogDesc": "Notre chien amical fait partie de la famille et pourrait vous accueillir durant votre séjour."
+        "residentDog": "Notre Famille à Quatre Pattes",
+        "residentDogDesc": "Nos deux chiens et notre chat font partie de notre famille. Ils vous accueilleront bruyamment et aboieront de temps en temps."
     },
     "suites": {
         "eyebrow": "Trois Villas",
@@ -108,7 +108,7 @@
         "eyebrow": "Expérience",
         "title": "Le Luxe Réside",
         "titleAccent": "dans les Détails",
-        "description": "Toast fait maison pour le petit-déjeuner. Confiture artisanale de la cuisine de Patricia. Un coucher de soleil différent chaque jour, juste devant vos yeux.",
+        "description": "Pain et confiture faits maison (pas de simples toasts !) pour le petit-déjeuner. Vues imprenables depuis le toit-terrasse face à l'océan et vos vérandas confortables. Un coucher de soleil différent chaque jour, juste devant vos yeux.",
         "ctaLabel": "Demander des Services"
     },
     "gallery": {
@@ -154,7 +154,7 @@
         "eyebrow": "Contactez-nous",
         "title": "Nous Vous",
         "titleAccent": "Attendons",
-        "description": "Directement avec nous : sans agents, sans commissions. Comme appeler chez un ami. Patricia et Eddy sont prêts à vous aider à planifier la visite parfaite.",
+        "description": "Directement avec nous : sans agents, sans commissions. Comme appeler chez un ami. Patricia et Eddy sont prêts à vous aider à planifier la visite parfaite. Les paiements sur place se font généralement en espèces ou via l'application 'Wise'.",
         "formTitle": "Demande Directe",
         "formSubtitle": "Réponse dans les 2 heures",
         "submitLabel": "Envoyer la Demande",
@@ -199,13 +199,8 @@
         },
         "facilities": {
             "q1": "Combien de personnes par unité ?",
-            "a1": "De 2 à maximum 4 personnes par unité. Parfait pour les couples et les familles.",
-            "q2": "Quelles villas sont disponibles ?",
-            "a2_intro": "Nous avons 3 villas exclusives :",
-            "a2_cipaku": "Villa Cipaku (Une Chambre) — Lit King (2m x 2m), cuisine privée, véranda privée, 100% intimité.",
-            "a2_birdsong": "Villa Birdsong (Deluxe) — Lit King (2m x 2m), vue mer et coucher de soleil, chambre spacieuse et véranda la plus large.",
-            "a2_tivoli": "Villa Tivoli Garden (Supérieure) — Queen (1.8m x 2m) + Double (1.5m x 2m), jardin privé.",
-            "a2_note": "Toutes face à la mer avec panorama de coucher de soleil de 120°.",
+            "a1": "Villa Cipaku et Villa Birdsong sont conçues pour 2 personnes, parfaites pour les couples. Villa Tivoli Garden peut accueillir jusqu'à 4 personnes et est parfaite pour les petites familles.",
+
             "q3": "Chaque unité a-t-elle une terrasse ?",
             "a3": "Oui, toutes les unités ont une spacieuse terrasse privée avec vue mer et coucher de soleil.",
             "q4": "Quelles installations dans la chambre ?",
