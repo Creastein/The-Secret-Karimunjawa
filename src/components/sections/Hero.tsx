@@ -180,7 +180,7 @@ export default function Hero() {
           >
             <source
               media="(max-width: 768px)"
-              srcSet="/assets/hero-img.webp"
+              srcSet="/assets/hero-img-mobile.webp"
               type="image/webp"
             />
             <source

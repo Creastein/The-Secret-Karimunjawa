@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import Navigation from './components/layout/Navigation'
 import Hero from './components/sections/Hero'
-import OurStory from './components/sections/OurStory'
 import Preloader from './components/ui/Preloader'
 
+const OurStory = lazy(() => import('./components/sections/OurStory'))
 const Suites = lazy(() => import('./components/sections/Suites'))
 const Experience = lazy(() => import('./components/sections/Experience'))
 const Gallery = lazy(() => import('./components/sections/Gallery'))
@@ -137,9 +137,9 @@ export default function App() {
       <div className="min-h-screen bg-sand font-sans overflow-x-clip animate-fade-in">
         <Navigation />
         <Hero />
-        <OurStory />
 
         <Suspense fallback={<div className="h-screen w-full bg-bleached-sand" />}>
+          <OurStory />
           <Suites />
           <Experience />
           <Gallery />

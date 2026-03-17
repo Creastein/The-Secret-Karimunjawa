@@ -76,7 +76,7 @@ export default function Navigation() {
           `}
         >
           <a href="#" onClick={handleLogoClick} className="relative z-50 shrink-0 flex items-center hover:opacity-70 transition-opacity">
-            <img src="/assets/logo-navbar.svg" alt="The Secret Karimunjawa" className="h-14 md:h-16 w-auto" />
+            <img src="/assets/logo-navbar.svg" alt="The Secret Karimunjawa" className="h-14 md:h-16 w-auto" width={64} height={64} />
           </a>
 
           <div className="hidden md:flex items-center gap-5 lg:gap-6">

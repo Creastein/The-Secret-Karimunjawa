@@ -23,7 +23,7 @@ export default function Footer() {
         >
           {/* Column 1: Brand */}
           <motion.div variants={fadeUp} className="space-y-6">
-            <img src="/assets/logo-footer.svg" alt="The Secret Karimunjawa" className="h-11 w-auto" />
+            <img src="/assets/logo-footer.svg" alt="The Secret Karimunjawa" className="h-11 w-auto" width={44} height={44} />
             <p className="text-sm font-light leading-relaxed max-w-xs">
               {t('footer.description')}
             </p>

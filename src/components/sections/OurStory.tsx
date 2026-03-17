@@ -1,13 +1,9 @@
 import { useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Section from '@/components/layout/Section'
 import { blurFade, staggerContainer } from '@/lib/motion'
 import { useCountUp } from '@/hooks/useCountUp'
-
-gsap.registerPlugin(ScrollTrigger)
 
 function CountUpStat({ end, decimals = 0, labelKey }: { end: number; decimals?: number; labelKey: string }) {
   const { t } = useTranslation()
@@ -29,31 +25,33 @@ export default function OurStory() {
   const imageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Entrance animation for the image container
-      gsap.fromTo(imageRef.current,
-        {
-          opacity: 0,
-          y: 60,
-          scale: 0.95
-        },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.2,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: imageRef.current,
-            start: 'top 85%',
+    let ctx: { revert: () => void } | undefined
+
+    // Dynamic import gsap only when component mounts
+    Promise.all([
+      import('gsap'),
+      import('gsap/ScrollTrigger'),
+    ]).then(([gsapModule, scrollTriggerModule]) => {
+      const gsap = gsapModule.default || gsapModule.gsap
+      const ScrollTrigger = scrollTriggerModule.ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger)
+
+      ctx = gsap.context(() => {
+        gsap.fromTo(imageRef.current,
+          { opacity: 0, y: 60, scale: 0.95 },
+          {
+            opacity: 1, y: 0, scale: 1,
+            duration: 1.2, ease: 'power3.out',
+            scrollTrigger: {
+              trigger: imageRef.current,
+              start: 'top 85%',
+            }
           }
-        }
-      )
+        )
+      }, containerRef)
+    })
 
-
-    }, containerRef)
-
-    return () => ctx.revert()
+    return () => ctx?.revert()
   }, [])
 
   return (

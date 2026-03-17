@@ -3,16 +3,12 @@ import { useRef, useEffect } from 'react'
 
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon } from 'hugeicons-react'
 import { PawPrint as PawPrintIcon } from 'lucide-react'
 
 import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
 import { fadeUp, blurFade, staggerContainer, EASE_OUT_EXPO } from '@/lib/motion'
-
-gsap.registerPlugin(ScrollTrigger)
 
 interface Props { }
 
@@ -68,25 +64,37 @@ const Experience: React.FC<Props> = () => {
   const rightColRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      /* only pin on desktop (lg: 1024px+) */
-      ScrollTrigger.matchMedia({
-        '(min-width: 1024px)': () => {
-          if (!leftColRef.current || !rightColRef.current) return
+    let ctx: { revert: () => void } | undefined
 
-          ScrollTrigger.create({
-            trigger: leftColRef.current,
-            pin: true,
-            start: 'top 35%',
-            endTrigger: rightColRef.current,
-            end: 'bottom center',
-            pinSpacing: false,
-          })
-        },
-      })
-    }, sectionRef)
+    // Dynamic import gsap only when component mounts
+    Promise.all([
+      import('gsap'),
+      import('gsap/ScrollTrigger'),
+    ]).then(([gsapModule, scrollTriggerModule]) => {
+      const gsap = gsapModule.default || gsapModule.gsap
+      const ScrollTrigger = scrollTriggerModule.ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger)
 
-    return () => ctx.revert()
+      ctx = gsap.context(() => {
+        /* only pin on desktop (lg: 1024px+) */
+        ScrollTrigger.matchMedia({
+          '(min-width: 1024px)': () => {
+            if (!leftColRef.current || !rightColRef.current) return
+
+            ScrollTrigger.create({
+              trigger: leftColRef.current,
+              pin: true,
+              start: 'top 35%',
+              endTrigger: rightColRef.current,
+              end: 'bottom center',
+              pinSpacing: false,
+            })
+          },
+        })
+      }, sectionRef)
+    })
+
+    return () => ctx?.revert()
   }, [])
 
   const handleContact = () => {

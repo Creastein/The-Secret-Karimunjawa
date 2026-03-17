@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, type FC } from 'react'
+import { useState, useEffect, useMemo, useRef, useCallback, type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { GALLERY_IMAGES } from '@/config/site'
@@ -27,9 +27,9 @@ const thumbVariant = {
 }
 
 const slideVariants = {
-  enter: (direction: number) => ({ x: direction > 0 ? 60 : -60, opacity: 0, scale: 1.03, filter: 'blur(8px)' }),
-  center: { zIndex: 1, x: 0, opacity: 1, scale: 1, filter: 'blur(0px)' },
-  exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 60 : -60, opacity: 0, scale: 0.97, filter: 'blur(4px)' }),
+  enter: (direction: number) => ({ x: direction > 0 ? 60 : -60, opacity: 0, scale: 1.03 }),
+  center: { zIndex: 1, x: 0, opacity: 1, scale: 1 },
+  exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 60 : -60, opacity: 0, scale: 0.97 }),
 }
 
 type Props = {}
@@ -40,6 +40,15 @@ const Gallery: FC<Props> = () => {
   const lightboxImageRef = useRef<HTMLImageElement>(null)
   const lightboxCaptionRef = useRef<HTMLDivElement>(null)
   const shouldReduceMotion = useReducedMotion()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 768px)')
+    setIsMobile(mql.matches)
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    mql.addEventListener('change', handler)
+    return () => mql.removeEventListener('change', handler)
+  }, [])
   const [activeCategory, setActiveCategory] = useState<ImageCategory | 'All'>('All')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -184,12 +193,15 @@ const Gallery: FC<Props> = () => {
                       src={filteredImages[currentIndex]?.url} 
                       alt={filteredImages[currentIndex]?.alt} 
                       className="w-full h-full object-cover origin-center" 
-                      style={{ willChange: 'transform' }}
                       loading="eager" 
-                      decoding="async" 
+                      decoding="async"
+                      width={1200}
+                      height={900}
                       onClick={() => setIsLightboxOpen(true)} 
-                      animate={{ scale: [1, 1.05] }}
-                      transition={{ duration: 20, ease: 'linear', repeat: Infinity, repeatType: 'reverse' }}
+                      {...(!isMobile ? {
+                        animate: { scale: [1, 1.05] },
+                        transition: { duration: 20, ease: 'linear', repeat: Infinity, repeatType: 'reverse' as const },
+                      } : {})}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/5 to-transparent pointer-events-none" />
                   </motion.div>

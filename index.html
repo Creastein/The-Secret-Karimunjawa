@@ -58,8 +58,9 @@
       rel="stylesheet" />
   </noscript>
 
-  <!-- Preload hero image (LCP element) -->
-  <link rel="preload" as="image" href="/assets/hero-img.webp" type="image/webp" />
+  <!-- Preload hero image (LCP element) — responsive -->
+  <link rel="preload" as="image" href="/assets/hero-img-mobile.webp" type="image/webp" media="(max-width: 768px)" />
+  <link rel="preload" as="image" href="/assets/hero-img.webp" type="image/webp" media="(min-width: 769px)" />
 </head>
 
 <body>
