@@ -81,11 +81,11 @@ export default function OurTeam() {
                     className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
-                <div className="text-center w-full mt-auto px-2 pb-2">
+                <div className="text-center w-full px-2 pb-2">
                   <h3 className="font-serif text-xl md:text-2xl text-charcoal mb-2">{member.name}</h3>
                   <p className="text-teak-accent font-medium text-sm md:text-base mb-3">{member.role}</p>
                   <div className="w-12 h-px bg-stone-300 mx-auto mb-4"></div>
-                  <p className="text-stone-500 text-xs md:text-sm leading-relaxed italic line-clamp-4">{member.description}</p>
+                  <p className="text-stone-500 text-xs md:text-sm leading-relaxed italic">{member.description}</p>
                 </div>
               </div>
             </motion.div>

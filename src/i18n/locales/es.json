@@ -41,7 +41,7 @@
         "privateGarden": "Jardín Tropical",
         "privateGardenDesc": "Tu espacio para respirar en el jardín oculto bellamente arreglado en medio de la jungla.",
         "privateVeranda": "Terraza Privada",
-        "privateVerandaDesc": "El lugar favorito de nuestros huéspedes para el café matutino y los atardeceres.",
+        "privateVerandaDesc": "Da un paso a tu terraza privada - tu lugar para hacer una pausa, respirar y reconectar con la naturaleza.",
         "sunriseBreakfast": "Desayuno Casero",
         "sunriseBreakfastDesc": "Pan y mermelada caseros con café recién molido con vista al océano.",
         "ecoConscious": "Estilo de Vida Eco-consciente",
@@ -153,7 +153,7 @@
         "eyebrow": "Contáctenos",
         "title": "Le Esperamos",
         "titleAccent": "Como Familia",
-        "description": "Directo con nosotros: sin agentes, sin comisiones. Como llamar a la casa de un amigo. Patricia y Eddy están listos para ayudarle a planificar la visita perfecta. Los pagos en el lugar son generalmente en efectivo o mediante la aplicación 'Wise'.",
+        "description": "Directo con nosotros: sin agentes, sin comisiones. Como llamar a la casa de un amigo. Patricia está lista para ayudarle a planificar la visita perfecta con antelación, mientras Eddy cuidará de usted durante su estancia.",
         "formTitle": "Consulta Directa",
         "formSubtitle": "Respuesta en 2 horas",
         "submitLabel": "Enviar Solicitud",
@@ -253,7 +253,7 @@
             "abyan": "Cocina y Conexión con los Huéspedes",
             "anik": "Cocina y Limpieza",
             "dadang": "Mantenimiento General, Jardines y Propiedad",
-            "bella": "Cuidado de la Familia (Miembro más antiguo desde 2021)"
+            "bella": "Cuidado de la Familia"
         },
         "descriptions": {
             "abyan": "De la cocina a la conexión con los huéspedes, Mas Abyan crea momentos deliciosos con calidez — y una sonrisa acogedora.",
@@ -304,7 +304,6 @@
             "culinary": "Gastronomía",
             "airport": "Aeropuerto",
             "transport": "Transporte",
-            "attractions": "Atracciones",
             "landmarks": "Landmarks"
         },
         "nearbyFooter": "Las distancias se miden en línea recta. Las distancias reales pueden variar."

@@ -41,7 +41,7 @@
         "privateGarden": "Jardin Tropical",
         "privateGardenDesc": "Votre espace pour respirer dans le jardin caché magnifiquement aménagé au milieu de la jungle.",
         "privateVeranda": "Véranda Privée",
-        "privateVerandaDesc": "L'endroit préféré de nos invités pour le café du matin et les couchers de soleil.",
+        "privateVerandaDesc": "Entrez sur votre véranda privée - votre refuge pour faire une pause, respirer et vous reconnecter à la nature.",
         "sunriseBreakfast": "Petit-déjeuner Fait Maison",
         "sunriseBreakfastDesc": "Pain et confiture faits maison avec du café fraîchement moulu et vue sur l'océan.",
         "ecoConscious": "Mode de Vie Éco-responsable",
@@ -153,7 +153,7 @@
         "eyebrow": "Contactez-nous",
         "title": "Nous Vous",
         "titleAccent": "Attendons",
-        "description": "Directement avec nous : sans agents, sans commissions. Comme appeler chez un ami. Patricia et Eddy sont prêts à vous aider à planifier la visite parfaite. Les paiements sur place se font généralement en espèces ou via l'application 'Wise'.",
+        "description": "Directement avec nous : sans agents, sans commissions. Comme appeler chez un ami. Patricia est prête à vous aider à planifier la visite parfaite à l'avance, tandis qu'Eddy prendra soin de vous pendant votre séjour.",
         "formTitle": "Demande Directe",
         "formSubtitle": "Réponse dans les 2 heures",
         "submitLabel": "Envoyer la Demande",
@@ -253,7 +253,7 @@
             "abyan": "Cuisine & Connexion avec les Invités",
             "anik": "Cuisine & Entretien",
             "dadang": "Polyvalent, Jardins & Propriété",
-            "bella": "Soins Familiaux (Membre le plus ancien depuis 2021)"
+            "bella": "Soins Familiaux"
         },
         "descriptions": {
             "abyan": "De la cuisine à la connexion avec les invités, Mas Abyan crée des moments délicieux avec chaleur — et un sourire accueillant.",
@@ -304,7 +304,6 @@
             "culinary": "Gastronomie",
             "airport": "Aéroport",
             "transport": "Transport",
-            "attractions": "Attractions",
             "landmarks": "Landmarks"
         },
         "nearbyFooter": "Les distances sont mesurées en ligne droite. Les distances réelles peuvent varier."

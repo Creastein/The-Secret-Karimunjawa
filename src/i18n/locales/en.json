@@ -41,7 +41,7 @@
         "privateGarden": "Tropical Garden",
         "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
         "privateVeranda": "Private Veranda",
-        "privateVerandaDesc": "Our guests' favorite spot for morning coffee and afternoon sunsets.",
+        "privateVerandaDesc": "Step onto your secluded veranda - your place to pause, breathe and reconnect with nature.",
         "sunriseBreakfast": "Homemade Breakfast",
         "sunriseBreakfastDesc": "Homemade bread and jam with freshly ground coffee with an ocean view.",
         "ecoConscious": "Eco-conscious Living",
@@ -153,7 +153,7 @@
         "eyebrow": "Contact Us",
         "title": "We're Waiting",
         "titleAccent": "for You",
-        "description": "Straight to us: no agents, no commissions. Like calling a friend's home. Patricia and Eddy are ready to help you plan the perfect visit. On-site payments are generally in cash or via the application 'Wise'.",
+        "description": "Straight to us: no agents, no commissions. Like calling a friend's home. Patricia is ready to help you plan the perfect visit ahead of time, while Eddy will take care of you during your stay.",
         "formTitle": "Direct Inquiry",
         "formSubtitle": "Response within 2 hours",
         "submitLabel": "Send Request",
@@ -252,7 +252,7 @@
             "abyan": "Kitchen & Guest Connection",
             "anik": "Kitchen & Housekeeping",
             "dadang": "All-Rounder, Gardens & Property",
-            "bella": "Family Care (Longest member since 2021)"
+            "bella": "Family Care"
         },
         "descriptions": {
             "abyan": "From kitchen to guest connection, Mas Abyan crafts delicious moments with warmth — and a welcoming smile.",
@@ -303,7 +303,6 @@
             "culinary": "Culinary",
             "airport": "Airport",
             "transport": "Transport",
-            "attractions": "Attractions",
             "landmarks": "Landmarks"
         },
         "nearbyFooter": "Distances are measured in a straight line. Actual travel distances may vary."

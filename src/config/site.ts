@@ -205,16 +205,6 @@ export const NEARBY_TABS: NearbyTab[] = [
     ],
   },
   {
-    id: 'attractions',
-    labelKey: 'location.tabs.attractions',
-    places: [
-      { name: 'Karimunjawa Package', category: 'Atraksi Outdoor', distance: '3.7km', categoryColor: '#34A853' },
-      { name: 'KarimunDjawa Tour', category: 'Atraksi Outdoor', distance: '4.1km', categoryColor: '#34A853' },
-      { name: 'Go Green Tour', category: 'Atraksi Outdoor', distance: '4.3km', categoryColor: '#34A853' },
-      { name: 'Tracking Mangrove', category: 'Wisata Alam', distance: '8.3km', categoryColor: '#34A853' },
-    ],
-  },
-  {
     id: 'landmarks',
     labelKey: 'location.tabs.landmarks',
     places: [

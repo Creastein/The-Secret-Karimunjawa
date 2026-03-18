@@ -41,7 +41,7 @@
         "privateGarden": "Taman Tropis",
         "privateGardenDesc": "Ruang Anda untuk bernapas di taman tersembunyi yang tertata indah di tengah hutan.",
         "privateVeranda": "Veranda Pribadi",
-        "privateVerandaDesc": "Tempat favorit tamu kami untuk kopi pagi dan sunset sore.",
+        "privateVerandaDesc": "Melangkah ke veranda pribadimu - tempat untuk berhenti sejenak, bernapas, dan kembali terhubung dengan alam.",
         "sunriseBreakfast": "Sarapan Buatan Sendiri",
         "sunriseBreakfastDesc": "Roti dan selai buatan sendiri dengan kopi yang baru digiling sambil menikmati pemandangan laut.",
         "ecoConscious": "Gaya Hidup Ramah Lingkungan",
@@ -153,7 +153,7 @@
         "eyebrow": "Hubungi Kami",
         "title": "Kami Menunggu",
         "titleAccent": "Anda",
-        "description": "Langsung ke kami: tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Patricia dan Eddy siap membantu Anda merencanakan kunjungan yang sempurna. Pembayaran di lokasi umumnya menggunakan tunai atau via aplikasi 'Wise'.",
+        "description": "Langsung ke kami: tanpa agen, tanpa komisi. Seperti menelepon rumah teman. Patricia siap membantu Anda merencanakan kunjungan yang sempurna sejak sebelum kedatangan, sementara Eddy akan menjaga Anda selama menginap.",
         "formTitle": "Hubungi Langsung",
         "formSubtitle": "Respon dalam 2 jam",
         "submitLabel": "Kirim Permintaan",
@@ -253,7 +253,7 @@
             "abyan": "Dapur & Tim Komunikasi Tamu",
             "anik": "Dapur & Housekeeping",
             "dadang": "Serbabisa, Logistik & Taman",
-            "bella": "Pengurus Keluarga (Anggota terlama sejak 2021)"
+            "bella": "Pengurus Keluarga"
         },
         "descriptions": {
             "abyan": "Dari dapur hingga koneksi dengan tamu, Mas Abyan menciptakan momen lezat dengan kehangatan — dan senyum ramahnya.",
@@ -304,7 +304,6 @@
             "culinary": "Kuliner",
             "airport": "Bandara",
             "transport": "Transportasi",
-            "attractions": "Atraksi",
             "landmarks": "Landmarks"
         },
         "nearbyFooter": "Jarak di atas diukur berdasarkan garis lurus. Jarak perjalanan yang sebenarnya mungkin berbeda."
