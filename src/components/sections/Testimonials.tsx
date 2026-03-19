@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
 import { QuoteUpIcon } from 'hugeicons-react'
 import { fadeUp, staggerContainer } from '@/lib/motion'
+import { useCallback, useMemo, useState } from 'react'
 
 interface ReadReview {
   id: number;
@@ -14,7 +15,24 @@ interface ReadReview {
 export default function Testimonials() {
   const { t } = useTranslation()
   const reviews = t('reviews', { returnObjects: true }) as ReadReview[]
-  const marqueeReviews = [...reviews, ...reviews]
+  const totalReviews = reviews.length
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const active = useMemo(() => {
+    if (totalReviews === 0) return null
+    const safeIndex = ((activeIndex % totalReviews) + totalReviews) % totalReviews
+    return { index: safeIndex, review: reviews[safeIndex] }
+  }, [activeIndex, reviews, totalReviews])
+
+  const goPrev = useCallback(() => {
+    if (totalReviews <= 1) return
+    setActiveIndex((current) => (current - 1 + totalReviews) % totalReviews)
+  }, [totalReviews])
+
+  const goNext = useCallback(() => {
+    if (totalReviews <= 1) return
+    setActiveIndex((current) => (current + 1) % totalReviews)
+  }, [totalReviews])
 
   return (
     <Section className="bg-sand relative overflow-hidden py-16 md:py-24 lg:py-32">
@@ -34,29 +52,76 @@ export default function Testimonials() {
           <motion.h2 variants={fadeUp} className="font-serif text-4xl md:text-5xl text-charcoal">{t('testimonials.title')}</motion.h2>
         </motion.div>
 
-        <div className="marquee group relative max-w-6xl mx-auto overflow-hidden">
-          <div className="marquee-track flex items-stretch gap-8 lg:gap-12 py-4">
-            {marqueeReviews.map((review, index) => (
-              <div
-                key={`${review.id}-${index}`}
-                aria-hidden={index >= reviews.length}
-                className="flex min-w-[280px] max-w-[360px] md:min-w-[320px] md:max-w-[420px] flex-col items-center text-center p-6 md:p-8 lg:p-12"
-              >
-                <div className="mb-8 text-teak-accent/20">
-                  <QuoteUpIcon className="w-8 h-8 md:w-12 md:h-12 fill-current" />
-                </div>
-                <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
-                  "{review.text}"
-                </p>
-                <div className="w-12 h-px bg-teak-accent/30 mb-6" />
-                <div>
-                  <h3 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{review.author}</h3>
-                  <span className="text-[10px] text-stone-500 uppercase tracking-wide">{review.origin}</span>
-                </div>
+        {active ? (
+          <div
+            className="relative max-w-3xl mx-auto"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label={t('testimonials.title')}
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === 'ArrowLeft') {
+                event.preventDefault()
+                goPrev()
+              }
+              if (event.key === 'ArrowRight') {
+                event.preventDefault()
+                goNext()
+              }
+            }}
+          >
+            <button
+              type="button"
+              onClick={goPrev}
+              disabled={totalReviews <= 1}
+              aria-label="Previous testimonial"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur ring-1 ring-black/10 shadow-coastal flex items-center justify-center text-charcoal hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teak-accent disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <span aria-hidden className="text-xl leading-none">←</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={goNext}
+              disabled={totalReviews <= 1}
+              aria-label="Next testimonial"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/70 backdrop-blur ring-1 ring-black/10 shadow-coastal flex items-center justify-center text-charcoal hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-teak-accent disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              <span aria-hidden className="text-xl leading-none">→</span>
+            </button>
+
+            <div className="overflow-hidden px-14 md:px-16">
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={`${active.review.id}-${active.index}`}
+                  initial={{ opacity: 0, x: 24 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -24 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  className="flex flex-col items-center text-center py-4"
+                >
+                  <div className="mb-8 text-teak-accent/20">
+                    <QuoteUpIcon className="w-8 h-8 md:w-12 md:h-12 fill-current" />
+                  </div>
+                  <p className="font-serif text-xl md:text-2xl text-stone-600 leading-relaxed mb-10 italic">
+                    "{active.review.text}"
+                  </p>
+                  <div className="w-12 h-px bg-teak-accent/30 mb-6" />
+                  <div>
+                    <h3 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{active.review.author}</h3>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wide">{active.review.origin}</span>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.25em] text-stone-500">
+                <span>{active.index + 1}</span>
+                <span className="text-stone-400">/</span>
+                <span>{totalReviews}</span>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
     </Section>
   )
