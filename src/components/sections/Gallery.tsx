@@ -32,9 +32,7 @@ const slideVariants = {
   exit: (direction: number) => ({ zIndex: 0, x: direction < 0 ? 60 : -60, opacity: 0, scale: 0.97 }),
 }
 
-type Props = {}
-
-const Gallery: FC<Props> = () => {
+const Gallery: FC = () => {
   const { t } = useTranslation()
   const lightboxRef = useRef<HTMLDivElement>(null)
   const lightboxImageRef = useRef<HTMLImageElement>(null)

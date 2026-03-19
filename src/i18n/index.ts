@@ -10,6 +10,8 @@ const lazyResources: Record<string, () => Promise<{ default: Record<string, unkn
     en: () => import('./locales/en.json'),
     es: () => import('./locales/es.json'),
     fr: () => import('./locales/fr.json'),
+    de: () => import('./locales/de.json'),
+    it: () => import('./locales/it.json'),
 }
 
 i18n
@@ -20,7 +22,7 @@ i18n
             id: { translation: id },
         },
         fallbackLng: 'id',
-        supportedLngs: ['id', 'en', 'es', 'fr'],
+        supportedLngs: ['id', 'en', 'es', 'fr', 'de', 'it'],
         interpolation: {
             escapeValue: false,
         },

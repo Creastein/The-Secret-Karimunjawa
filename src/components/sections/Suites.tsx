@@ -196,7 +196,7 @@ export default function Suites({ }: Props) {
                         setSelectedRoom({ room, i18nKey })
                       }}
                     >
-                      <span>{room.comingSoon ? 'View Details' : t('suites.detailLabel')}</span>
+                      <span>{t('suites.detailLabel')}</span>
                       <ArrowRight01Icon className="w-3 h-3" strokeWidth={2} />
                     </motion.button>
                   </motion.div>

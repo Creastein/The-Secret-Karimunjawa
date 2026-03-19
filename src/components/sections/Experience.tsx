@@ -10,8 +10,6 @@ import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
 import { fadeUp, blurFade, staggerContainer, EASE_OUT_EXPO } from '@/lib/motion'
 
-interface Props { }
-
 const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Anchor: EyeIcon,
   Utensils: Restaurant01Icon,
@@ -58,7 +56,7 @@ const lineReveal = {
   },
 }
 
-  const Experience: React.FC<Props> = () => {
+const Experience: React.FC = () => {
   const { t } = useTranslation()
 
   const handleContact = () => {

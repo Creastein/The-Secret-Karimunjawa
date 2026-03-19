@@ -67,20 +67,6 @@ function useFAQData(): CategoryData[] {
             categoryKey: 'faq.categories.facilities',
             items: [
                 { question: t('faq.facilities.q1'), answer: t('faq.facilities.a1') },
-                {
-                    question: t('faq.facilities.q2'),
-                    answer: (
-                        <div className="space-y-3">
-                            <p>{t('faq.facilities.a2_intro')}</p>
-                            <ul className="list-disc pl-5 space-y-2">
-                                <li><strong>Villa Cipaku</strong> — {t('faq.facilities.a2_cipaku').replace('Villa Cipaku (One-Bedroom) — ', '')}</li>
-                                <li><strong>Villa Birdsong</strong> — {t('faq.facilities.a2_birdsong').replace('Villa Birdsong (Deluxe) — ', '')}</li>
-                                <li><strong>Villa Tivoli Garden</strong> — {t('faq.facilities.a2_tivoli').replace('Villa Tivoli Garden (Superior) — ', '')}</li>
-                            </ul>
-                            <p className="text-stone-500 text-sm italic">{t('faq.facilities.a2_note')}</p>
-                        </div>
-                    )
-                },
                 { question: t('faq.facilities.q3'), answer: t('faq.facilities.a3') },
                 {
                     question: t('faq.facilities.q4'),

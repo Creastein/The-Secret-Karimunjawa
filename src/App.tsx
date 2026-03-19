@@ -40,7 +40,7 @@ export default function App() {
         <meta property="og:image" content="https://thesecretkarimunjawa.com/assets/hero-coastal.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:locale" content={i18n.language === 'id' ? 'id_ID' : i18n.language === 'en' ? 'en_US' : i18n.language === 'fr' ? 'fr_FR' : 'es_ES'} />
+        <meta property="og:locale" content={i18n.language === 'id' ? 'id_ID' : i18n.language === 'en' ? 'en_US' : i18n.language === 'fr' ? 'fr_FR' : i18n.language === 'de' ? 'de_DE' : i18n.language === 'it' ? 'it_IT' : 'es_ES'} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://thesecretkarimunjawa.com/" />
@@ -57,6 +57,8 @@ export default function App() {
         <link rel="alternate" hrefLang="en" href="https://thesecretkarimunjawa.com/?lng=en" />
         <link rel="alternate" hrefLang="es" href="https://thesecretkarimunjawa.com/?lng=es" />
         <link rel="alternate" hrefLang="fr" href="https://thesecretkarimunjawa.com/?lng=fr" />
+        <link rel="alternate" hrefLang="de" href="https://thesecretkarimunjawa.com/?lng=de" />
+        <link rel="alternate" hrefLang="it" href="https://thesecretkarimunjawa.com/?lng=it" />
         <link rel="alternate" hrefLang="x-default" href="https://thesecretkarimunjawa.com/?lng=id" />
 
         <script type="application/ld+json">{JSON.stringify({
@@ -116,7 +118,6 @@ export default function App() {
             { "@type": "Question", "name": t('faq.reservation.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a3') } },
             { "@type": "Question", "name": t('faq.reservation.q4'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.reservation.a4') } },
             { "@type": "Question", "name": t('faq.facilities.q1'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a1') } },
-            { "@type": "Question", "name": t('faq.facilities.q2'), "acceptedAnswer": { "@type": "Answer", "text": `${t('faq.facilities.a2_intro')} ${t('faq.facilities.a2_cipaku')} ${t('faq.facilities.a2_birdsong')} ${t('faq.facilities.a2_tivoli')} ${t('faq.facilities.a2_note')}` } },
             { "@type": "Question", "name": t('faq.facilities.q3'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a3') } },
             { "@type": "Question", "name": t('faq.facilities.q4'), "acceptedAnswer": { "@type": "Answer", "text": `${t('faq.facilities.a4_intro')} ${(t('faq.facilities.a4_items', { returnObjects: true }) as string[]).join(', ')}` } },
             { "@type": "Question", "name": t('faq.facilities.q5'), "acceptedAnswer": { "@type": "Answer", "text": t('faq.facilities.a5') } },

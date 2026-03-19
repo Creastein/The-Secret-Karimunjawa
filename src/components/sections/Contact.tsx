@@ -54,9 +54,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, type, placeholder,
   )
 }
 
-interface Props { }
-
-const Contact: React.FC<Props> = () => {
+const Contact: React.FC = () => {
   const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
