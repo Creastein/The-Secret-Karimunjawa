@@ -3,8 +3,7 @@ import { useRef, useEffect } from 'react'
 
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon } from 'hugeicons-react'
-import { PawPrint as PawPrintIcon, Recycle as RecycleIcon, Beer as BeerIcon } from 'lucide-react'
+import { Car01Icon, Coffee01Icon, EyeIcon, Leaf01Icon, SmartPhone01Icon, SparklesIcon, SunriseIcon, Restaurant01Icon, FavouriteIcon, Recycle01Icon, Coffee02Icon } from 'hugeicons-react'
 
 import { FACILITIES, WHATSAPP_NUMBER } from '@/config/site'
 import type { Facility } from '@/config/types'
@@ -14,7 +13,7 @@ const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Anchor: EyeIcon,
   Utensils: Restaurant01Icon,
   Car: Car01Icon,
-  PawPrint: PawPrintIcon,
+  PawPrint: FavouriteIcon,
   Eye: EyeIcon,
   CigaretteOff: Leaf01Icon,
   ConciergeBell: SparklesIcon,
@@ -23,8 +22,8 @@ const iconMap: Record<Facility['iconName'], React.ElementType> = {
   Leaf: Leaf01Icon,
   Sparkles: SparklesIcon,
   Smartphone: SmartPhone01Icon,
-  Recycle: RecycleIcon,
-  Beer: BeerIcon,
+  Recycle: Recycle01Icon,
+  Beer: Coffee02Icon,
 }
 
 const FACILITY_KEYS: Record<string, string> = {

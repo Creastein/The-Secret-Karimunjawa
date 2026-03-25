@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => {
           manualChunks: {
             'vendor-react': ['react', 'react-dom'],
             'vendor-animation': ['framer-motion'],
-            'vendor-icons': ['lucide-react', 'hugeicons-react'],
+            'vendor-icons': ['hugeicons-react'],
           }
         }
       }

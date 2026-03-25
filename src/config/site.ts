@@ -269,14 +269,14 @@ export const GALLERY_IMAGES: ImageItem[] = [
   { id: '25', url: '/assets/Cipaku/cipaku12.webp', alt: 'Cipaku Kitchen Area', category: 'Interiors', span: false },
   { id: '26', url: '/assets/Cipaku/cipaku17.webp', alt: 'Cipaku Private Retreat', category: 'Interiors', span: false },
   // Exteriors
-  { id: '27', url: '/assets/Cipaku/ciapku10.webp', alt: 'Cipaku Exterior Panorama', category: 'Exteriors', span: true },
+  { id: '27', url: '/assets/Cipaku/cipaku10.webp', alt: 'Cipaku Exterior Panorama', category: 'Exteriors', span: true },
   { id: '28', url: '/assets/Cipaku/cipaku6.webp', alt: 'Cipaku Garden Path', category: 'Exteriors', span: false },
   { id: '29', url: '/assets/Cipaku/cipaku7.webp', alt: 'Cipaku Tropical Surroundings', category: 'Exteriors', span: false },
   { id: '30', url: '/assets/Cipaku/cipaku9.webp', alt: 'Cipaku Veranda View', category: 'Exteriors', span: false },
   { id: '31', url: '/assets/Cipaku/cipaku11.webp', alt: 'Cipaku Outdoor Living', category: 'Exteriors', span: false },
   // General Exteriors
   { id: '33', url: '/assets/exterior1.jpeg', alt: 'The Secret Karimunjawa Aerial View', category: 'Exteriors', span: true },
-  { id: '34', url: '/assets/exteriror 2.jpeg', alt: 'The Secret Karimunjawa Beachfront', category: 'Exteriors', span: false },
+  { id: '34', url: '/assets/exterior-2.jpeg', alt: 'The Secret Karimunjawa Beachfront', category: 'Exteriors', span: false },
   // Night
   { id: '32', url: '/assets/Cipaku/cipaku3.webp', alt: 'Cipaku at Night', category: 'Night', span: false },
 

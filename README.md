@@ -13,7 +13,7 @@ Built with React 18, TypeScript, Vite, dan Tailwind CSS.
 | Styling | Tailwind CSS 3.4 + custom design tokens |
 | Animation | Framer Motion, GSAP |
 | SEO | react-helmet-async (OG / Twitter Cards) |
-| Icons | lucide-react |
+| Icons | hugeicons-react |
 | Fonts | Fraunces (serif), Manrope (sans) via Google Fonts |
 
 ## Project Structure
@@ -52,14 +52,6 @@ npm install
 
 # jalankan dev server di port 3000
 npm run dev
-```
-
-### Environment Variables
-
-Buat file `.env.local` di root project:
-
-```env
-GEMINI_API_KEY=your_api_key_here
 ```
 
 ### Build Production
