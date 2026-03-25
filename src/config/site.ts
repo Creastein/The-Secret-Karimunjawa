@@ -94,7 +94,7 @@ export const SUITES_SECTION = {
   typeLabel: 'Room Type',
 } as const;
 
-export const WHATSAPP_NUMBER = '628131011434';
+export const WHATSAPP_NUMBER = '6289682381293';
 export const WHATSAPP_MESSAGE_TEMPLATE = 'Halo, saya ingin memesan Villa [NAMA UNIT] untuk tanggal [TANGGAL]';
 export const WHATSAPP_SERVICE_MESSAGE = 'Halo, saya ingin menanyakan layanan tambahan untuk menginap di The Secret Karimunjawa.';
 export const WHATSAPP_AVAILABILITY_MESSAGE = 'Halo, saya ingin mengetahui ketersediaan menginap di The Secret Karimunjawa.';
@@ -111,7 +111,7 @@ export const CONTACT_SECTION = {
   locationText: 'Jl. I. J. Kasimo, Karimunjawa, Jepara',
   locationLink: 'https://maps.app.goo.gl/N7ZEBC1pCWXsCh2W8',
   whatsappLabel: 'WhatsApp',
-  whatsappText: '+62 813 1011 434',
+  whatsappText: '+62 896-8238-1293',
   instagramHandle: '@thesecretkarimunjawa',
   instagramLink: 'https://www.instagram.com/thesecretkarimunjawa/',
 } as const;

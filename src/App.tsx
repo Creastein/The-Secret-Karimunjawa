@@ -66,7 +66,7 @@ export default function App() {
           "@type": "LodgingBusiness",
           "name": "The Secret Karimunjawa",
           "url": "https://thesecretkarimunjawa.com",
-          "telephone": "+628131011434",
+          "telephone": "+6289682381293",
           "image": "https://thesecretkarimunjawa.com/assets/hero-coastal.png",
           "description": t('seo.description'),
           "address": {
