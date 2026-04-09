@@ -59,7 +59,7 @@ export default function OurStory() {
       <div ref={containerRef} className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center relative z-10">
 
         {/* Left column: Text */}
-        <div ref={leftColRef} className="lg:w-1/2 pt-10 lg:pt-0">
+        <div ref={leftColRef} className="lg:w-[45%] pt-10 lg:pt-0">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -90,39 +90,17 @@ export default function OurStory() {
         {/* Right column: Family Photo */}
         <div
           ref={imageRef}
-          className="lg:w-1/2 w-full"
+          className="lg:w-[55%] w-full"
         >
-          <div className="relative group overflow-hidden aspect-[4/4] md:aspect-[8/7] rounded-[8px] shadow-[20px_30px_60px_-10px_rgba(0,0,0,0.4),0_8px_30px_4px_rgba(0,0,0,0.15)] border-2 border-white/80 bg-white">
-            <img
-              src="/assets/ourstory1.webp"
-              alt="Eddy, Patricia & Family — The Secret Karimunjawa"
-              className="absolute inset-0 w-full h-full object-cover object-[45%_center] origin-[45%_50%] scale-[1.01] group-hover:scale-[1.08] transition-transform duration-[2.5s] ease-[cubic-bezier(0.25,1,0.5,1)]"
+          <div className="relative overflow-hidden aspect-video rounded-[8px] shadow-[20px_30px_60px_-10px_rgba(0,0,0,0.4),0_8px_30px_4px_rgba(0,0,0,0.15)] border-2 border-white/80 bg-black">
+            <iframe
+              src="https://www.youtube.com/embed/5-69huuZoAk?rel=0&modestbranding=1"
+              title="The Secret Karimunjawa — Our Story"
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
               loading="lazy"
-              decoding="async"
-              width={1200}
-              height={1050}
             />
-            {/* Soft inner glow */}
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/50 pointer-events-none rounded-[8px] z-10 mix-blend-overlay" />
-            
-            {/* Subtle gradient overlay at bottom */}
-            <div className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent pointer-events-none z-20" />
-
-            {/* Caption */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-30"
-            >
-              <p className="text-white/90 text-sm md:text-base font-light tracking-wide">
-                Eddy, Patricia & Family
-              </p>
-              <p className="text-white/60 text-xs tracking-widest uppercase mt-1">
-                The Secret Karimunjawa
-              </p>
-            </motion.div>
           </div>
         </div>
 

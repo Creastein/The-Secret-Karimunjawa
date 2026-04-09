@@ -183,6 +183,7 @@ export default function Suites({ }: Props) {
                         <span className="text-xs text-stone-400">/{t('suites.perNight')}</span>
                       </div>
                       <p className="text-[10px] italic text-stone-400">*{t('suites.seasonNote')}</p>
+                      <p className="text-[10px] font-medium text-teak-accent">✦ {t('suites.rateNote')}</p>
                     </motion.div>
 
                     {/* CTA */}

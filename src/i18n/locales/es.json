@@ -14,7 +14,7 @@
         "badge": "Karimunjawa, Java Central",
         "title1": "Karimunjawa Tiene",
         "title2": "un Secreto",
-        "description": "Construido con amor por Eddy y Patricia como su hogar familiar al borde del mar. Hoy, tres villas frente al océano con un panorama de atardecer de 120° — abiertas para quienes buscan verdadera tranquilidad. Calificado 9.6 Excepcional en Booking.com.",
+        "description": "Construido con amor por Eddy y Patricia como su hogar familiar al borde del mar, The Secret es ahora tres villas exclusivas frente al océano con un panorama de 120° sobre una serena bahía de manglares, extendiéndose a través de ocho islas y atardeceres inolvidables. Calificado 9.6 Excepcional en Booking.com.",
         "ctaReserve": "Descubre el Secreto",
         "ctaGallery": "Ver Galería",
         "tagline1": "Panorama de Atardecer 120°",
@@ -37,7 +37,7 @@
         "seaSunsetView": "Azotea con Atardecer 120° y Observación de Estrellas",
         "seaSunsetViewDesc": "El lugar favorito de nuestros huéspedes para el café matutino, los atardeceres y cenas bajo la vía láctea.",
         "cozyKitchenBar": "Cocina-Bar Abierta y Acogedora",
-        "cozyKitchenBarDesc": "El corazón de The Secret — un lugar acogedor donde los huéspedes se reúnen y disfrutan de conversaciones amistosas con la familia y el equipo.",
+        "cozyKitchenBarDesc": "El corazón de The Secret — una experiencia gastronómica exclusiva y privada donde nuestro chef privado prepara cocina local e internacional refinada, todo en un ambiente cálido y acogedor.",
         "privateGarden": "Jardín Tropical",
         "privateGardenDesc": "Tu espacio para respirar en el jardín oculto bellamente arreglado en medio de la jungla.",
         "privateVeranda": "Terraza Privada",
@@ -48,8 +48,8 @@
         "ecoConsciousDesc": "Disfruta de la isla de forma ligera con un enfoque dedicado a no usar plásticos de un solo uso y esfuerzo por reciclar y compostar. Rellena tu botella de agua y disfruta de la gastronomía local.",
         "residentDog": "Nuestra Familia Peluda",
         "residentDogDesc": "Nuestros dos perros y nuestro gato son parte de nuestra familia. Te darán una ruidosa bienvenida y ladrarán de vez en cuando.",
-        "dailyHousekeeping": "Servicio de Limpieza Diario",
-        "dailyHousekeepingDesc": "Nuestro equipo asegura que su villa esté siempre limpia y cómoda."
+        "dailyHousekeeping": "Esterilla de Yoga Gratuita",
+        "dailyHousekeepingDesc": "Una esterilla de yoga gratuita le espera en cada villa, permitiéndole moverse y recargar energías en su propio espacio sereno."
     },
     "suites": {
         "eyebrow": "Tres Villas",
@@ -64,6 +64,7 @@
         "lowSeason": "Temporada Baja",
         "highSeason": "Temporada Alta",
         "seasonNote": "La tarifa varía según la temporada",
+        "rateNote": "Tarifa incluye desayuno casero",
         "detailLabel": "Ver Detalles",
         "rooms": {
             "cipaku": {
@@ -75,30 +76,34 @@
                     "Cocina Privada Completa",
                     "Terraza Frente al Mar",
                     "100% Privacidad Total",
-                    "Atardecer Entre Cocoteros"
+                    "Atardecer Sobre los Manglares",
+                    "Desayuno Casero Incluido"
                 ]
             },
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
                 "bedDetails": "Cama King (2m x 2m)",
-                "description": "Diseñada para los amigos más cercanos de la familia. La terraza más amplia y la villa más espaciosa de The Secret. 'Birdsong' es el nombre de un café encantador en el pueblo de Mukteshwar, en el Himalaya indio, donde Eddy y Patricia solían pasar sus vacaciones cuando vivían en la India.",
+                "description": "Diseñada para los amigos más cercanos de la familia. La terraza más amplia y la villa más espaciosa de The Secret. 'Birdsong' es el nombre de un café encantador en el Himalaya indio, donde Eddy y Patricia solían pasar sus vacaciones cuando vivían en la India.",
                 "features": [
                     "Habitación Espaciosa y Terraza Más Amplia",
-                    "Panorama Oceánico 120°",
-                    "Atardeceres Sin Obstáculos",
-                    "Limpieza Diaria"
+                    "Panorama oculto sobre la bahía de manglares",
+                    "Vistas doradas del atardecer",
+                    "Rodeada de jungla",
+                    "Desayuno Casero Incluido"
                 ]
             },
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
                 "bedDetails": "Queen (1.8m x 2m) + Doble (1.5m x 2m)",
-                "description": "Una villa con un jardín oculto. Flexible para parejas o familias pequeñas. 'Tivoli Garden' era el nombre del apartamento donde Eddy y Patricia vivían en Manila, Filipinas. Visitaron el Tivoli Garden original en Copenhague, Dinamarca, donde se casaron en 2017.",
+                "description": "Una villa con un jardín oculto. Flexible para parejas o familias pequeñas. 'Tivoli Garden' era el nombre del apartamento donde Eddy y Patricia vivían en Manila, Filipinas.",
                 "features": [
                     "Jardín Privado",
                     "Camas Flexibles",
-                    "Ideal para Familias"
+                    "Vista del Atardecer sobre la Bahía de Manglares",
+                    "Ideal para Familias",
+                    "Desayuno Casero Incluido"
                 ]
             }
         }
@@ -193,8 +198,8 @@
             "a2": "Nuestras tarifas son dinámicas (temporada alta/baja). Rango: Rp 1.600.000 – Rp 2.000.000 por noche. Contáctenos para el precio exacto.",
             "q3": "¿Qué métodos de pago se aceptan?",
             "a3": "Pagos en el lugar generalmente en efectivo o a través de la aplicación 'Wise'. Tarjetas de crédito para garantía en reservas online. Consulte sobre transferencias bancarias.",
-            "q4": "¿Puedo reservar directamente sin OTA?",
-            "a4": "¡Sí! Reserve directamente por nuestro WhatsApp con 0% de comisión. El 100% va directamente a la villa."
+            "q4": "¿Cómo puedo reservar directamente?",
+            "a4": "Simplemente contáctenos a través de WhatsApp Business para verificar la disponibilidad de sus fechas deseadas. Una vez confirmado, le enviaremos un enlace de pago fácil para un depósito del 50%. Después del pago, su reserva estará asegurada."
         },
         "facilities": {
             "q1": "¿Cuántos huéspedes por unidad?",
@@ -357,7 +362,6 @@
         },
         "infoTitle": "Información",
         "infoLinks": {
-            "concierge": "Servicios de Conserje",
             "activities": "Actividades",
             "faq": "Preguntas Frecuentes",
             "contact": "Contáctenos"

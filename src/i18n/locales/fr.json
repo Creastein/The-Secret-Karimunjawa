@@ -14,7 +14,7 @@
         "badge": "Karimunjawa, Java Central",
         "title1": "Karimunjawa a",
         "title2": "un Secret",
-        "description": "Construit avec amour par Eddy et Patricia comme maison familiale au bord de l'océan. Aujourd'hui, trois villas face à la mer avec une vue panoramique de 120° sur le coucher de soleil — ouvertes à ceux qui cherchent la vraie tranquillité. Noté 9.6 Exceptionnel sur Booking.com.",
+        "description": "Construit avec amour par Eddy et Patricia comme maison familiale au bord de l'océan, The Secret est désormais trois villas exclusives face à la mer avec un panorama de 120° sur une baie de mangrove sereine, s'étendant sur huit îles et des couchers de soleil inoubliables. Noté 9.6 Exceptionnel sur Booking.com.",
         "ctaReserve": "Trouvez le Secret",
         "ctaGallery": "Voir la Galerie",
         "tagline1": "Panorama Coucher de Soleil 120°",
@@ -37,7 +37,7 @@
         "seaSunsetView": "Toit-Terrasse Coucher de Soleil 120° et Observation des Étoiles",
         "seaSunsetViewDesc": "L'endroit préféré de nos invités pour le café du matin, les couchers de soleil l'après-midi et les dîners sous la voie lactée.",
         "cozyKitchenBar": "Cuisine-Bar Ouverte et Chaleureuse",
-        "cozyKitchenBarDesc": "Le cœur de The Secret — un lieu accueillant où les invités se retrouvent et profitent de conversations amicales avec la famille et l'équipe.",
+        "cozyKitchenBarDesc": "Le cœur de The Secret — une expérience gastronomique exclusive et privée où notre chef privé prépare une cuisine locale et internationale raffinée, le tout dans un cadre chaleureux et accueillant.",
         "privateGarden": "Jardin Tropical",
         "privateGardenDesc": "Votre espace pour respirer dans le jardin caché magnifiquement aménagé au milieu de la jungle.",
         "privateVeranda": "Véranda Privée",
@@ -48,8 +48,8 @@
         "ecoConsciousDesc": "Séjournez en douceur sur l'île grâce à une approche dédiée au zéro plastique à usage unique et à des efforts de recyclage et de compostage. Remplissez votre bouteille d'eau et profitez de la cuisine locale.",
         "residentDog": "Notre Famille à Quatre Pattes",
         "residentDogDesc": "Nos deux chiens et notre chat font partie de notre famille. Ils vous accueilleront bruyamment et aboieront de temps en temps.",
-        "dailyHousekeeping": "Service de Nettoyage Quotidien",
-        "dailyHousekeepingDesc": "Notre équipe s'assure que votre villa est toujours propre et confortable."
+        "dailyHousekeeping": "Tapis de Yoga Offert",
+        "dailyHousekeepingDesc": "Un tapis de yoga gratuit vous attend dans chaque villa, vous permettant de bouger et de vous ressourcer dans votre propre espace serein."
     },
     "suites": {
         "eyebrow": "Trois Villas",
@@ -64,6 +64,7 @@
         "lowSeason": "Basse Saison",
         "highSeason": "Haute Saison",
         "seasonNote": "Le tarif varie selon la saison",
+        "rateNote": "Tarif incluant le petit-déjeuner fait maison",
         "detailLabel": "Voir les Détails",
         "rooms": {
             "cipaku": {
@@ -75,30 +76,34 @@
                     "Cuisine Privée Complète",
                     "Véranda Face à la Mer",
                     "100% Intimité Totale",
-                    "Coucher de Soleil à Travers les Cocotiers"
+                    "Coucher de Soleil sur les Mangroves",
+                    "Petit-déjeuner Fait Maison Inclus"
                 ]
             },
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
                 "bedDetails": "Lit King (2m x 2m)",
-                "description": "Conçue pour les amis les plus proches de la famille. La véranda la plus large et la villa la plus spacieuse de The Secret. 'Birdsong' est le nom d'un charmant café dans le village de Mukteshwar, dans l'Himalaya indien, où Eddy et Patricia aimaient passer leurs vacances lorsqu'ils vivaient en Inde.",
+                "description": "Conçue pour les amis les plus proches de la famille. La véranda la plus large et la villa la plus spacieuse de The Secret. 'Birdsong' est le nom d'un charmant café dans l'Himalaya indien, où Eddy et Patricia aimaient passer leurs vacances lorsqu'ils vivaient en Inde.",
                 "features": [
                     "Chambre Spacieuse et Véranda la Plus Large",
-                    "Panorama Océanique 120°",
-                    "Couchers de Soleil Sans Obstacle",
-                    "Ménage Quotidien"
+                    "Panorama caché sur la baie de mangrove",
+                    "Vues dorées sur le coucher de soleil",
+                    "Entourée par la jungle",
+                    "Petit-déjeuner Fait Maison Inclus"
                 ]
             },
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Supérieure",
                 "bedDetails": "Queen (1.8m x 2m) + Double (1.5m x 2m)",
-                "description": "Une villa avec un jardin secret. Flexible pour les couples ou les petites familles. 'Tivoli Garden' était le nom de l'appartement où Eddy et Patricia vivaient à Manille, aux Philippines. Ils ont visité le Tivoli Garden original à Copenhague, au Danemark, où ils se sont mariés en 2017.",
+                "description": "Une villa avec un jardin secret. Flexible pour les couples ou les petites familles. 'Tivoli Garden' était le nom de l'appartement où Eddy et Patricia vivaient à Manille, aux Philippines.",
                 "features": [
                     "Jardin Privé",
                     "Literie Flexible",
-                    "Idéal pour les Familles"
+                    "Vue Coucher de Soleil sur la Baie de Mangrove",
+                    "Idéal pour les Familles",
+                    "Petit-déjeuner Fait Maison Inclus"
                 ]
             }
         }
@@ -193,8 +198,8 @@
             "a2": "Tarifs dynamiques selon la saison. De Rp 1.600.000 à Rp 2.000.000 par nuit. Contactez-nous pour le prix exact.",
             "q3": "Quels modes de paiement sont acceptés ?",
             "a3": "Les paiements sur place se font généralement en espèces ou via l'application 'Wise'. Cartes de crédit en garantie pour les réservations en ligne. Renseignez-vous sur les virements bancaires.",
-            "q4": "Puis-je réserver directement sans OTA ?",
-            "a4": "Oui ! Réservez directement via WhatsApp avec 0% de commission. 100% va directement à la villa."
+            "q4": "Comment puis-je réserver directement ?",
+            "a4": "Contactez-nous simplement via WhatsApp Business pour vérifier la disponibilité pour vos dates souhaitées. Une fois confirmé, nous vous enverrons un lien de paiement facile pour un acompte de 50%. Après le paiement, votre réservation sera confirmée."
         },
         "facilities": {
             "q1": "Combien de personnes par unité ?",
@@ -357,7 +362,6 @@
         },
         "infoTitle": "Information",
         "infoLinks": {
-            "concierge": "Conciergerie",
             "activities": "Activités",
             "faq": "Questions Fréquentes",
             "contact": "Contactez-Nous"

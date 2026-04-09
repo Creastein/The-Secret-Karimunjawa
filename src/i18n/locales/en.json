@@ -14,7 +14,7 @@
         "badge": "Karimunjawa, Central Java",
         "title1": "Karimunjawa Has",
         "title2": "a Secret",
-        "description": "Built with love by Eddy & Patricia as their family home on the ocean's edge. Today, three sea-facing villas with a 120° sunset panorama — open to those seeking true tranquility. Rated 9.6 Exceptional on Booking.com.",
+        "description": "Built with love by Eddy & Patricia as their family home on the ocean’s edge, The Secret is now three exclusive sea-facing villas with a 120° panorama over a serene mangrove bay, stretching across eight islands and unforgettable sunsets. Rated 9.6 Exceptional on Booking.com.",
         "ctaReserve": "Find the Secret",
         "ctaGallery": "View Gallery",
         "tagline1": "120° Sunset Panorama",
@@ -37,7 +37,7 @@
         "seaSunsetView": "120° Sunset and Stargazing Rooftop",
         "seaSunsetViewDesc": "Our guests' favorite spot for morning coffee, afternoon sunsets and dinner under the milky way.",
         "cozyKitchenBar": "Cozy Open Kitchen-Bar",
-        "cozyKitchenBarDesc": "The heart of The Secret — a welcoming place where guests gather and enjoy friendly conversations with the family and the team.",
+        "cozyKitchenBarDesc": "The heart of The Secret - an exclusive, in-house dining experience where our private chef prepares refined local and international cuisine, all in a warm and welcoming setting.",
         "privateGarden": "Tropical Garden",
         "privateGardenDesc": "Your space to breath in the beautifully arranged hidden garden in midst of the jungle.",
         "privateVeranda": "Private Veranda",
@@ -48,8 +48,8 @@
         "ecoConsciousDesc": "Stay lightly on the island with the dedicated zero single-use plastic approach and effort to recycle and compost. Refill your water bottle and enjoy the local cuisine.",
         "residentDog": "Our Furry Family",
         "residentDogDesc": "Our two dogs and our cat are part of our family. They will loudly welcome you and bark once in a while.",
-        "dailyHousekeeping": "Daily Cleaning Services",
-        "dailyHousekeepingDesc": "Our housekeeping team ensures your villa is always clean and comfortable."
+        "dailyHousekeeping": "Complimentary Yoga Mat",
+        "dailyHousekeepingDesc": "A complimentary yoga mat awaits in every villa, allowing you to move and recharge in your own serene space."
     },
     "suites": {
         "eyebrow": "Three Villas",
@@ -64,6 +64,7 @@
         "lowSeason": "Low Season",
         "highSeason": "High Season",
         "seasonNote": "Rate varies by season",
+        "rateNote": "Rate includes homemade breakfast",
         "detailLabel": "View Details",
         "rooms": {
             "cipaku": {
@@ -75,30 +76,34 @@
                     "Full Private Kitchen",
                     "Ocean-Facing Veranda",
                     "100% Total Privacy",
-                    "Sunset Through the Coconut Trees"
+                    "Sunset Over the mangroves",
+                    "Homemade Breakfast Included"
                 ]
             },
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
                 "bedDetails": "King Bed (2m x 2m)",
-                "description": "Designed for the family's closest friends. The widest veranda and most spacious Villa at The Secret. 'Birdsong' is a name of a cute Cafe in the village Mukteshwar in the Indian Himalayas, where Eddy and Patricia loved to spend their holidays while they were living in India.",
+                "description": "Designed for the family's closest friends. The widest veranda and most spacious Villa at The Secret. 'Birdsong' is a name of a cute Cafe in the Indian Himalayas, where Eddy and Patricia loved to spend their holidays while they were living in India.",
                 "features": [
                     "Spacious Room and Widest Veranda",
-                    "120° Ocean Panorama",
-                    "Unobstructed Sunsets",
-                    "Daily Housekeeping"
+                    "Hidden panorama over the mangrove bay",
+                    "Golden Sunset views",
+                    "Surrounded by jungle",
+                    "Homemade Breakfast Included"
                 ]
             },
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
                 "bedDetails": "Queen Bed (1.8m x 2m) + Double Bed (1.5m x 2m)",
-                "description": "A villa with a hidden garden. Flexible for couples or small families. 'Tivoli Garden' was the name of the apartment where Eddy and Patricia were living in Manila, Philippines. They visited the original Tivoli Garden in Kopenhagen, Denmark, where they got married in 2017.",
+                "description": "A villa with a hidden garden. Flexible for couples or small families. 'Tivoli Garden' was the name of the apartment where Eddy and Patricia were living in Manila, Philippines.",
                 "features": [
                     "Private Garden",
                     "Flexible Bedding",
-                    "Family Friendly"
+                    "Sunset View over the mangrove bay",
+                    "Family Friendly",
+                    "Homemade Breakfast Included"
                 ]
             }
         }
@@ -123,7 +128,7 @@
         "categoryContent": {
             "all": {
                 "title": "The Full Story",
-                "description": "Every corner has a story. From ocean-facing verandas to hidden gardens, This is soft luxury, surrounded by nature."
+                "description": "Every corner has a story. From ocean-facing verandas to hidden gardens. This is soft luxury, surrounded by nature."
             },
             "exteriors": {
                 "title": "Built with Love",
@@ -193,8 +198,8 @@
             "a2": "Our rates are dynamic and vary depending on the selected unit type and your stay dates (High/Low Season). Prices generally range from Rp 1,600,000 – Rp 2,000,000 per night. Please contact us to get the exact price for your preferred dates.",
             "q3": "What payment methods are accepted?",
             "a3": "On-site payments are generally in cash or via the application 'Wise'. For bookings via online platforms, credit cards can be used as a guarantee. Please contact us for more information regarding bank transfers.",
-            "q4": "Can I book directly without using an OTA (Online Travel Agent)?",
-            "a4": "Yes, absolutely! You can book directly via our WhatsApp with 0% commission. All transactions go 100% to the villa, allowing us to provide the best service for you."
+            "q4": "How can I book directly?",
+            "a4": "Simply contact us via WhatsApp Business to check availability for your desired dates. Once confirmed, we'll send you an easy payment link for a 50% deposit. After payment, your booking will be secured."
         },
         "facilities": {
             "q1": "How many guests can stay in one unit?",
@@ -356,7 +361,6 @@
         },
         "infoTitle": "Information",
         "infoLinks": {
-            "concierge": "Concierge Services",
             "activities": "Island Activities",
             "faq": "Frequently Asked Questions",
             "contact": "Contact Us"

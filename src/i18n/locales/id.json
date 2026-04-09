@@ -14,7 +14,7 @@
         "badge": "Karimunjawa, Jepara",
         "title1": "Karimunjawa Punya",
         "title2": "Rahasia",
-        "description": "Dibangun dengan cinta oleh Eddy & Patricia sebagai rumah keluarga mereka di tepi laut. Kini, tiga villa menghadap lautan dengan panorama sunset 120° — terbuka untuk Anda yang mencari ketenangan sejati. Rated 9.6 Istimewa di Booking.com.",
+        "description": "Dibangun dengan cinta oleh Eddy & Patricia sebagai rumah keluarga mereka di tepi laut, The Secret kini tiga villa eksklusif menghadap lautan dengan panorama 120° di atas teluk mangrove yang tenang, membentang melintasi delapan pulau dan sunset yang tak terlupakan. Rated 9.6 Istimewa di Booking.com.",
         "ctaReserve": "Temukan Rahasianya",
         "ctaGallery": "Lihat Galeri",
         "tagline1": "Panorama Sunset 120°",
@@ -37,7 +37,7 @@
         "seaSunsetView": "Rooftop Sunset 120° & Stargazing",
         "seaSunsetViewDesc": "Tempat favorit tamu kami untuk kopi pagi, sunset sore hari, dan makan malam di bawah taburan bintang.",
         "cozyKitchenBar": "Dapur-Bar Terbuka yang Nyaman",
-        "cozyKitchenBarDesc": "Jantung dari The Secret — tempat yang hangat di mana tamu berkumpul dan menikmati obrolan santai bersama keluarga dan tim.",
+        "cozyKitchenBarDesc": "Jantung dari The Secret — pengalaman bersantap eksklusif dan privat di mana chef pribadi kami menyiapkan hidangan lokal dan internasional pilihan, dalam suasana yang hangat dan menyambut.",
         "privateGarden": "Taman Tropis",
         "privateGardenDesc": "Ruang Anda untuk bernapas di taman tersembunyi yang tertata indah di tengah hutan.",
         "privateVeranda": "Veranda Pribadi",
@@ -48,8 +48,8 @@
         "ecoConsciousDesc": "Tinggal dengan nyaman di pulau ini dengan pendekatan tanpa plastik sekali pakai serta upaya daur ulang dan pengomposan. Isi ulang botol air Anda dan nikmati kuliner lokal.",
         "residentDog": "Keluarga Berbulu Kami",
         "residentDogDesc": "Dua anjing dan kucing kami adalah bagian dari keluarga. Mereka mungkin akan menyambut Anda dengan keras dan menggonggong sesekali.",
-        "dailyHousekeeping": "Layanan Kebersihan Harian",
-        "dailyHousekeepingDesc": "Tim kami memastikan villa selalu bersih dan nyaman."
+        "dailyHousekeeping": "Matras Yoga Gratis",
+        "dailyHousekeepingDesc": "Matras yoga gratis tersedia di setiap villa, memungkinkan Anda bergerak dan memulihkan energi di ruang pribadi yang tenang."
     },
     "suites": {
         "eyebrow": "Tiga Villa",
@@ -64,6 +64,7 @@
         "lowSeason": "Low Season",
         "highSeason": "High Season",
         "seasonNote": "Harga bervariasi sesuai musim",
+        "rateNote": "Harga sudah termasuk sarapan buatan sendiri",
         "detailLabel": "Lihat Detail",
         "rooms": {
             "cipaku": {
@@ -75,30 +76,34 @@
                     "Dapur Pribadi Lengkap",
                     "Veranda Menghadap Laut",
                     "100% Privasi Total",
-                    "Sunset dari Balik Kelapa"
+                    "Sunset di Atas Mangrove",
+                    "Sarapan Buatan Sendiri Termasuk"
                 ]
             },
             "birdsong": {
                 "name": "Birdsong",
                 "typeLabel": "Deluxe",
                 "bedDetails": "Kasur King (2m x 2m)",
-                "description": "Dirancang untuk teman-teman terdekat keluarga. Veranda paling luas dan Villa paling lega di The Secret. 'Birdsong' adalah nama sebuah kafe kecil di desa Mukteshwar di pegunungan Himalaya India, tempat Eddy dan Patricia suka menghabiskan liburan saat mereka tinggal di India.",
+                "description": "Dirancang untuk teman-teman terdekat keluarga. Veranda paling luas dan Villa paling lega di The Secret. 'Birdsong' adalah nama sebuah kafe kecil di pegunungan Himalaya India, tempat Eddy dan Patricia suka menghabiskan liburan saat mereka tinggal di India.",
                 "features": [
                     "Kamar Luas dan Veranda Terluas",
-                    "Panorama Laut 120°",
-                    "Sunset Tanpa Halangan",
-                    "Housekeeping Harian"
+                    "Panorama tersembunyi di atas teluk mangrove",
+                    "Pemandangan sunset keemasan",
+                    "Dikelilingi hutan",
+                    "Sarapan Buatan Sendiri Termasuk"
                 ]
             },
             "tivoliGarden": {
                 "name": "Tivoli Garden",
                 "typeLabel": "Superior",
                 "bedDetails": "Kasur Queen (1.8m x 2m) + Kasur Double (1.5m x 2m)",
-                "description": "Villa dengan taman tersembunyi. Fleksibel untuk pasangan maupun keluarga kecil. 'Tivoli Garden' adalah nama apartemen tempat Eddy dan Patricia tinggal di Manila, Filipina. Mereka mengunjungi Tivoli Garden yang asli di Kopenhagen, Denmark, tempat mereka menikah pada tahun 2017.",
+                "description": "Villa dengan taman tersembunyi. Fleksibel untuk pasangan maupun keluarga kecil. 'Tivoli Garden' adalah nama apartemen tempat Eddy dan Patricia tinggal di Manila, Filipina.",
                 "features": [
                     "Taman Pribadi",
                     "Tempat Tidur Fleksibel",
-                    "Cocok untuk Keluarga"
+                    "Pemandangan Sunset di Atas Teluk Mangrove",
+                    "Cocok untuk Keluarga",
+                    "Sarapan Buatan Sendiri Termasuk"
                 ]
             }
         }
@@ -193,8 +198,8 @@
             "a2": "Tarif menginap kami bersifat dinamis dan bervariasi tergantung pada tipe unit yang dipilih serta masa inap Anda (High/Low Season). Kisaran harga mulai dari Rp 1.600.000 – Rp 2.000.000 per malam. Silakan hubungi kami untuk mendapatkan harga pasti pada tanggal pilihan Anda.",
             "q3": "Metode pembayaran apa saja yang diterima?",
             "a3": "Pembayaran di lokasi umumnya menggunakan tunai (cash) atau via aplikasi 'Wise'. Untuk pemesanan melalui platform online, kartu kredit dapat digunakan sebagai jaminan. Silakan hubungi kami untuk informasi lebih lanjut mengenai transfer bank.",
-            "q4": "Apakah bisa memesan langsung tanpa melalui OTA (Online Travel Agent)?",
-            "a4": "Ya, tentu! Anda dapat memesan langsung melalui WhatsApp kami dengan komisi 0%. Seluruh transaksi masuk 100% ke pihak villa, sehingga kami dapat memberikan pelayanan terbaik untuk Anda."
+            "q4": "Bagaimana cara memesan langsung?",
+            "a4": "Cukup hubungi kami melalui WhatsApp Business untuk mengecek ketersediaan tanggal yang Anda inginkan. Setelah dikonfirmasi, kami akan mengirimkan link pembayaran mudah untuk deposit 50%. Setelah pembayaran, pemesanan Anda akan terjamin."
         },
         "facilities": {
             "q1": "Berapa banyak tamu yang dapat menginap di satu unit?",
@@ -357,7 +362,6 @@
         },
         "infoTitle": "Informasi",
         "infoLinks": {
-            "concierge": "Layanan Concierge",
             "activities": "Aktivitas Pulau",
             "faq": "Pertanyaan yang Sering Diajukan",
             "contact": "Hubungi Kami"

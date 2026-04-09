@@ -53,7 +53,6 @@ export default function Footer() {
           <motion.div variants={fadeUp}>
             <h3 className="text-xs uppercase tracking-[0.2em] text-white font-bold mb-8">{t('footer.infoTitle')}</h3>
             <ul className="space-y-4 text-sm font-light">
-              <li><a href="#experience" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.concierge')}</a></li>
               <li><a href="#location" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.activities')}</a></li>
               <li><a href="#faq" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.faq')}</a></li>
               <li><a href="#contact" className="hover:text-teak-accent transition-colors">{t('footer.infoLinks.contact')}</a></li>
