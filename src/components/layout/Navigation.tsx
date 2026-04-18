@@ -88,7 +88,7 @@ export default function Navigation() {
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.id)}
-                  className={`text-[11px] uppercase tracking-widest transition-colors relative group py-1 font-medium cursor-pointer ${isActive ? 'text-ink' : 'text-stone-500 hover:text-tide'}`}
+                  className={`text-[11px] uppercase tracking-widest transition-colors relative group py-1 font-medium cursor-pointer ${isActive ? 'text-ink' : 'text-stone-700 hover:text-tide'}`}
                 >
                   {t(`nav.${link.key}`)}
                   <span className={`absolute bottom-0 left-0 h-[1px] bg-teak-accent transition-all duration-500 ${isActive ? 'w-full' : 'w-0 group-hover:w-full'}`} />

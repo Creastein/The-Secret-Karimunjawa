@@ -109,12 +109,12 @@ export default function Testimonials() {
                   <div className="w-12 h-px bg-teak-accent/30 mb-6" />
                   <div>
                     <h3 className="text-sm uppercase tracking-widest text-charcoal font-semibold mb-1">{active.review.author}</h3>
-                    <span className="text-[10px] text-stone-500 uppercase tracking-wide">{active.review.origin}</span>
+                    <span className="text-[10px] text-stone-600 uppercase tracking-wide">{active.review.origin}</span>
                   </div>
                 </motion.div>
               </AnimatePresence>
 
-              <div className="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.25em] text-stone-500">
+              <div className="mt-10 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.25em] text-stone-600">
                 <span>{active.index + 1}</span>
                 <span className="text-stone-400">/</span>
                 <span>{totalReviews}</span>
