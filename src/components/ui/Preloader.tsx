@@ -27,7 +27,7 @@ export default function Preloader() {
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
     // If user prefers reduced motion or wants to save data, keep this very short.
     const saveData = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData
-    return reduce || saveData ? 200 : 700
+    return reduce || saveData ? 100 : 400
   }, [])
 
   useLockBodyScroll(isVisible)
@@ -47,8 +47,8 @@ export default function Preloader() {
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, scale: 1.02 }}
-          transition={{ duration: 1.2, ease: EASE_EXPO }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: EASE_EXPO }}
           className="fixed inset-0 z-[9999] bg-ink flex items-center justify-center overflow-hidden"
         >
           {/* ── centered content ─────────────────────── */}

@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '@/components/layout/Section'
@@ -23,6 +23,7 @@ export default function OurStory() {
   const containerRef = useRef<HTMLDivElement>(null)
   const leftColRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
   useEffect(() => {
     let ctx: { revert: () => void } | undefined
@@ -92,15 +93,34 @@ export default function OurStory() {
           ref={imageRef}
           className="lg:w-[55%] w-full"
         >
-          <div className="relative overflow-hidden aspect-video rounded-[8px] shadow-[20px_30px_60px_-10px_rgba(0,0,0,0.4),0_8px_30px_4px_rgba(0,0,0,0.15)] border-2 border-white/80 bg-black">
-            <iframe
-              src="https://www.youtube.com/embed/5-69huuZoAk?rel=0&modestbranding=1"
-              title="The Secret Karimunjawa — Our Story"
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-            />
+          <div className="relative overflow-hidden aspect-video rounded-[8px] shadow-[20px_30px_60px_-10px_rgba(0,0,0,0.4),0_8px_30px_4px_rgba(0,0,0,0.15)] border-2 border-white/80 bg-black group cursor-pointer">
+            {!isVideoLoaded ? (
+              <div
+                className="absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer"
+                onClick={() => setIsVideoLoaded(true)}
+              >
+                {/* Fallback to high-res YouTube thumbnail */}
+                <img
+                  src="https://img.youtube.com/vi/5-69huuZoAk/maxresdefault.jpg"
+                  alt="The Secret Karimunjawa Video Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                {/* Play Button Icon */}
+                <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-0 h-0 border-t-[8px] border-b-[8px] border-l-[14px] md:border-t-[10px] md:border-b-[10px] md:border-l-[16px] border-transparent border-l-charcoal ml-1" />
+                </div>
+              </div>
+            ) : (
+              <iframe
+                src="https://www.youtube.com/embed/5-69huuZoAk?autoplay=1&rel=0&modestbranding=1"
+                title="The Secret Karimunjawa — Our Story"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            )}
           </div>
         </div>
 
