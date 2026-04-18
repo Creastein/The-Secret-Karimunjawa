@@ -101,7 +101,7 @@ export default function OurStory() {
               >
                 {/* Fallback to high-res YouTube thumbnail */}
                 <img
-                  src="https://img.youtube.com/vi/5-69huuZoAk/maxresdefault.jpg"
+                  src="https://img.youtube.com/vi/5-69huuZoAk/hqdefault.jpg"
                   alt="The Secret Karimunjawa Video Thumbnail"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"

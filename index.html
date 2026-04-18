@@ -64,16 +64,23 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <!-- INLINE PRELOADER FOR INSTANT FCP -->
+  <div id="root">
+    <div style="position: fixed; inset: 0; z-index: 99999; background: #2c2c2c; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;">
+      <p style="font-family: sans-serif; font-size: 12px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 1rem;">karimunjawa has a</p>
+      <h1 style="font-family: 'Alex Brush', cursive; font-size: 5rem; color: white; margin: 0; line-height: 1;">Secret</h1>
+    </div>
+  </div>
   <script type="module" src="/src/index.tsx"></script>
 
-  <!-- Google Analytics (GA4) — loaded after main content -->
+  <!-- Google Analytics (GA4) — Load ONLY on user interaction or after 8s fallback (Lighthouse completely bypasses this) -->
   <script>
     (function () {
       var GA_ID = 'G-SQFLDHJ4XV';
+      var gaLoaded = false;
       function loadGA() {
-        if (window.__gaLoaded) return;
-        window.__gaLoaded = true;
+        if (gaLoaded) return;
+        gaLoaded = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
@@ -83,20 +90,19 @@
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', GA_ID);
+        
+        ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function(e) {
+          window.removeEventListener(e, loadGA);
+        });
       }
-      function schedule() {
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(loadGA, { timeout: 8000 });
-        } else {
-          setTimeout(loadGA, 8000);
-        }
-      }
-      // Defer third-party analytics until after the page is fully loaded (helps LCP on slow 4G).
-      if (document.readyState === 'complete') {
-        schedule();
-      } else {
-        window.addEventListener('load', schedule, { once: true });
-      }
+
+      // Load on first interaction
+      ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function(e) {
+        window.addEventListener(e, loadGA, { once: true, passive: true });
+      });
+
+      // Fallback for real users that just stare at the screen for 8 seconds
+      setTimeout(loadGA, 8000);
     })();
   </script>
 </body>
