@@ -110,6 +110,14 @@ export default function Footer() {
           <p className="text-[10px] uppercase tracking-widest text-stone-600">
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
+          <a
+            href="https://wellibuilds.online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] uppercase tracking-widest text-stone-600 hover:text-teak-accent transition-colors"
+          >
+            Website by <span className="font-semibold text-stone-400">WelliBuilds</span>
+          </a>
           <div className="flex items-center gap-8">
             <span className="text-[10px] uppercase tracking-widest text-stone-600 hidden md:block">
               {t('footer.tagline')}
