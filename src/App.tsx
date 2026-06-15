@@ -63,6 +63,37 @@ export default function App() {
 
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "The Secret Karimunjawa",
+          "url": "https://thesecretkarimunjawa.com",
+          "inLanguage": ["id", "en", "de", "fr", "es", "it"]
+        })}</script>
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "The Secret Karimunjawa",
+          "url": "https://thesecretkarimunjawa.com",
+          "logo": "https://thesecretkarimunjawa.com/favicon.svg",
+          "founder": [
+            { "@type": "Person", "name": "Eddy" },
+            { "@type": "Person", "name": "Patricia" }
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+6289682381293",
+            "contactType": "reservations",
+            "availableLanguage": ["Indonesian", "English", "German"]
+          },
+          "sameAs": [
+            "https://www.instagram.com/thesecretkarimunjawa/",
+            "https://www.booking.com/hotel/id/the-secret-karimunjawa-kabupaten-jepara1.id.html",
+            "https://maps.app.goo.gl/N7ZEBC1pCWXsCh2W8"
+          ]
+        })}</script>
+
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "LodgingBusiness",
           "name": "The Secret Karimunjawa",
           "url": "https://thesecretkarimunjawa.com",
@@ -81,6 +112,14 @@ export default function App() {
             "@type": "GeoCoordinates",
             "latitude": -5.8672,
             "longitude": 110.4381
+          },
+          "founder": [
+            { "@type": "Person", "name": "Eddy" },
+            { "@type": "Person", "name": "Patricia" }
+          ],
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": "https://wa.me/6289682381293"
           },
           "aggregateRating": {
             "@type": "AggregateRating",

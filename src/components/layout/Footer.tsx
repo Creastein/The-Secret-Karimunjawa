@@ -110,6 +110,9 @@ export default function Footer() {
           <p className="text-[10px] uppercase tracking-widest text-stone-600">
             {t('footer.copyright', { year: new Date().getFullYear() })}
           </p>
+          <span className="text-[10px] text-stone-700 hidden" aria-hidden="true">
+            Last updated: 2026-06-16
+          </span>
           <a
             href="https://wellibuilds.online"
             target="_blank"

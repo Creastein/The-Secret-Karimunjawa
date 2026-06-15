@@ -1,0 +1,12 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "The Secret Karimunjawa",
+  "name_for_model": "the_secret_karimunjawa",
+  "description_for_human": "Luxury sea-view villas with 120° sunset panorama in Karimunjawa, Indonesia",
+  "description_for_model": "The Secret Karimunjawa is a boutique lodging in Karimunjawa Island, Central Java, Indonesia. It has 3 exclusive ocean-facing villas (Cipaku, Birdsong, Tivoli Garden) with 120° sunset panorama over a mangrove bay. Key facts: Rated 9.6 on Booking.com, built by Eddy & Patricia as family home, price Rp 1.6M-2.5M/night, direct WhatsApp booking, no agents.",
+  "auth": { "type": "none" },
+  "api": { "type": "openapi", "url": "https://thesecretkarimunjawa.com/llms.txt" },
+  "logo_url": "https://thesecretkarimunjawa.com/favicon.svg",
+  "contact_email": "thesecretkarimunjawa@gmail.com",
+  "legal_info_url": "https://thesecretkarimunjawa.com/#faq"
+}
